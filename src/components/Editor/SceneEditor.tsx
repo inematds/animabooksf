@@ -11,7 +11,7 @@ import BackgroundSelector from './BackgroundSelector';
 
 interface SceneEditorProps {
   initialStory: Story;
-  onSave: (story: Story) => void;
+  onSave: (story: Story) => Promise<string | void> | void;
   onPreview: (story: Story) => void;
 }
 
@@ -30,6 +30,8 @@ export default function SceneEditor({ initialStory, onSave, onPreview }: SceneEd
   const [selectedSpriteId, setSelectedSpriteId] = useState<string | null>(null);
   const [showBgSelector, setShowBgSelector] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const [saveMsg, setSaveMsg] = useState('');
   const canvasRef = useRef<HTMLDivElement>(null);
 
   const scene = story.scenes[sceneIndex];
@@ -207,25 +209,47 @@ export default function SceneEditor({ initialStory, onSave, onPreview }: SceneEd
         <button
           onClick={() => onPreview(story)}
           className="px-3 py-1.5 text-sm bg-purple-100 text-purple-700 hover:bg-purple-200 rounded transition"
+          title="Abre a historia no leitor para ver como fica"
         >
-          Preview
+          Ver Historia
         </button>
+        {saveMsg && (
+          <span className="text-xs text-green-600 animate-pulse">{saveMsg}</span>
+        )}
         <button
-          onClick={() => onSave(story)}
-          className="px-3 py-1.5 text-sm bg-purple-500 text-white hover:bg-purple-600 rounded transition"
+          onClick={async () => {
+            setSaving(true);
+            setSaveMsg('');
+            try {
+              await onSave(story);
+              setSaveMsg('Salvo!');
+              setTimeout(() => setSaveMsg(''), 2000);
+            } catch {
+              setSaveMsg('Erro ao salvar');
+              setTimeout(() => setSaveMsg(''), 3000);
+            } finally {
+              setSaving(false);
+            }
+          }}
+          disabled={saving}
+          className={`px-3 py-1.5 text-sm rounded transition ${
+            saving
+              ? 'bg-gray-300 text-gray-500 cursor-wait'
+              : 'bg-purple-500 text-white hover:bg-purple-600'
+          }`}
         >
-          Salvar
+          {saving ? 'Salvando...' : 'Salvar'}
         </button>
       </div>
 
       {/* Main area */}
-      <div className="flex flex-1 overflow-hidden">
+      <div className="flex flex-1 min-h-0 overflow-hidden">
         {/* Sprite panel */}
         <SpritePanel onAddSprite={handleAddSprite} />
 
-        {/* Canvas */}
-        <div className="flex-1 flex flex-col">
-          <div className="flex-1 p-4 flex items-center justify-center">
+        {/* Canvas + Timeline + Dialogues */}
+        <div className="flex-1 flex flex-col min-h-0">
+          <div className="flex-1 min-h-0 p-4 flex items-center justify-center overflow-auto">
             <div
               ref={canvasRef}
               className="relative w-full max-w-3xl aspect-video bg-gray-900 rounded-lg overflow-hidden shadow-lg cursor-crosshair"
