@@ -69,7 +69,7 @@ export default function SpritePanel({ onAddSprite }: SpritePanelProps) {
                     className="object-contain p-1"
                   />
                   <span className="absolute bottom-0 left-0 right-0 text-[9px] text-center bg-white/80 truncate">
-                    {s.filename.replace('.png', '')}
+                    {s.filename.replace(/\.\w+$/, '')}
                   </span>
                 </button>
               ))}
@@ -78,7 +78,7 @@ export default function SpritePanel({ onAddSprite }: SpritePanelProps) {
         ))}
         {sprites.length === 0 && (
           <p className="text-xs text-gray-400 text-center mt-4">
-            Adicione PNGs em /public/sprites/
+            Adicione imagens em /public/sprites/
           </p>
         )}
       </div>

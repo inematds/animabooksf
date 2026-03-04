@@ -56,9 +56,33 @@ const DEFAULT_PROFILE: ChildProfile = {
   storiesCreated: 0,
   currentStreak: 0,
   longestStreak: 0,
+  lastActiveDate: undefined,
+  challengesCompleted: 0,
+  eventsParticipated: 0,
   unlockedSprites: [],
   unlockedAchievements: [],
 };
+
+function getTodayStr(): string {
+  return new Date().toISOString().slice(0, 10);
+}
+
+function getYesterdayStr(): string {
+  const d = new Date();
+  d.setDate(d.getDate() - 1);
+  return d.toISOString().slice(0, 10);
+}
+
+function checkStreakReset(profile: ChildProfile): ChildProfile {
+  if (!profile.lastActiveDate) return profile;
+  const today = getTodayStr();
+  const yesterday = getYesterdayStr();
+  if (profile.lastActiveDate === today || profile.lastActiveDate === yesterday) {
+    return profile; // streak still valid
+  }
+  // More than 1 day gap - reset streak
+  return { ...profile, currentStreak: 0 };
+}
 
 const STORAGE_KEY = 'animabook_sf_game';
 
@@ -90,7 +114,8 @@ export function GameProvider({ children }: { children: ReactNode }) {
     const todayEvent = DEFAULT_WEEKLY_EVENTS.find((e) => e.dayOfWeek === today && e.active) || null;
 
     if (saved) {
-      return { ...saved, todayEvent, weeklyEvents: DEFAULT_WEEKLY_EVENTS };
+      const profile = checkStreakReset(saved.profile || DEFAULT_PROFILE);
+      return { ...saved, profile, todayEvent, weeklyEvents: DEFAULT_WEEKLY_EVENTS };
     }
 
     return {
@@ -139,6 +164,12 @@ export function GameProvider({ children }: { children: ReactNode }) {
             break;
           case 'sprites_collected':
             achieved = profile.unlockedSprites.length >= achievement.criteria.count;
+            break;
+          case 'challenges_completed':
+            achieved = profile.challengesCompleted >= achievement.criteria.count;
+            break;
+          case 'events_participated':
+            achieved = profile.eventsParticipated >= achievement.criteria.count;
             break;
         }
 
@@ -205,11 +236,18 @@ export function GameProvider({ children }: { children: ReactNode }) {
 
   const recordStoryRead = useCallback(() => {
     setState((prev) => {
+      const today = getTodayStr();
+      const alreadyActiveToday = prev.profile.lastActiveDate === today;
+      const newStreak = alreadyActiveToday
+        ? prev.profile.currentStreak
+        : prev.profile.currentStreak + 1;
+
       const updatedProfile = {
         ...prev.profile,
         storiesRead: prev.profile.storiesRead + 1,
-        currentStreak: prev.profile.currentStreak + 1,
-        longestStreak: Math.max(prev.profile.longestStreak, prev.profile.currentStreak + 1),
+        currentStreak: newStreak,
+        longestStreak: Math.max(prev.profile.longestStreak, newStreak),
+        lastActiveDate: today,
       };
 
       // Check achievements

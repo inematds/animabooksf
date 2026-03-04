@@ -56,6 +56,10 @@ export default function EditorPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id, story: updatedStory }),
       });
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({ error: 'Erro de rede' }));
+        throw new Error(err.error || `Erro ${res.status}`);
+      }
       const data = await res.json();
       if (data.id) {
         savedIdRef.current = data.id;

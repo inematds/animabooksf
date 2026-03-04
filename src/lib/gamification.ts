@@ -11,6 +11,9 @@ export interface ChildProfile {
   storiesCreated: number;
   currentStreak: number; // dias seguidos lendo
   longestStreak: number;
+  lastActiveDate?: string; // ISO date string (YYYY-MM-DD) for streak tracking
+  challengesCompleted: number;
+  eventsParticipated: number;
   unlockedSprites: string[];
   unlockedAchievements: string[];
 }

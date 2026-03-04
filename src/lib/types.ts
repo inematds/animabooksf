@@ -1,6 +1,6 @@
 export interface SpriteState {
   id: string;           // derivado do prefixo do filename (ex: "lumi")
-  filename: string;     // ex: "lumi_feliz.png"
+  filename: string;     // ex: "lumi_feliz.svg"
   x: string;            // ex: "35%"
   y: string;            // ex: "72%"
   scale: number;        // default: 1.0
@@ -15,7 +15,7 @@ export interface Dialogue {
 
 export interface Scene {
   id: number;
-  background: string;   // ex: "sala_aula_fundo.png"
+  background: string;   // ex: "sala_aula.svg"
   sprites: SpriteState[];
   narrator?: string;
   dialogues: Dialogue[];

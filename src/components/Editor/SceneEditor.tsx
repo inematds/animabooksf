@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useRef, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Story, Scene, SpriteState, Dialogue } from '@/lib/types';
 import { spriteIdFromFilename } from '@/lib/parseStory';
 import SpritePanel from './SpritePanel';
@@ -33,16 +34,18 @@ export default function SceneEditor({ initialStory, onSave, onPreview }: SceneEd
   const [saving, setSaving] = useState(false);
   const [saveMsg, setSaveMsg] = useState('');
   const canvasRef = useRef<HTMLDivElement>(null);
+  const storyRef = useRef(story);
+  storyRef.current = story;
 
   const scene = story.scenes[sceneIndex];
 
-  // Auto-save every 30s
+  // Auto-save every 30s (uses ref to avoid interval recreation)
   useEffect(() => {
     const interval = setInterval(() => {
-      onSave(story);
+      onSave(storyRef.current);
     }, 30000);
     return () => clearInterval(interval);
-  }, [story, onSave]);
+  }, [onSave]);
 
   const updateScene = useCallback(
     (updater: (scene: Scene) => Scene) => {
@@ -166,6 +169,7 @@ export default function SceneEditor({ initialStory, onSave, onPreview }: SceneEd
   const handleRemoveScene = useCallback(
     (index: number) => {
       if (story.scenes.length <= 1) return;
+      if (!confirm(`Remover cena ${index + 1}?`)) return;
       setStory((prev) => ({
         ...prev,
         scenes: prev.scenes
@@ -192,6 +196,13 @@ export default function SceneEditor({ initialStory, onSave, onPreview }: SceneEd
     <div className="flex flex-col h-screen bg-gray-100">
       {/* Toolbar */}
       <div className="flex items-center gap-3 px-4 py-2 bg-white border-b shadow-sm">
+        <Link
+          href="/"
+          className="px-3 py-1.5 text-sm bg-gray-100 hover:bg-gray-200 rounded transition flex items-center gap-1"
+          title="Voltar ao menu principal"
+        >
+          ← Inicio
+        </Link>
         <input
           type="text"
           value={story.title}

@@ -12,26 +12,26 @@ interface StoryMeta {
 function getStories(): StoryMeta[] {
   const dir = path.join(process.cwd(), 'data', 'stories');
   if (!fs.existsSync(dir)) return [];
-  return fs
-    .readdirSync(dir)
-    .filter((f) => f.endsWith('.json') || f.endsWith('.md'))
-    .map((f) => {
-      const ext = path.extname(f);
-      const id = f.replace(ext, '');
+  const stories: StoryMeta[] = [];
+  const files = fs.readdirSync(dir).filter((f) => f.endsWith('.json') || f.endsWith('.md'));
 
+  for (const f of files) {
+    const ext = path.extname(f);
+    const id = f.replace(ext, '');
+    try {
       if (ext === '.json') {
         const data = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf-8'));
-        return {
-          id,
-          title: data.title || 'Sem titulo',
-          scenesCount: data.scenes?.length || 0,
-        };
+        stories.push({ id, title: data.title || 'Sem titulo', scenesCount: data.scenes?.length || 0 });
+      } else {
+        const md = fs.readFileSync(path.join(dir, f), 'utf-8');
+        const story = parseStory(md);
+        stories.push({ id, title: story.title, scenesCount: story.scenes.length });
       }
-
-      const md = fs.readFileSync(path.join(dir, f), 'utf-8');
-      const story = parseStory(md);
-      return { id, title: story.title, scenesCount: story.scenes.length };
-    });
+    } catch {
+      stories.push({ id, title: `(erro ao ler ${f})`, scenesCount: 0 });
+    }
+  }
+  return stories;
 }
 
 export default function HomePage() {

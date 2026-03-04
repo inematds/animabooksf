@@ -56,7 +56,7 @@ export default function DialogueEditor({
 
       {/* Dialogues */}
       {dialogues.map((d, i) => (
-        <div key={i} className="flex items-center gap-1 group">
+        <div key={`${i}-${d.character}`} className="flex items-center gap-1 group">
           <div className="flex flex-col">
             <button
               onClick={() => moveDialogue(i, -1)}

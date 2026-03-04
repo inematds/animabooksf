@@ -23,6 +23,14 @@ export default function BackgroundSelector({
       .catch(() => setBackgrounds([]));
   }, []);
 
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [onClose]);
+
   return (
     <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center">
       <div className="bg-white rounded-xl shadow-xl w-[600px] max-h-[80vh] flex flex-col">
@@ -48,13 +56,13 @@ export default function BackgroundSelector({
             >
               <Image src={`/backgrounds/${bg}`} alt={bg} fill className="object-cover" />
               <span className="absolute bottom-0 left-0 right-0 text-[10px] bg-black/50 text-white text-center py-0.5 truncate">
-                {bg}
+                {bg.replace(/\.\w+$/, '')}
               </span>
             </button>
           ))}
           {backgrounds.length === 0 && (
             <p className="col-span-3 text-sm text-gray-400 text-center py-8">
-              Adicione PNGs em /public/backgrounds/
+              Adicione imagens em /public/backgrounds/
             </p>
           )}
         </div>

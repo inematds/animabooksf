@@ -2,7 +2,7 @@ import { Story, Scene, SpriteState, Dialogue } from './types';
 
 /**
  * Extrai o ID do sprite a partir do filename.
- * Ex: "lumi_feliz.png" → "lumi", "caio.png" → "caio"
+ * Ex: "lumi_feliz.svg" → "lumi", "caio.svg" → "caio"
  * Regra: primeiro segmento antes de "_" (se houver), sem extensao.
  */
 export function spriteIdFromFilename(filename: string): string {

@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SpriteState } from '@/lib/types';
 
@@ -48,11 +49,12 @@ export default function SpriteLayer({ sprites }: SpriteLayerProps) {
             className="w-full h-full relative"
           >
             {/* The sprite image */}
-            <motion.img
+            <Image
               src={`/sprites/${sprite.filename}`}
               alt={sprite.id}
+              fill
+              className="object-contain"
               draggable={false}
-              className="w-full h-full object-contain"
               style={{
                 filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.25))',
               }}
