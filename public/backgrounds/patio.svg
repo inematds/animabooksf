@@ -1,10 +1,270 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#f39c12"/>
-      <stop offset="100%" stop-color="#e67e22"/>
+    <linearGradient id="ptSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="60%" stop-color="#7DD3FC"/>
+      <stop offset="100%" stop-color="#BAE6FD"/>
     </linearGradient>
+    <linearGradient id="ptGrass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4ADE80"/>
+      <stop offset="100%" stop-color="#22C55E"/>
+    </linearGradient>
+    <linearGradient id="ptGrassD" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22C55E"/>
+      <stop offset="100%" stop-color="#16A34A"/>
+    </linearGradient>
+    <radialGradient id="ptSun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="60%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ptSlide" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F472B6"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+    <linearGradient id="ptMetal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9CA3AF"/>
+      <stop offset="100%" stop-color="#6B7280"/>
+    </linearGradient>
+    <filter id="ptSoft" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
   </defs>
-  <rect width="1920" height="1080" fill="url(#bg)"/>
-  <text x="960" y="540" text-anchor="middle" font-size="48" fill="white" opacity="0.3" font-family="sans-serif">patio</text>
+
+  <!-- ======= SKY ======= -->
+  <rect width="960" height="360" fill="url(#ptSky)"/>
+
+  <!-- Sun -->
+  <circle cx="800" cy="80" r="50" fill="url(#ptSun)"/>
+  <circle cx="800" cy="80" r="30" fill="#FDE68A"/>
+  <!-- Sun rays -->
+  <g stroke="#FDE68A" stroke-width="2" opacity="0.4">
+    <line x1="800" y1="20" x2="800" y2="8"/>
+    <line x1="800" y1="140" x2="800" y2="152"/>
+    <line x1="740" y1="80" x2="728" y2="80"/>
+    <line x1="860" y1="80" x2="872" y2="80"/>
+    <line x1="758" y1="38" x2="748" y2="28"/>
+    <line x1="842" y1="38" x2="852" y2="28"/>
+    <line x1="758" y1="122" x2="748" y2="132"/>
+    <line x1="842" y1="122" x2="852" y2="132"/>
+  </g>
+
+  <!-- Clouds -->
+  <g opacity="0.9">
+    <ellipse cx="150" cy="70" rx="60" ry="28" fill="white"/>
+    <ellipse cx="180" cy="58" rx="40" ry="22" fill="white"/>
+    <ellipse cx="120" cy="62" rx="35" ry="20" fill="white"/>
+    <ellipse cx="160" cy="52" rx="30" ry="18" fill="white"/>
+  </g>
+  <g opacity="0.8">
+    <ellipse cx="500" cy="50" rx="50" ry="24" fill="white"/>
+    <ellipse cx="525" cy="40" rx="35" ry="18" fill="white"/>
+    <ellipse cx="480" cy="42" rx="30" ry="16" fill="white"/>
+  </g>
+  <g opacity="0.6">
+    <ellipse cx="350" cy="100" rx="35" ry="16" fill="white"/>
+    <ellipse cx="370" cy="94" rx="25" ry="13" fill="white"/>
+  </g>
+  <g opacity="0.5">
+    <ellipse cx="680" cy="120" rx="40" ry="18" fill="white"/>
+    <ellipse cx="700" cy="112" rx="28" ry="14" fill="white"/>
+  </g>
+
+  <!-- ======= BACKGROUND HILLS ======= -->
+  <path d="M0 340 Q120 280 240 310 Q360 260 480 300 Q600 270 720 290 Q840 260 960 300 L960 360 L0 360 Z" fill="#86EFAC" opacity="0.5"/>
+
+  <!-- ======= GROUND / GRASS ======= -->
+  <rect y="340" width="960" height="200" fill="url(#ptGrass)"/>
+  <!-- Grass texture lines -->
+  <g stroke="#16A34A" stroke-width="0.8" opacity="0.2" stroke-linecap="round">
+    <path d="M50 360 Q52 350 50 342"/>
+    <path d="M55 362 Q57 354 54 348"/>
+    <path d="M150 365 Q152 355 149 347"/>
+    <path d="M155 367 Q158 358 155 350"/>
+    <path d="M300 358 Q302 348 299 340"/>
+    <path d="M305 360 Q308 352 305 344"/>
+    <path d="M450 362 Q452 352 449 344"/>
+    <path d="M600 359 Q602 349 599 341"/>
+    <path d="M750 363 Q753 354 750 346"/>
+    <path d="M850 360 Q852 350 849 342"/>
+    <path d="M900 365 Q903 356 900 348"/>
+  </g>
+
+  <!-- Dirt path -->
+  <path d="M400 540 Q420 480 440 440 Q460 410 500 380 Q540 360 580 350" fill="none" stroke="#D4A574" stroke-width="30" stroke-linecap="round" opacity="0.3"/>
+  <path d="M400 540 Q420 480 440 440 Q460 410 500 380 Q540 360 580 350" fill="none" stroke="#C4956A" stroke-width="20" stroke-linecap="round" opacity="0.15"/>
+
+  <!-- ======= FENCE (background) ======= -->
+  <g transform="translate(0, 300)">
+    <!-- Horizontal rails -->
+    <rect x="0" y="10" width="960" height="4" rx="2" fill="#D4A574"/>
+    <rect x="0" y="30" width="960" height="4" rx="2" fill="#D4A574"/>
+    <!-- Fence posts -->
+    <rect x="20" y="0" width="6" height="50" rx="2" fill="#B8864E"/>
+    <rect x="80" y="0" width="6" height="50" rx="2" fill="#B8864E"/>
+    <rect x="140" y="0" width="6" height="50" rx="2" fill="#B8864E"/>
+    <rect x="200" y="0" width="6" height="50" rx="2" fill="#B8864E"/>
+    <rect x="260" y="0" width="6" height="50" rx="2" fill="#B8864E"/>
+    <rect x="320" y="0" width="6" height="50" rx="2" fill="#B8864E"/>
+    <rect x="380" y="0" width="6" height="50" rx="2" fill="#B8864E"/>
+    <rect x="440" y="0" width="6" height="50" rx="2" fill="#B8864E"/>
+    <rect x="500" y="0" width="6" height="50" rx="2" fill="#B8864E"/>
+    <rect x="560" y="0" width="6" height="50" rx="2" fill="#B8864E"/>
+    <rect x="620" y="0" width="6" height="50" rx="2" fill="#B8864E"/>
+    <rect x="680" y="0" width="6" height="50" rx="2" fill="#B8864E"/>
+    <rect x="740" y="0" width="6" height="50" rx="2" fill="#B8864E"/>
+    <rect x="800" y="0" width="6" height="50" rx="2" fill="#B8864E"/>
+    <rect x="860" y="0" width="6" height="50" rx="2" fill="#B8864E"/>
+    <rect x="920" y="0" width="6" height="50" rx="2" fill="#B8864E"/>
+    <!-- Post tops (pointed) -->
+    <path d="M20 0 L23 -8 L26 0" fill="#B8864E"/>
+    <path d="M80 0 L83 -8 L86 0" fill="#B8864E"/>
+    <path d="M140 0 L143 -8 L146 0" fill="#B8864E"/>
+    <path d="M200 0 L203 -8 L206 0" fill="#B8864E"/>
+    <path d="M260 0 L263 -8 L266 0" fill="#B8864E"/>
+    <path d="M320 0 L323 -8 L326 0" fill="#B8864E"/>
+    <path d="M380 0 L383 -8 L386 0" fill="#B8864E"/>
+    <path d="M440 0 L443 -8 L446 0" fill="#B8864E"/>
+    <path d="M500 0 L503 -8 L506 0" fill="#B8864E"/>
+    <path d="M560 0 L563 -8 L566 0" fill="#B8864E"/>
+    <path d="M620 0 L623 -8 L626 0" fill="#B8864E"/>
+    <path d="M680 0 L683 -8 L686 0" fill="#B8864E"/>
+    <path d="M740 0 L743 -8 L746 0" fill="#B8864E"/>
+    <path d="M800 0 L803 -8 L806 0" fill="#B8864E"/>
+    <path d="M860 0 L863 -8 L866 0" fill="#B8864E"/>
+    <path d="M920 0 L923 -8 L926 0" fill="#B8864E"/>
+  </g>
+
+  <!-- ======= TREES ======= -->
+  <!-- Tree 1 (left background) -->
+  <g transform="translate(60, 240)">
+    <rect x="18" y="40" width="14" height="60" rx="4" fill="#92400E"/>
+    <rect x="22" y="45" width="4" height="50" rx="2" fill="#A0764A" opacity="0.3"/>
+    <ellipse cx="25" cy="30" rx="40" ry="42" fill="#22C55E"/>
+    <ellipse cx="25" cy="20" rx="32" ry="34" fill="#4ADE80" opacity="0.6"/>
+    <ellipse cx="15" cy="28" rx="20" ry="22" fill="#86EFAC" opacity="0.3"/>
+    <!-- Apples -->
+    <circle cx="10" cy="35" r="4" fill="#EF4444" opacity="0.7"/>
+    <circle cx="40" cy="25" r="3.5" fill="#EF4444" opacity="0.6"/>
+    <circle cx="28" cy="45" r="3" fill="#EF4444" opacity="0.5"/>
+  </g>
+
+  <!-- Tree 2 (right background) -->
+  <g transform="translate(850, 250)">
+    <rect x="15" y="35" width="12" height="50" rx="3" fill="#92400E"/>
+    <rect x="18" y="38" width="4" height="44" rx="2" fill="#A0764A" opacity="0.3"/>
+    <ellipse cx="21" cy="25" rx="35" ry="38" fill="#16A34A"/>
+    <ellipse cx="21" cy="16" rx="28" ry="30" fill="#22C55E" opacity="0.6"/>
+    <ellipse cx="14" cy="22" rx="18" ry="20" fill="#4ADE80" opacity="0.3"/>
+  </g>
+
+  <!-- ======= SLIDE ======= -->
+  <g transform="translate(600, 330)">
+    <!-- Slide platform -->
+    <rect x="0" y="0" width="60" height="5" rx="2" fill="url(#ptMetal)"/>
+    <!-- Slide legs -->
+    <rect x="5" y="5" width="5" height="100" rx="2" fill="url(#ptMetal)"/>
+    <rect x="50" y="5" width="5" height="100" rx="2" fill="url(#ptMetal)"/>
+    <!-- Cross brace -->
+    <line x1="7" y1="50" x2="52" y2="50" stroke="#9CA3AF" stroke-width="3"/>
+    <!-- The slide surface -->
+    <path d="M55 5 Q80 5 110 50 Q140 95 180 110" fill="none" stroke="url(#ptSlide)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M55 5 Q80 5 110 50 Q140 95 180 110" fill="none" stroke="#F9A8D4" stroke-width="6" stroke-linecap="round" opacity="0.3"/>
+    <!-- Side rails -->
+    <path d="M55 -2 Q80 -2 110 43 Q140 88 180 103" fill="none" stroke="#EC4899" stroke-width="3" stroke-linecap="round"/>
+    <path d="M55 12 Q80 12 110 57 Q140 102 180 117" fill="none" stroke="#EC4899" stroke-width="3" stroke-linecap="round"/>
+    <!-- Ladder -->
+    <rect x="-15" y="5" width="5" height="100" rx="2" fill="url(#ptMetal)"/>
+    <rect x="15" y="5" width="5" height="100" rx="2" fill="url(#ptMetal)"/>
+    <rect x="-15" y="25" width="35" height="4" rx="1" fill="#9CA3AF"/>
+    <rect x="-15" y="45" width="35" height="4" rx="1" fill="#9CA3AF"/>
+    <rect x="-15" y="65" width="35" height="4" rx="1" fill="#9CA3AF"/>
+    <rect x="-15" y="85" width="35" height="4" rx="1" fill="#9CA3AF"/>
+    <!-- Platform railing -->
+    <rect x="-2" y="-20" width="3" height="22" rx="1" fill="url(#ptMetal)"/>
+    <rect x="55" y="-20" width="3" height="22" rx="1" fill="url(#ptMetal)"/>
+    <rect x="-2" y="-20" width="60" height="3" rx="1" fill="url(#ptMetal)"/>
+  </g>
+
+  <!-- ======= SWING SET ======= -->
+  <g transform="translate(200, 310)">
+    <!-- Frame - A shape -->
+    <line x1="0" y1="120" x2="40" y2="0" stroke="url(#ptMetal)" stroke-width="5" stroke-linecap="round"/>
+    <line x1="80" y1="120" x2="40" y2="0" stroke="url(#ptMetal)" stroke-width="5" stroke-linecap="round"/>
+    <line x1="160" y1="120" x2="120" y2="0" stroke="url(#ptMetal)" stroke-width="5" stroke-linecap="round"/>
+    <line x1="240" y1="120" x2="200" y2="0" stroke="url(#ptMetal)" stroke-width="5" stroke-linecap="round"/>
+    <!-- Top bar -->
+    <line x1="40" y1="0" x2="200" y2="0" stroke="url(#ptMetal)" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- Swing 1 - chains and seat -->
+    <line x1="85" y1="2" x2="75" y2="90" stroke="#9CA3AF" stroke-width="2"/>
+    <line x1="115" y1="2" x2="105" y2="90" stroke="#9CA3AF" stroke-width="2"/>
+    <rect x="72" y="88" width="36" height="6" rx="3" fill="#3B82F6"/>
+    <rect x="72" y="88" width="36" height="3" rx="2" fill="#60A5FA" opacity="0.4"/>
+
+    <!-- Swing 2 - chains and seat (slightly swinging) -->
+    <line x1="145" y1="2" x2="140" y2="88" stroke="#9CA3AF" stroke-width="2"/>
+    <line x1="175" y1="2" x2="170" y2="88" stroke="#9CA3AF" stroke-width="2"/>
+    <rect x="137" y="86" width="36" height="6" rx="3" fill="#EF4444"/>
+    <rect x="137" y="86" width="36" height="3" rx="2" fill="#FCA5A5" opacity="0.4"/>
+  </g>
+
+  <!-- ======= FLOWERS ======= -->
+  <!-- Flower cluster 1 -->
+  <g transform="translate(100, 440)">
+    <line x1="0" y1="0" x2="0" y2="18" stroke="#15803D" stroke-width="2"/>
+    <circle cx="0" cy="-3" r="5" fill="#FDE68A"/>
+    <circle cx="0" cy="-3" r="2.5" fill="#F59E0B"/>
+    <line x1="12" y1="2" x2="12" y2="20" stroke="#15803D" stroke-width="2"/>
+    <circle cx="12" cy="-1" r="4.5" fill="#F472B6"/>
+    <circle cx="12" cy="-1" r="2" fill="#EC4899"/>
+    <line x1="-8" y1="4" x2="-8" y2="20" stroke="#15803D" stroke-width="2"/>
+    <circle cx="-8" cy="1" r="4" fill="#A78BFA"/>
+    <circle cx="-8" cy="1" r="2" fill="#7C3AED"/>
+    <!-- Leaves -->
+    <ellipse cx="-4" cy="12" rx="4" ry="2" fill="#22C55E" transform="rotate(-30 -4 12)"/>
+    <ellipse cx="6" cy="14" rx="4" ry="2" fill="#22C55E" transform="rotate(20 6 14)"/>
+  </g>
+
+  <!-- Flower cluster 2 -->
+  <g transform="translate(480, 460)">
+    <line x1="0" y1="0" x2="0" y2="16" stroke="#15803D" stroke-width="2"/>
+    <circle cx="0" cy="-3" r="5" fill="#FCA5A5"/>
+    <circle cx="0" cy="-3" r="2.5" fill="#EF4444"/>
+    <line x1="10" y1="2" x2="10" y2="16" stroke="#15803D" stroke-width="2"/>
+    <circle cx="10" cy="-1" r="4" fill="#FDE68A"/>
+    <circle cx="10" cy="-1" r="2" fill="#F59E0B"/>
+    <ellipse cx="5" cy="10" rx="4" ry="2" fill="#22C55E" transform="rotate(-20 5 10)"/>
+  </g>
+
+  <!-- Flower cluster 3 -->
+  <g transform="translate(750, 450)">
+    <line x1="0" y1="0" x2="0" y2="14" stroke="#15803D" stroke-width="2"/>
+    <circle cx="0" cy="-3" r="4.5" fill="#C084FC"/>
+    <circle cx="0" cy="-3" r="2" fill="#7C3AED"/>
+    <line x1="8" y1="2" x2="8" y2="14" stroke="#15803D" stroke-width="1.5"/>
+    <circle cx="8" cy="-1" r="3.5" fill="#FDE68A"/>
+    <circle cx="8" cy="-1" r="1.5" fill="#F59E0B"/>
+    <line x1="-6" y1="3" x2="-6" y2="14" stroke="#15803D" stroke-width="1.5"/>
+    <circle cx="-6" cy="0" r="3.5" fill="#F472B6"/>
+    <circle cx="-6" cy="0" r="1.5" fill="#EC4899"/>
+  </g>
+
+  <!-- ======= BUTTERFLY ======= -->
+  <g transform="translate(320, 280) scale(0.8)">
+    <path d="M0 0 Q-15 -15 -10 -25 Q-5 -30 0 -20 Q5 -30 10 -25 Q15 -15 0 0" fill="#C084FC" opacity="0.7"/>
+    <path d="M0 0 Q-12 10 -8 20 Q-3 25 0 15 Q3 25 8 20 Q12 10 0 0" fill="#E9D5FF" opacity="0.6"/>
+    <line x1="0" y1="0" x2="0" y2="-5" stroke="#7C3AED" stroke-width="0.8"/>
+    <line x1="-2" y1="-8" x2="0" y2="-5" stroke="#7C3AED" stroke-width="0.8"/>
+    <line x1="2" y1="-8" x2="0" y2="-5" stroke="#7C3AED" stroke-width="0.8"/>
+  </g>
+
+  <!-- ======= BALL ON GROUND ======= -->
+  <circle cx="500" cy="420" r="12" fill="#EF4444"/>
+  <path d="M490 415 Q500 410 510 415" fill="none" stroke="white" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="496" cy="416" r="2" fill="white" opacity="0.4"/>
+  <path d="M492 425 Q500 430 508 425" fill="none" stroke="#DC2626" stroke-width="1" opacity="0.3"/>
+
+  <!-- ======= LIGHT OVERLAY ======= -->
+  <rect width="960" height="540" fill="#FEF08A" opacity="0.03"/>
 </svg>

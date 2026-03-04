@@ -1,9 +1,210 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="280" viewBox="0 0 200 280">
-  <rect x="10" y="10" width="180" height="260" rx="20" fill="#8e44ad" opacity="0.9"/>
-  <circle cx="85" cy="93.33333333333333" r="8" fill="white"/>
-  <circle cx="115" cy="93.33333333333333" r="8" fill="white"/>
-  <circle cx="85" cy="93.33333333333333" r="4" fill="#333"/>
-  <circle cx="115" cy="93.33333333333333" r="4" fill="#333"/>
-  <path d="M88 140 Q100 155 112 140" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round"/>
-  <text x="100" y="255" text-anchor="middle" font-size="14" fill="white" font-family="sans-serif">lumi_feliz</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" width="200" height="300">
+  <defs>
+    <linearGradient id="lhGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D8B4FE"/>
+      <stop offset="50%" stop-color="#B57EDC"/>
+      <stop offset="100%" stop-color="#9B59B6"/>
+    </linearGradient>
+    <linearGradient id="lhShine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#EDE0F7" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#C9A0DC" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="lhSkin" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#FFF0E0"/>
+      <stop offset="80%" stop-color="#FDDCBD"/>
+      <stop offset="100%" stop-color="#F5CEAA"/>
+    </radialGradient>
+    <radialGradient id="lhEyeL" cx="42%" cy="32%" r="55%">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="45%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#4C1D95"/>
+    </radialGradient>
+    <radialGradient id="lhEyeR" cx="58%" cy="32%" r="55%">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="45%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#4C1D95"/>
+    </radialGradient>
+    <linearGradient id="lhSkirt" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#7E22CE"/>
+    </linearGradient>
+    <linearGradient id="lhShirt" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F3E8FF"/>
+    </linearGradient>
+    <linearGradient id="lhBand" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F472B6"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+    <linearGradient id="lhShoe" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#374151"/>
+      <stop offset="100%" stop-color="#1F2937"/>
+    </linearGradient>
+    <filter id="lhShadow" x="-15%" y="-10%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.5" result="blur"/>
+      <feOffset dx="1" dy="2" result="off"/>
+      <feFlood flood-color="#000" flood-opacity="0.12"/>
+      <feComposite in2="off" operator="in" result="sh"/>
+      <feMerge><feMergeNode in="sh"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="lhBlush" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#lhShadow)">
+    <!-- ======= LEGS ======= -->
+    <!-- Legs slightly apart (joyful pose) -->
+    <rect x="76" y="228" width="14" height="36" rx="7" fill="#FDDCBD" transform="rotate(-3 83 246)"/>
+    <rect x="110" y="228" width="14" height="36" rx="7" fill="#FDDCBD" transform="rotate(3 117 246)"/>
+
+    <!-- Socks -->
+    <rect x="74" y="250" width="18" height="16" rx="5" fill="white" stroke="#E9D5FF" stroke-width="0.6" transform="rotate(-3 83 258)"/>
+    <rect x="108" y="250" width="18" height="16" rx="5" fill="white" stroke="#E9D5FF" stroke-width="0.6" transform="rotate(3 117 258)"/>
+    <rect x="74" y="250" width="18" height="3" rx="1.5" fill="#E9D5FF" transform="rotate(-3 83 251)"/>
+    <rect x="108" y="250" width="18" height="3" rx="1.5" fill="#E9D5FF" transform="rotate(3 117 251)"/>
+
+    <!-- Shoes -->
+    <ellipse cx="83" cy="270" rx="15" ry="7" fill="url(#lhShoe)" transform="rotate(-3 83 270)"/>
+    <ellipse cx="117" cy="270" rx="15" ry="7" fill="url(#lhShoe)" transform="rotate(3 117 270)"/>
+    <ellipse cx="81" cy="268" rx="7" ry="2.5" fill="#4B5563" opacity="0.5"/>
+    <ellipse cx="115" cy="268" rx="7" ry="2.5" fill="#4B5563" opacity="0.5"/>
+
+    <!-- ======= SKIRT ======= -->
+    <path d="M66 200 Q72 194 100 192 Q128 194 134 200 L142 242 Q127 250 100 250 Q73 250 58 242 Z" fill="url(#lhSkirt)"/>
+    <path d="M80 198 L74 244" fill="none" stroke="#7E22CE" stroke-width="0.7" opacity="0.35"/>
+    <path d="M92 195 L86 248" fill="none" stroke="#7E22CE" stroke-width="0.7" opacity="0.35"/>
+    <path d="M108 195 L114 248" fill="none" stroke="#7E22CE" stroke-width="0.7" opacity="0.35"/>
+    <path d="M120 198 L126 244" fill="none" stroke="#7E22CE" stroke-width="0.7" opacity="0.35"/>
+    <path d="M70 202 Q100 196 130 202 L132 210 Q100 204 68 210 Z" fill="white" opacity="0.1"/>
+
+    <!-- ======= SHIRT ======= -->
+    <path d="M70 155 Q74 147 100 144 Q126 147 130 155 L132 200 Q126 194 100 192 Q74 194 68 200 Z" fill="url(#lhShirt)" stroke="#E9D5FF" stroke-width="0.5"/>
+    <!-- Collar -->
+    <path d="M83 151 L100 168 L117 151" fill="none" stroke="#D8B4FE" stroke-width="1.4"/>
+    <path d="M83 151 L93 161 L100 147" fill="white" stroke="#D8B4FE" stroke-width="0.5"/>
+    <path d="M117 151 L107 161 L100 147" fill="white" stroke="#D8B4FE" stroke-width="0.5"/>
+    <!-- Bow -->
+    <path d="M94 154 Q97 149 100 154 Q103 149 106 154 Q103 157 100 154 Q97 157 94 154" fill="#F472B6"/>
+    <circle cx="100" cy="154" r="2" fill="#EC4899"/>
+    <!-- Buttons -->
+    <circle cx="100" cy="173" r="1" fill="#D8B4FE"/>
+    <circle cx="100" cy="183" r="1" fill="#D8B4FE"/>
+
+    <!-- ======= ARMS - Raised up in joy! ======= -->
+    <!-- Left arm raised -->
+    <path d="M70 158 Q56 148 46 132 Q42 125 46 124 Q50 125 54 132 Q60 144 68 152" fill="#FDDCBD" stroke="#F0C9A0" stroke-width="0.4"/>
+    <ellipse cx="44" cy="124" rx="6" ry="5.5" fill="#FFF0E0"/>
+    <!-- Left fingers (open hand, happy) -->
+    <path d="M40 120 L38 116" fill="none" stroke="#FFF0E0" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M42 119 L41 115" fill="none" stroke="#FFF0E0" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M44 119 L44 115" fill="none" stroke="#FFF0E0" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Left sleeve -->
+    <path d="M70 155 Q62 152 58 148 Q64 150 70 152" fill="url(#lhShirt)" stroke="#E9D5FF" stroke-width="0.4"/>
+
+    <!-- Right arm raised -->
+    <path d="M130 158 Q144 148 154 132 Q158 125 154 124 Q150 125 146 132 Q140 144 132 152" fill="#FDDCBD" stroke="#F0C9A0" stroke-width="0.4"/>
+    <ellipse cx="156" cy="124" rx="6" ry="5.5" fill="#FFF0E0"/>
+    <!-- Right fingers (open hand, happy) -->
+    <path d="M160 120 L162 116" fill="none" stroke="#FFF0E0" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M158 119 L159 115" fill="none" stroke="#FFF0E0" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M156 119 L156 115" fill="none" stroke="#FFF0E0" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Right sleeve -->
+    <path d="M130 155 Q138 152 142 148 Q136 150 130 152" fill="url(#lhShirt)" stroke="#E9D5FF" stroke-width="0.4"/>
+
+    <!-- ======= HEAD (slightly tilted for joy) ======= -->
+    <g transform="rotate(-3 100 80)">
+      <!-- Hair back -->
+      <ellipse cx="100" cy="75" rx="60" ry="58" fill="url(#lhGrad)"/>
+
+      <!-- Face -->
+      <ellipse cx="100" cy="85" rx="48" ry="46" fill="url(#lhSkin)"/>
+
+      <!-- Hair bangs -->
+      <path d="M52 72 Q56 38 78 28 Q92 24 100 26 Q108 24 122 28 Q144 38 148 72 Q146 58 138 50 Q128 42 120 48 Q112 38 100 36 Q88 38 80 48 Q72 42 62 50 Q54 58 52 72" fill="url(#lhGrad)"/>
+      <path d="M62 64 Q68 42 84 34 Q92 30 98 32 Q93 38 86 46 Q78 54 68 64" fill="url(#lhShine)" opacity="0.5"/>
+      <path d="M110 40 Q116 36 124 38 Q130 42 134 50 Q128 44 120 42 Q114 42 110 44" fill="url(#lhShine)" opacity="0.3"/>
+
+      <!-- Left pigtail -->
+      <path d="M54 58 Q32 64 26 88 Q22 108 27 128 Q30 140 38 144 Q46 146 48 134 Q50 118 47 98 Q45 78 54 58" fill="url(#lhGrad)"/>
+      <path d="M48 68 Q36 78 32 98 Q30 112 34 126" fill="none" stroke="#EDE0F7" stroke-width="2" opacity="0.35"/>
+      <ellipse cx="52" cy="60" rx="7" ry="5" fill="url(#lhBand)"/>
+      <ellipse cx="52" cy="60" rx="4.5" ry="3" fill="#F472B6" opacity="0.5"/>
+      <path d="M38 142 Q34 148 38 150 Q42 148 40 144" fill="url(#lhGrad)"/>
+
+      <!-- Right pigtail -->
+      <path d="M146 58 Q168 64 174 88 Q178 108 173 128 Q170 140 162 144 Q154 146 152 134 Q150 118 153 98 Q155 78 146 58" fill="url(#lhGrad)"/>
+      <path d="M152 68 Q164 78 168 98 Q170 112 166 126" fill="none" stroke="#EDE0F7" stroke-width="2" opacity="0.35"/>
+      <ellipse cx="148" cy="60" rx="7" ry="5" fill="url(#lhBand)"/>
+      <ellipse cx="148" cy="60" rx="4.5" ry="3" fill="#F472B6" opacity="0.5"/>
+      <path d="M162 142 Q166 148 162 150 Q158 148 160 144" fill="url(#lhGrad)"/>
+
+      <!-- Ears -->
+      <ellipse cx="54" cy="88" rx="5" ry="7" fill="#FDDCBD"/>
+      <ellipse cx="54" cy="88" rx="2.5" ry="4" fill="#F0C9A0" opacity="0.4"/>
+      <ellipse cx="146" cy="88" rx="5" ry="7" fill="#FDDCBD"/>
+      <ellipse cx="146" cy="88" rx="2.5" ry="4" fill="#F0C9A0" opacity="0.4"/>
+
+      <!-- ======= HAPPY FACE ======= -->
+
+      <!-- Eyebrows - raised happily -->
+      <path d="M72 64 Q80 58 90 62" fill="none" stroke="#7C3AED" stroke-width="1.6" stroke-linecap="round" opacity="0.6"/>
+      <path d="M128 64 Q120 58 110 62" fill="none" stroke="#7C3AED" stroke-width="1.6" stroke-linecap="round" opacity="0.6"/>
+
+      <!-- Happy eyes - closed/squinting with joy -->
+      <!-- Left happy eye (curved arc) -->
+      <path d="M70 82 Q76 74 82 74 Q88 74 94 82" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- Lower lash line for happy squint -->
+      <path d="M72 82 Q82 86 92 82" fill="none" stroke="#5B21B6" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+      <!-- Eyelashes on happy eyes -->
+      <path d="M70 82 Q67 78 65 75" fill="none" stroke="#5B21B6" stroke-width="1.3" stroke-linecap="round"/>
+      <path d="M94 82 Q96 79 97 76" fill="none" stroke="#5B21B6" stroke-width="1.3" stroke-linecap="round"/>
+
+      <!-- Right happy eye (curved arc) -->
+      <path d="M106 82 Q112 74 118 74 Q124 74 130 82" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M108 82 Q118 86 128 82" fill="none" stroke="#5B21B6" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+      <path d="M106 82 Q104 79 103 76" fill="none" stroke="#5B21B6" stroke-width="1.3" stroke-linecap="round"/>
+      <path d="M130 82 Q133 78 135 75" fill="none" stroke="#5B21B6" stroke-width="1.3" stroke-linecap="round"/>
+
+      <!-- Extra rosy blush for happiness -->
+      <ellipse cx="68" cy="93" rx="11" ry="6" fill="#FCA5A5" filter="url(#lhBlush)" opacity="0.55"/>
+      <ellipse cx="132" cy="93" rx="11" ry="6" fill="#FCA5A5" filter="url(#lhBlush)" opacity="0.55"/>
+
+      <!-- Nose -->
+      <ellipse cx="100" cy="93" rx="2" ry="1.5" fill="#F0C9A0" opacity="0.6"/>
+
+      <!-- Big happy smile with open mouth -->
+      <path d="M85 102 Q92 115 100 116 Q108 115 115 102" fill="#F87171" stroke="#D97070" stroke-width="1.2"/>
+      <!-- Tongue -->
+      <ellipse cx="100" cy="113" rx="6" ry="4" fill="#FCA5A5"/>
+      <!-- Teeth hint -->
+      <path d="M90 102 L110 102" fill="none" stroke="white" stroke-width="2.5"/>
+      <!-- Smile highlight -->
+      <path d="M90 106 Q100 108 110 106" fill="white" opacity="0.15"/>
+
+      <!-- Hair wisps -->
+      <path d="M88 40 Q86 50 89 57" fill="none" stroke="#C084FC" stroke-width="1.3" opacity="0.4" stroke-linecap="round"/>
+      <path d="M100 36 Q99 46 100 54" fill="none" stroke="#C084FC" stroke-width="1.3" opacity="0.4" stroke-linecap="round"/>
+      <path d="M112 40 Q114 50 111 57" fill="none" stroke="#C084FC" stroke-width="1.3" opacity="0.4" stroke-linecap="round"/>
+
+      <!-- Star accessory -->
+      <path d="M44 52 L46 48 L48 52 L52 50 L48 52 L46 56 L44 52 L40 50 Z" fill="#FDE68A" stroke="#F59E0B" stroke-width="0.4" opacity="0.7"/>
+    </g>
+
+    <!-- Joy sparkles around character -->
+    <g opacity="0.6">
+      <path d="M30 110 L32 106 L34 110 L38 108 L34 110 L32 114 L30 110 L26 108 Z" fill="#FDE68A"/>
+      <path d="M165 105 L167 101 L169 105 L173 103 L169 105 L167 109 L165 105 L161 103 Z" fill="#FDE68A"/>
+      <path d="M48 140 L49.5 137 L51 140 L54 138.5 L51 140 L49.5 143 L48 140 L45 138.5 Z" fill="#FBCFE8"/>
+      <path d="M152 140 L153.5 137 L155 140 L158 138.5 L155 140 L153.5 143 L152 140 L149 138.5 Z" fill="#FBCFE8"/>
+      <!-- Musical note -->
+      <g transform="translate(168,90) scale(0.6)">
+        <circle cx="0" cy="8" r="3" fill="#A78BFA"/>
+        <rect x="2" y="-8" width="1.5" height="16" fill="#A78BFA"/>
+        <path d="M3.5 -8 Q10 -12 3.5 -4" fill="none" stroke="#A78BFA" stroke-width="1.5"/>
+      </g>
+      <!-- Heart -->
+      <path d="M26 135 Q26 130 30 130 Q34 130 34 135 Q34 130 38 130 Q42 130 42 135 Q42 142 34 148 Q26 142 26 135 Z" fill="#F472B6" opacity="0.5" transform="scale(0.5) translate(48 230)"/>
+    </g>
+  </g>
 </svg>

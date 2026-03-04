@@ -1,10 +1,293 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2ecc71"/>
-      <stop offset="100%" stop-color="#27ae60"/>
+    <linearGradient id="saWall" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FEF9C3"/>
+      <stop offset="100%" stop-color="#FEF08A"/>
     </linearGradient>
+    <linearGradient id="saFloor" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D4A574"/>
+      <stop offset="100%" stop-color="#B8864E"/>
+    </linearGradient>
+    <linearGradient id="saBoard" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#166534"/>
+      <stop offset="60%" stop-color="#15803D"/>
+      <stop offset="100%" stop-color="#14532D"/>
+    </linearGradient>
+    <linearGradient id="saDesk" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D4A574"/>
+      <stop offset="100%" stop-color="#B8864E"/>
+    </linearGradient>
+    <linearGradient id="saSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7DD3FC"/>
+      <stop offset="100%" stop-color="#BAE6FD"/>
+    </linearGradient>
+    <linearGradient id="saShelf" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#92400E"/>
+      <stop offset="100%" stop-color="#78350F"/>
+    </linearGradient>
+    <filter id="saGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="saSoft" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1"/>
+    </filter>
   </defs>
-  <rect width="1920" height="1080" fill="url(#bg)"/>
-  <text x="960" y="540" text-anchor="middle" font-size="48" fill="white" opacity="0.3" font-family="sans-serif">sala_aula</text>
+
+  <!-- ======= WALL ======= -->
+  <rect width="960" height="380" fill="url(#saWall)"/>
+
+  <!-- Wall wainscoting (lower wall) -->
+  <rect y="280" width="960" height="100" fill="#FDE68A" opacity="0.5"/>
+  <rect y="278" width="960" height="4" rx="2" fill="#D4A574" opacity="0.4"/>
+
+  <!-- ======= FLOOR ======= -->
+  <rect y="380" width="960" height="160" fill="url(#saFloor)"/>
+  <!-- Floor boards -->
+  <line x1="0" y1="410" x2="960" y2="410" stroke="#C4956A" stroke-width="0.8" opacity="0.3"/>
+  <line x1="0" y1="440" x2="960" y2="440" stroke="#C4956A" stroke-width="0.8" opacity="0.3"/>
+  <line x1="0" y1="470" x2="960" y2="470" stroke="#C4956A" stroke-width="0.8" opacity="0.3"/>
+  <line x1="0" y1="500" x2="960" y2="500" stroke="#C4956A" stroke-width="0.8" opacity="0.3"/>
+  <!-- Vertical board lines -->
+  <line x1="120" y1="380" x2="120" y2="540" stroke="#C4956A" stroke-width="0.5" opacity="0.2"/>
+  <line x1="240" y1="380" x2="240" y2="540" stroke="#C4956A" stroke-width="0.5" opacity="0.2"/>
+  <line x1="360" y1="380" x2="360" y2="540" stroke="#C4956A" stroke-width="0.5" opacity="0.2"/>
+  <line x1="480" y1="380" x2="480" y2="540" stroke="#C4956A" stroke-width="0.5" opacity="0.2"/>
+  <line x1="600" y1="380" x2="600" y2="540" stroke="#C4956A" stroke-width="0.5" opacity="0.2"/>
+  <line x1="720" y1="380" x2="720" y2="540" stroke="#C4956A" stroke-width="0.5" opacity="0.2"/>
+  <line x1="840" y1="380" x2="840" y2="540" stroke="#C4956A" stroke-width="0.5" opacity="0.2"/>
+  <!-- Floor shine -->
+  <rect y="380" width="960" height="15" fill="white" opacity="0.06"/>
+
+  <!-- ======= WINDOW (right side) ======= -->
+  <g transform="translate(740, 50)">
+    <!-- Window frame -->
+    <rect x="-5" y="-5" width="190" height="230" rx="6" fill="#92400E"/>
+    <rect width="180" height="220" rx="4" fill="url(#saSky)"/>
+    <!-- Window panes -->
+    <line x1="90" y1="0" x2="90" y2="220" stroke="#92400E" stroke-width="4"/>
+    <line x1="0" y1="110" x2="180" y2="110" stroke="#92400E" stroke-width="4"/>
+    <!-- Clouds -->
+    <g opacity="0.85">
+      <ellipse cx="40" cy="50" rx="25" ry="14" fill="white"/>
+      <ellipse cx="60" cy="46" rx="20" ry="12" fill="white"/>
+      <ellipse cx="50" cy="44" rx="15" ry="10" fill="white"/>
+    </g>
+    <g opacity="0.7">
+      <ellipse cx="130" cy="75" rx="20" ry="11" fill="white"/>
+      <ellipse cx="145" cy="72" rx="15" ry="9" fill="white"/>
+    </g>
+    <!-- Sun peeking -->
+    <circle cx="160" cy="25" r="18" fill="#FDE68A" opacity="0.8"/>
+    <circle cx="160" cy="25" r="14" fill="#FBBF24" opacity="0.6"/>
+    <!-- Curtains -->
+    <path d="M-2 0 Q10 40 5 100 Q0 130 -2 220" fill="#F472B6" opacity="0.3" stroke="#EC4899" stroke-width="0.5"/>
+    <path d="M182 0 Q170 40 175 100 Q180 130 182 220" fill="#F472B6" opacity="0.3" stroke="#EC4899" stroke-width="0.5"/>
+    <!-- Window sill -->
+    <rect x="-10" y="218" width="200" height="8" rx="2" fill="#92400E"/>
+    <!-- Flower pot on sill -->
+    <rect x="65" y="205" width="24" height="16" rx="3" fill="#DC2626"/>
+    <ellipse cx="77" cy="205" rx="14" ry="3" fill="#22C55E"/>
+    <circle cx="73" cy="200" r="4" fill="#FDE68A"/>
+    <circle cx="81" cy="198" r="3.5" fill="#F472B6"/>
+    <circle cx="77" cy="196" r="3" fill="#FDE68A"/>
+    <!-- Stems -->
+    <line x1="73" y1="204" x2="73" y2="196" stroke="#15803D" stroke-width="1"/>
+    <line x1="81" y1="204" x2="81" y2="194" stroke="#15803D" stroke-width="1"/>
+    <line x1="77" y1="204" x2="77" y2="192" stroke="#15803D" stroke-width="1"/>
+  </g>
+
+  <!-- ======= CHALKBOARD ======= -->
+  <g transform="translate(250, 40)">
+    <!-- Board frame -->
+    <rect x="-8" y="-8" width="416" height="216" rx="4" fill="#78350F"/>
+    <rect width="400" height="200" rx="2" fill="url(#saBoard)"/>
+    <!-- Chalk tray -->
+    <rect x="-8" y="200" width="416" height="12" rx="3" fill="#78350F"/>
+    <!-- Chalk pieces -->
+    <rect x="10" y="202" width="20" height="6" rx="2" fill="white" opacity="0.9"/>
+    <rect x="40" y="203" width="16" height="5" rx="2" fill="#FDE68A" opacity="0.9"/>
+    <rect x="65" y="202" width="18" height="6" rx="2" fill="#F472B6" opacity="0.9"/>
+    <!-- Eraser -->
+    <rect x="350" y="201" width="30" height="8" rx="2" fill="#6B7280"/>
+    <rect x="350" y="201" width="30" height="4" rx="1" fill="#9CA3AF"/>
+
+    <!-- Chalk doodles -->
+    <!-- Math: 2+2=4 -->
+    <text x="30" y="50" font-family="sans-serif" font-size="24" fill="white" opacity="0.85">2 + 2 = 4</text>
+    <!-- Star doodle -->
+    <path d="M300 40 L308 60 L330 60 L312 72 L320 92 L300 78 L280 92 L288 72 L270 60 L292 60 Z" fill="none" stroke="#FDE68A" stroke-width="1.5" opacity="0.7"/>
+    <!-- Smiley face -->
+    <circle cx="350" cy="50" r="18" fill="none" stroke="white" stroke-width="1.5" opacity="0.6"/>
+    <circle cx="343" cy="44" r="2" fill="white" opacity="0.6"/>
+    <circle cx="357" cy="44" r="2" fill="white" opacity="0.6"/>
+    <path d="M342 56 Q350 64 358 56" fill="none" stroke="white" stroke-width="1.5" opacity="0.6"/>
+    <!-- Sun doodle -->
+    <circle cx="60" cy="120" r="12" fill="none" stroke="#FDE68A" stroke-width="1.5" opacity="0.6"/>
+    <line x1="60" y1="104" x2="60" y2="98" stroke="#FDE68A" stroke-width="1.5" opacity="0.5"/>
+    <line x1="60" y1="136" x2="60" y2="142" stroke="#FDE68A" stroke-width="1.5" opacity="0.5"/>
+    <line x1="44" y1="120" x2="38" y2="120" stroke="#FDE68A" stroke-width="1.5" opacity="0.5"/>
+    <line x1="76" y1="120" x2="82" y2="120" stroke="#FDE68A" stroke-width="1.5" opacity="0.5"/>
+    <!-- "ABC" -->
+    <text x="160" y="100" font-family="sans-serif" font-size="32" fill="white" opacity="0.7">ABC</text>
+    <!-- House doodle -->
+    <path d="M300 160 L300 130 L330 110 L360 130 L360 160 Z" fill="none" stroke="#F472B6" stroke-width="1.5" opacity="0.5"/>
+    <rect x="320" y="140" width="15" height="20" fill="none" stroke="#F472B6" stroke-width="1" opacity="0.5"/>
+    <!-- Flower -->
+    <path d="M180 170 L180 145" stroke="#86EFAC" stroke-width="1.5" opacity="0.6"/>
+    <circle cx="180" cy="140" r="6" fill="none" stroke="#F472B6" stroke-width="1.5" opacity="0.5"/>
+    <circle cx="174" cy="140" r="5" fill="none" stroke="#FCA5A5" stroke-width="1" opacity="0.4"/>
+    <circle cx="186" cy="140" r="5" fill="none" stroke="#FCA5A5" stroke-width="1" opacity="0.4"/>
+    <circle cx="180" cy="134" r="5" fill="none" stroke="#FCA5A5" stroke-width="1" opacity="0.4"/>
+  </g>
+
+  <!-- ======= ALPHABET LETTERS ON WALL ======= -->
+  <g transform="translate(30, 15)">
+    <text x="0" y="25" font-family="sans-serif" font-size="22" font-weight="bold" fill="#EF4444">A</text>
+    <text x="25" y="25" font-family="sans-serif" font-size="22" font-weight="bold" fill="#F97316">B</text>
+    <text x="50" y="25" font-family="sans-serif" font-size="22" font-weight="bold" fill="#EAB308">C</text>
+    <text x="75" y="25" font-family="sans-serif" font-size="22" font-weight="bold" fill="#22C55E">D</text>
+    <text x="100" y="25" font-family="sans-serif" font-size="22" font-weight="bold" fill="#3B82F6">E</text>
+    <text x="125" y="25" font-family="sans-serif" font-size="22" font-weight="bold" fill="#8B5CF6">F</text>
+    <text x="150" y="25" font-family="sans-serif" font-size="22" font-weight="bold" fill="#EC4899">G</text>
+    <text x="175" y="25" font-family="sans-serif" font-size="22" font-weight="bold" fill="#EF4444">H</text>
+  </g>
+
+  <!-- Letters continued above board -->
+  <g transform="translate(680, 15)">
+    <text x="0" y="25" font-family="sans-serif" font-size="22" font-weight="bold" fill="#F97316">I</text>
+    <text x="20" y="25" font-family="sans-serif" font-size="22" font-weight="bold" fill="#EAB308">J</text>
+    <text x="42" y="25" font-family="sans-serif" font-size="22" font-weight="bold" fill="#22C55E">K</text>
+  </g>
+
+  <!-- ======= CLOCK ON WALL ======= -->
+  <g transform="translate(180, 60)">
+    <circle r="22" fill="white" stroke="#78350F" stroke-width="3"/>
+    <circle r="1.5" fill="#78350F"/>
+    <!-- Hour marks -->
+    <line x1="0" y1="-18" x2="0" y2="-16" stroke="#78350F" stroke-width="1.5"/>
+    <line x1="18" y1="0" x2="16" y2="0" stroke="#78350F" stroke-width="1.5"/>
+    <line x1="0" y1="18" x2="0" y2="16" stroke="#78350F" stroke-width="1.5"/>
+    <line x1="-18" y1="0" x2="-16" y2="0" stroke="#78350F" stroke-width="1.5"/>
+    <!-- Hour hand -->
+    <line x1="0" y1="0" x2="6" y2="-10" stroke="#78350F" stroke-width="2" stroke-linecap="round"/>
+    <!-- Minute hand -->
+    <line x1="0" y1="0" x2="-2" y2="-14" stroke="#78350F" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- ======= BOOKSHELF (left side) ======= -->
+  <g transform="translate(15, 100)">
+    <!-- Shelf frame -->
+    <rect width="90" height="200" rx="3" fill="url(#saShelf)"/>
+    <!-- Shelves -->
+    <rect x="3" y="3" width="84" height="62" fill="#5C2D0E"/>
+    <rect x="3" y="68" width="84" height="62" fill="#5C2D0E"/>
+    <rect x="3" y="133" width="84" height="62" fill="#5C2D0E"/>
+
+    <!-- Books row 1 -->
+    <rect x="8" y="20" width="10" height="42" rx="1" fill="#EF4444"/>
+    <rect x="20" y="15" width="8" height="47" rx="1" fill="#3B82F6"/>
+    <rect x="30" y="18" width="12" height="44" rx="1" fill="#22C55E"/>
+    <rect x="44" y="22" width="9" height="40" rx="1" fill="#F97316"/>
+    <rect x="55" y="16" width="11" height="46" rx="1" fill="#8B5CF6"/>
+    <rect x="68" y="20" width="8" height="42" rx="1" fill="#EC4899"/>
+    <rect x="78" y="24" width="6" height="38" rx="1" fill="#EAB308"/>
+
+    <!-- Books row 2 -->
+    <rect x="8" y="85" width="12" height="42" rx="1" fill="#F472B6"/>
+    <rect x="22" y="82" width="9" height="45" rx="1" fill="#14B8A6"/>
+    <rect x="33" y="88" width="10" height="39" rx="1" fill="#F59E0B"/>
+    <rect x="45" y="84" width="11" height="43" rx="1" fill="#6366F1"/>
+    <rect x="58" y="86" width="8" height="41" rx="1" fill="#EF4444"/>
+    <rect x="68" y="82" width="10" height="45" rx="1" fill="#10B981"/>
+
+    <!-- Books row 3 -->
+    <rect x="8" y="150" width="11" height="42" rx="1" fill="#8B5CF6"/>
+    <rect x="21" y="148" width="9" height="44" rx="1" fill="#F97316"/>
+    <rect x="32" y="152" width="12" height="40" rx="1" fill="#3B82F6"/>
+    <rect x="46" y="146" width="8" height="46" rx="1" fill="#EC4899"/>
+    <rect x="56" y="150" width="10" height="42" rx="1" fill="#22C55E"/>
+    <!-- Globe on shelf -->
+    <circle cx="76" cy="170" r="10" fill="#60A5FA" stroke="#92400E" stroke-width="1"/>
+    <ellipse cx="76" cy="170" rx="10" ry="3" fill="none" stroke="#22C55E" stroke-width="1" opacity="0.5"/>
+    <path d="M76 160 L76 180" fill="none" stroke="#22C55E" stroke-width="0.8" opacity="0.5"/>
+    <ellipse cx="76" cy="168" rx="5" ry="8" fill="none" stroke="#22C55E" stroke-width="0.8" opacity="0.4" transform="rotate(20 76 170)"/>
+  </g>
+
+  <!-- ======= DESKS ======= -->
+  <!-- Desk 1 (front left) -->
+  <g transform="translate(180, 380)">
+    <rect x="0" y="0" width="140" height="55" rx="4" fill="url(#saDesk)" stroke="#92400E" stroke-width="1"/>
+    <rect x="0" y="0" width="140" height="8" rx="4" fill="white" opacity="0.08"/>
+    <!-- Desk legs -->
+    <rect x="8" y="50" width="8" height="50" rx="2" fill="#92400E"/>
+    <rect x="124" y="50" width="8" height="50" rx="2" fill="#92400E"/>
+    <!-- Items on desk -->
+    <rect x="15" y="-12" width="30" height="14" rx="2" fill="#60A5FA" transform="rotate(-5 30 -5)"/>
+    <rect x="12" y="-10" width="25" height="10" rx="1" fill="white" opacity="0.3"/>
+    <!-- Pencil -->
+    <rect x="80" y="-4" width="50" height="5" rx="1" fill="#FDE68A" transform="rotate(-8 105 -1)"/>
+    <path d="M80 -4 L75 -1.5 L80 1" fill="#F59E0B" transform="rotate(-8 80 -1)"/>
+  </g>
+
+  <!-- Desk 2 (front right) -->
+  <g transform="translate(540, 385)">
+    <rect x="0" y="0" width="140" height="55" rx="4" fill="url(#saDesk)" stroke="#92400E" stroke-width="1"/>
+    <rect x="0" y="0" width="140" height="8" rx="4" fill="white" opacity="0.08"/>
+    <rect x="8" y="50" width="8" height="50" rx="2" fill="#92400E"/>
+    <rect x="124" y="50" width="8" height="50" rx="2" fill="#92400E"/>
+    <!-- Book on desk -->
+    <rect x="40" y="-10" width="50" height="12" rx="2" fill="#EF4444"/>
+    <rect x="42" y="-8" width="46" height="8" rx="1" fill="white" opacity="0.15"/>
+    <!-- Apple -->
+    <circle cx="110" cy="-6" r="8" fill="#EF4444"/>
+    <ellipse cx="112" cy="-4" rx="3" ry="2" fill="#FCA5A5" opacity="0.4"/>
+    <path d="M110 -14 Q112 -18 114 -14" fill="none" stroke="#15803D" stroke-width="1.5"/>
+    <ellipse cx="113" cy="-16" rx="3" ry="2" fill="#22C55E" opacity="0.6"/>
+  </g>
+
+  <!-- Desk 3 (back center - smaller/perspective) -->
+  <g transform="translate(380, 340)">
+    <rect x="0" y="0" width="120" height="45" rx="3" fill="url(#saDesk)" stroke="#92400E" stroke-width="0.8" opacity="0.8"/>
+    <rect x="0" y="0" width="120" height="6" rx="3" fill="white" opacity="0.06"/>
+    <rect x="6" y="42" width="6" height="35" rx="2" fill="#92400E" opacity="0.8"/>
+    <rect x="108" y="42" width="6" height="35" rx="2" fill="#92400E" opacity="0.8"/>
+  </g>
+
+  <!-- ======= CHAIR ======= -->
+  <g transform="translate(210, 410)">
+    <rect x="0" y="0" width="50" height="5" rx="2" fill="#92400E"/>
+    <rect x="5" y="5" width="5" height="30" rx="1" fill="#78350F"/>
+    <rect x="40" y="5" width="5" height="30" rx="1" fill="#78350F"/>
+    <rect x="0" y="-40" width="50" height="5" rx="2" fill="#92400E"/>
+    <rect x="0" y="-35" width="5" height="35" rx="1" fill="#78350F"/>
+    <rect x="45" y="-35" width="5" height="35" rx="1" fill="#78350F"/>
+  </g>
+
+  <!-- ======= DECORATIONS ======= -->
+  <!-- Paper airplane -->
+  <g transform="translate(700, 320) rotate(-15)">
+    <path d="M0 0 L30 8 L10 8 L5 16 Z" fill="white" stroke="#D1D5DB" stroke-width="0.5" opacity="0.7"/>
+    <path d="M0 0 L30 8 L10 8 Z" fill="#F3F4F6" opacity="0.8"/>
+  </g>
+
+  <!-- Bulletin board -->
+  <g transform="translate(120, 60)">
+    <rect width="80" height="60" rx="3" fill="#D4A574" stroke="#92400E" stroke-width="2"/>
+    <!-- Pinned papers -->
+    <rect x="8" y="8" width="25" height="20" rx="1" fill="white" transform="rotate(-5 20 18)"/>
+    <circle cx="20" cy="10" r="2" fill="#EF4444"/>
+    <rect x="40" y="12" width="30" height="22" rx="1" fill="#FEF08A" transform="rotate(3 55 23)"/>
+    <circle cx="55" cy="14" r="2" fill="#3B82F6"/>
+    <rect x="15" y="35" width="22" height="18" rx="1" fill="#BBF7D0" transform="rotate(2 26 44)"/>
+    <circle cx="26" cy="37" r="2" fill="#22C55E"/>
+    <!-- Drawing on paper -->
+    <path d="M44 22 Q50 18 56 22 Q53 28 50 22 Q47 28 44 22" fill="#F472B6" opacity="0.5"/>
+  </g>
+
+  <!-- ======= WARM LIGHT OVERLAY ======= -->
+  <rect width="960" height="540" fill="#FEF08A" opacity="0.04"/>
+
+  <!-- Sunlight beam from window -->
+  <path d="M740 150 L600 380 L760 380 L920 150 Z" fill="#FDE68A" opacity="0.05"/>
 </svg>
