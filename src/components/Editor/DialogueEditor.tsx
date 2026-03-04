@@ -39,8 +39,8 @@ export default function DialogueEditor({
   };
 
   return (
-    <div className="border-t border-gray-200 bg-white p-3 space-y-2 max-h-64 overflow-y-auto">
-      <h3 className="text-sm font-semibold text-gray-700">Dialogos</h3>
+    <div className="border-t border-gray-200 bg-white p-4 space-y-2 min-h-[140px] max-h-[40vh] overflow-y-auto">
+      <h3 className="text-sm font-semibold text-gray-700">Dialogos da Cena</h3>
 
       {/* Narrator */}
       <div className="flex items-center gap-2">

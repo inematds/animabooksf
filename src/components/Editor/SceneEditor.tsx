@@ -18,7 +18,7 @@ interface SceneEditorProps {
 function createEmptyScene(id: number): Scene {
   return {
     id,
-    background: 'default_bg.png',
+    background: 'default_bg.svg',
     sprites: [],
     dialogues: [],
   };
