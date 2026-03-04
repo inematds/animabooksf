@@ -41,8 +41,12 @@ export default function SceneEditor({ initialStory, onSave, onPreview }: SceneEd
 
   // Auto-save every 30s (uses ref to avoid interval recreation)
   useEffect(() => {
-    const interval = setInterval(() => {
-      onSave(storyRef.current);
+    const interval = setInterval(async () => {
+      try {
+        await onSave(storyRef.current);
+      } catch {
+        // auto-save silently fails - user can save manually
+      }
     }, 30000);
     return () => clearInterval(interval);
   }, [onSave]);
@@ -225,7 +229,7 @@ export default function SceneEditor({ initialStory, onSave, onPreview }: SceneEd
           Ver Historia
         </button>
         {saveMsg && (
-          <span className="text-xs text-green-600 animate-pulse">{saveMsg}</span>
+          <span className={`text-xs animate-pulse ${saveMsg === 'Salvo!' ? 'text-green-600' : 'text-red-500'}`}>{saveMsg}</span>
         )}
         <button
           onClick={async () => {
@@ -235,9 +239,11 @@ export default function SceneEditor({ initialStory, onSave, onPreview }: SceneEd
               await onSave(story);
               setSaveMsg('Salvo!');
               setTimeout(() => setSaveMsg(''), 2000);
-            } catch {
-              setSaveMsg('Erro ao salvar');
-              setTimeout(() => setSaveMsg(''), 3000);
+            } catch (err) {
+              const msg = err instanceof Error ? err.message : 'Erro ao salvar';
+              setSaveMsg(msg);
+              console.error('Save failed:', err);
+              setTimeout(() => setSaveMsg(''), 5000);
             } finally {
               setSaving(false);
             }
