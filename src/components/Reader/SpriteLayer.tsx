@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SpriteState } from '@/lib/types';
@@ -9,6 +10,9 @@ interface SpriteLayerProps {
 }
 
 export default function SpriteLayer({ sprites }: SpriteLayerProps) {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   return (
     <AnimatePresence mode="popLayout">
       {sprites.map((sprite, idx) => (
@@ -22,7 +26,7 @@ export default function SpriteLayer({ sprites }: SpriteLayerProps) {
             transform: 'translateX(-50%)',
             zIndex: 10 + sprite.zIndex,
           }}
-          initial={{ opacity: 0, y: 60, scale: 0.7 }}
+          initial={mounted ? { opacity: 0, y: 60, scale: 0.7 } : false}
           animate={{
             opacity: 1,
             y: 0,
@@ -34,11 +38,10 @@ export default function SpriteLayer({ sprites }: SpriteLayerProps) {
             stiffness: 160,
             damping: 16,
             mass: 0.8,
-            delay: idx * 0.08,
+            delay: mounted ? idx * 0.08 : 0,
           }}
-          className="h-[40%] w-auto max-w-[30%] pointer-events-none select-none"
+          className="pointer-events-none select-none"
         >
-          {/* Idle floating animation wrapper */}
           <motion.div
             animate={{ y: [0, -4, 0] }}
             transition={{
@@ -46,21 +49,22 @@ export default function SpriteLayer({ sprites }: SpriteLayerProps) {
               duration: 2.8 + idx * 0.4,
               ease: 'easeInOut',
             }}
-            className="w-full h-full relative"
+            className="relative"
           >
-            {/* The sprite image */}
             <Image
               src={`/sprites/${sprite.filename}`}
               alt={sprite.id}
-              fill
+              width={200}
+              height={300}
               className="object-contain"
               draggable={false}
               style={{
                 filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.25))',
+                height: 'auto',
+                maxHeight: '35vh',
+                width: 'auto',
               }}
             />
-
-            {/* Ground shadow beneath the sprite */}
             <div
               className="absolute -bottom-1 left-1/2 -translate-x-1/2 rounded-full"
               style={{

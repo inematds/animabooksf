@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
 import { Story } from '@/lib/types';
@@ -14,6 +14,8 @@ interface SceneViewProps {
 export default function SceneView({ story }: SceneViewProps) {
   const [sceneIndex, setSceneIndex] = useState(0);
   const [showTitle, setShowTitle] = useState(true);
+  const hasMounted = useRef(false);
+  useEffect(() => { hasMounted.current = true; }, []);
   const scene = story.scenes[sceneIndex];
   const totalScenes = story.scenes.length;
 
@@ -92,7 +94,7 @@ export default function SceneView({ story }: SceneViewProps) {
         <AnimatePresence mode="wait">
           <motion.div
             key={scene.background}
-            initial={{ opacity: 0, scale: 1.06 }}
+            initial={hasMounted.current ? { opacity: 0, scale: 1.06 } : false}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.98 }}
             transition={{ duration: 0.6, ease: 'easeInOut' }}

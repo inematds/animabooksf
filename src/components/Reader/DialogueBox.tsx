@@ -25,6 +25,9 @@ function getCharacterPalette(name: string) {
 }
 
 export default function DialogueBox({ dialogues, narrator, onComplete }: DialogueBoxProps) {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   // Build ordered list: narrator first (if exists), then dialogues
   const items = useMemo(() => {
     const list: Array<{ type: 'narrator'; text: string } | { type: 'dialogue'; dialogue: Dialogue }> = [];
@@ -99,7 +102,7 @@ export default function DialogueBox({ dialogues, narrator, onComplete }: Dialogu
     >
       <motion.div
         key={`item-${itemIndex}`}
-        initial={{ opacity: 0, y: 30 }}
+        initial={mounted ? { opacity: 0, y: 30 } : false}
         animate={{ opacity: 1, y: 0 }}
         transition={{ type: 'spring', stiffness: 220, damping: 22 }}
         className="mx-3 mb-3 sm:mx-6 sm:mb-5"
