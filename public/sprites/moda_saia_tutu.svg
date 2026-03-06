@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="moda_saia_tutu_grad1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FBCFE8"/>
+      <stop offset="100%" stop-color="#F472B6"/>
+    </linearGradient>
+    <linearGradient id="moda_saia_tutu_grad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F9A8D4"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+    <filter id="moda_saia_tutu_shadow">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <g filter="url(#moda_saia_tutu_shadow)">
+    <!-- Waistband -->
+    <ellipse cx="60" cy="25" rx="28" ry="8" fill="url(#moda_saia_tutu_grad2)" stroke="#DB2777" stroke-width="1.5"/>
+    <!-- Tutu layers - back (lightest, widest) -->
+    <path d="M18 30 Q10 60 8 75 Q15 82 30 85 Q45 88 60 90 Q75 88 90 85 Q105 82 112 75 Q110 60 102 30 Q82 35 60 35 Q38 35 18 30Z" fill="#FBCFE8" opacity="0.5"/>
+    <!-- Tutu layer 2 -->
+    <path d="M22 32 Q14 58 14 72 Q25 80 42 84 Q52 86 60 87 Q68 86 78 84 Q95 80 106 72 Q106 58 98 32 Q80 37 60 37 Q40 37 22 32Z" fill="url(#moda_saia_tutu_grad1)" opacity="0.6"/>
+    <!-- Tutu layer 3 -->
+    <path d="M26 33 Q20 55 20 68 Q32 76 48 80 Q55 82 60 83 Q65 82 72 80 Q88 76 100 68 Q100 55 94 33 Q78 38 60 38 Q42 38 26 33Z" fill="url(#moda_saia_tutu_grad1)" opacity="0.7"/>
+    <!-- Tutu front layer -->
+    <path d="M30 34 Q24 52 26 65 Q38 73 52 77 Q57 78 60 79 Q63 78 68 77 Q82 73 94 65 Q96 52 90 34 Q76 39 60 39 Q44 39 30 34Z" fill="url(#moda_saia_tutu_grad2)" opacity="0.8"/>
+    <!-- Ruffled edge details -->
+    <path d="M8 75 Q15 78 22 74 Q28 78 35 74 Q42 78 48 74 Q54 78 60 74 Q66 78 72 74 Q78 78 85 74 Q92 78 98 74 Q105 78 112 75" fill="none" stroke="#F9A8D4" stroke-width="1.5" opacity="0.7"/>
+    <path d="M14 72 Q20 76 28 72 Q34 76 42 72 Q48 76 55 72 Q60 76 65 72 Q72 76 78 72 Q84 76 92 72 Q98 76 106 72" fill="none" stroke="#F472B6" stroke-width="1.5" opacity="0.6"/>
+    <!-- Waistband bow -->
+    <path d="M55 22 Q45 16 42 22 Q45 28 55 22Z" fill="#EC4899" stroke="#DB2777" stroke-width="0.8"/>
+    <path d="M65 22 Q75 16 78 22 Q75 28 65 22Z" fill="#EC4899" stroke="#DB2777" stroke-width="0.8"/>
+    <circle cx="60" cy="22" r="3" fill="#DB2777"/>
+    <circle cx="59" cy="21" r="1" fill="white" opacity="0.5"/>
+    <!-- Sparkles -->
+    <circle cx="40" cy="50" r="1.5" fill="white" opacity="0.6"/>
+    <circle cx="75" cy="55" r="1.2" fill="white" opacity="0.5"/>
+    <circle cx="55" cy="65" r="1" fill="white" opacity="0.4"/>
+    <circle cx="85" cy="48" r="1" fill="white" opacity="0.5"/>
+  </g>
+</svg>

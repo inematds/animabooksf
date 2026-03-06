@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <radialGradient id="maca_body" cx="0.35" cy="0.3" r="0.7">
+      <stop offset="0%" stop-color="#FF4444"/>
+      <stop offset="60%" stop-color="#E53935"/>
+      <stop offset="100%" stop-color="#B71C1C"/>
+    </radialGradient>
+    <radialGradient id="maca_highlight" cx="0.3" cy="0.2" r="0.4">
+      <stop offset="0%" stop-color="#FF8A80" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#FF8A80" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="maca_stem" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6D4C41"/>
+      <stop offset="100%" stop-color="#4E342E"/>
+    </linearGradient>
+    <linearGradient id="maca_leaf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#66BB6A"/>
+      <stop offset="100%" stop-color="#2E7D32"/>
+    </linearGradient>
+    <filter id="maca_shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+  </defs>
+  <!-- Apple body -->
+  <ellipse cx="45" cy="68" rx="28" ry="32" fill="url(#maca_body)" filter="url(#maca_shadow)"/>
+  <ellipse cx="75" cy="68" rx="28" ry="32" fill="url(#maca_body)"/>
+  <!-- Overlap center -->
+  <ellipse cx="60" cy="68" rx="18" ry="32" fill="url(#maca_body)"/>
+  <!-- Top indent -->
+  <ellipse cx="60" cy="38" rx="8" ry="4" fill="#B71C1C"/>
+  <!-- Highlight -->
+  <ellipse cx="42" cy="55" rx="12" ry="16" fill="url(#maca_highlight)"/>
+  <!-- Stem -->
+  <rect x="57" y="24" width="5" height="16" rx="2" fill="url(#maca_stem)"/>
+  <!-- Leaf -->
+  <ellipse cx="72" cy="30" rx="12" ry="6" fill="url(#maca_leaf)" transform="rotate(-20,72,30)"/>
+  <line x1="65" y1="32" x2="78" y2="28" stroke="#2E7D32" stroke-width="0.8" opacity="0.5"/>
+  <!-- Cute face -->
+  <circle cx="48" cy="65" r="3" fill="#7F1010"/>
+  <circle cx="72" cy="65" r="3" fill="#7F1010"/>
+  <circle cx="49" cy="63.5" r="1.2" fill="white"/>
+  <circle cx="73" cy="63.5" r="1.2" fill="white"/>
+  <path d="M52,75 Q60,80 68,75" fill="none" stroke="#7F1010" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Cheeks -->
+  <circle cx="42" cy="72" r="5" fill="#FF8A80" opacity="0.4"/>
+  <circle cx="78" cy="72" r="5" fill="#FF8A80" opacity="0.4"/>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="moda_bolsa_grad1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F9A8D4"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+    <linearGradient id="moda_bolsa_grad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FBCFE8"/>
+      <stop offset="100%" stop-color="#F472B6"/>
+    </linearGradient>
+    <filter id="moda_bolsa_shadow">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <g filter="url(#moda_bolsa_shadow)">
+    <!-- Handle -->
+    <path d="M38 38 Q38 14 60 14 Q82 14 82 38" fill="none" stroke="#DB2777" stroke-width="5" stroke-linecap="round"/>
+    <path d="M38 38 Q38 16 60 16 Q82 16 82 38" fill="none" stroke="#F9A8D4" stroke-width="2" opacity="0.5"/>
+    <!-- Bag body -->
+    <rect x="22" y="38" width="76" height="58" rx="10" fill="url(#moda_bolsa_grad1)" stroke="#DB2777" stroke-width="2"/>
+    <!-- Flap -->
+    <path d="M22 38 L22 55 Q60 70 98 55 L98 38Z" fill="url(#moda_bolsa_grad2)" stroke="#DB2777" stroke-width="1.5"/>
+    <!-- Clasp -->
+    <circle cx="60" cy="60" r="7" fill="#FBBF24" stroke="#D97706" stroke-width="1.5"/>
+    <circle cx="60" cy="60" r="4" fill="#FDE047"/>
+    <circle cx="58" cy="58" r="1.5" fill="white" opacity="0.6"/>
+    <!-- Stitching details -->
+    <path d="M28 80 L92 80" stroke="#DB2777" stroke-width="1" stroke-dasharray="3 3" opacity="0.4"/>
+    <!-- Shine -->
+    <ellipse cx="40" cy="50" rx="8" ry="4" fill="white" opacity="0.2" transform="rotate(-10 40 50)"/>
+  </g>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <radialGradient id="sol_face" cx="0.4" cy="0.4" r="0.6">
+      <stop offset="0%" stop-color="#FFE44D"/>
+      <stop offset="100%" stop-color="#FFA726"/>
+    </radialGradient>
+    <radialGradient id="sol_glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#FFEB3B" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#FFEB3B" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sol_ray" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFD54F"/>
+      <stop offset="100%" stop-color="#FFA726"/>
+    </linearGradient>
+    <radialGradient id="sol_cheek" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#FF8A65" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FF8A65" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="sol_shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#00000020"/>
+    </filter>
+  </defs>
+  <!-- Outer glow -->
+  <circle cx="60" cy="60" r="55" fill="url(#sol_glow)"/>
+  <!-- Rays -->
+  <polygon points="60,5 55,22 65,22" fill="url(#sol_ray)" filter="url(#sol_shadow)"/>
+  <polygon points="60,115 55,98 65,98" fill="url(#sol_ray)"/>
+  <polygon points="5,60 22,55 22,65" fill="url(#sol_ray)"/>
+  <polygon points="115,60 98,55 98,65" fill="url(#sol_ray)"/>
+  <!-- Diagonal rays -->
+  <polygon points="21,21 30,34 38,28" fill="url(#sol_ray)"/>
+  <polygon points="99,21 90,34 82,28" fill="url(#sol_ray)"/>
+  <polygon points="21,99 30,86 38,92" fill="url(#sol_ray)"/>
+  <polygon points="99,99 90,86 82,92" fill="url(#sol_ray)"/>
+  <!-- Between rays -->
+  <polygon points="38,8 40,24 48,18" fill="url(#sol_ray)" opacity="0.7"/>
+  <polygon points="82,8 80,24 72,18" fill="url(#sol_ray)" opacity="0.7"/>
+  <polygon points="8,38 24,40 18,48" fill="url(#sol_ray)" opacity="0.7"/>
+  <polygon points="112,38 96,40 102,48" fill="url(#sol_ray)" opacity="0.7"/>
+  <!-- Main circle -->
+  <circle cx="60" cy="60" r="30" fill="url(#sol_face)" filter="url(#sol_shadow)"/>
+  <!-- Eyes -->
+  <circle cx="50" cy="55" r="4" fill="#5C3D00"/>
+  <circle cx="70" cy="55" r="4" fill="#5C3D00"/>
+  <circle cx="51.5" cy="53.5" r="1.5" fill="white"/>
+  <circle cx="71.5" cy="53.5" r="1.5" fill="white"/>
+  <!-- Happy mouth -->
+  <path d="M48,67 Q60,78 72,67" fill="none" stroke="#E65100" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Cheeks -->
+  <circle cx="42" cy="66" r="6" fill="url(#sol_cheek)"/>
+  <circle cx="78" cy="66" r="6" fill="url(#sol_cheek)"/>
+</svg>

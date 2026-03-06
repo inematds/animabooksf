@@ -1,0 +1,248 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1344 768">
+  <defs>
+    <linearGradient id="fazenda-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#42a5f5"/>
+      <stop offset="100%" stop-color="#bbdefb"/>
+    </linearGradient>
+    <radialGradient id="fazenda-sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#fff9c4"/>
+      <stop offset="50%" stop-color="#ffee58"/>
+      <stop offset="100%" stop-color="rgba(255,238,88,0)"/>
+    </radialGradient>
+    <linearGradient id="fazenda-hills-far" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#81c784"/>
+      <stop offset="100%" stop-color="#66bb6a"/>
+    </linearGradient>
+    <linearGradient id="fazenda-hills-mid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#66bb6a"/>
+      <stop offset="100%" stop-color="#4caf50"/>
+    </linearGradient>
+    <linearGradient id="fazenda-ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#388e3c"/>
+    </linearGradient>
+    <linearGradient id="fazenda-barn-wall" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d32f2f"/>
+      <stop offset="100%" stop-color="#b71c1c"/>
+    </linearGradient>
+    <linearGradient id="fazenda-barn-roof" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5d4037"/>
+      <stop offset="100%" stop-color="#4e342e"/>
+    </linearGradient>
+    <linearGradient id="fazenda-fence" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d7ccc8"/>
+      <stop offset="100%" stop-color="#bcaaa4"/>
+    </linearGradient>
+    <linearGradient id="fazenda-silo" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#bdbdbd"/>
+      <stop offset="40%" stop-color="#e0e0e0"/>
+      <stop offset="100%" stop-color="#9e9e9e"/>
+    </linearGradient>
+    <linearGradient id="fazenda-dirt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a1887f"/>
+      <stop offset="100%" stop-color="#8d6e63"/>
+    </linearGradient>
+    <linearGradient id="fazenda-hay" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff176"/>
+      <stop offset="100%" stop-color="#f9a825"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1344" height="768" fill="url(#fazenda-sky)"/>
+
+  <!-- Sun -->
+  <circle cx="1100" cy="100" r="70" fill="url(#fazenda-sun)"/>
+  <circle cx="1100" cy="100" r="40" fill="#fff9c4"/>
+
+  <!-- Clouds -->
+  <g fill="white" opacity="0.85">
+    <ellipse cx="250" cy="80" rx="90" ry="35"/>
+    <ellipse cx="310" cy="70" rx="65" ry="28"/>
+    <ellipse cx="200" cy="75" rx="55" ry="24"/>
+
+    <ellipse cx="700" cy="60" rx="75" ry="30"/>
+    <ellipse cx="755" cy="52" rx="55" ry="24"/>
+    <ellipse cx="655" cy="56" rx="48" ry="20"/>
+
+    <ellipse cx="950" cy="130" rx="60" ry="22"/>
+    <ellipse cx="990" cy="124" rx="45" ry="18"/>
+  </g>
+
+  <!-- Far hills -->
+  <path d="M0,380 Q150,300 350,350 Q550,280 750,340 Q950,290 1150,330 Q1300,310 1344,340 L1344,450 L0,450Z" fill="url(#fazenda-hills-far)"/>
+
+  <!-- Mid hills -->
+  <path d="M0,420 Q200,370 400,400 Q600,350 800,390 Q1000,360 1200,380 Q1300,370 1344,390 L1344,500 L0,500Z" fill="url(#fazenda-hills-mid)"/>
+
+  <!-- Foreground ground -->
+  <rect x="0" y="480" width="1344" height="288" fill="url(#fazenda-ground)"/>
+
+  <!-- Dirt path -->
+  <path d="M600,768 Q620,700 640,640 Q660,600 680,580 Q750,560 850,580 Q900,600 950,640 Q1000,700 1050,768Z" fill="url(#fazenda-dirt)" opacity="0.7"/>
+
+  <!-- Field rows (crops) -->
+  <g opacity="0.5">
+    <path d="M0,530 Q100,525 200,530 Q300,535 400,530" stroke="#2e7d32" stroke-width="3" fill="none"/>
+    <path d="M0,550 Q100,545 200,550 Q300,555 400,550" stroke="#2e7d32" stroke-width="3" fill="none"/>
+    <path d="M0,570 Q100,565 200,570 Q300,575 400,570" stroke="#2e7d32" stroke-width="3" fill="none"/>
+    <path d="M0,590 Q100,585 200,590 Q300,595 400,590" stroke="#2e7d32" stroke-width="3" fill="none"/>
+  </g>
+
+  <!-- Sunflowers in field -->
+  <g>
+    <line x1="100" y1="520" x2="100" y2="480" stroke="#388e3c" stroke-width="3"/>
+    <circle cx="100" cy="475" r="10" fill="#ffeb3b"/>
+    <circle cx="100" cy="475" r="5" fill="#795548"/>
+    <ellipse cx="85" cy="500" rx="12" ry="6" fill="#4caf50" transform="rotate(-30,85,500)"/>
+
+    <line x1="150" y1="525" x2="150" y2="482" stroke="#388e3c" stroke-width="3"/>
+    <circle cx="150" cy="477" r="11" fill="#fdd835"/>
+    <circle cx="150" cy="477" r="5.5" fill="#795548"/>
+
+    <line x1="200" y1="518" x2="200" y2="475" stroke="#388e3c" stroke-width="3"/>
+    <circle cx="200" cy="470" r="10" fill="#ffee58"/>
+    <circle cx="200" cy="470" r="5" fill="#6d4c41"/>
+
+    <line x1="250" y1="522" x2="250" y2="478" stroke="#388e3c" stroke-width="3"/>
+    <circle cx="250" cy="473" r="10" fill="#ffeb3b"/>
+    <circle cx="250" cy="473" r="5" fill="#795548"/>
+  </g>
+
+  <!-- Barn -->
+  <g transform="translate(700,300)">
+    <!-- Main wall -->
+    <rect x="0" y="60" width="200" height="160" fill="url(#fazenda-barn-wall)"/>
+    <!-- Roof -->
+    <polygon points="-15,60 100,-10 215,60" fill="url(#fazenda-barn-roof)"/>
+    <!-- White X trim -->
+    <line x1="10" y1="70" x2="90" y2="210" stroke="white" stroke-width="3" opacity="0.7"/>
+    <line x1="90" y1="70" x2="10" y2="210" stroke="white" stroke-width="3" opacity="0.7"/>
+    <line x1="110" y1="70" x2="190" y2="210" stroke="white" stroke-width="3" opacity="0.7"/>
+    <line x1="190" y1="70" x2="110" y2="210" stroke="white" stroke-width="3" opacity="0.7"/>
+    <!-- Door -->
+    <rect x="65" y="130" width="70" height="90" rx="3" fill="#5d4037"/>
+    <line x1="100" y1="130" x2="100" y2="220" stroke="#4e342e" stroke-width="2"/>
+    <!-- Hay loft window -->
+    <rect x="75" y="80" width="50" height="35" rx="3" fill="#5d4037"/>
+    <rect x="80" y="85" width="40" height="25" fill="#fff176" opacity="0.5"/>
+    <!-- Roof detail -->
+    <line x1="100" y1="-10" x2="100" y2="0" stroke="#4e342e" stroke-width="4"/>
+    <!-- Weather vane -->
+    <line x1="100" y1="-10" x2="100" y2="-35" stroke="#757575" stroke-width="2"/>
+    <polygon points="100,-35 120,-30 100,-25" fill="#757575"/>
+    <line x1="90" y1="-30" x2="110" y2="-30" stroke="#757575" stroke-width="1.5"/>
+  </g>
+
+  <!-- Silo -->
+  <g transform="translate(940,280)">
+    <rect x="0" y="30" width="50" height="200" rx="5" fill="url(#fazenda-silo)"/>
+    <ellipse cx="25" cy="30" rx="25" ry="10" fill="#bdbdbd"/>
+    <path d="M0,30 Q25,10 50,30" fill="#9e9e9e"/>
+    <!-- Bands -->
+    <line x1="0" y1="80" x2="50" y2="80" stroke="#757575" stroke-width="2"/>
+    <line x1="0" y1="140" x2="50" y2="140" stroke="#757575" stroke-width="2"/>
+    <line x1="0" y1="200" x2="50" y2="200" stroke="#757575" stroke-width="2"/>
+  </g>
+
+  <!-- Fence -->
+  <g fill="url(#fazenda-fence)" stroke="#a1887f" stroke-width="1">
+    <!-- Left fence -->
+    <rect x="430" y="490" width="6" height="50" rx="1"/>
+    <rect x="480" y="490" width="6" height="50" rx="1"/>
+    <rect x="530" y="490" width="6" height="50" rx="1"/>
+    <rect x="580" y="490" width="6" height="50" rx="1"/>
+    <rect x="630" y="490" width="6" height="50" rx="1"/>
+    <rect x="430" y="500" width="206" height="5" rx="1"/>
+    <rect x="430" y="520" width="206" height="5" rx="1"/>
+
+    <!-- Right fence -->
+    <rect x="940" y="490" width="6" height="50" rx="1"/>
+    <rect x="990" y="490" width="6" height="50" rx="1"/>
+    <rect x="1040" y="490" width="6" height="50" rx="1"/>
+    <rect x="1090" y="490" width="6" height="50" rx="1"/>
+    <rect x="1140" y="490" width="6" height="50" rx="1"/>
+    <rect x="1190" y="490" width="6" height="50" rx="1"/>
+    <rect x="940" y="500" width="256" height="5" rx="1"/>
+    <rect x="940" y="520" width="256" height="5" rx="1"/>
+  </g>
+
+  <!-- Hay bales -->
+  <g>
+    <ellipse cx="1100" cy="560" rx="30" ry="22" fill="url(#fazenda-hay)"/>
+    <ellipse cx="1100" cy="560" rx="30" ry="22" stroke="#f57f17" stroke-width="1" fill="none"/>
+    <circle cx="1100" cy="560" r="8" fill="none" stroke="#f57f17" stroke-width="0.5"/>
+    <circle cx="1100" cy="560" r="15" fill="none" stroke="#f57f17" stroke-width="0.5"/>
+
+    <ellipse cx="1160" cy="565" rx="28" ry="20" fill="url(#fazenda-hay)"/>
+    <ellipse cx="1160" cy="565" rx="28" ry="20" stroke="#f57f17" stroke-width="1" fill="none"/>
+    <circle cx="1160" cy="565" r="7" fill="none" stroke="#f57f17" stroke-width="0.5"/>
+    <circle cx="1160" cy="565" r="14" fill="none" stroke="#f57f17" stroke-width="0.5"/>
+
+    <ellipse cx="1130" cy="535" rx="25" ry="18" fill="url(#fazenda-hay)"/>
+    <ellipse cx="1130" cy="535" rx="25" ry="18" stroke="#f57f17" stroke-width="1" fill="none"/>
+  </g>
+
+  <!-- Windmill in distance -->
+  <g transform="translate(400,320)" opacity="0.7">
+    <rect x="8" y="30" width="16" height="100" fill="#e0e0e0"/>
+    <circle cx="16" cy="30" r="5" fill="#bdbdbd"/>
+    <!-- Blades -->
+    <line x1="16" y1="30" x2="16" y2="-10" stroke="#bdbdbd" stroke-width="3"/>
+    <line x1="16" y1="30" x2="50" y2="45" stroke="#bdbdbd" stroke-width="3"/>
+    <line x1="16" y1="30" x2="16" y2="70" stroke="#bdbdbd" stroke-width="3"/>
+    <line x1="16" y1="30" x2="-18" y2="15" stroke="#bdbdbd" stroke-width="3"/>
+  </g>
+
+  <!-- Animals in distance -->
+  <!-- Cow -->
+  <g transform="translate(500,470)" opacity="0.7">
+    <ellipse cx="0" cy="0" rx="18" ry="10" fill="white"/>
+    <ellipse cx="-15" cy="-5" rx="7" ry="6" fill="white"/>
+    <rect x="-12" y="8" width="3" height="10" fill="white"/>
+    <rect x="-5" y="8" width="3" height="10" fill="white"/>
+    <rect x="5" y="8" width="3" height="10" fill="white"/>
+    <rect x="12" y="8" width="3" height="10" fill="white"/>
+    <ellipse cx="5" cy="-3" rx="5" ry="4" fill="#212121" opacity="0.5"/>
+    <ellipse cx="-8" cy="2" rx="4" ry="3" fill="#212121" opacity="0.5"/>
+  </g>
+
+  <!-- Chicken -->
+  <g transform="translate(650,505)" opacity="0.7">
+    <ellipse cx="0" cy="0" rx="8" ry="6" fill="white"/>
+    <circle cx="-7" cy="-4" r="4" fill="white"/>
+    <polygon points="-11,-4 -14,-3 -11,-2" fill="#ff9800"/>
+    <circle cx="-8" cy="-5" r="1" fill="#212121"/>
+    <polygon points="-7,-8 -6,-5 -8,-5" fill="#e53935"/>
+    <rect x="-2" y="5" width="2" height="5" fill="#ff9800"/>
+    <rect x="3" y="5" width="2" height="5" fill="#ff9800"/>
+  </g>
+
+  <!-- Flowers in grass -->
+  <g>
+    <circle cx="350" cy="560" r="4" fill="#e91e63"/>
+    <circle cx="350" cy="560" r="1.5" fill="#fff176"/>
+    <circle cx="420" cy="570" r="3.5" fill="#ab47bc"/>
+    <circle cx="420" cy="570" r="1.5" fill="#fff176"/>
+    <circle cx="1250" cy="550" r="4" fill="#e91e63"/>
+    <circle cx="1250" cy="550" r="1.5" fill="#fff176"/>
+    <circle cx="1300" cy="565" r="3.5" fill="#ffeb3b"/>
+    <circle cx="1300" cy="565" r="1.5" fill="#ff9800"/>
+  </g>
+
+  <!-- Pond -->
+  <ellipse cx="300" cy="680" rx="80" ry="30" fill="#4fc3f7" opacity="0.6"/>
+  <ellipse cx="300" cy="680" rx="60" ry="20" fill="#29b6f6" opacity="0.4"/>
+  <!-- Cattails -->
+  <line x1="250" y1="680" x2="250" y2="640" stroke="#4e342e" stroke-width="2"/>
+  <ellipse cx="250" cy="640" rx="3" ry="8" fill="#5d4037"/>
+  <line x1="260" y1="675" x2="260" y2="645" stroke="#4e342e" stroke-width="2"/>
+  <ellipse cx="260" cy="645" rx="3" ry="7" fill="#5d4037"/>
+
+  <!-- Birds -->
+  <g stroke="#37474f" stroke-width="1.5" fill="none" opacity="0.6">
+    <path d="M600,200 Q605,195 610,200 Q615,195 620,200"/>
+    <path d="M640,180 Q644,176 648,180 Q652,176 656,180"/>
+    <path d="M580,210 Q585,205 590,210 Q595,205 600,210"/>
+  </g>
+</svg>

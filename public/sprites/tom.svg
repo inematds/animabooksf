@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" width="200" height="300">
+  <defs>
+    <radialGradient id="tom-skin" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#FFE8D6"/>
+      <stop offset="100%" stop-color="#F5D0B0"/>
+    </radialGradient>
+    <linearGradient id="tom-hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8651A"/>
+      <stop offset="100%" stop-color="#CC5511"/>
+    </linearGradient>
+    <linearGradient id="tom-cap" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#42A5F5"/>
+      <stop offset="100%" stop-color="#1E88E5"/>
+    </linearGradient>
+    <linearGradient id="tom-hoodie" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#66BB6A"/>
+      <stop offset="50%" stop-color="#4CAF50"/>
+      <stop offset="100%" stop-color="#43A047"/>
+    </linearGradient>
+    <linearGradient id="tom-jeans" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5C6BC0"/>
+      <stop offset="100%" stop-color="#3F51B5"/>
+    </linearGradient>
+    <radialGradient id="tom-eye" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#43A047"/>
+      <stop offset="100%" stop-color="#2E7D32"/>
+    </radialGradient>
+    <radialGradient id="tom-blush" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFAB91" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FFAB91" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tom-freckle" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D4956A" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#D4956A" stop-opacity="0.3"/>
+    </radialGradient>
+    <filter id="tom-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+  </defs>
+  <g filter="url(#tom-shadow)">
+    <!-- Head -->
+    <ellipse cx="100" cy="90" rx="46" ry="50" fill="url(#tom-skin)"/>
+    <!-- Hair (ginger, visible under cap) -->
+    <path d="M55 78 Q55 65, 62 60 L60 82" fill="url(#tom-hair)"/>
+    <path d="M145 78 Q145 65, 138 60 L140 82" fill="url(#tom-hair)"/>
+    <!-- Hair sticking out from cap -->
+    <path d="M58 72 Q52 60, 48 55 Q54 58, 58 68" fill="url(#tom-hair)"/>
+    <path d="M65 65 Q60 50, 55 48 Q62 50, 66 62" fill="url(#tom-hair)"/>
+    <path d="M142 72 Q148 60, 152 55 Q146 58, 142 68" fill="url(#tom-hair)"/>
+    <!-- Cap (backwards) -->
+    <path d="M56 74 Q56 40, 100 35 Q144 40, 144 74 L140 70 Q138 50, 100 45 Q62 50, 60 70 Z" fill="url(#tom-cap)"/>
+    <!-- Cap rim (backwards) -->
+    <path d="M80 74 Q78 68, 75 66 Q100 58, 125 66 Q122 68, 120 74 Q100 70, 80 74" fill="#1565C0"/>
+    <!-- Cap button -->
+    <circle cx="100" cy="37" r="3" fill="#1565C0"/>
+    <!-- Cap strap visible at front -->
+    <path d="M60 74 Q100 80, 140 74" stroke="#1565C0" stroke-width="2.5" fill="none"/>
+    <!-- Eyes -->
+    <ellipse cx="80" cy="92" rx="9" ry="10" fill="url(#tom-eye)"/>
+    <ellipse cx="120" cy="92" rx="9" ry="10" fill="url(#tom-eye)"/>
+    <!-- Eye highlights -->
+    <ellipse cx="83" cy="88" rx="3.5" ry="4" fill="white" opacity="0.9"/>
+    <ellipse cx="123" cy="88" rx="3.5" ry="4" fill="white" opacity="0.9"/>
+    <ellipse cx="78" cy="95" rx="1.5" ry="1.5" fill="white" opacity="0.6"/>
+    <ellipse cx="118" cy="95" rx="1.5" ry="1.5" fill="white" opacity="0.6"/>
+    <!-- Eyebrows -->
+    <path d="M69 78 Q80 74, 90 78" stroke="#CC5511" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M110 78 Q120 74, 131 78" stroke="#CC5511" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Freckles -->
+    <circle cx="70" cy="100" r="1.5" fill="url(#tom-freckle)"/>
+    <circle cx="75" cy="103" r="1.2" fill="url(#tom-freckle)"/>
+    <circle cx="68" cy="105" r="1" fill="url(#tom-freckle)"/>
+    <circle cx="73" cy="98" r="1" fill="url(#tom-freckle)"/>
+    <circle cx="130" cy="100" r="1.5" fill="url(#tom-freckle)"/>
+    <circle cx="125" cy="103" r="1.2" fill="url(#tom-freckle)"/>
+    <circle cx="132" cy="105" r="1" fill="url(#tom-freckle)"/>
+    <circle cx="127" cy="98" r="1" fill="url(#tom-freckle)"/>
+    <!-- Nose -->
+    <ellipse cx="100" cy="103" rx="3" ry="2" fill="#E8C0A0" opacity="0.6"/>
+    <!-- Mouth -->
+    <path d="M93 114 Q100 117, 107 114" stroke="#C08070" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Blush -->
+    <ellipse cx="67" cy="106" rx="10" ry="5" fill="url(#tom-blush)"/>
+    <ellipse cx="133" cy="106" rx="10" ry="5" fill="url(#tom-blush)"/>
+    <!-- Neck -->
+    <rect x="90" y="134" width="20" height="14" rx="3" fill="url(#tom-skin)"/>
+    <!-- Body / Hoodie -->
+    <path d="M62 146 Q62 142, 72 140 L90 138 Q100 137, 110 138 L128 140 Q138 142, 138 146 L142 240 Q142 245, 137 245 L63 245 Q58 245, 58 240 Z" fill="url(#tom-hoodie)"/>
+    <!-- Hoodie pocket -->
+    <path d="M75 195 L125 195 L125 220 Q125 225, 120 225 L80 225 Q75 225, 75 220 Z" fill="#43A047" stroke="#388E3C" stroke-width="1"/>
+    <!-- Hoodie strings -->
+    <line x1="92" y1="148" x2="88" y2="175" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="108" y1="148" x2="112" y2="175" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- String tips -->
+    <rect x="86" y="174" width="4" height="6" rx="1" fill="white" opacity="0.8"/>
+    <rect x="110" y="174" width="4" height="6" rx="1" fill="white" opacity="0.8"/>
+    <!-- Hoodie neckline -->
+    <path d="M80 143 Q100 155, 120 143" stroke="#43A047" stroke-width="3" fill="none"/>
+    <!-- Hoodie logo (skateboard icon) -->
+    <rect x="95" y="160" width="10" height="3" rx="1.5" fill="white" opacity="0.5"/>
+    <circle cx="98" cy="165" r="1.5" fill="white" opacity="0.5"/>
+    <circle cx="102" cy="165" r="1.5" fill="white" opacity="0.5"/>
+    <!-- Arms -->
+    <path d="M62 150 Q45 168, 38 198 Q36 208, 44 210 Q50 208, 50 194 L56 172" fill="url(#tom-hoodie)" stroke="#388E3C" stroke-width="0.5"/>
+    <path d="M138 150 Q155 168, 162 198 Q164 208, 156 210 Q150 208, 150 194 L144 172" fill="url(#tom-hoodie)" stroke="#388E3C" stroke-width="0.5"/>
+    <!-- Hands -->
+    <ellipse cx="41" cy="210" rx="8" ry="7" fill="url(#tom-skin)"/>
+    <ellipse cx="159" cy="210" rx="8" ry="7" fill="url(#tom-skin)"/>
+    <!-- Jeans -->
+    <path d="M60 243 L58 275 Q58 280, 64 280 L90 280 Q95 280, 95 275 L100 255 L105 275 Q105 280, 110 280 L136 280 Q142 280, 142 275 L140 243 Z" fill="url(#tom-jeans)"/>
+    <!-- Jean details -->
+    <line x1="100" y1="243" x2="100" y2="256" stroke="#3949AB" stroke-width="1" opacity="0.5"/>
+    <!-- Sneakers -->
+    <path d="M55 276 Q55 272, 60 272 L94 272 Q98 272, 98 276 L98 284 Q98 288, 94 288 L60 288 Q55 288, 55 284 Z" fill="white" stroke="#E0E0E0" stroke-width="1"/>
+    <path d="M106 276 Q106 272, 110 272 L144 272 Q148 272, 148 276 L148 284 Q148 288, 144 288 L110 288 Q106 288, 106 284 Z" fill="white" stroke="#E0E0E0" stroke-width="1"/>
+    <!-- Sneaker accents -->
+    <rect x="58" y="278" width="37" height="4" rx="2" fill="#42A5F5"/>
+    <rect x="109" y="278" width="37" height="4" rx="2" fill="#42A5F5"/>
+    <!-- Sneaker soles -->
+    <rect x="55" y="285" width="43" height="3" rx="1.5" fill="#37474F"/>
+    <rect x="106" y="285" width="42" height="3" rx="1.5" fill="#37474F"/>
+  </g>
+</svg>

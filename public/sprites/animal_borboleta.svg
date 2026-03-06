@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="borboleta_wing_tl" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF69B4"/>
+      <stop offset="100%" stop-color="#DA70D6"/>
+    </linearGradient>
+    <linearGradient id="borboleta_wing_tr" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF69B4"/>
+      <stop offset="100%" stop-color="#DA70D6"/>
+    </linearGradient>
+    <linearGradient id="borboleta_wing_bl" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFB347"/>
+      <stop offset="100%" stop-color="#FF6B6B"/>
+    </linearGradient>
+    <linearGradient id="borboleta_wing_br" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFB347"/>
+      <stop offset="100%" stop-color="#FF6B6B"/>
+    </linearGradient>
+    <linearGradient id="borboleta_body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A3728"/>
+      <stop offset="100%" stop-color="#2E1F14"/>
+    </linearGradient>
+    <radialGradient id="borboleta_spot" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="borboleta_shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+  </defs>
+  <!-- Upper wings -->
+  <ellipse cx="35" cy="42" rx="26" ry="22" fill="url(#borboleta_wing_tl)" filter="url(#borboleta_shadow)" transform="rotate(-15,35,42)"/>
+  <ellipse cx="85" cy="42" rx="26" ry="22" fill="url(#borboleta_wing_tr)" filter="url(#borboleta_shadow)" transform="rotate(15,85,42)"/>
+  <!-- Lower wings -->
+  <ellipse cx="38" cy="72" rx="20" ry="16" fill="url(#borboleta_wing_bl)" transform="rotate(-10,38,72)"/>
+  <ellipse cx="82" cy="72" rx="20" ry="16" fill="url(#borboleta_wing_br)" transform="rotate(10,82,72)"/>
+  <!-- Wing spots -->
+  <circle cx="30" cy="38" r="8" fill="url(#borboleta_spot)"/>
+  <circle cx="90" cy="38" r="8" fill="url(#borboleta_spot)"/>
+  <circle cx="35" cy="70" r="6" fill="url(#borboleta_spot)"/>
+  <circle cx="85" cy="70" r="6" fill="url(#borboleta_spot)"/>
+  <!-- Wing dots -->
+  <circle cx="22" cy="45" r="3" fill="#FFD700" opacity="0.7"/>
+  <circle cx="98" cy="45" r="3" fill="#FFD700" opacity="0.7"/>
+  <circle cx="40" cy="30" r="2.5" fill="#87CEEB" opacity="0.7"/>
+  <circle cx="80" cy="30" r="2.5" fill="#87CEEB" opacity="0.7"/>
+  <!-- Body -->
+  <ellipse cx="60" cy="58" rx="5" ry="25" fill="url(#borboleta_body)"/>
+  <!-- Head -->
+  <circle cx="60" cy="30" r="8" fill="url(#borboleta_body)"/>
+  <!-- Eyes -->
+  <circle cx="56" cy="28" r="3" fill="white"/>
+  <circle cx="64" cy="28" r="3" fill="white"/>
+  <circle cx="57" cy="29" r="1.8" fill="#1A1A2E"/>
+  <circle cx="65" cy="29" r="1.8" fill="#1A1A2E"/>
+  <circle cx="57.5" cy="27.8" r="0.8" fill="white"/>
+  <circle cx="65.5" cy="27.8" r="0.8" fill="white"/>
+  <!-- Smile -->
+  <path d="M56,33 Q60,36 64,33" fill="none" stroke="#5C3D2E" stroke-width="0.8" stroke-linecap="round"/>
+  <!-- Antennae -->
+  <path d="M56,24 Q48,10 42,8" fill="none" stroke="#4A3728" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M64,24 Q72,10 78,8" fill="none" stroke="#4A3728" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="42" cy="8" r="3" fill="#FF69B4"/>
+  <circle cx="78" cy="8" r="3" fill="#DA70D6"/>
+</svg>

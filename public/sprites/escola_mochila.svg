@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="mochila_body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF6644"/>
+      <stop offset="100%" stop-color="#DD4422"/>
+    </linearGradient>
+    <linearGradient id="mochila_pocket" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF8866"/>
+      <stop offset="100%" stop-color="#EE5533"/>
+    </linearGradient>
+    <linearGradient id="mochila_strap" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#CC3311"/>
+      <stop offset="100%" stop-color="#BB2200"/>
+    </linearGradient>
+    <filter id="mochila_shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="1" dy="3" stdDeviation="3" flood-color="#00000033"/>
+    </filter>
+  </defs>
+  <ellipse cx="60" cy="112" rx="28" ry="5" fill="#00000020"/>
+  <g filter="url(#mochila_shadow)">
+    <!-- Straps behind -->
+    <path d="M38 25 Q30 25 28 35 L28 85" stroke="url(#mochila_strap)" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M82 25 Q90 25 92 35 L92 85" stroke="url(#mochila_strap)" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <!-- Main body -->
+    <rect x="30" y="15" width="60" height="80" rx="14" fill="url(#mochila_body)"/>
+    <!-- Top flap -->
+    <path d="M30 35 Q30 15 60 12 Q90 15 90 35 Z" fill="#EE5533"/>
+    <!-- Handle -->
+    <path d="M50 10 Q50 4 60 4 Q70 4 70 10" stroke="#CC3311" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <!-- Front pocket -->
+    <rect x="38" y="55" width="44" height="30" rx="8" fill="url(#mochila_pocket)" stroke="#DD5533" stroke-width="1"/>
+    <!-- Pocket zipper -->
+    <line x1="48" y1="55" x2="72" y2="55" stroke="#FFCC44" stroke-width="2.5"/>
+    <circle cx="72" cy="55" r="3" fill="#FFDD44"/>
+    <!-- Main zipper -->
+    <line x1="40" y1="35" x2="80" y2="35" stroke="#FFCC44" stroke-width="2.5"/>
+    <circle cx="80" cy="35" r="3" fill="#FFDD44"/>
+    <!-- Pocket detail - star -->
+    <polygon points="60,64 62,69 68,69 64,73 65,78 60,75 55,78 56,73 52,69 58,69" fill="#FFDD44" opacity="0.8"/>
+    <!-- Side buckle left -->
+    <rect x="28" y="50" width="6" height="8" rx="2" fill="#FFCC44"/>
+    <!-- Side buckle right -->
+    <rect x="86" y="50" width="6" height="8" rx="2" fill="#FFCC44"/>
+    <!-- Pencil poking out -->
+    <rect x="78" y="22" width="4" height="20" rx="1" fill="#FFCC44" transform="rotate(15,80,32)"/>
+    <polygon points="80,20 78,26 82,26" fill="#FFE0A0" transform="rotate(15,80,23)"/>
+    <!-- Stitching detail -->
+    <path d="M44 95 Q60 100 76 95" stroke="#CC3311" stroke-width="1" fill="none" stroke-dasharray="3,2"/>
+  </g>
+</svg>

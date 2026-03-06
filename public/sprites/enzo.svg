@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" width="200" height="300">
+  <defs>
+    <radialGradient id="enzo-skin" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#F0D5A8"/>
+      <stop offset="100%" stop-color="#D4B88C"/>
+    </radialGradient>
+    <linearGradient id="enzo-hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1C1C1C"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <linearGradient id="enzo-coat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E8E8E8"/>
+    </linearGradient>
+    <linearGradient id="enzo-shirt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4FC3F7"/>
+      <stop offset="100%" stop-color="#29B6F6"/>
+    </linearGradient>
+    <linearGradient id="enzo-pants" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#455A64"/>
+      <stop offset="100%" stop-color="#37474F"/>
+    </linearGradient>
+    <radialGradient id="enzo-eye" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#4E342E"/>
+      <stop offset="100%" stop-color="#3E2723"/>
+    </radialGradient>
+    <radialGradient id="enzo-blush" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFAB91" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#FFAB91" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="enzo-glasses" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5C6BC0"/>
+      <stop offset="100%" stop-color="#3F51B5"/>
+    </linearGradient>
+    <radialGradient id="enzo-lens" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E3F2FD" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#BBDEFB" stop-opacity="0.1"/>
+    </radialGradient>
+    <filter id="enzo-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+  </defs>
+  <g filter="url(#enzo-shadow)">
+    <!-- Head -->
+    <ellipse cx="100" cy="88" rx="46" ry="50" fill="url(#enzo-skin)"/>
+    <!-- Hair -->
+    <path d="M54 72 Q54 32, 100 25 Q146 32, 146 72 L143 58 Q135 48, 120 52 L112 46 Q100 38, 88 46 L80 52 Q65 48, 57 58 Z" fill="url(#enzo-hair)"/>
+    <!-- Hair part line -->
+    <path d="M88 28 Q92 40, 90 52" stroke="#333" stroke-width="1" fill="none" opacity="0.5"/>
+    <!-- Glasses frames -->
+    <ellipse cx="78" cy="90" rx="16" ry="14" fill="url(#enzo-lens)" stroke="url(#enzo-glasses)" stroke-width="2.5"/>
+    <ellipse cx="122" cy="90" rx="16" ry="14" fill="url(#enzo-lens)" stroke="url(#enzo-glasses)" stroke-width="2.5"/>
+    <!-- Glasses bridge -->
+    <path d="M94 88 Q100 92, 106 88" stroke="url(#enzo-glasses)" stroke-width="2.5" fill="none"/>
+    <!-- Glasses arms -->
+    <line x1="62" y1="88" x2="52" y2="85" stroke="url(#enzo-glasses)" stroke-width="2" stroke-linecap="round"/>
+    <line x1="138" y1="88" x2="148" y2="85" stroke="url(#enzo-glasses)" stroke-width="2" stroke-linecap="round"/>
+    <!-- Eyes -->
+    <ellipse cx="78" cy="91" rx="7" ry="8" fill="url(#enzo-eye)"/>
+    <ellipse cx="122" cy="91" rx="7" ry="8" fill="url(#enzo-eye)"/>
+    <!-- Eye highlights -->
+    <ellipse cx="81" cy="87" rx="3" ry="3.5" fill="white" opacity="0.9"/>
+    <ellipse cx="125" cy="87" rx="3" ry="3.5" fill="white" opacity="0.9"/>
+    <ellipse cx="76" cy="94" rx="1.5" ry="1.5" fill="white" opacity="0.5"/>
+    <ellipse cx="120" cy="94" rx="1.5" ry="1.5" fill="white" opacity="0.5"/>
+    <!-- Eyebrows -->
+    <path d="M66 74 Q78 69, 90 74" stroke="#1C1C1C" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M110 74 Q122 69, 134 74" stroke="#1C1C1C" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Nose -->
+    <ellipse cx="100" cy="102" rx="2" ry="1.5" fill="#C4A07A" opacity="0.6"/>
+    <!-- Mouth -->
+    <path d="M93 112 Q100 115, 107 112" stroke="#A08070" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Blush -->
+    <ellipse cx="65" cy="103" rx="9" ry="5" fill="url(#enzo-blush)"/>
+    <ellipse cx="135" cy="103" rx="9" ry="5" fill="url(#enzo-blush)"/>
+    <!-- Neck -->
+    <rect x="90" y="132" width="20" height="16" rx="3" fill="url(#enzo-skin)"/>
+    <!-- Body / Blue shirt -->
+    <path d="M70 146 Q70 142, 80 140 L95 138 Q100 137, 105 138 L120 140 Q130 142, 130 146 L132 250 L68 250 Z" fill="url(#enzo-shirt)"/>
+    <!-- Lab coat -->
+    <path d="M58 148 Q58 143, 68 141 L80 139 Q82 139, 82 145 L82 255 Q82 258, 78 258 L62 258 Q55 258, 55 252 Z" fill="url(#enzo-coat)" stroke="#D0D0D0" stroke-width="0.5"/>
+    <path d="M142 148 Q142 143, 132 141 L120 139 Q118 139, 118 145 L118 255 Q118 258, 122 258 L138 258 Q145 258, 145 252 Z" fill="url(#enzo-coat)" stroke="#D0D0D0" stroke-width="0.5"/>
+    <!-- Coat center overlap -->
+    <path d="M82 145 L82 255" stroke="#D0D0D0" stroke-width="1"/>
+    <path d="M118 145 L118 255" stroke="#D0D0D0" stroke-width="1"/>
+    <!-- Coat lapels -->
+    <path d="M82 145 L95 160 L82 160 Z" fill="#F0F0F0" stroke="#D0D0D0" stroke-width="0.5"/>
+    <path d="M118 145 L105 160 L118 160 Z" fill="#F0F0F0" stroke="#D0D0D0" stroke-width="0.5"/>
+    <!-- Coat buttons -->
+    <circle cx="100" cy="175" r="2.5" fill="#CFD8DC" stroke="#B0BEC5" stroke-width="0.5"/>
+    <circle cx="100" cy="195" r="2.5" fill="#CFD8DC" stroke="#B0BEC5" stroke-width="0.5"/>
+    <circle cx="100" cy="215" r="2.5" fill="#CFD8DC" stroke="#B0BEC5" stroke-width="0.5"/>
+    <!-- Coat pocket -->
+    <rect x="60" y="200" width="18" height="2" rx="1" fill="#D0D0D0"/>
+    <rect x="122" y="200" width="18" height="2" rx="1" fill="#D0D0D0"/>
+    <!-- Pocket pen -->
+    <rect x="62" y="190" width="2" height="12" rx="1" fill="#3F51B5"/>
+    <rect x="62" y="188" width="2" height="3" rx="0.5" fill="#FF5722"/>
+    <!-- Arms -->
+    <path d="M58 152 Q42 168, 36 200 Q34 210, 42 212 Q48 210, 48 196 L55 172" fill="url(#enzo-coat)" stroke="#D0D0D0" stroke-width="0.5"/>
+    <path d="M142 152 Q158 168, 164 200 Q166 210, 158 212 Q152 210, 152 196 L145 172" fill="url(#enzo-coat)" stroke="#D0D0D0" stroke-width="0.5"/>
+    <!-- Hands -->
+    <ellipse cx="39" cy="212" rx="8" ry="7" fill="url(#enzo-skin)"/>
+    <ellipse cx="161" cy="212" rx="8" ry="7" fill="url(#enzo-skin)"/>
+    <!-- Pants -->
+    <path d="M68 248 L66 275 Q66 280, 72 280 L92 280 Q96 280, 96 275 L100 255 L104 275 Q104 280, 108 280 L128 280 Q134 280, 134 275 L132 248 Z" fill="url(#enzo-pants)"/>
+    <!-- Shoes -->
+    <rect x="64" y="277" width="32" height="10" rx="5" fill="#37474F"/>
+    <rect x="104" y="277" width="32" height="10" rx="5" fill="#37474F"/>
+    <!-- Atom symbol on shirt -->
+    <ellipse cx="100" cy="170" rx="8" ry="4" fill="none" stroke="white" stroke-width="1" opacity="0.5" transform="rotate(30 100 170)"/>
+    <ellipse cx="100" cy="170" rx="8" ry="4" fill="none" stroke="white" stroke-width="1" opacity="0.5" transform="rotate(-30 100 170)"/>
+    <ellipse cx="100" cy="170" rx="8" ry="4" fill="none" stroke="white" stroke-width="1" opacity="0.5"/>
+    <circle cx="100" cy="170" r="2" fill="white" opacity="0.6"/>
+  </g>
+</svg>

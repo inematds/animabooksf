@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="moda_vestido_grad1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F472B6"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+    <linearGradient id="moda_vestido_grad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FBCFE8"/>
+      <stop offset="100%" stop-color="#F9A8D4"/>
+    </linearGradient>
+    <filter id="moda_vestido_shadow">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <g filter="url(#moda_vestido_shadow)">
+    <!-- Straps -->
+    <line x1="42" y1="18" x2="48" y2="32" stroke="#C084FC" stroke-width="4" stroke-linecap="round"/>
+    <line x1="78" y1="18" x2="72" y2="32" stroke="#C084FC" stroke-width="4" stroke-linecap="round"/>
+    <!-- Bodice -->
+    <path d="M44 32 Q42 32 40 36 L38 50 Q60 56 82 50 L80 36 Q78 32 76 32 Z" fill="url(#moda_vestido_grad1)"/>
+    <!-- Skirt -->
+    <path d="M38 50 Q28 90 26 100 Q60 108 94 100 Q92 90 82 50 Q60 56 38 50Z" fill="url(#moda_vestido_grad1)"/>
+    <!-- Waist ribbon -->
+    <path d="M38 50 Q60 56 82 50 Q60 54 38 50Z" fill="url(#moda_vestido_grad2)" opacity="0.7"/>
+    <ellipse cx="60" cy="52" rx="5" ry="3" fill="url(#moda_vestido_grad2)"/>
+    <!-- Bow at waist -->
+    <path d="M55 50 Q50 46 48 50 Q50 54 55 50Z" fill="#FBCFE8"/>
+    <path d="M65 50 Q70 46 72 50 Q70 54 65 50Z" fill="#FBCFE8"/>
+    <circle cx="60" cy="50" r="2" fill="#E879F9"/>
+    <!-- Hem details -->
+    <path d="M26 100 Q34 96 42 100 Q50 96 58 100 Q66 96 74 100 Q82 96 94 100" fill="none" stroke="#FBCFE8" stroke-width="2" opacity="0.6"/>
+    <!-- Sparkles -->
+    <circle cx="50" cy="70" r="1.5" fill="white" opacity="0.7"/>
+    <circle cx="70" cy="75" r="1.2" fill="white" opacity="0.6"/>
+    <circle cx="55" cy="85" r="1" fill="white" opacity="0.5"/>
+  </g>
+</svg>

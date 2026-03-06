@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="sorvete_cone" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E6B87D"/>
+      <stop offset="100%" stop-color="#C49451"/>
+    </linearGradient>
+    <radialGradient id="sorvete_scoop1" cx="0.4" cy="0.3" r="0.6">
+      <stop offset="0%" stop-color="#FF85A2"/>
+      <stop offset="100%" stop-color="#E84393"/>
+    </radialGradient>
+    <radialGradient id="sorvete_scoop2" cx="0.4" cy="0.3" r="0.6">
+      <stop offset="0%" stop-color="#FFF8DC"/>
+      <stop offset="100%" stop-color="#FFEB99"/>
+    </radialGradient>
+    <radialGradient id="sorvete_scoop3" cx="0.4" cy="0.3" r="0.6">
+      <stop offset="0%" stop-color="#A0522D"/>
+      <stop offset="100%" stop-color="#6D3A1F"/>
+    </radialGradient>
+    <filter id="sorvete_shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+  </defs>
+  <!-- Cone -->
+  <polygon points="38,62 82,62 60,115" fill="url(#sorvete_cone)" filter="url(#sorvete_shadow)"/>
+  <!-- Cone cross-hatch pattern -->
+  <line x1="45" y1="65" x2="55" y2="105" stroke="#B8843E" stroke-width="0.8" opacity="0.4"/>
+  <line x1="55" y1="65" x2="58" y2="105" stroke="#B8843E" stroke-width="0.8" opacity="0.4"/>
+  <line x1="65" y1="65" x2="60" y2="105" stroke="#B8843E" stroke-width="0.8" opacity="0.4"/>
+  <line x1="75" y1="65" x2="62" y2="105" stroke="#B8843E" stroke-width="0.8" opacity="0.4"/>
+  <line x1="40" y1="72" x2="78" y2="72" stroke="#B8843E" stroke-width="0.8" opacity="0.4"/>
+  <line x1="44" y1="82" x2="74" y2="82" stroke="#B8843E" stroke-width="0.8" opacity="0.4"/>
+  <line x1="48" y1="92" x2="70" y2="92" stroke="#B8843E" stroke-width="0.8" opacity="0.4"/>
+  <!-- Chocolate scoop (back) -->
+  <circle cx="52" cy="48" r="18" fill="url(#sorvete_scoop3)"/>
+  <!-- Vanilla scoop (back right) -->
+  <circle cx="72" cy="48" r="16" fill="url(#sorvete_scoop2)"/>
+  <!-- Strawberry scoop (front) -->
+  <circle cx="60" cy="38" r="20" fill="url(#sorvete_scoop1)" filter="url(#sorvete_shadow)"/>
+  <!-- Highlights -->
+  <ellipse cx="52" cy="32" rx="6" ry="4" fill="white" opacity="0.3"/>
+  <ellipse cx="46" cy="44" rx="4" ry="3" fill="white" opacity="0.2"/>
+  <ellipse cx="66" cy="42" rx="4" ry="3" fill="white" opacity="0.2"/>
+  <!-- Sprinkles on strawberry -->
+  <rect x="50" y="30" width="3" height="1.5" rx="0.5" fill="#FFD700" transform="rotate(20,51,30)"/>
+  <rect x="62" y="28" width="3" height="1.5" rx="0.5" fill="#4CAF50" transform="rotate(-30,63,28)"/>
+  <rect x="55" y="44" width="3" height="1.5" rx="0.5" fill="#5CB8E6" transform="rotate(40,56,44)"/>
+  <rect x="68" y="38" width="3" height="1.5" rx="0.5" fill="#FF5722" transform="rotate(-10,69,38)"/>
+  <rect x="45" y="38" width="2.5" height="1.2" rx="0.5" fill="#FFD700" transform="rotate(50,46,38)"/>
+  <!-- Cherry on top -->
+  <circle cx="60" cy="20" r="7" fill="#E53935"/>
+  <ellipse cx="57" cy="17" rx="2.5" ry="2" fill="#FF8A80" opacity="0.6"/>
+  <path d="M60,14 Q62,8 66,6" fill="none" stroke="#4E342E" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

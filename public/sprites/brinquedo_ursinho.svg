@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <radialGradient id="urso_body" cx="45%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#D4A574"/>
+      <stop offset="100%" stop-color="#A67B5B"/>
+    </radialGradient>
+    <radialGradient id="urso_belly" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#F0D5B0"/>
+      <stop offset="100%" stop-color="#E0C090"/>
+    </radialGradient>
+    <filter id="urso_shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="1" dy="3" stdDeviation="3" flood-color="#00000033"/>
+    </filter>
+  </defs>
+  <ellipse cx="60" cy="112" rx="28" ry="5" fill="#00000020"/>
+  <g filter="url(#urso_shadow)">
+    <!-- Ears -->
+    <circle cx="38" cy="18" r="12" fill="url(#urso_body)"/>
+    <circle cx="38" cy="18" r="7" fill="url(#urso_belly)"/>
+    <circle cx="82" cy="18" r="12" fill="url(#urso_body)"/>
+    <circle cx="82" cy="18" r="7" fill="url(#urso_belly)"/>
+    <!-- Head -->
+    <circle cx="60" cy="32" r="22" fill="url(#urso_body)"/>
+    <!-- Body -->
+    <ellipse cx="60" cy="72" rx="25" ry="30" fill="url(#urso_body)"/>
+    <!-- Belly -->
+    <ellipse cx="60" cy="74" rx="17" ry="20" fill="url(#urso_belly)"/>
+    <!-- Arms -->
+    <ellipse cx="33" cy="62" rx="10" ry="18" fill="url(#urso_body)" transform="rotate(15,33,62)"/>
+    <ellipse cx="87" cy="62" rx="10" ry="18" fill="url(#urso_body)" transform="rotate(-15,87,62)"/>
+    <!-- Paw pads -->
+    <ellipse cx="30" cy="75" rx="6" ry="5" fill="url(#urso_belly)"/>
+    <ellipse cx="90" cy="75" rx="6" ry="5" fill="url(#urso_belly)"/>
+    <!-- Legs -->
+    <ellipse cx="45" cy="98" rx="12" ry="10" fill="url(#urso_body)"/>
+    <ellipse cx="75" cy="98" rx="12" ry="10" fill="url(#urso_body)"/>
+    <ellipse cx="45" cy="100" rx="8" ry="6" fill="url(#urso_belly)"/>
+    <ellipse cx="75" cy="100" rx="8" ry="6" fill="url(#urso_belly)"/>
+    <!-- Muzzle -->
+    <ellipse cx="60" cy="38" rx="10" ry="8" fill="url(#urso_belly)"/>
+    <!-- Nose -->
+    <ellipse cx="60" cy="35" rx="4" ry="3" fill="#444"/>
+    <ellipse cx="59" cy="34" rx="2" ry="1.5" fill="#666"/>
+    <!-- Eyes -->
+    <circle cx="50" cy="28" r="3.5" fill="#333"/>
+    <circle cx="70" cy="28" r="3.5" fill="#333"/>
+    <circle cx="49" cy="27" r="1.5" fill="#FFF"/>
+    <circle cx="69" cy="27" r="1.5" fill="#FFF"/>
+    <!-- Mouth -->
+    <path d="M55 40 Q60 45 65 40" stroke="#886644" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <!-- Bow tie -->
+    <polygon points="53,52 60,56 60,50" fill="#FF5577"/>
+    <polygon points="67,52 60,56 60,50" fill="#FF5577"/>
+    <circle cx="60" cy="53" r="3" fill="#FF6688"/>
+  </g>
+</svg>

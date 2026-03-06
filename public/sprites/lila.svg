@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" width="200" height="300">
+  <defs>
+    <radialGradient id="lila-skin" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#FFE8E0"/>
+      <stop offset="100%" stop-color="#F5D0C0"/>
+    </radialGradient>
+    <linearGradient id="lila-hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#CE93D8"/>
+      <stop offset="100%" stop-color="#AB47BC"/>
+    </linearGradient>
+    <linearGradient id="lila-hair-light" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E1BEE7" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#CE93D8" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="lila-dress-top" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E1BEE7"/>
+      <stop offset="100%" stop-color="#CE93D8"/>
+    </linearGradient>
+    <linearGradient id="lila-dress-skirt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#CE93D8"/>
+      <stop offset="50%" stop-color="#BA68C8"/>
+      <stop offset="100%" stop-color="#AB47BC"/>
+    </linearGradient>
+    <linearGradient id="lila-ribbon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F48FB1"/>
+      <stop offset="100%" stop-color="#EC407A"/>
+    </linearGradient>
+    <radialGradient id="lila-eye" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#7B1FA2"/>
+      <stop offset="100%" stop-color="#4A148C"/>
+    </radialGradient>
+    <radialGradient id="lila-blush" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F8BBD0" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#F8BBD0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lila-sparkle" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="lila-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+  </defs>
+  <g filter="url(#lila-shadow)">
+    <!-- Twin tails back -->
+    <!-- Left twin tail -->
+    <path d="M60 55 Q40 60, 32 90 Q25 120, 30 160 Q32 170, 38 168 Q42 165, 40 140 Q38 110, 45 85 Q50 65, 62 58" fill="url(#lila-hair)"/>
+    <!-- Right twin tail -->
+    <path d="M140 55 Q160 60, 168 90 Q175 120, 170 160 Q168 170, 162 168 Q158 165, 160 140 Q162 110, 155 85 Q150 65, 138 58" fill="url(#lila-hair)"/>
+    <!-- Twin tail shine -->
+    <path d="M38 90 Q35 110, 34 140" stroke="url(#lila-hair-light)" stroke-width="4" fill="none"/>
+    <path d="M162 90 Q165 110, 166 140" stroke="url(#lila-hair-light)" stroke-width="4" fill="none"/>
+    <!-- Head -->
+    <ellipse cx="100" cy="88" rx="46" ry="50" fill="url(#lila-skin)"/>
+    <!-- Hair front -->
+    <path d="M54 72 Q54 30, 100 22 Q146 30, 146 72 L143 60 Q138 48, 125 52 L115 44 Q100 36, 85 44 L75 52 Q62 48, 57 60 Z" fill="url(#lila-hair)"/>
+    <!-- Hair shine -->
+    <path d="M68 38 Q85 28, 100 26 Q115 28, 132 38 L128 48 Q112 38, 100 36 Q88 38, 72 48 Z" fill="url(#lila-hair-light)"/>
+    <!-- Twin tail ties (ribbons) -->
+    <circle cx="58" cy="58" r="6" fill="url(#lila-ribbon)"/>
+    <path d="M52 58 Q45 50, 42 55 Q45 62, 52 60" fill="url(#lila-ribbon)"/>
+    <path d="M52 58 Q45 65, 42 60 Q45 54, 52 56" fill="#EC407A"/>
+    <circle cx="142" cy="58" r="6" fill="url(#lila-ribbon)"/>
+    <path d="M148 58 Q155 50, 158 55 Q155 62, 148 60" fill="url(#lila-ribbon)"/>
+    <path d="M148 58 Q155 65, 158 60 Q155 54, 148 56" fill="#EC407A"/>
+    <!-- Eyes (large, sparkly) -->
+    <ellipse cx="80" cy="92" rx="10" ry="11" fill="url(#lila-eye)"/>
+    <ellipse cx="120" cy="92" rx="10" ry="11" fill="url(#lila-eye)"/>
+    <!-- Eye highlights -->
+    <ellipse cx="84" cy="87" rx="4" ry="4.5" fill="white" opacity="0.9"/>
+    <ellipse cx="124" cy="87" rx="4" ry="4.5" fill="white" opacity="0.9"/>
+    <ellipse cx="77" cy="96" rx="2" ry="2" fill="white" opacity="0.6"/>
+    <ellipse cx="117" cy="96" rx="2" ry="2" fill="white" opacity="0.6"/>
+    <!-- Extra sparkle in eyes -->
+    <circle cx="86" cy="93" r="1" fill="white" opacity="0.7"/>
+    <circle cx="126" cy="93" r="1" fill="white" opacity="0.7"/>
+    <!-- Eyelashes -->
+    <path d="M69 85 L66 80" stroke="#4A148C" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M72 83 L70 78" stroke="#4A148C" stroke-width="1" stroke-linecap="round"/>
+    <path d="M131 85 L134 80" stroke="#4A148C" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M128 83 L130 78" stroke="#4A148C" stroke-width="1" stroke-linecap="round"/>
+    <!-- Eyebrows -->
+    <path d="M69 76 Q80 72, 91 76" stroke="#AB47BC" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <path d="M109 76 Q120 72, 131 76" stroke="#AB47BC" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <!-- Nose -->
+    <ellipse cx="100" cy="103" rx="2" ry="1.5" fill="#E8B8A8" opacity="0.6"/>
+    <!-- Mouth -->
+    <path d="M94 113 Q100 116, 106 113" stroke="#D4868A" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Blush -->
+    <ellipse cx="67" cy="105" rx="10" ry="6" fill="url(#lila-blush)"/>
+    <ellipse cx="133" cy="105" rx="10" ry="6" fill="url(#lila-blush)"/>
+    <!-- Neck -->
+    <rect x="90" y="134" width="20" height="14" rx="3" fill="url(#lila-skin)"/>
+    <!-- Body / Dress top -->
+    <path d="M68 146 Q68 142, 78 140 L95 138 Q100 137, 105 138 L122 140 Q132 142, 132 146 L134 195 L66 195 Z" fill="url(#lila-dress-top)"/>
+    <!-- Dress neckline with lace -->
+    <path d="M78 142 Q100 150, 122 142" stroke="white" stroke-width="2" fill="none" opacity="0.6"/>
+    <path d="M80 144 Q84 147, 88 144 Q92 147, 96 144 Q100 147, 104 144 Q108 147, 112 144 Q116 147, 120 144" stroke="white" stroke-width="1" fill="none" opacity="0.4"/>
+    <!-- Dress ribbon at waist -->
+    <rect x="66" y="190" width="68" height="8" rx="4" fill="url(#lila-ribbon)"/>
+    <!-- Bow at waist -->
+    <path d="M100 194 Q88 186, 85 190 Q88 196, 100 194" fill="#F48FB1"/>
+    <path d="M100 194 Q112 186, 115 190 Q112 196, 100 194" fill="#EC407A"/>
+    <circle cx="100" cy="194" r="3" fill="#F48FB1" stroke="#EC407A" stroke-width="0.5"/>
+    <!-- Dress skirt (full, fairy-tale) -->
+    <path d="M62 196 Q50 230, 45 268 Q44 275, 52 275 L148 275 Q156 275, 155 268 Q150 230, 138 196 Z" fill="url(#lila-dress-skirt)"/>
+    <!-- Skirt layers / ruffles -->
+    <path d="M52 240 Q70 235, 100 237 Q130 235, 148 240" stroke="#E1BEE7" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <path d="M48 260 Q70 255, 100 257 Q130 255, 152 260" stroke="#E1BEE7" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <!-- Skirt sparkles -->
+    <circle cx="75" cy="230" r="2" fill="url(#lila-sparkle)"/>
+    <circle cx="120" cy="245" r="1.5" fill="url(#lila-sparkle)"/>
+    <circle cx="90" cy="260" r="2" fill="url(#lila-sparkle)"/>
+    <circle cx="130" cy="225" r="1.5" fill="url(#lila-sparkle)"/>
+    <circle cx="110" cy="265" r="1.5" fill="url(#lila-sparkle)"/>
+    <!-- Star sparkles -->
+    <path d="M70 220 L71 222 L73 222 L71.5 223.5 L72 226 L70 224.5 L68 226 L68.5 223.5 L67 222 L69 222 Z" fill="white" opacity="0.5"/>
+    <path d="M135 250 L136 252 L138 252 L136.5 253.5 L137 256 L135 254.5 L133 256 L133.5 253.5 L132 252 L134 252 Z" fill="white" opacity="0.5"/>
+    <!-- Arms -->
+    <path d="M68 148 Q52 164, 46 192 Q44 202, 52 204 Q58 202, 56 188 L62 168" fill="url(#lila-dress-top)" stroke="#CE93D8" stroke-width="0.5"/>
+    <path d="M132 148 Q148 164, 154 192 Q156 202, 148 204 Q142 202, 144 188 L138 168" fill="url(#lila-dress-top)" stroke="#CE93D8" stroke-width="0.5"/>
+    <!-- Puffy sleeves -->
+    <ellipse cx="65" cy="152" rx="10" ry="8" fill="#E1BEE7" opacity="0.7"/>
+    <ellipse cx="135" cy="152" rx="10" ry="8" fill="#E1BEE7" opacity="0.7"/>
+    <!-- Hands -->
+    <ellipse cx="49" cy="204" rx="7" ry="6" fill="url(#lila-skin)"/>
+    <ellipse cx="151" cy="204" rx="7" ry="6" fill="url(#lila-skin)"/>
+    <!-- Shoes (cute mary janes) -->
+    <ellipse cx="72" cy="278" rx="14" ry="7" fill="#AB47BC"/>
+    <ellipse cx="128" cy="278" rx="14" ry="7" fill="#AB47BC"/>
+    <path d="M72 272 L72 278" stroke="#AB47BC" stroke-width="2"/>
+    <path d="M128 272 L128 278" stroke="#AB47BC" stroke-width="2"/>
+    <!-- Shoe bows -->
+    <circle cx="72" cy="274" r="2.5" fill="#F48FB1"/>
+    <circle cx="128" cy="274" r="2.5" fill="#F48FB1"/>
+    <!-- Crown / tiara -->
+    <path d="M78 38 L82 25 L88 35 L94 20 L100 35 L106 20 L112 35 L118 25 L122 38" fill="none" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M78 38 L122 38" stroke="#FFD700" stroke-width="2.5"/>
+    <!-- Crown gems -->
+    <circle cx="94" cy="24" r="2" fill="#E91E63"/>
+    <circle cx="100" cy="22" r="2.5" fill="#E1BEE7" stroke="#CE93D8" stroke-width="0.5"/>
+    <circle cx="106" cy="24" r="2" fill="#E91E63"/>
+  </g>
+</svg>

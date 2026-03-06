@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <radialGradient id="globo_earth" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#55BBFF"/>
+      <stop offset="100%" stop-color="#2277CC"/>
+    </radialGradient>
+    <radialGradient id="globo_shine" cx="35%" cy="30%" r="30%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="globo_stand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#CCAA66"/>
+      <stop offset="100%" stop-color="#997733"/>
+    </linearGradient>
+    <filter id="globo_shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="1" dy="3" stdDeviation="3" flood-color="#00000033"/>
+    </filter>
+    <clipPath id="globo_clip">
+      <circle cx="60" cy="48" r="32"/>
+    </clipPath>
+  </defs>
+  <ellipse cx="60" cy="112" rx="25" ry="4" fill="#00000020"/>
+  <g filter="url(#globo_shadow)">
+    <!-- Stand base -->
+    <ellipse cx="60" cy="108" rx="22" ry="6" fill="url(#globo_stand)"/>
+    <ellipse cx="60" cy="106" rx="22" ry="6" fill="#BBAA55"/>
+    <!-- Stand pole -->
+    <rect x="57" y="78" width="6" height="30" fill="url(#globo_stand)"/>
+    <!-- Arc frame -->
+    <ellipse cx="60" cy="48" rx="36" ry="36" fill="none" stroke="#CCAA66" stroke-width="3"/>
+    <!-- Globe sphere -->
+    <circle cx="60" cy="48" r="32" fill="url(#globo_earth)"/>
+    <!-- Continents (simplified cute style) -->
+    <g clip-path="url(#globo_clip)">
+      <!-- Americas-like -->
+      <path d="M42 28 Q38 32 40 38 Q42 42 38 48 Q36 55 40 60 Q44 65 42 72" stroke="none" fill="#55CC77" opacity="0.8"/>
+      <ellipse cx="40" cy="42" rx="8" ry="10" fill="#55CC77" opacity="0.8"/>
+      <ellipse cx="40" cy="60" rx="6" ry="12" fill="#55CC77" opacity="0.8"/>
+      <!-- Europe/Africa-like -->
+      <ellipse cx="65" cy="35" rx="8" ry="7" fill="#55CC77" opacity="0.8"/>
+      <ellipse cx="68" cy="55" rx="10" ry="14" fill="#55CC77" opacity="0.8"/>
+      <!-- Asia-like -->
+      <ellipse cx="80" cy="38" rx="12" ry="10" fill="#55CC77" opacity="0.8"/>
+      <!-- Ice caps -->
+      <ellipse cx="60" cy="20" rx="15" ry="5" fill="#FFFFFF" opacity="0.5"/>
+      <ellipse cx="60" cy="76" rx="12" ry="4" fill="#FFFFFF" opacity="0.5"/>
+    </g>
+    <!-- Grid lines -->
+    <ellipse cx="60" cy="48" rx="32" ry="16" fill="none" stroke="#88CCFF" stroke-width="0.5" opacity="0.5"/>
+    <ellipse cx="60" cy="48" rx="16" ry="32" fill="none" stroke="#88CCFF" stroke-width="0.5" opacity="0.5"/>
+    <line x1="28" y1="48" x2="92" y2="48" stroke="#88CCFF" stroke-width="0.5" opacity="0.5"/>
+    <!-- Shine -->
+    <circle cx="60" cy="48" r="32" fill="url(#globo_shine)"/>
+    <!-- Axis tilt line top -->
+    <circle cx="60" cy="14" r="3" fill="#CCAA66"/>
+  </g>
+</svg>

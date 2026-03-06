@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="coelho_body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8E0D8"/>
+      <stop offset="100%" stop-color="#C8BEB5"/>
+    </linearGradient>
+    <linearGradient id="coelho_belly" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F5F0EB"/>
+    </linearGradient>
+    <linearGradient id="coelho_ear_inner" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFB6C1"/>
+      <stop offset="100%" stop-color="#FF91A4"/>
+    </linearGradient>
+    <radialGradient id="coelho_cheek" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#FFB6C1" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FFB6C1" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="coelho_shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+  </defs>
+  <!-- Body -->
+  <ellipse cx="60" cy="82" rx="26" ry="24" fill="url(#coelho_body)" filter="url(#coelho_shadow)"/>
+  <!-- Belly -->
+  <ellipse cx="60" cy="85" rx="17" ry="15" fill="url(#coelho_belly)"/>
+  <!-- Head -->
+  <circle cx="60" cy="52" r="22" fill="url(#coelho_body)"/>
+  <!-- Ears -->
+  <ellipse cx="47" cy="22" rx="8" ry="24" fill="url(#coelho_body)" transform="rotate(-8,47,22)"/>
+  <ellipse cx="73" cy="22" rx="8" ry="24" fill="url(#coelho_body)" transform="rotate(8,73,22)"/>
+  <ellipse cx="47" cy="22" rx="5" ry="18" fill="url(#coelho_ear_inner)" transform="rotate(-8,47,22)"/>
+  <ellipse cx="73" cy="22" rx="5" ry="18" fill="url(#coelho_ear_inner)" transform="rotate(8,73,22)"/>
+  <!-- Eyes -->
+  <circle cx="50" cy="49" r="5" fill="white"/>
+  <circle cx="70" cy="49" r="5" fill="white"/>
+  <circle cx="51" cy="50" r="3.2" fill="#5C2D91"/>
+  <circle cx="71" cy="50" r="3.2" fill="#5C2D91"/>
+  <circle cx="52" cy="48.5" r="1.2" fill="white"/>
+  <circle cx="72" cy="48.5" r="1.2" fill="white"/>
+  <!-- Nose -->
+  <ellipse cx="60" cy="56" rx="3" ry="2.2" fill="#FFB6C1"/>
+  <!-- Mouth -->
+  <path d="M57,59 Q60,62 63,59" fill="none" stroke="#C8BEB5" stroke-width="1" stroke-linecap="round"/>
+  <!-- Whiskers -->
+  <line x1="37" y1="55" x2="49" y2="57" stroke="#C8BEB5" stroke-width="0.7"/>
+  <line x1="37" y1="59" x2="49" y2="59" stroke="#C8BEB5" stroke-width="0.7"/>
+  <line x1="71" y1="57" x2="83" y2="55" stroke="#C8BEB5" stroke-width="0.7"/>
+  <line x1="71" y1="59" x2="83" y2="59" stroke="#C8BEB5" stroke-width="0.7"/>
+  <!-- Cheeks -->
+  <circle cx="42" cy="56" r="6" fill="url(#coelho_cheek)"/>
+  <circle cx="78" cy="56" r="6" fill="url(#coelho_cheek)"/>
+  <!-- Paws -->
+  <ellipse cx="44" cy="102" rx="12" ry="6" fill="url(#coelho_body)"/>
+  <ellipse cx="76" cy="102" rx="12" ry="6" fill="url(#coelho_body)"/>
+  <ellipse cx="44" cy="103" rx="8" ry="3.5" fill="url(#coelho_belly)"/>
+  <ellipse cx="76" cy="103" rx="8" ry="3.5" fill="url(#coelho_belly)"/>
+  <!-- Tail puff -->
+  <circle cx="88" cy="85" r="7" fill="url(#coelho_belly)"/>
+</svg>

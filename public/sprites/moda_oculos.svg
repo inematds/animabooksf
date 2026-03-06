@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="moda_oculos_grad1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </linearGradient>
+    <linearGradient id="moda_oculos_lens" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#818CF8" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#A78BFA" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#C084FC" stop-opacity="0.6"/>
+    </linearGradient>
+    <filter id="moda_oculos_shadow">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <g filter="url(#moda_oculos_shadow)">
+    <!-- Left temple (arm) -->
+    <path d="M6 48 L22 52" stroke="url(#moda_oculos_grad1)" stroke-width="4" stroke-linecap="round"/>
+    <!-- Right temple (arm) -->
+    <path d="M114 48 L98 52" stroke="url(#moda_oculos_grad1)" stroke-width="4" stroke-linecap="round"/>
+    <!-- Bridge -->
+    <path d="M52 55 Q60 50 68 55" fill="none" stroke="url(#moda_oculos_grad1)" stroke-width="4" stroke-linecap="round"/>
+    <!-- Left frame -->
+    <ellipse cx="37" cy="62" rx="20" ry="18" fill="none" stroke="url(#moda_oculos_grad1)" stroke-width="4"/>
+    <!-- Left lens -->
+    <ellipse cx="37" cy="62" rx="17" ry="15" fill="url(#moda_oculos_lens)"/>
+    <!-- Left lens shine -->
+    <ellipse cx="30" cy="56" rx="6" ry="4" fill="white" opacity="0.4" transform="rotate(-15 30 56)"/>
+    <!-- Right frame -->
+    <ellipse cx="83" cy="62" rx="20" ry="18" fill="none" stroke="url(#moda_oculos_grad1)" stroke-width="4"/>
+    <!-- Right lens -->
+    <ellipse cx="83" cy="62" rx="17" ry="15" fill="url(#moda_oculos_lens)"/>
+    <!-- Right lens shine -->
+    <ellipse cx="76" cy="56" rx="6" ry="4" fill="white" opacity="0.4" transform="rotate(-15 76 56)"/>
+    <!-- Decorative stars -->
+    <circle cx="18" cy="52" r="2" fill="#FBBF24"/>
+    <circle cx="102" cy="52" r="2" fill="#FBBF24"/>
+  </g>
+</svg>

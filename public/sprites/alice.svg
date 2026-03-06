@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" width="200" height="300">
+  <defs>
+    <linearGradient id="aliceHairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="50%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="aliceHairShine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FEF3C7" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FDE68A" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="aliceSkin" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#FFF5EB"/>
+      <stop offset="80%" stop-color="#FDE8D0"/>
+      <stop offset="100%" stop-color="#F5D5B0"/>
+    </radialGradient>
+    <radialGradient id="aliceEyeL" cx="42%" cy="32%" r="55%">
+      <stop offset="0%" stop-color="#93C5FD"/>
+      <stop offset="45%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </radialGradient>
+    <radialGradient id="aliceEyeR" cx="58%" cy="32%" r="55%">
+      <stop offset="0%" stop-color="#93C5FD"/>
+      <stop offset="45%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </radialGradient>
+    <linearGradient id="aliceDress" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F9A8D4"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+    <linearGradient id="aliceDressTop" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FBCFE8"/>
+      <stop offset="100%" stop-color="#F9A8D4"/>
+    </linearGradient>
+    <linearGradient id="aliceBow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F472B6"/>
+      <stop offset="50%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#DB2777"/>
+    </linearGradient>
+    <linearGradient id="aliceShoe" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F9A8D4"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+    <filter id="aliceShadow" x="-15%" y="-10%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.5" result="blur"/>
+      <feOffset dx="1" dy="2" result="off"/>
+      <feFlood flood-color="#000" flood-opacity="0.12"/>
+      <feComposite in2="off" operator="in" result="sh"/>
+      <feMerge><feMergeNode in="sh"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="aliceBlush" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#aliceShadow)">
+    <!-- LEGS -->
+    <rect x="79" y="230" width="14" height="34" rx="7" fill="#FDE8D0"/>
+    <rect x="107" y="230" width="14" height="34" rx="7" fill="#FDE8D0"/>
+
+    <!-- Socks (white knee-high) -->
+    <rect x="77" y="244" width="18" height="20" rx="5" fill="white" stroke="#FBCFE8" stroke-width="0.6"/>
+    <rect x="105" y="244" width="18" height="20" rx="5" fill="white" stroke="#FBCFE8" stroke-width="0.6"/>
+    <!-- Sock lace top -->
+    <path d="M77 246 Q86 244 95 246" fill="none" stroke="#FBCFE8" stroke-width="1" opacity="0.6"/>
+    <path d="M105 246 Q114 244 123 246" fill="none" stroke="#FBCFE8" stroke-width="1" opacity="0.6"/>
+
+    <!-- Shoes (mary janes) -->
+    <ellipse cx="86" cy="270" rx="15" ry="7" fill="url(#aliceShoe)"/>
+    <ellipse cx="114" cy="270" rx="15" ry="7" fill="url(#aliceShoe)"/>
+    <path d="M74 268 Q86 262 98 268" fill="none" stroke="#DB2777" stroke-width="1"/>
+    <path d="M102 268 Q114 262 126 268" fill="none" stroke="#DB2777" stroke-width="1"/>
+    <!-- Shoe straps -->
+    <path d="M80 268 Q86 266 92 268" fill="none" stroke="#DB2777" stroke-width="1.2"/>
+    <path d="M108 268 Q114 266 120 268" fill="none" stroke="#DB2777" stroke-width="1.2"/>
+    <!-- Strap buttons -->
+    <circle cx="86" cy="267" r="1.2" fill="#FDE68A"/>
+    <circle cx="114" cy="267" r="1.2" fill="#FDE68A"/>
+
+    <!-- SKIRT -->
+    <path d="M66 196 Q74 190 100 188 Q126 190 134 196 L144 248 Q125 254 100 254 Q75 254 56 248 Z" fill="url(#aliceDress)"/>
+    <!-- Pleats -->
+    <path d="M78 194 L74 250" fill="none" stroke="#DB2777" stroke-width="0.7" opacity="0.25"/>
+    <path d="M90 191 L86 252" fill="none" stroke="#DB2777" stroke-width="0.7" opacity="0.25"/>
+    <path d="M110 191 L114 252" fill="none" stroke="#DB2777" stroke-width="0.7" opacity="0.25"/>
+    <path d="M122 194 L126 250" fill="none" stroke="#DB2777" stroke-width="0.7" opacity="0.25"/>
+    <!-- Skirt highlight -->
+    <path d="M70 198 Q100 192 130 198 L132 206 Q100 200 68 206 Z" fill="white" opacity="0.15"/>
+    <!-- Lace trim at bottom -->
+    <path d="M58 246 Q65 242 72 246 Q79 242 86 246 Q93 242 100 246 Q107 242 114 246 Q121 242 128 246 Q135 242 142 246" fill="none" stroke="white" stroke-width="1" opacity="0.5"/>
+
+    <!-- DRESS TOP -->
+    <path d="M70 152 Q74 144 100 141 Q126 144 130 152 L134 196 Q126 190 100 188 Q74 190 66 196 Z" fill="url(#aliceDressTop)" stroke="#EC4899" stroke-width="0.5"/>
+    <!-- Peter pan collar -->
+    <path d="M80 148 Q88 155 100 156 Q112 155 120 148" fill="white" stroke="#FBCFE8" stroke-width="0.6"/>
+    <path d="M80 148 Q90 152 100 150" fill="white" stroke="#FBCFE8" stroke-width="0.4"/>
+    <path d="M120 148 Q110 152 100 150" fill="white" stroke="#FBCFE8" stroke-width="0.4"/>
+    <!-- Center bow -->
+    <path d="M94 154 Q97 149 100 154 Q103 149 106 154 Q103 157 100 154 Q97 157 94 154" fill="#EC4899"/>
+    <circle cx="100" cy="154" r="2" fill="#DB2777"/>
+    <!-- Buttons -->
+    <circle cx="100" cy="170" r="1.2" fill="#EC4899" opacity="0.5"/>
+    <circle cx="100" cy="180" r="1.2" fill="#EC4899" opacity="0.5"/>
+
+    <!-- ARMS -->
+    <!-- Left arm -->
+    <path d="M70 155 Q60 170 56 188 Q55 194 59 194 Q63 192 66 184 Q70 172 74 162" fill="#FDE8D0" stroke="#F0C9A0" stroke-width="0.4"/>
+    <ellipse cx="57" cy="193" rx="6" ry="5.5" fill="#FFF5EB"/>
+    <path d="M52 191 Q51 188 53 186" fill="none" stroke="#F0C9A0" stroke-width="0.6" stroke-linecap="round"/>
+    <!-- Left puff sleeve -->
+    <path d="M70 150 Q62 152 58 160 Q62 164 68 160 Q72 156 70 150" fill="url(#aliceDressTop)" stroke="#EC4899" stroke-width="0.4"/>
+    <path d="M60 154 Q64 152 68 154" fill="none" stroke="white" stroke-width="0.6" opacity="0.4"/>
+
+    <!-- Right arm -->
+    <path d="M130 155 Q140 170 144 188 Q145 194 141 194 Q137 192 134 184 Q130 172 126 162" fill="#FDE8D0" stroke="#F0C9A0" stroke-width="0.4"/>
+    <ellipse cx="143" cy="193" rx="6" ry="5.5" fill="#FFF5EB"/>
+    <path d="M148 191 Q149 188 147 186" fill="none" stroke="#F0C9A0" stroke-width="0.6" stroke-linecap="round"/>
+    <!-- Right puff sleeve -->
+    <path d="M130 150 Q138 152 142 160 Q138 164 132 160 Q128 156 130 150" fill="url(#aliceDressTop)" stroke="#EC4899" stroke-width="0.4"/>
+    <path d="M132 154 Q136 152 140 154" fill="none" stroke="white" stroke-width="0.6" opacity="0.4"/>
+
+    <!-- HEAD -->
+    <!-- Hair back -->
+    <ellipse cx="100" cy="75" rx="60" ry="58" fill="url(#aliceHairGrad)"/>
+    <!-- Long hair sides -->
+    <path d="M46 68 Q38 90 36 120 Q34 150 40 172 Q44 180 48 176 Q50 164 50 140 Q50 110 52 86 Q52 76 46 68" fill="url(#aliceHairGrad)"/>
+    <path d="M154 68 Q162 90 164 120 Q166 150 160 172 Q156 180 152 176 Q150 164 150 140 Q150 110 148 86 Q148 76 154 68" fill="url(#aliceHairGrad)"/>
+    <!-- Hair shine on sides -->
+    <path d="M44 82 Q42 110 42 140 Q42 158 44 170" fill="none" stroke="#FEF3C7" stroke-width="1.5" opacity="0.3"/>
+    <path d="M156 82 Q158 110 158 140 Q158 158 156 170" fill="none" stroke="#FEF3C7" stroke-width="1.5" opacity="0.3"/>
+
+    <!-- Face -->
+    <ellipse cx="100" cy="85" rx="48" ry="46" fill="url(#aliceSkin)"/>
+
+    <!-- Hair bangs -->
+    <path d="M52 72 Q56 38 78 28 Q92 24 100 26 Q108 24 122 28 Q144 38 148 72 Q146 56 138 48 Q130 42 122 46 Q112 38 100 36 Q88 38 78 46 Q70 42 62 48 Q54 56 52 72" fill="url(#aliceHairGrad)"/>
+    <!-- Bangs shine -->
+    <path d="M62 62 Q68 42 84 34 Q92 30 98 32 Q93 38 86 44 Q78 52 68 62" fill="url(#aliceHairShine)" opacity="0.5"/>
+    <path d="M110 38 Q116 34 124 36 Q130 40 134 48 Q128 42 120 40 Q114 40 110 42" fill="url(#aliceHairShine)" opacity="0.3"/>
+
+    <!-- HAIR BOW -->
+    <path d="M120 42 Q132 30 144 36 Q148 40 142 44 Q134 46 126 42" fill="url(#aliceBow)"/>
+    <path d="M120 42 Q108 30 96 36 Q92 40 98 44 Q106 46 114 42" fill="url(#aliceBow)" opacity="0.9"/>
+    <circle cx="120" cy="42" r="4" fill="#EC4899"/>
+    <circle cx="120" cy="42" r="2" fill="#DB2777"/>
+    <!-- Bow shine -->
+    <path d="M126 36 Q130 34 134 36" fill="none" stroke="white" stroke-width="0.8" opacity="0.4"/>
+    <path d="M106 36 Q110 34 114 36" fill="none" stroke="white" stroke-width="0.8" opacity="0.4"/>
+
+    <!-- Ears -->
+    <ellipse cx="54" cy="88" rx="5" ry="7" fill="#FDE8D0"/>
+    <ellipse cx="54" cy="88" rx="2.5" ry="4" fill="#F0C9A0" opacity="0.4"/>
+    <ellipse cx="146" cy="88" rx="5" ry="7" fill="#FDE8D0"/>
+    <ellipse cx="146" cy="88" rx="2.5" ry="4" fill="#F0C9A0" opacity="0.4"/>
+
+    <!-- FACE -->
+    <!-- Eyebrows -->
+    <path d="M72 68 Q80 63 90 66" fill="none" stroke="#D97706" stroke-width="1.3" stroke-linecap="round" opacity="0.5"/>
+    <path d="M128 68 Q120 63 110 66" fill="none" stroke="#D97706" stroke-width="1.3" stroke-linecap="round" opacity="0.5"/>
+
+    <!-- Left eye -->
+    <ellipse cx="82" cy="82" rx="13" ry="14" fill="white"/>
+    <ellipse cx="82" cy="84" rx="9.5" ry="10.5" fill="url(#aliceEyeL)"/>
+    <ellipse cx="82" cy="85" rx="4.5" ry="5.5" fill="#0C1445"/>
+    <circle cx="77" cy="79" r="3.5" fill="white" opacity="0.95"/>
+    <circle cx="86" cy="88" r="1.8" fill="white" opacity="0.7"/>
+    <circle cx="79" cy="86" r="1" fill="white" opacity="0.5"/>
+    <path d="M76 78 L77 76.5 L78 78 L79.5 77 L78 78 L77 79.5 L76 78 L74.5 77 Z" fill="white" opacity="0.6"/>
+    <path d="M69 77 Q76 69 82 69 Q88 69 95 77" fill="none" stroke="#1E3A8A" stroke-width="2" stroke-linecap="round"/>
+    <path d="M69 77 Q66 73 64 69" fill="none" stroke="#1E3A8A" stroke-width="1.4" stroke-linecap="round"/>
+    <path d="M72 74 Q70 70 69 67" fill="none" stroke="#1E3A8A" stroke-width="1.1" stroke-linecap="round"/>
+    <path d="M95 77 Q97 74 98 71" fill="none" stroke="#1E3A8A" stroke-width="1" stroke-linecap="round"/>
+
+    <!-- Right eye -->
+    <ellipse cx="118" cy="82" rx="13" ry="14" fill="white"/>
+    <ellipse cx="118" cy="84" rx="9.5" ry="10.5" fill="url(#aliceEyeR)"/>
+    <ellipse cx="118" cy="85" rx="4.5" ry="5.5" fill="#0C1445"/>
+    <circle cx="113" cy="79" r="3.5" fill="white" opacity="0.95"/>
+    <circle cx="122" cy="88" r="1.8" fill="white" opacity="0.7"/>
+    <circle cx="115" cy="86" r="1" fill="white" opacity="0.5"/>
+    <path d="M112 78 L113 76.5 L114 78 L115.5 77 L114 78 L113 79.5 L112 78 L110.5 77 Z" fill="white" opacity="0.6"/>
+    <path d="M105 77 Q112 69 118 69 Q124 69 131 77" fill="none" stroke="#1E3A8A" stroke-width="2" stroke-linecap="round"/>
+    <path d="M131 77 Q134 73 136 69" fill="none" stroke="#1E3A8A" stroke-width="1.4" stroke-linecap="round"/>
+    <path d="M128 74 Q130 70 131 67" fill="none" stroke="#1E3A8A" stroke-width="1.1" stroke-linecap="round"/>
+    <path d="M105 77 Q103 74 102 71" fill="none" stroke="#1E3A8A" stroke-width="1" stroke-linecap="round"/>
+
+    <!-- Blush -->
+    <ellipse cx="68" cy="97" rx="9" ry="5" fill="#FCA5A5" filter="url(#aliceBlush)" opacity="0.5"/>
+    <ellipse cx="132" cy="97" rx="9" ry="5" fill="#FCA5A5" filter="url(#aliceBlush)" opacity="0.5"/>
+
+    <!-- Nose -->
+    <ellipse cx="100" cy="93" rx="2" ry="1.5" fill="#F0C9A0" opacity="0.6"/>
+
+    <!-- Mouth - neutral sweet -->
+    <path d="M94 105 Q100 110 106 105" fill="none" stroke="#D97070" stroke-width="1.5" stroke-linecap="round"/>
+
+    <!-- Hair wisps -->
+    <path d="M88 40 Q86 48 89 55" fill="none" stroke="#FBBF24" stroke-width="1.3" opacity="0.3" stroke-linecap="round"/>
+    <path d="M100 36 Q99 44 100 52" fill="none" stroke="#FBBF24" stroke-width="1.3" opacity="0.3" stroke-linecap="round"/>
+  </g>
+</svg>

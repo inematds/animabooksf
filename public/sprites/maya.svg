@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" width="200" height="300">
+  <defs>
+    <radialGradient id="maya-skin" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#C68A5C"/>
+      <stop offset="100%" stop-color="#A87042"/>
+    </radialGradient>
+    <linearGradient id="maya-hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1A1A1A"/>
+      <stop offset="100%" stop-color="#0D0D0D"/>
+    </linearGradient>
+    <linearGradient id="maya-top" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4A76A"/>
+      <stop offset="50%" stop-color="#C49458"/>
+      <stop offset="100%" stop-color="#B08040"/>
+    </linearGradient>
+    <linearGradient id="maya-skirt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8D6E4C"/>
+      <stop offset="100%" stop-color="#6B5338"/>
+    </linearGradient>
+    <linearGradient id="maya-pattern" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E74C3C"/>
+      <stop offset="50%" stop-color="#E67E22"/>
+      <stop offset="100%" stop-color="#E74C3C"/>
+    </linearGradient>
+    <radialGradient id="maya-eye" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#3E2723"/>
+      <stop offset="100%" stop-color="#1B0F0A"/>
+    </radialGradient>
+    <radialGradient id="maya-blush" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D4835A" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#D4835A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="maya-feather1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E74C3C"/>
+      <stop offset="100%" stop-color="#C0392B"/>
+    </linearGradient>
+    <linearGradient id="maya-feather2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2ECC71"/>
+      <stop offset="100%" stop-color="#27AE60"/>
+    </linearGradient>
+    <filter id="maya-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+  </defs>
+  <g filter="url(#maya-shadow)">
+    <!-- Hair back (long braids) -->
+    <rect x="55" y="60" width="14" height="130" rx="7" fill="url(#maya-hair)"/>
+    <rect x="131" y="60" width="14" height="130" rx="7" fill="url(#maya-hair)"/>
+    <!-- Braid texture left -->
+    <path d="M58 75 L69 80 M58 90 L69 95 M58 105 L69 110 M58 120 L69 125 M58 135 L69 140 M58 150 L69 155 M58 165 L69 170" stroke="#333" stroke-width="1" opacity="0.3"/>
+    <!-- Braid texture right -->
+    <path d="M131 75 L145 80 M131 90 L145 95 M131 105 L145 110 M131 120 L145 125 M131 135 L145 140 M131 150 L145 155 M131 165 L145 170" stroke="#333" stroke-width="1" opacity="0.3"/>
+    <!-- Braid ties -->
+    <rect x="56" y="185" width="12" height="6" rx="3" fill="#E74C3C"/>
+    <rect x="132" y="185" width="12" height="6" rx="3" fill="#E74C3C"/>
+    <!-- Braid end tassels -->
+    <ellipse cx="62" cy="195" rx="5" ry="4" fill="url(#maya-hair)"/>
+    <ellipse cx="138" cy="195" rx="5" ry="4" fill="url(#maya-hair)"/>
+    <!-- Head -->
+    <ellipse cx="100" cy="88" rx="46" ry="50" fill="url(#maya-skin)"/>
+    <!-- Hair top -->
+    <path d="M54 72 Q54 32, 100 25 Q146 32, 146 72 L144 60 Q140 50, 130 52 L100 48 L70 52 Q60 50, 56 60 Z" fill="url(#maya-hair)"/>
+    <!-- Hair center part -->
+    <line x1="100" y1="25" x2="100" y2="55" stroke="#333" stroke-width="1" opacity="0.4"/>
+    <!-- Feather hair ornament -->
+    <path d="M142 42 Q148 20, 150 10 Q152 20, 150 35 Q148 42, 145 45" fill="url(#maya-feather1)" stroke="#C0392B" stroke-width="0.5"/>
+    <path d="M145 45 Q152 22, 156 15 Q157 25, 154 38 Q152 44, 148 47" fill="url(#maya-feather2)" stroke="#27AE60" stroke-width="0.5"/>
+    <line x1="150" y1="10" x2="150" y2="35" stroke="#8B4513" stroke-width="0.8" opacity="0.5"/>
+    <line x1="156" y1="15" x2="154" y2="38" stroke="#8B4513" stroke-width="0.8" opacity="0.5"/>
+    <!-- Head band -->
+    <rect x="54" y="60" width="92" height="6" rx="3" fill="url(#maya-pattern)"/>
+    <!-- Band pattern (triangles) -->
+    <path d="M60 60 L63 66 L66 60 M72 60 L75 66 L78 60 M84 60 L87 66 L90 60 M96 60 L99 66 L102 60 M108 60 L111 66 L114 60 M120 60 L123 66 L126 60 M132 60 L135 66 L138 60" stroke="#FDD835" stroke-width="1" fill="none"/>
+    <!-- Eyes -->
+    <ellipse cx="80" cy="92" rx="8" ry="9" fill="url(#maya-eye)"/>
+    <ellipse cx="120" cy="92" rx="8" ry="9" fill="url(#maya-eye)"/>
+    <!-- Eye highlights -->
+    <ellipse cx="83" cy="88" rx="3" ry="3.5" fill="white" opacity="0.9"/>
+    <ellipse cx="123" cy="88" rx="3" ry="3.5" fill="white" opacity="0.9"/>
+    <ellipse cx="78" cy="95" rx="1.5" ry="1.5" fill="white" opacity="0.5"/>
+    <ellipse cx="118" cy="95" rx="1.5" ry="1.5" fill="white" opacity="0.5"/>
+    <!-- Eyebrows -->
+    <path d="M70 78 Q80 74, 89 78" stroke="#1A1A1A" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M111 78 Q120 74, 130 78" stroke="#1A1A1A" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Nose -->
+    <ellipse cx="100" cy="103" rx="2.5" ry="2" fill="#9A6842" opacity="0.5"/>
+    <!-- Mouth -->
+    <path d="M93 113 Q100 116, 107 113" stroke="#7A5035" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Blush -->
+    <ellipse cx="68" cy="105" rx="9" ry="5" fill="url(#maya-blush)"/>
+    <ellipse cx="132" cy="105" rx="9" ry="5" fill="url(#maya-blush)"/>
+    <!-- Neck -->
+    <rect x="90" y="132" width="20" height="16" rx="3" fill="url(#maya-skin)"/>
+    <!-- Necklace -->
+    <path d="M80 140 Q100 148, 120 140" stroke="#E67E22" stroke-width="2" fill="none"/>
+    <circle cx="100" cy="147" r="4" fill="#27AE60" stroke="#1E8449" stroke-width="0.5"/>
+    <circle cx="90" cy="145" r="2.5" fill="#E74C3C"/>
+    <circle cx="110" cy="145" r="2.5" fill="#E74C3C"/>
+    <circle cx="84" cy="142" r="2" fill="#F39C12"/>
+    <circle cx="116" cy="142" r="2" fill="#F39C12"/>
+    <!-- Body / Top -->
+    <path d="M68 148 Q68 144, 78 142 L95 140 Q100 139, 105 140 L122 142 Q132 144, 132 148 L135 200 L65 200 Z" fill="url(#maya-top)"/>
+    <!-- Top pattern band -->
+    <rect x="65" y="160" width="70" height="8" rx="2" fill="url(#maya-pattern)"/>
+    <path d="M68 160 L72 168 L76 160 M80 160 L84 168 L88 160 M92 160 L96 168 L100 160 M104 160 L108 168 L112 160 M116 160 L120 168 L124 160 M128 160 L132 168" stroke="#FDD835" stroke-width="0.8" fill="none"/>
+    <!-- Skirt -->
+    <path d="M65 198 L55 268 Q54 272, 60 272 L140 272 Q146 272, 145 268 L135 198 Z" fill="url(#maya-skirt)"/>
+    <!-- Skirt pattern -->
+    <rect x="57" y="230" width="86" height="6" rx="2" fill="url(#maya-pattern)" opacity="0.7"/>
+    <rect x="56" y="255" width="88" height="4" rx="2" fill="#E67E22" opacity="0.5"/>
+    <!-- Arms -->
+    <path d="M68 152 Q50 168, 44 198 Q42 208, 50 210 Q56 208, 54 194 L60 172" fill="url(#maya-skin)" stroke="#9A6842" stroke-width="0.5"/>
+    <path d="M132 152 Q150 168, 156 198 Q158 208, 150 210 Q144 208, 146 194 L140 172" fill="url(#maya-skin)" stroke="#9A6842" stroke-width="0.5"/>
+    <!-- Arm bands -->
+    <rect x="48" y="180" width="10" height="4" rx="2" fill="url(#maya-pattern)"/>
+    <rect x="142" y="180" width="10" height="4" rx="2" fill="url(#maya-pattern)"/>
+    <!-- Hands -->
+    <ellipse cx="47" cy="210" rx="8" ry="7" fill="url(#maya-skin)"/>
+    <ellipse cx="153" cy="210" rx="8" ry="7" fill="url(#maya-skin)"/>
+    <!-- Feet / moccasins -->
+    <ellipse cx="75" cy="276" rx="14" ry="8" fill="#8D6E4C"/>
+    <ellipse cx="125" cy="276" rx="14" ry="8" fill="#8D6E4C"/>
+    <path d="M68 274 Q75 270, 82 274" stroke="#6B5338" stroke-width="1" fill="none"/>
+    <path d="M118 274 Q125 270, 132 274" stroke="#6B5338" stroke-width="1" fill="none"/>
+  </g>
+</svg>

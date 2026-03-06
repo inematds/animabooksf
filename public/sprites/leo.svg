@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" width="200" height="300">
+  <defs>
+    <linearGradient id="leoHairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A0764A"/>
+      <stop offset="50%" stop-color="#78552B"/>
+      <stop offset="100%" stop-color="#5C3D1E"/>
+    </linearGradient>
+    <linearGradient id="leoHairShine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D4A574" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#A0764A" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="leoSkin" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#FFE8D0"/>
+      <stop offset="80%" stop-color="#FDDCBD"/>
+      <stop offset="100%" stop-color="#F0C9A0"/>
+    </radialGradient>
+    <radialGradient id="leoEyeL" cx="42%" cy="32%" r="55%">
+      <stop offset="0%" stop-color="#C4A882"/>
+      <stop offset="45%" stop-color="#78350F"/>
+      <stop offset="100%" stop-color="#451A03"/>
+    </radialGradient>
+    <radialGradient id="leoEyeR" cx="58%" cy="32%" r="55%">
+      <stop offset="0%" stop-color="#C4A882"/>
+      <stop offset="45%" stop-color="#78350F"/>
+      <stop offset="100%" stop-color="#451A03"/>
+    </radialGradient>
+    <linearGradient id="leoJersey" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="leoShorts" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F5F5F4"/>
+      <stop offset="100%" stop-color="#D6D3D1"/>
+    </linearGradient>
+    <linearGradient id="leoShoe" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1D4ED8"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </linearGradient>
+    <filter id="leoShadow" x="-15%" y="-10%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.5" result="blur"/>
+      <feOffset dx="1" dy="2" result="off"/>
+      <feFlood flood-color="#000" flood-opacity="0.12"/>
+      <feComposite in2="off" operator="in" result="sh"/>
+      <feMerge><feMergeNode in="sh"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="leoBlush" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#leoShadow)">
+    <!-- LEGS (skin + socks) -->
+    <rect x="78" y="218" width="16" height="44" rx="7" fill="#FDDCBD"/>
+    <rect x="106" y="218" width="16" height="44" rx="7" fill="#FDDCBD"/>
+    <!-- Athletic socks -->
+    <rect x="76" y="248" width="20" height="16" rx="5" fill="white" stroke="#D6D3D1" stroke-width="0.6"/>
+    <rect x="104" y="248" width="20" height="16" rx="5" fill="white" stroke="#D6D3D1" stroke-width="0.6"/>
+    <!-- Sock stripes -->
+    <rect x="76" y="250" width="20" height="2" rx="1" fill="#3B82F6" opacity="0.5"/>
+    <rect x="104" y="250" width="20" height="2" rx="1" fill="#3B82F6" opacity="0.5"/>
+    <rect x="76" y="254" width="20" height="2" rx="1" fill="#3B82F6" opacity="0.5"/>
+    <rect x="104" y="254" width="20" height="2" rx="1" fill="#3B82F6" opacity="0.5"/>
+
+    <!-- Athletic shoes -->
+    <ellipse cx="86" cy="270" rx="16" ry="8" fill="url(#leoShoe)"/>
+    <ellipse cx="114" cy="270" rx="16" ry="8" fill="url(#leoShoe)"/>
+    <path d="M74 268 Q86 262 98 268" fill="none" stroke="white" stroke-width="1.5" opacity="0.5"/>
+    <path d="M102 268 Q114 262 126 268" fill="none" stroke="white" stroke-width="1.5" opacity="0.5"/>
+    <path d="M72 272 Q86 276 100 272" fill="none" stroke="#1E3A8A" stroke-width="1.2"/>
+    <path d="M100 272 Q114 276 128 272" fill="none" stroke="#1E3A8A" stroke-width="1.2"/>
+
+    <!-- SHORTS -->
+    <path d="M68 198 Q74 192 100 190 Q126 192 132 198 L136 232 Q126 228 100 226 Q74 228 64 232 Z" fill="url(#leoShorts)" stroke="#A8A29E" stroke-width="0.5"/>
+    <!-- Shorts seams -->
+    <path d="M100 192 L100 228" fill="none" stroke="#A8A29E" stroke-width="0.5" opacity="0.3"/>
+    <!-- Side stripe -->
+    <path d="M68 200 L64 230" fill="none" stroke="#3B82F6" stroke-width="2" opacity="0.5"/>
+    <path d="M132 200 L136 230" fill="none" stroke="#3B82F6" stroke-width="2" opacity="0.5"/>
+
+    <!-- JERSEY -->
+    <path d="M68 148 Q74 140 100 137 Q126 140 132 148 L134 200 Q126 194 100 192 Q74 194 66 200 Z" fill="url(#leoJersey)" stroke="#1E40AF" stroke-width="0.5"/>
+    <!-- White shoulder panels -->
+    <path d="M68 148 Q62 156 60 166 L72 158 Z" fill="white" opacity="0.7"/>
+    <path d="M132 148 Q138 156 140 166 L128 158 Z" fill="white" opacity="0.7"/>
+    <!-- Collar (V-neck) -->
+    <path d="M84 146 L100 160 L116 146" fill="none" stroke="white" stroke-width="1.5"/>
+    <path d="M84 146 L96 156 L100 150" fill="url(#leoJersey)" stroke="white" stroke-width="0.5" opacity="0.5"/>
+    <path d="M116 146 L104 156 L100 150" fill="url(#leoJersey)" stroke="white" stroke-width="0.5" opacity="0.5"/>
+    <!-- Number on jersey -->
+    <text x="100" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" opacity="0.9">7</text>
+    <!-- Jersey highlight -->
+    <path d="M72 152 Q100 146 128 152 L128 160 Q100 154 72 160 Z" fill="white" opacity="0.08"/>
+
+    <!-- ARMS -->
+    <!-- Left arm -->
+    <path d="M68 152 Q58 168 54 186 Q53 192 57 192 Q61 190 64 182 Q68 170 72 160" fill="#FDDCBD" stroke="#F0C9A0" stroke-width="0.4"/>
+    <ellipse cx="55" cy="191" rx="6" ry="5.5" fill="#FFE8D0"/>
+    <path d="M50 189 Q49 186 51 184" fill="none" stroke="#F0C9A0" stroke-width="0.6" stroke-linecap="round"/>
+    <!-- Left sleeve -->
+    <path d="M68 148 Q60 154 58 164 Q64 160 70 153" fill="url(#leoJersey)" stroke="#1E40AF" stroke-width="0.4"/>
+    <!-- Sleeve stripe -->
+    <path d="M60 160 Q64 158 68 152" fill="none" stroke="white" stroke-width="1.5" opacity="0.5"/>
+
+    <!-- Right arm -->
+    <path d="M132 152 Q142 168 146 186 Q147 192 143 192 Q139 190 136 182 Q132 170 128 160" fill="#FDDCBD" stroke="#F0C9A0" stroke-width="0.4"/>
+    <ellipse cx="145" cy="191" rx="6" ry="5.5" fill="#FFE8D0"/>
+    <path d="M150 189 Q151 186 149 184" fill="none" stroke="#F0C9A0" stroke-width="0.6" stroke-linecap="round"/>
+    <!-- Right sleeve -->
+    <path d="M132 148 Q140 154 142 164 Q136 160 130 153" fill="url(#leoJersey)" stroke="#1E40AF" stroke-width="0.4"/>
+    <path d="M140 160 Q136 158 132 152" fill="none" stroke="white" stroke-width="1.5" opacity="0.5"/>
+
+    <!-- HEAD -->
+    <!-- Hair back -->
+    <ellipse cx="100" cy="68" rx="55" ry="52" fill="url(#leoHairGrad)"/>
+
+    <!-- Face -->
+    <ellipse cx="100" cy="85" rx="48" ry="46" fill="url(#leoSkin)"/>
+
+    <!-- Spiky hair -->
+    <path d="M50 68 Q54 34 78 24 Q92 20 100 22 Q108 20 122 24 Q146 34 150 68 Q148 52 140 42 Q130 34 122 38 Q114 28 100 26 Q86 28 78 38 Q70 34 60 42 Q52 52 50 68" fill="url(#leoHairGrad)"/>
+    <!-- Spikes -->
+    <path d="M68 30 Q72 14 78 26" fill="url(#leoHairGrad)"/>
+    <path d="M80 24 Q86 8 92 22" fill="url(#leoHairGrad)"/>
+    <path d="M96 20 Q102 4 108 18" fill="url(#leoHairGrad)"/>
+    <path d="M112 22 Q118 10 124 24" fill="url(#leoHairGrad)"/>
+    <path d="M128 28 Q134 16 138 30" fill="url(#leoHairGrad)"/>
+    <!-- Hair shine -->
+    <path d="M65 54 Q72 36 88 28 Q94 26 98 28 Q92 32 86 40 Q78 48 70 56" fill="url(#leoHairShine)" opacity="0.4"/>
+    <!-- Spike highlights -->
+    <path d="M84 14 Q86 10 88 14" fill="none" stroke="#D4A574" stroke-width="0.8" opacity="0.4"/>
+    <path d="M100 8 Q102 4 104 8" fill="none" stroke="#D4A574" stroke-width="0.8" opacity="0.4"/>
+
+    <!-- Ears -->
+    <ellipse cx="54" cy="88" rx="5" ry="7" fill="#FDDCBD"/>
+    <ellipse cx="54" cy="88" rx="2.5" ry="4" fill="#F0C9A0" opacity="0.4"/>
+    <ellipse cx="146" cy="88" rx="5" ry="7" fill="#FDDCBD"/>
+    <ellipse cx="146" cy="88" rx="2.5" ry="4" fill="#F0C9A0" opacity="0.4"/>
+
+    <!-- FACE -->
+    <!-- Eyebrows (confident) -->
+    <path d="M71 67 Q80 61 91 65" fill="none" stroke="#5C3D1E" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+    <path d="M129 67 Q120 61 109 65" fill="none" stroke="#5C3D1E" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+
+    <!-- Left eye -->
+    <ellipse cx="82" cy="82" rx="12" ry="13" fill="white"/>
+    <ellipse cx="82" cy="84" rx="8.5" ry="9.5" fill="url(#leoEyeL)"/>
+    <ellipse cx="82" cy="85" rx="4" ry="5" fill="#1C0A00"/>
+    <circle cx="78" cy="80" r="3" fill="white" opacity="0.95"/>
+    <circle cx="86" cy="87" r="1.5" fill="white" opacity="0.7"/>
+    <path d="M70 78 Q77 71 82 71 Q87 71 94 78" fill="none" stroke="#5C3D1E" stroke-width="1.8" stroke-linecap="round"/>
+
+    <!-- Right eye -->
+    <ellipse cx="118" cy="82" rx="12" ry="13" fill="white"/>
+    <ellipse cx="118" cy="84" rx="8.5" ry="9.5" fill="url(#leoEyeR)"/>
+    <ellipse cx="118" cy="85" rx="4" ry="5" fill="#1C0A00"/>
+    <circle cx="114" cy="80" r="3" fill="white" opacity="0.95"/>
+    <circle cx="122" cy="87" r="1.5" fill="white" opacity="0.7"/>
+    <path d="M106 78 Q113 71 118 71 Q123 71 130 78" fill="none" stroke="#5C3D1E" stroke-width="1.8" stroke-linecap="round"/>
+
+    <!-- Blush -->
+    <ellipse cx="68" cy="97" rx="8" ry="5" fill="#FCA5A5" filter="url(#leoBlush)" opacity="0.35"/>
+    <ellipse cx="132" cy="97" rx="8" ry="5" fill="#FCA5A5" filter="url(#leoBlush)" opacity="0.35"/>
+
+    <!-- Nose -->
+    <ellipse cx="100" cy="93" rx="2.5" ry="2" fill="#F0C9A0" opacity="0.6"/>
+
+    <!-- Mouth - neutral determined -->
+    <path d="M93 106 Q100 110 107 106" fill="none" stroke="#D97070" stroke-width="1.6" stroke-linecap="round"/>
+
+    <!-- Sweatband hint on forehead -->
+    <path d="M56 64 Q100 58 144 64" fill="none" stroke="white" stroke-width="2.5" opacity="0.3"/>
+  </g>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="moda_bota_grad1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#A16207"/>
+      <stop offset="100%" stop-color="#78350F"/>
+    </linearGradient>
+    <linearGradient id="moda_bota_grad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#A16207"/>
+    </linearGradient>
+    <filter id="moda_bota_shadow">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <g filter="url(#moda_bota_shadow)">
+    <!-- Left boot -->
+    <!-- Shaft -->
+    <path d="M18 15 L14 65 L48 65 L44 15Z" fill="url(#moda_bota_grad2)" stroke="#78350F" stroke-width="1.5"/>
+    <!-- Foot -->
+    <path d="M14 65 L8 90 Q6 100 16 102 L55 102 Q58 100 56 92 L48 65Z" fill="url(#moda_bota_grad1)" stroke="#78350F" stroke-width="1.5"/>
+    <!-- Heel -->
+    <rect x="10" y="98" width="12" height="8" rx="2" fill="#5C1F0F" stroke="#78350F" stroke-width="1"/>
+    <!-- Sole -->
+    <path d="M10 102 L55 102 Q58 104 55 106 L10 106 Q7 104 10 102Z" fill="#5C1F0F"/>
+    <!-- Boot top trim -->
+    <path d="M18 15 L44 15" stroke="#FBBF24" stroke-width="3" stroke-linecap="round"/>
+    <!-- Decorative stitching -->
+    <path d="M25 30 Q31 25 37 30 Q31 35 25 30Z" fill="none" stroke="#FDE047" stroke-width="1.5"/>
+    <path d="M25 45 Q31 40 37 45 Q31 50 25 45Z" fill="none" stroke="#FDE047" stroke-width="1.5"/>
+    <!-- Pull straps -->
+    <line x1="24" y1="16" x2="24" y2="22" stroke="#FBBF24" stroke-width="2" stroke-linecap="round"/>
+    <line x1="38" y1="16" x2="38" y2="22" stroke="#FBBF24" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Right boot -->
+    <!-- Shaft -->
+    <path d="M68 15 L64 65 L98 65 L94 15Z" fill="url(#moda_bota_grad2)" stroke="#78350F" stroke-width="1.5"/>
+    <!-- Foot -->
+    <path d="M64 65 L58 90 Q56 100 66 102 L105 102 Q108 100 106 92 L98 65Z" fill="url(#moda_bota_grad1)" stroke="#78350F" stroke-width="1.5"/>
+    <!-- Heel -->
+    <rect x="60" y="98" width="12" height="8" rx="2" fill="#5C1F0F" stroke="#78350F" stroke-width="1"/>
+    <!-- Sole -->
+    <path d="M60 102 L105 102 Q108 104 105 106 L60 106 Q57 104 60 102Z" fill="#5C1F0F"/>
+    <!-- Boot top trim -->
+    <path d="M68 15 L94 15" stroke="#FBBF24" stroke-width="3" stroke-linecap="round"/>
+    <!-- Decorative stitching -->
+    <path d="M75 30 Q81 25 87 30 Q81 35 75 30Z" fill="none" stroke="#FDE047" stroke-width="1.5"/>
+    <path d="M75 45 Q81 40 87 45 Q81 50 75 45Z" fill="none" stroke="#FDE047" stroke-width="1.5"/>
+    <!-- Pull straps -->
+    <line x1="74" y1="16" x2="74" y2="22" stroke="#FBBF24" stroke-width="2" stroke-linecap="round"/>
+    <line x1="88" y1="16" x2="88" y2="22" stroke="#FBBF24" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>

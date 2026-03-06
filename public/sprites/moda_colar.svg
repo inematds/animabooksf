@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="moda_colar_grad1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="moda_colar_heart" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FB7185"/>
+      <stop offset="100%" stop-color="#E11D48"/>
+    </linearGradient>
+    <filter id="moda_colar_shadow">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <g filter="url(#moda_colar_shadow)">
+    <!-- Chain -->
+    <path d="M20 25 Q20 70 60 85 Q100 70 100 25" fill="none" stroke="url(#moda_colar_grad1)" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Chain links detail -->
+    <path d="M20 25 Q20 70 60 85 Q100 70 100 25" fill="none" stroke="#FDE047" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.5"/>
+    <!-- Chain end beads -->
+    <circle cx="20" cy="25" r="3" fill="#F59E0B" stroke="#D97706" stroke-width="1"/>
+    <circle cx="100" cy="25" r="3" fill="#F59E0B" stroke="#D97706" stroke-width="1"/>
+    <!-- Heart pendant -->
+    <path d="M60 78 Q60 72 54 68 Q48 64 48 70 Q48 76 60 88 Q72 76 72 70 Q72 64 66 68 Q60 72 60 78Z" fill="url(#moda_colar_heart)" stroke="#BE123C" stroke-width="1.5"/>
+    <!-- Heart shine -->
+    <ellipse cx="54" cy="72" rx="3" ry="4" fill="white" opacity="0.3" transform="rotate(-15 54 72)"/>
+    <!-- Small decorative beads on chain -->
+    <circle cx="30" cy="45" r="2.5" fill="#FBBF24" stroke="#D97706" stroke-width="0.8"/>
+    <circle cx="40" cy="60" r="2.5" fill="#FBBF24" stroke="#D97706" stroke-width="0.8"/>
+    <circle cx="90" cy="45" r="2.5" fill="#FBBF24" stroke="#D97706" stroke-width="0.8"/>
+    <circle cx="80" cy="60" r="2.5" fill="#FBBF24" stroke="#D97706" stroke-width="0.8"/>
+    <!-- Sparkles -->
+    <circle cx="56" cy="70" r="1" fill="white" opacity="0.7"/>
+    <circle cx="35" cy="50" r="1" fill="white" opacity="0.5"/>
+    <circle cx="85" cy="50" r="1" fill="white" opacity="0.5"/>
+  </g>
+</svg>

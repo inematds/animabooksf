@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="aviao_body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EEEEEE"/>
+      <stop offset="100%" stop-color="#BBBBBB"/>
+    </linearGradient>
+    <linearGradient id="aviao_wing" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4488FF"/>
+      <stop offset="100%" stop-color="#2266CC"/>
+    </linearGradient>
+    <linearGradient id="aviao_tail" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF5555"/>
+      <stop offset="100%" stop-color="#CC3333"/>
+    </linearGradient>
+    <linearGradient id="aviao_window" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#AAE4FF"/>
+      <stop offset="100%" stop-color="#66C8FF"/>
+    </linearGradient>
+    <filter id="aviao_shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="1" dy="3" stdDeviation="3" flood-color="#00000033"/>
+    </filter>
+  </defs>
+  <ellipse cx="60" cy="108" rx="30" ry="5" fill="#00000015"/>
+  <g filter="url(#aviao_shadow)">
+    <!-- Body (fuselage) -->
+    <ellipse cx="60" cy="60" rx="42" ry="12" fill="url(#aviao_body)"/>
+    <!-- Nose -->
+    <ellipse cx="100" cy="60" rx="10" ry="10" fill="#DDDDDD"/>
+    <ellipse cx="105" cy="60" rx="5" ry="7" fill="#CCCCCC"/>
+    <!-- Propeller -->
+    <ellipse cx="110" cy="60" rx="2" ry="16" fill="#888" transform="rotate(20,110,60)"/>
+    <circle cx="110" cy="60" r="3" fill="#666"/>
+    <!-- Windows -->
+    <circle cx="75" cy="55" r="4" fill="url(#aviao_window)"/>
+    <circle cx="65" cy="55" r="4" fill="url(#aviao_window)"/>
+    <circle cx="55" cy="55" r="4" fill="url(#aviao_window)"/>
+    <!-- Cockpit window -->
+    <ellipse cx="93" cy="55" rx="6" ry="5" fill="url(#aviao_window)"/>
+    <!-- Wings -->
+    <path d="M45 60 L30 85 Q28 88 32 88 L72 88 Q76 88 74 85 L65 60 Z" fill="url(#aviao_wing)" opacity="0.9"/>
+    <path d="M45 60 L35 38 Q33 35 37 35 L68 35 Q72 35 70 38 L65 60 Z" fill="url(#aviao_wing)" opacity="0.9"/>
+    <!-- Tail -->
+    <path d="M20 60 L10 35 Q8 32 12 33 L25 50 Z" fill="url(#aviao_tail)"/>
+    <path d="M20 60 L10 80 Q8 83 12 82 L25 68 Z" fill="url(#aviao_tail)"/>
+    <!-- Tail fin (vertical) -->
+    <path d="M22 48 L15 28 Q14 25 18 27 L25 45 Z" fill="url(#aviao_tail)"/>
+    <!-- Stripe -->
+    <rect x="20" y="58" width="80" height="4" rx="2" fill="#FF5555" opacity="0.6"/>
+    <!-- Smile -->
+    <path d="M100 64 Q104 68 108 64" stroke="#999" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

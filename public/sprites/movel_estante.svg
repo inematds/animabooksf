@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="estante_wood" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#A1887F"/>
+      <stop offset="50%" stop-color="#BCAAA4"/>
+      <stop offset="100%" stop-color="#8D6E63"/>
+    </linearGradient>
+    <linearGradient id="estante_shelf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#BCAAA4"/>
+      <stop offset="100%" stop-color="#8D6E63"/>
+    </linearGradient>
+    <linearGradient id="estante_back" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D7CCC8"/>
+      <stop offset="100%" stop-color="#BCAAA4"/>
+    </linearGradient>
+    <filter id="estante_shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+  </defs>
+  <!-- Back panel -->
+  <rect x="12" y="6" width="96" height="108" rx="3" fill="url(#estante_back)" filter="url(#estante_shadow)"/>
+  <!-- Left side -->
+  <rect x="8" y="4" width="8" height="112" rx="2" fill="url(#estante_wood)"/>
+  <!-- Right side -->
+  <rect x="104" y="4" width="8" height="112" rx="2" fill="url(#estante_wood)"/>
+  <!-- Top -->
+  <rect x="8" y="4" width="104" height="6" rx="2" fill="url(#estante_shelf)"/>
+  <!-- Shelf 1 -->
+  <rect x="8" y="32" width="104" height="5" rx="1" fill="url(#estante_shelf)"/>
+  <!-- Shelf 2 -->
+  <rect x="8" y="62" width="104" height="5" rx="1" fill="url(#estante_shelf)"/>
+  <!-- Shelf 3 (bottom) -->
+  <rect x="8" y="92" width="104" height="5" rx="1" fill="url(#estante_shelf)"/>
+  <!-- Bottom -->
+  <rect x="8" y="110" width="104" height="6" rx="2" fill="url(#estante_shelf)"/>
+  <!-- Books row 1 -->
+  <rect x="18" y="12" width="8" height="20" rx="1" fill="#E53935"/>
+  <rect x="27" y="14" width="7" height="18" rx="1" fill="#1E88E5"/>
+  <rect x="35" y="11" width="9" height="21" rx="1" fill="#43A047"/>
+  <rect x="45" y="13" width="7" height="19" rx="1" fill="#FDD835"/>
+  <rect x="53" y="12" width="8" height="20" rx="1" fill="#8E24AA"/>
+  <rect x="62" y="15" width="6" height="17" rx="1" fill="#FF7043"/>
+  <rect x="70" y="11" width="9" height="21" rx="1" fill="#26C6DA"/>
+  <rect x="80" y="14" width="7" height="18" rx="1" fill="#EC407A"/>
+  <rect x="88" y="12" width="8" height="20" rx="1" fill="#5C6BC0"/>
+  <!-- Book spine lines row 1 -->
+  <line x1="22" y1="13" x2="22" y2="31" stroke="white" stroke-width="0.5" opacity="0.2"/>
+  <line x1="39" y1="12" x2="39" y2="31" stroke="white" stroke-width="0.5" opacity="0.2"/>
+  <line x1="57" y1="13" x2="57" y2="31" stroke="white" stroke-width="0.5" opacity="0.2"/>
+  <line x1="74" y1="12" x2="74" y2="31" stroke="white" stroke-width="0.5" opacity="0.2"/>
+  <line x1="92" y1="13" x2="92" y2="31" stroke="white" stroke-width="0.5" opacity="0.2"/>
+  <!-- Books row 2 -->
+  <rect x="18" y="39" width="10" height="23" rx="1" fill="#FF9800"/>
+  <rect x="29" y="42" width="7" height="20" rx="1" fill="#4CAF50"/>
+  <rect x="37" y="40" width="8" height="22" rx="1" fill="#2196F3"/>
+  <rect x="46" y="43" width="9" height="19" rx="1" fill="#F44336"/>
+  <!-- Leaning book -->
+  <rect x="57" y="40" width="8" height="22" rx="1" fill="#9C27B0" transform="rotate(12,61,51)"/>
+  <!-- Small plant pot -->
+  <rect x="76" y="53" width="14" height="9" rx="2" fill="#FF7043"/>
+  <circle cx="83" cy="48" r="7" fill="#66BB6A"/>
+  <circle cx="78" cy="50" r="5" fill="#81C784"/>
+  <circle cx="88" cy="50" r="5" fill="#81C784"/>
+  <!-- Row 3 - bigger books and items -->
+  <rect x="18" y="69" width="12" height="23" rx="1" fill="#3F51B5"/>
+  <rect x="31" y="71" width="8" height="21" rx="1" fill="#FF5722"/>
+  <rect x="40" y="69" width="10" height="23" rx="1" fill="#009688"/>
+  <!-- Globe/sphere decoration -->
+  <circle cx="62" cy="82" r="9" fill="#64B5F6"/>
+  <ellipse cx="62" cy="82" rx="9" ry="2" fill="#42A5F5" opacity="0.5"/>
+  <ellipse cx="62" cy="82" rx="2" ry="9" fill="#42A5F5" opacity="0.5"/>
+  <!-- More books -->
+  <rect x="78" y="70" width="8" height="22" rx="1" fill="#E91E63"/>
+  <rect x="87" y="72" width="7" height="20" rx="1" fill="#FFC107"/>
+  <rect x="95" y="69" width="6" height="23" rx="1" fill="#795548"/>
+  <!-- Row 4 bottom - storage -->
+  <rect x="18" y="98" width="28" height="11" rx="2" fill="#FFE082"/>
+  <rect x="18" y="98" width="28" height="2" rx="1" fill="#FFD54F"/>
+  <rect x="55" y="98" width="20" height="11" rx="2" fill="#A5D6A7"/>
+  <rect x="55" y="98" width="20" height="2" rx="1" fill="#81C784"/>
+  <rect x="80" y="99" width="8" height="10" rx="1" fill="#CE93D8"/>
+  <rect x="90" y="99" width="8" height="10" rx="1" fill="#90CAF9"/>
+</svg>

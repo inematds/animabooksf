@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="livro_cover" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5577CC"/>
+      <stop offset="100%" stop-color="#3355AA"/>
+    </linearGradient>
+    <linearGradient id="livro_page" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFF5"/>
+      <stop offset="100%" stop-color="#F5F0E0"/>
+    </linearGradient>
+    <linearGradient id="livro_spine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4466BB"/>
+      <stop offset="100%" stop-color="#223388"/>
+    </linearGradient>
+    <filter id="livro_shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="1" dy="3" stdDeviation="3" flood-color="#00000033"/>
+    </filter>
+  </defs>
+  <ellipse cx="60" cy="108" rx="40" ry="5" fill="#00000018"/>
+  <g filter="url(#livro_shadow)">
+    <!-- Left cover -->
+    <path d="M10 30 Q12 28 20 28 L58 35 L58 100 L20 93 Q12 93 10 90 Z" fill="url(#livro_cover)"/>
+    <!-- Right cover -->
+    <path d="M110 30 Q108 28 100 28 L62 35 L62 100 L100 93 Q108 93 110 90 Z" fill="url(#livro_cover)"/>
+    <!-- Left pages -->
+    <path d="M14 33 Q16 31 22 31 L57 37 L57 97 L22 91 Q16 91 14 88 Z" fill="url(#livro_page)"/>
+    <!-- Right pages -->
+    <path d="M106 33 Q104 31 98 31 L63 37 L63 97 L98 91 Q104 91 106 88 Z" fill="url(#livro_page)"/>
+    <!-- Spine -->
+    <path d="M58 35 L62 35 L62 100 L58 100 Z" fill="url(#livro_spine)"/>
+    <!-- Page lines left -->
+    <line x1="22" y1="45" x2="52" y2="49" stroke="#DDD8CC" stroke-width="1"/>
+    <line x1="22" y1="52" x2="52" y2="56" stroke="#DDD8CC" stroke-width="1"/>
+    <line x1="22" y1="59" x2="52" y2="63" stroke="#DDD8CC" stroke-width="1"/>
+    <line x1="22" y1="66" x2="52" y2="70" stroke="#DDD8CC" stroke-width="1"/>
+    <line x1="22" y1="73" x2="52" y2="77" stroke="#DDD8CC" stroke-width="1"/>
+    <line x1="22" y1="80" x2="42" y2="83" stroke="#DDD8CC" stroke-width="1"/>
+    <!-- Page lines right -->
+    <line x1="68" y1="49" x2="98" y2="45" stroke="#DDD8CC" stroke-width="1"/>
+    <line x1="68" y1="56" x2="98" y2="52" stroke="#DDD8CC" stroke-width="1"/>
+    <line x1="68" y1="63" x2="98" y2="59" stroke="#DDD8CC" stroke-width="1"/>
+    <line x1="68" y1="70" x2="98" y2="66" stroke="#DDD8CC" stroke-width="1"/>
+    <line x1="68" y1="77" x2="98" y2="73" stroke="#DDD8CC" stroke-width="1"/>
+    <line x1="68" y1="84" x2="88" y2="81" stroke="#DDD8CC" stroke-width="1"/>
+    <!-- Little picture on right page -->
+    <rect x="72" y="44" width="18" height="14" rx="2" fill="#FFEECC" stroke="#EEDDBB" stroke-width="0.5"/>
+    <circle cx="78" cy="49" r="3" fill="#FFCC44" opacity="0.6"/>
+    <path d="M73 55 L80 50 L87 55 Z" fill="#66BB77" opacity="0.5"/>
+    <!-- Star decoration on left page -->
+    <polygon points="35,44 37,49 42,49 38,52 39,57 35,54 31,57 32,52 28,49 33,49" fill="#FFCC44" opacity="0.5"/>
+    <!-- Page curl -->
+    <path d="M100 90 Q104 86 106 88 L100 93 Z" fill="#EEE8D8"/>
+  </g>
+</svg>

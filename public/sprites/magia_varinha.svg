@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="varinha_wand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFE0AA"/>
+      <stop offset="100%" stop-color="#CC9944"/>
+    </linearGradient>
+    <radialGradient id="varinha_star" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFCC"/>
+      <stop offset="60%" stop-color="#FFDD44"/>
+      <stop offset="100%" stop-color="#FFAA00"/>
+    </radialGradient>
+    <radialGradient id="varinha_glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFF88" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FFDD44" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="varinha_shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="1" dy="3" stdDeviation="3" flood-color="#00000033"/>
+    </filter>
+    <filter id="varinha_sparkle">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#varinha_shadow)">
+    <!-- Wand stick -->
+    <line x1="85" y1="105" x2="38" y2="38" stroke="url(#varinha_wand)" stroke-width="7" stroke-linecap="round"/>
+    <!-- Wand dark stripe -->
+    <line x1="85" y1="105" x2="38" y2="38" stroke="#BB8833" stroke-width="3" stroke-linecap="round"/>
+    <!-- Wand handle grip -->
+    <line x1="85" y1="105" x2="70" y2="82" stroke="#AA7722" stroke-width="9" stroke-linecap="round"/>
+    <line x1="78" y1="95" x2="75" y2="90" stroke="#FFDD88" stroke-width="2" stroke-linecap="round"/>
+    <line x1="82" y1="100" x2="79" y2="95" stroke="#FFDD88" stroke-width="2" stroke-linecap="round"/>
+    <!-- Glow at tip -->
+    <circle cx="35" cy="35" r="20" fill="url(#varinha_glow)"/>
+    <!-- Star at tip -->
+    <g filter="url(#varinha_sparkle)">
+      <polygon points="35,15 39,27 52,27 42,34 45,46 35,39 25,46 28,34 18,27 31,27" fill="url(#varinha_star)"/>
+    </g>
+  </g>
+  <!-- Sparkles around -->
+  <g filter="url(#varinha_sparkle)">
+    <polygon points="18,12 20,8 22,12 20,16" fill="#FFEE44" opacity="0.8"/>
+    <polygon points="55,15 56,12 57,15 56,18" fill="#FFEE44" opacity="0.6"/>
+    <polygon points="12,42 14,38 16,42 14,46" fill="#FFDD44" opacity="0.7"/>
+    <polygon points="52,45 53,42 54,45 53,48" fill="#FFEE44" opacity="0.5"/>
+    <polygon points="22,55 23,52 24,55 23,58" fill="#FFDD44" opacity="0.4"/>
+    <circle cx="8" cy="25" r="2" fill="#FFEE88" opacity="0.6"/>
+    <circle cx="48" cy="8" r="1.5" fill="#FFEE88" opacity="0.5"/>
+    <circle cx="60" cy="30" r="1.5" fill="#FFEE88" opacity="0.4"/>
+  </g>
+</svg>

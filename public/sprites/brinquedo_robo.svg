@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="robo_body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#88CCEE"/>
+      <stop offset="100%" stop-color="#5599CC"/>
+    </linearGradient>
+    <linearGradient id="robo_head" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#AADDFF"/>
+      <stop offset="100%" stop-color="#77BBEE"/>
+    </linearGradient>
+    <radialGradient id="robo_eye" cx="40%" cy="35%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#DDFFDD"/>
+    </radialGradient>
+    <filter id="robo_shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="1" dy="3" stdDeviation="3" flood-color="#00000033"/>
+    </filter>
+    <filter id="robo_glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <ellipse cx="60" cy="112" rx="25" ry="4" fill="#00000020"/>
+  <g filter="url(#robo_shadow)">
+    <!-- Antenna -->
+    <line x1="60" y1="12" x2="60" y2="22" stroke="#888" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="60" cy="9" r="4" fill="#FF5555" filter="url(#robo_glow)"/>
+    <circle cx="60" cy="9" r="2" fill="#FF8888"/>
+    <!-- Head -->
+    <rect x="38" y="22" width="44" height="30" rx="8" fill="url(#robo_head)"/>
+    <!-- Eyes -->
+    <rect x="44" y="30" width="12" height="10" rx="3" fill="url(#robo_eye)" stroke="#5599CC" stroke-width="1"/>
+    <rect x="64" y="30" width="12" height="10" rx="3" fill="url(#robo_eye)" stroke="#5599CC" stroke-width="1"/>
+    <circle cx="50" cy="35" r="3" fill="#44CC66"/>
+    <circle cx="70" cy="35" r="3" fill="#44CC66"/>
+    <circle cx="49" cy="34" r="1" fill="#88FF99"/>
+    <circle cx="69" cy="34" r="1" fill="#88FF99"/>
+    <!-- Mouth -->
+    <rect x="48" y="44" width="24" height="4" rx="2" fill="#5599CC"/>
+    <rect x="50" y="44.5" width="4" height="3" rx="1" fill="#AADDFF"/>
+    <rect x="56" y="44.5" width="4" height="3" rx="1" fill="#AADDFF"/>
+    <rect x="62" y="44.5" width="4" height="3" rx="1" fill="#AADDFF"/>
+    <rect x="68" y="44.5" width="2" height="3" rx="1" fill="#AADDFF"/>
+    <!-- Neck -->
+    <rect x="54" y="52" width="12" height="6" rx="2" fill="#999"/>
+    <!-- Body -->
+    <rect x="32" y="58" width="56" height="35" rx="8" fill="url(#robo_body)"/>
+    <!-- Chest panel -->
+    <rect x="42" y="63" width="36" height="22" rx="4" fill="#77BBEE" stroke="#5599CC" stroke-width="1"/>
+    <!-- Chest buttons -->
+    <circle cx="50" cy="70" r="4" fill="#FF5555"/>
+    <circle cx="50" cy="70" r="2" fill="#FF8888"/>
+    <circle cx="62" cy="70" r="4" fill="#FFCC44"/>
+    <circle cx="62" cy="70" r="2" fill="#FFEE88"/>
+    <circle cx="74" cy="70" r="4" fill="#44CC66"/>
+    <circle cx="74" cy="70" r="2" fill="#88FF99"/>
+    <!-- Chest meter -->
+    <rect x="45" y="78" width="30" height="4" rx="2" fill="#336688"/>
+    <rect x="45" y="78" width="20" height="4" rx="2" fill="#44FF88" opacity="0.8"/>
+    <!-- Arms -->
+    <rect x="18" y="60" width="12" height="25" rx="5" fill="url(#robo_body)"/>
+    <rect x="90" y="60" width="12" height="25" rx="5" fill="url(#robo_body)"/>
+    <!-- Hands (claws) -->
+    <circle cx="24" cy="88" r="7" fill="#999"/>
+    <circle cx="96" cy="88" r="7" fill="#999"/>
+    <circle cx="24" cy="88" r="4" fill="#AAAAAA"/>
+    <circle cx="96" cy="88" r="4" fill="#AAAAAA"/>
+    <!-- Legs -->
+    <rect x="40" y="93" width="14" height="14" rx="4" fill="url(#robo_body)"/>
+    <rect x="66" y="93" width="14" height="14" rx="4" fill="url(#robo_body)"/>
+    <!-- Feet -->
+    <rect x="36" y="104" width="22" height="8" rx="4" fill="#5599CC"/>
+    <rect x="62" y="104" width="22" height="8" rx="4" fill="#5599CC"/>
+    <!-- Bolts -->
+    <circle cx="38" cy="32" r="2.5" fill="#CCCCCC" stroke="#999" stroke-width="0.5"/>
+    <circle cx="82" cy="32" r="2.5" fill="#CCCCCC" stroke="#999" stroke-width="0.5"/>
+  </g>
+</svg>

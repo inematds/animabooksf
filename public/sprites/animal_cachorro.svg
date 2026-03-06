@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="cachorro_body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C88B5E"/>
+      <stop offset="100%" stop-color="#A0714A"/>
+    </linearGradient>
+    <linearGradient id="cachorro_belly" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFF5E0"/>
+      <stop offset="100%" stop-color="#F5DEB3"/>
+    </linearGradient>
+    <radialGradient id="cachorro_cheek" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#FFB6C1" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FFB6C1" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="cachorro_shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+  </defs>
+  <!-- Body -->
+  <ellipse cx="60" cy="78" rx="30" ry="26" fill="url(#cachorro_body)" filter="url(#cachorro_shadow)"/>
+  <!-- Belly -->
+  <ellipse cx="60" cy="82" rx="20" ry="17" fill="url(#cachorro_belly)"/>
+  <!-- Head -->
+  <circle cx="60" cy="42" r="24" fill="url(#cachorro_body)"/>
+  <!-- Floppy ears -->
+  <ellipse cx="36" cy="42" rx="10" ry="18" fill="#8B5E3C" transform="rotate(-10,36,42)"/>
+  <ellipse cx="84" cy="42" rx="10" ry="18" fill="#8B5E3C" transform="rotate(10,84,42)"/>
+  <!-- Face patch -->
+  <ellipse cx="60" cy="50" rx="14" ry="12" fill="url(#cachorro_belly)"/>
+  <!-- Eyes -->
+  <circle cx="50" cy="38" r="5" fill="white"/>
+  <circle cx="70" cy="38" r="5" fill="white"/>
+  <circle cx="51" cy="39" r="3.2" fill="#3D2B1F"/>
+  <circle cx="71" cy="39" r="3.2" fill="#3D2B1F"/>
+  <circle cx="52" cy="37.5" r="1.2" fill="white"/>
+  <circle cx="72" cy="37.5" r="1.2" fill="white"/>
+  <!-- Nose -->
+  <ellipse cx="60" cy="47" rx="4" ry="3" fill="#3D2B1F"/>
+  <ellipse cx="60" cy="46.5" rx="1.5" ry="1" fill="#5C4033" opacity="0.5"/>
+  <!-- Mouth - happy open -->
+  <path d="M52,52 Q60,60 68,52" fill="#FF6B6B" stroke="#A0714A" stroke-width="1"/>
+  <path d="M54,52 Q60,56 66,52" fill="#FF8E8E"/>
+  <!-- Tongue -->
+  <ellipse cx="60" cy="57" rx="4" ry="5" fill="#FF8E8E"/>
+  <ellipse cx="60" cy="56" rx="3" ry="3.5" fill="#FFB0B0"/>
+  <!-- Cheeks -->
+  <circle cx="42" cy="48" r="5" fill="url(#cachorro_cheek)"/>
+  <circle cx="78" cy="48" r="5" fill="url(#cachorro_cheek)"/>
+  <!-- Tail -->
+  <path d="M90,72 Q105,55 100,45 Q98,40 102,35" fill="none" stroke="url(#cachorro_body)" stroke-width="6" stroke-linecap="round"/>
+  <!-- Paws -->
+  <ellipse cx="43" cy="101" rx="11" ry="5" fill="url(#cachorro_body)"/>
+  <ellipse cx="77" cy="101" rx="11" ry="5" fill="url(#cachorro_body)"/>
+  <ellipse cx="43" cy="102" rx="7" ry="3" fill="url(#cachorro_belly)"/>
+  <ellipse cx="77" cy="102" rx="7" ry="3" fill="url(#cachorro_belly)"/>
+</svg>

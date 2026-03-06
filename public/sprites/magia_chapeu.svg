@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="chapeu_hat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6644AA"/>
+      <stop offset="100%" stop-color="#332266"/>
+    </linearGradient>
+    <linearGradient id="chapeu_band" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFCC44"/>
+      <stop offset="100%" stop-color="#FFAA00"/>
+    </linearGradient>
+    <radialGradient id="chapeu_star" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFCC"/>
+      <stop offset="100%" stop-color="#FFDD44"/>
+    </radialGradient>
+    <filter id="chapeu_shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="1" dy="3" stdDeviation="3" flood-color="#00000033"/>
+    </filter>
+    <filter id="chapeu_glow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <ellipse cx="60" cy="110" rx="42" ry="5" fill="#00000018"/>
+  <g filter="url(#chapeu_shadow)">
+    <!-- Brim -->
+    <ellipse cx="60" cy="95" rx="48" ry="12" fill="#443388"/>
+    <ellipse cx="60" cy="93" rx="48" ry="12" fill="url(#chapeu_hat)"/>
+    <!-- Cone body -->
+    <path d="M25 95 Q20 50 55 10 Q60 5 65 10 Q100 50 95 95 Z" fill="url(#chapeu_hat)"/>
+    <!-- Hat tip curl -->
+    <path d="M55 10 Q45 5 42 15 Q40 22 48 20" stroke="#6644AA" stroke-width="3" fill="url(#chapeu_hat)"/>
+    <!-- Tip star -->
+    <g filter="url(#chapeu_glow)">
+      <polygon points="42,14 44,10 46,14 44,18" fill="#FFEE44"/>
+    </g>
+    <!-- Band -->
+    <path d="M28 80 Q60 70 92 80 Q60 90 28 80 Z" fill="url(#chapeu_band)"/>
+    <!-- Band buckle -->
+    <rect x="53" y="76" width="14" height="10" rx="2" fill="#FFDD44" stroke="#CC9900" stroke-width="1"/>
+    <rect x="56" y="78" width="8" height="6" rx="1" fill="url(#chapeu_hat)"/>
+    <!-- Stars on hat -->
+    <g filter="url(#chapeu_glow)">
+      <polygon points="45,45 47,40 49,45 47,50" fill="url(#chapeu_star)" opacity="0.8"/>
+      <polygon points="70,55 72,50 74,55 72,60" fill="url(#chapeu_star)" opacity="0.7"/>
+      <polygon points="55,62 57,58 59,62 57,66" fill="url(#chapeu_star)" opacity="0.6"/>
+      <polygon points="38,65 40,62 42,65 40,68" fill="url(#chapeu_star)" opacity="0.5"/>
+      <polygon points="78,42 79,39 80,42 79,45" fill="url(#chapeu_star)" opacity="0.6"/>
+    </g>
+    <!-- Moon on hat -->
+    <path d="M62 30 Q72 30 72 42 Q65 38 62 30 Z" fill="#FFDD88" opacity="0.7"/>
+    <!-- Shimmer on brim -->
+    <ellipse cx="40" cy="92" rx="12" ry="3" fill="#FFFFFF" opacity="0.1"/>
+  </g>
+</svg>

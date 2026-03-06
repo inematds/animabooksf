@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <radialGradient id="nuvem_main" cx="0.4" cy="0.3" r="0.7">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E0E8F0"/>
+    </radialGradient>
+    <radialGradient id="nuvem_highlight" cx="0.3" cy="0.3" r="0.5">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F0F4F8"/>
+    </radialGradient>
+    <radialGradient id="nuvem_cheek" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#FFB6C1" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FFB6C1" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="nuvem_shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#B0BEC530"/>
+    </filter>
+  </defs>
+  <!-- Cloud body - back bumps -->
+  <ellipse cx="30" cy="65" rx="22" ry="18" fill="url(#nuvem_main)" filter="url(#nuvem_shadow)"/>
+  <ellipse cx="90" cy="65" rx="22" ry="18" fill="url(#nuvem_main)"/>
+  <!-- Cloud body - main -->
+  <ellipse cx="60" cy="68" rx="45" ry="22" fill="url(#nuvem_main)"/>
+  <!-- Cloud top bumps -->
+  <ellipse cx="40" cy="52" rx="20" ry="18" fill="url(#nuvem_highlight)"/>
+  <ellipse cx="60" cy="46" rx="22" ry="20" fill="url(#nuvem_highlight)"/>
+  <ellipse cx="78" cy="52" rx="18" ry="16" fill="url(#nuvem_highlight)"/>
+  <!-- Top highlight -->
+  <ellipse cx="55" cy="38" rx="14" ry="10" fill="white" opacity="0.7"/>
+  <!-- Face -->
+  <!-- Eyes -->
+  <circle cx="45" cy="62" r="3.5" fill="#4A5568"/>
+  <circle cx="75" cy="62" r="3.5" fill="#4A5568"/>
+  <circle cx="46" cy="60.5" r="1.3" fill="white"/>
+  <circle cx="76" cy="60.5" r="1.3" fill="white"/>
+  <!-- Smile -->
+  <path d="M50,72 Q60,79 70,72" fill="none" stroke="#718096" stroke-width="2" stroke-linecap="round"/>
+  <!-- Cheeks -->
+  <circle cx="38" cy="70" r="6" fill="url(#nuvem_cheek)"/>
+  <circle cx="82" cy="70" r="6" fill="url(#nuvem_cheek)"/>
+</svg>

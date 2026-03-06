@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="lapis_body" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFCC33"/>
+      <stop offset="100%" stop-color="#EEAA00"/>
+    </linearGradient>
+    <linearGradient id="lapis_wood" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F5D5A0"/>
+      <stop offset="100%" stop-color="#E0BB77"/>
+    </linearGradient>
+    <linearGradient id="lapis_metal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#DDDDDD"/>
+      <stop offset="100%" stop-color="#AAAAAA"/>
+    </linearGradient>
+    <filter id="lapis_shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="1" dy="3" stdDeviation="3" flood-color="#00000033"/>
+    </filter>
+  </defs>
+  <ellipse cx="60" cy="108" rx="42" ry="4" fill="#00000015"/>
+  <g filter="url(#lapis_shadow)" transform="rotate(-35,60,60)">
+    <!-- Main pencil body -->
+    <rect x="30" y="50" width="75" height="18" rx="2" fill="url(#lapis_body)"/>
+    <!-- Body stripe -->
+    <rect x="30" y="54" width="75" height="4" fill="#FFDD66"/>
+    <rect x="30" y="60" width="75" height="4" fill="#FFDD66"/>
+    <!-- Wood tip section -->
+    <polygon points="30,50 30,68 12,59" fill="url(#lapis_wood)"/>
+    <!-- Graphite tip -->
+    <polygon points="12,59 18,54 18,64" fill="#555"/>
+    <polygon points="12,59 15,56 15,62" fill="#333"/>
+    <!-- Metal ferrule -->
+    <rect x="105" y="48" width="12" height="22" rx="2" fill="url(#lapis_metal)"/>
+    <line x1="108" y1="48" x2="108" y2="70" stroke="#CCCCCC" stroke-width="1"/>
+    <line x1="111" y1="48" x2="111" y2="70" stroke="#CCCCCC" stroke-width="1"/>
+    <line x1="114" y1="48" x2="114" y2="70" stroke="#CCCCCC" stroke-width="1"/>
+    <!-- Eraser -->
+    <rect x="117" y="49" width="8" height="20" rx="4" fill="#FF8899"/>
+    <rect x="117" y="52" width="8" height="4" fill="#FFAABB" opacity="0.5"/>
+    <!-- Text on pencil -->
+    <text x="68" y="63" text-anchor="middle" font-size="6" font-family="Arial, sans-serif" fill="#CC8800" font-weight="bold">No.2</text>
+  </g>
+  <!-- Small sparkle near tip -->
+  <polygon points="22,82 24,78 26,82 24,86" fill="#FFEE44" opacity="0.6"/>
+  <polygon points="18,76 20,74 22,76 20,78" fill="#FFEE44" opacity="0.4"/>
+</svg>

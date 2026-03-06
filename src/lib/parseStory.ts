@@ -5,7 +5,7 @@ import { Story, Scene, SpriteState, Dialogue } from './types';
  * Para personagens: "lumi_feliz.svg" → "lumi" (permite trocar expressao)
  * Para objetos com prefixo de categoria: "animal_gato.svg" → "animal_gato" (cada objeto e unico)
  */
-const OBJECT_PREFIXES = ['animal', 'natureza', 'comida', 'movel', 'veiculo', 'brinquedo', 'escola', 'magia'];
+const OBJECT_PREFIXES = ['animal', 'natureza', 'comida', 'movel', 'veiculo', 'brinquedo', 'escola', 'magia', 'moda'];
 
 export function spriteIdFromFilename(filename: string): string {
   const withoutExt = filename.replace(/\.\w+$/, '');

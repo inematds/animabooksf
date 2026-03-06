@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="cristal_face1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#88DDFF"/>
+      <stop offset="100%" stop-color="#4488DD"/>
+    </linearGradient>
+    <linearGradient id="cristal_face2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#AAEEFF"/>
+      <stop offset="100%" stop-color="#5599EE"/>
+    </linearGradient>
+    <linearGradient id="cristal_face3" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#66BBFF"/>
+      <stop offset="100%" stop-color="#3366BB"/>
+    </linearGradient>
+    <radialGradient id="cristal_glow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#AAEEFF" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#55AAFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="cristal_shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="1" dy="3" stdDeviation="3" flood-color="#00000033"/>
+    </filter>
+    <filter id="cristal_shine">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <ellipse cx="60" cy="110" rx="22" ry="5" fill="#00000020"/>
+  <!-- Glow -->
+  <ellipse cx="60" cy="55" rx="40" ry="40" fill="url(#cristal_glow)"/>
+  <g filter="url(#cristal_shadow)">
+    <!-- Main crystal - center facet -->
+    <polygon points="60,8 78,45 60,105 42,45" fill="url(#cristal_face2)"/>
+    <!-- Left facet -->
+    <polygon points="60,8 42,45 28,55 42,100 60,105" fill="url(#cristal_face3)" opacity="0.9"/>
+    <!-- Right facet -->
+    <polygon points="60,8 78,45 92,55 78,100 60,105" fill="url(#cristal_face1)" opacity="0.9"/>
+    <!-- Far left facet -->
+    <polygon points="42,45 28,55 35,85 42,100" fill="#3366BB" opacity="0.8"/>
+    <!-- Far right facet -->
+    <polygon points="78,45 92,55 85,85 78,100" fill="#5599DD" opacity="0.8"/>
+    <!-- Edge lines -->
+    <line x1="60" y1="8" x2="42" y2="45" stroke="#AADDFF" stroke-width="0.8" opacity="0.6"/>
+    <line x1="60" y1="8" x2="78" y2="45" stroke="#AADDFF" stroke-width="0.8" opacity="0.6"/>
+    <line x1="42" y1="45" x2="42" y2="100" stroke="#AADDFF" stroke-width="0.5" opacity="0.4"/>
+    <line x1="78" y1="45" x2="78" y2="100" stroke="#AADDFF" stroke-width="0.5" opacity="0.4"/>
+    <line x1="42" y1="45" x2="78" y2="45" stroke="#AADDFF" stroke-width="0.5" opacity="0.4"/>
+    <line x1="60" y1="8" x2="60" y2="105" stroke="#CCDDFF" stroke-width="0.5" opacity="0.3"/>
+    <!-- Highlight shine -->
+    <polygon points="60,12 50,40 60,38 55,60" fill="#FFFFFF" opacity="0.3"/>
+    <polygon points="60,12 65,30 60,35" fill="#FFFFFF" opacity="0.4"/>
+  </g>
+  <!-- Sparkles -->
+  <g filter="url(#cristal_shine)">
+    <polygon points="25,30 27,26 29,30 27,34" fill="#AAEEFF" opacity="0.7"/>
+    <polygon points="90,35 92,31 94,35 92,39" fill="#AAEEFF" opacity="0.6"/>
+    <polygon points="15,60 17,56 19,60 17,64" fill="#88DDFF" opacity="0.5"/>
+    <polygon points="100,65 101,62 102,65 101,68" fill="#88DDFF" opacity="0.5"/>
+    <polygon points="35,18 36,15 37,18 36,21" fill="#CCEDFF" opacity="0.6"/>
+    <polygon points="82,22 83,19 84,22 83,25" fill="#CCEDFF" opacity="0.5"/>
+  </g>
+</svg>

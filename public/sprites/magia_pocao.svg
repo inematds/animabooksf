@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="pocao_glass" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#DDEEFF" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#DDEEFF" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="pocao_liquid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#AA44FF"/>
+      <stop offset="100%" stop-color="#6622BB"/>
+    </linearGradient>
+    <radialGradient id="pocao_glow" cx="50%" cy="60%" r="50%">
+      <stop offset="0%" stop-color="#DD88FF" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#AA44FF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="pocao_shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="1" dy="3" stdDeviation="3" flood-color="#00000033"/>
+    </filter>
+    <filter id="pocao_bubble">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <ellipse cx="60" cy="112" rx="25" ry="4" fill="#00000020"/>
+  <g filter="url(#pocao_shadow)">
+    <!-- Glow behind bottle -->
+    <ellipse cx="60" cy="75" rx="30" ry="28" fill="url(#pocao_glow)"/>
+    <!-- Bottle body (round bottom) -->
+    <ellipse cx="60" cy="78" rx="28" ry="26" fill="url(#pocao_glass)" stroke="#BBCCDD" stroke-width="1.5"/>
+    <!-- Liquid fill -->
+    <ellipse cx="60" cy="82" rx="25" ry="22" fill="url(#pocao_liquid)" opacity="0.8"/>
+    <!-- Liquid surface -->
+    <ellipse cx="60" cy="62" rx="22" ry="5" fill="#BB66FF" opacity="0.6"/>
+    <!-- Neck -->
+    <rect x="50" y="38" width="20" height="18" fill="url(#pocao_glass)" stroke="#BBCCDD" stroke-width="1.5"/>
+    <!-- Liquid in neck -->
+    <rect x="52" y="48" width="16" height="8" fill="url(#pocao_liquid)" opacity="0.6"/>
+    <!-- Cork -->
+    <rect x="48" y="28" width="24" height="12" rx="4" fill="#CC9955"/>
+    <rect x="48" y="30" width="24" height="3" fill="#DDAA66" opacity="0.6"/>
+    <rect x="48" y="36" width="24" height="2" fill="#BB8844" opacity="0.5"/>
+    <!-- Cork top -->
+    <ellipse cx="60" cy="28" rx="12" ry="3" fill="#DDAA66"/>
+    <!-- Glass shine -->
+    <ellipse cx="48" cy="72" rx="4" ry="16" fill="#FFFFFF" opacity="0.3" transform="rotate(-10,48,72)"/>
+    <ellipse cx="45" cy="68" rx="2" ry="8" fill="#FFFFFF" opacity="0.2"/>
+    <!-- Bubbles inside -->
+    <g filter="url(#pocao_bubble)">
+      <circle cx="52" cy="85" r="3" fill="#DD88FF" opacity="0.6"/>
+      <circle cx="68" cy="78" r="2.5" fill="#DD88FF" opacity="0.5"/>
+      <circle cx="58" cy="72" r="2" fill="#EE99FF" opacity="0.5"/>
+      <circle cx="65" cy="90" r="3.5" fill="#DD88FF" opacity="0.4"/>
+      <circle cx="55" cy="92" r="2" fill="#EE99FF" opacity="0.4"/>
+    </g>
+    <!-- Sparkles rising -->
+    <polygon points="42,55 43,52 44,55 43,58" fill="#FFEE88" opacity="0.6"/>
+    <polygon points="75,48 76,45 77,48 76,51" fill="#FFEE88" opacity="0.5"/>
+    <polygon points="50,40 51,37 52,40 51,43" fill="#FFEE88" opacity="0.4"/>
+    <circle cx="70,42" r="1.5" fill="#FFEE88" opacity="0.4"/>
+    <!-- Label -->
+    <rect x="47" y="73" width="26" height="14" rx="3" fill="#FFEEDD" opacity="0.8"/>
+    <text x="60" y="83" text-anchor="middle" font-size="7" font-family="Arial, sans-serif" fill="#7733BB">~*~</text>
+  </g>
+</svg>

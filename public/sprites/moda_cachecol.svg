@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="moda_cachecol_grad1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F87171"/>
+      <stop offset="100%" stop-color="#EF4444"/>
+    </linearGradient>
+    <linearGradient id="moda_cachecol_grad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <filter id="moda_cachecol_shadow">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <g filter="url(#moda_cachecol_shadow)">
+    <!-- Main scarf wrap -->
+    <path d="M25 30 Q10 35 15 50 Q20 65 40 60 Q55 55 60 45 Q65 35 80 32 Q95 30 100 40 Q105 52 95 55 Q85 58 75 52" fill="none" stroke="url(#moda_cachecol_grad1)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Stripe overlay -->
+    <path d="M25 30 Q10 35 15 50 Q20 65 40 60 Q55 55 60 45 Q65 35 80 32 Q95 30 100 40 Q105 52 95 55 Q85 58 75 52" fill="none" stroke="url(#moda_cachecol_grad2)" stroke-width="4" stroke-linecap="round" stroke-dasharray="0 20 10 20"/>
+    <!-- Hanging end left -->
+    <path d="M25 30 L20 15 Q18 10 22 10 L30 10 Q34 10 32 15 L28 28" fill="url(#moda_cachecol_grad1)" stroke="#DC2626" stroke-width="1.5"/>
+    <!-- Stripes on left end -->
+    <line x1="22" y1="14" x2="30" y2="14" stroke="#FBBF24" stroke-width="2"/>
+    <line x1="21" y1="20" x2="31" y2="20" stroke="#FBBF24" stroke-width="2"/>
+    <!-- Fringe left -->
+    <line x1="22" y1="10" x2="22" y2="5" stroke="#EF4444" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="26" y1="10" x2="26" y2="4" stroke="#EF4444" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="30" y1="10" x2="30" y2="5" stroke="#EF4444" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Hanging end right -->
+    <path d="M75 52 L72 78 Q70 90 65 100 Q63 105 67 105 L78 105 Q82 105 80 100 L76 78" fill="url(#moda_cachecol_grad1)" stroke="#DC2626" stroke-width="1.5"/>
+    <!-- Stripes on right end -->
+    <line x1="69" y1="85" x2="79" y2="85" stroke="#FBBF24" stroke-width="2"/>
+    <line x1="68" y1="92" x2="79" y2="92" stroke="#FBBF24" stroke-width="2"/>
+    <line x1="67" y1="99" x2="79" y2="99" stroke="#FBBF24" stroke-width="2"/>
+    <!-- Fringe right -->
+    <line x1="68" y1="105" x2="68" y2="112" stroke="#EF4444" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="72" y1="105" x2="72" y2="113" stroke="#EF4444" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="76" y1="105" x2="76" y2="112" stroke="#EF4444" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+</svg>

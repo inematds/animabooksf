@@ -71,7 +71,7 @@ export default function SceneEditor({ initialStory, onSave, onPreview }: SceneEd
       const baseId = spriteIdFromFilename(filename);
       updateScene((s) => {
         // For characters: if same character exists, update filename (change expression)
-        const isCharacter = !filename.match(/^(animal|natureza|comida|movel|veiculo|brinquedo|escola|magia)_/);
+        const isCharacter = !filename.match(/^(animal|natureza|comida|movel|veiculo|brinquedo|escola|magia|moda)_/);
         if (isCharacter) {
           const existing = s.sprites.find((sp) => sp.id === baseId);
           if (existing) {

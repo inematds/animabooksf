@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" width="200" height="300">
+  <defs>
+    <radialGradient id="rosa-skin" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#C68642"/>
+      <stop offset="100%" stop-color="#A0682E"/>
+    </radialGradient>
+    <linearGradient id="rosa-hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A2C12"/>
+      <stop offset="100%" stop-color="#2E1A08"/>
+    </linearGradient>
+    <linearGradient id="rosa-dress" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF7EB3"/>
+      <stop offset="50%" stop-color="#FF5D9E"/>
+      <stop offset="100%" stop-color="#E8458B"/>
+    </linearGradient>
+    <linearGradient id="rosa-headband" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF4081"/>
+      <stop offset="100%" stop-color="#E91E63"/>
+    </linearGradient>
+    <radialGradient id="rosa-eye" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#6B3A2A"/>
+      <stop offset="100%" stop-color="#4A2518"/>
+    </radialGradient>
+    <radialGradient id="rosa-blush" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E07850" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#E07850" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="rosa-flower-center" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFE082"/>
+      <stop offset="100%" stop-color="#FFD54F"/>
+    </radialGradient>
+    <filter id="rosa-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+  </defs>
+  <g filter="url(#rosa-shadow)">
+    <!-- Hair back (curly volume) -->
+    <ellipse cx="100" cy="95" rx="60" ry="65" fill="url(#rosa-hair)"/>
+    <!-- Extra curly volume -->
+    <circle cx="48" cy="85" r="18" fill="url(#rosa-hair)"/>
+    <circle cx="152" cy="85" r="18" fill="url(#rosa-hair)"/>
+    <circle cx="45" cy="110" r="15" fill="url(#rosa-hair)"/>
+    <circle cx="155" cy="110" r="15" fill="url(#rosa-hair)"/>
+    <circle cx="50" cy="135" r="13" fill="url(#rosa-hair)"/>
+    <circle cx="150" cy="135" r="13" fill="url(#rosa-hair)"/>
+    <circle cx="58" cy="155" r="11" fill="url(#rosa-hair)"/>
+    <circle cx="142" cy="155" r="11" fill="url(#rosa-hair)"/>
+    <!-- Head -->
+    <ellipse cx="100" cy="90" rx="46" ry="50" fill="url(#rosa-skin)"/>
+    <!-- Hair front curls -->
+    <path d="M54 70 Q52 35, 100 28 Q148 35, 146 70" fill="url(#rosa-hair)"/>
+    <circle cx="62" cy="62" r="10" fill="url(#rosa-hair)"/>
+    <circle cx="82" cy="52" r="11" fill="url(#rosa-hair)"/>
+    <circle cx="100" cy="48" r="10" fill="url(#rosa-hair)"/>
+    <circle cx="118" cy="52" r="11" fill="url(#rosa-hair)"/>
+    <circle cx="138" cy="62" r="10" fill="url(#rosa-hair)"/>
+    <!-- Headband -->
+    <path d="M52 62 Q100 50, 148 62" stroke="url(#rosa-headband)" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <!-- Headband flower -->
+    <circle cx="135" cy="56" r="3" fill="#FF6B9D" transform="translate(5,-2)"/>
+    <circle cx="135" cy="56" r="3" fill="#FF6B9D" transform="translate(-2,-5) rotate(72 135 56)"/>
+    <circle cx="135" cy="56" r="3" fill="#FF6B9D" transform="translate(5,3) rotate(144 135 56)"/>
+    <circle cx="135" cy="56" r="3" fill="#FF6B9D" transform="translate(-4,3) rotate(216 135 56)"/>
+    <circle cx="135" cy="56" r="3" fill="#FF6B9D" transform="translate(-1,5) rotate(288 135 56)"/>
+    <circle cx="137" cy="54" r="3" fill="url(#rosa-flower-center)"/>
+    <!-- Eyes -->
+    <ellipse cx="80" cy="92" rx="9" ry="10" fill="url(#rosa-eye)"/>
+    <ellipse cx="120" cy="92" rx="9" ry="10" fill="url(#rosa-eye)"/>
+    <!-- Eye highlights -->
+    <ellipse cx="83" cy="88" rx="3.5" ry="4" fill="white" opacity="0.9"/>
+    <ellipse cx="123" cy="88" rx="3.5" ry="4" fill="white" opacity="0.9"/>
+    <ellipse cx="78" cy="95" rx="1.5" ry="1.5" fill="white" opacity="0.6"/>
+    <ellipse cx="118" cy="95" rx="1.5" ry="1.5" fill="white" opacity="0.6"/>
+    <!-- Eyelashes -->
+    <path d="M70 86 L67 82" stroke="#2E1A08" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M130 86 L133 82" stroke="#2E1A08" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Eyebrows -->
+    <path d="M70 78 Q80 74, 90 78" stroke="#2E1A08" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M110 78 Q120 74, 130 78" stroke="#2E1A08" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Nose -->
+    <ellipse cx="100" cy="103" rx="2.5" ry="2" fill="#A07040" opacity="0.5"/>
+    <!-- Mouth -->
+    <path d="M93 113 Q100 117, 107 113" stroke="#8B5040" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Blush -->
+    <ellipse cx="68" cy="105" rx="10" ry="6" fill="url(#rosa-blush)"/>
+    <ellipse cx="132" cy="105" rx="10" ry="6" fill="url(#rosa-blush)"/>
+    <!-- Neck -->
+    <rect x="90" y="134" width="20" height="15" rx="3" fill="url(#rosa-skin)"/>
+    <!-- Body / Floral dress -->
+    <path d="M65 147 Q65 143, 75 141 L90 139 Q100 138, 110 139 L125 141 Q135 143, 135 147 L145 230 Q150 260, 140 262 L60 262 Q50 260, 55 230 Z" fill="url(#rosa-dress)"/>
+    <!-- Dress neckline -->
+    <path d="M78 143 Q100 150, 122 143" stroke="#E8458B" stroke-width="2" fill="none"/>
+    <!-- Dress flowers -->
+    <g opacity="0.5">
+      <circle cx="80" cy="180" r="4" fill="white"/>
+      <circle cx="80" cy="180" r="2" fill="#FFE082"/>
+      <circle cx="115" cy="200" r="5" fill="white"/>
+      <circle cx="115" cy="200" r="2.5" fill="#FFE082"/>
+      <circle cx="90" cy="230" r="4" fill="white"/>
+      <circle cx="90" cy="230" r="2" fill="#FFE082"/>
+      <circle cx="120" cy="245" r="3.5" fill="white"/>
+      <circle cx="120" cy="245" r="1.8" fill="#FFE082"/>
+      <circle cx="75" cy="210" r="3" fill="white"/>
+      <circle cx="75" cy="210" r="1.5" fill="#FFE082"/>
+      <!-- Leaves -->
+      <ellipse cx="84" cy="183" rx="3" ry="1.5" fill="#81C784" transform="rotate(30 84 183)"/>
+      <ellipse cx="119" cy="203" rx="3.5" ry="1.5" fill="#81C784" transform="rotate(-20 119 203)"/>
+    </g>
+    <!-- Arms -->
+    <path d="M65 152 Q48 168, 42 198 Q40 208, 48 210 Q54 208, 54 195 L60 172" fill="url(#rosa-skin)" stroke="#A07040" stroke-width="0.5"/>
+    <path d="M135 152 Q152 168, 158 198 Q160 208, 152 210 Q146 208, 146 195 L140 172" fill="url(#rosa-skin)" stroke="#A07040" stroke-width="0.5"/>
+    <!-- Hands -->
+    <ellipse cx="45" cy="210" rx="8" ry="7" fill="url(#rosa-skin)"/>
+    <ellipse cx="155" cy="210" rx="8" ry="7" fill="url(#rosa-skin)"/>
+    <!-- Legs -->
+    <rect x="78" y="258" width="16" height="22" rx="5" fill="url(#rosa-skin)"/>
+    <rect x="108" y="258" width="16" height="22" rx="5" fill="url(#rosa-skin)"/>
+    <!-- Shoes -->
+    <path d="M74 276 Q74 272, 78 272 L96 272 Q100 272, 100 276 L100 284 Q100 288, 96 288 L78 288 Q74 288, 74 284 Z" fill="#E91E63"/>
+    <path d="M104 276 Q104 272, 108 272 L126 272 Q130 272, 130 276 L130 284 Q130 288, 126 288 L108 288 Q104 288, 104 284 Z" fill="#E91E63"/>
+    <!-- Shoe flowers -->
+    <circle cx="87" cy="278" r="3" fill="#FFB0C0"/>
+    <circle cx="117" cy="278" r="3" fill="#FFB0C0"/>
+    <!-- Earrings -->
+    <circle cx="54" cy="100" r="3" fill="#FFD700"/>
+    <circle cx="146" cy="100" r="3" fill="#FFD700"/>
+  </g>
+</svg>

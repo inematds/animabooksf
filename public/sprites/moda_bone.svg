@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="moda_bone_grad1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="moda_bone_grad2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <filter id="moda_bone_shadow">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <g filter="url(#moda_bone_shadow)">
+    <!-- Cap dome -->
+    <path d="M20 65 Q20 25 60 20 Q100 25 100 65Z" fill="url(#moda_bone_grad1)" stroke="#1D4ED8" stroke-width="1.5"/>
+    <!-- Panel lines -->
+    <path d="M60 20 L60 65" stroke="#1D4ED8" stroke-width="1" opacity="0.3"/>
+    <path d="M38 28 L45 65" stroke="#1D4ED8" stroke-width="1" opacity="0.3"/>
+    <path d="M82 28 L75 65" stroke="#1D4ED8" stroke-width="1" opacity="0.3"/>
+    <!-- Brim -->
+    <path d="M15 65 Q10 68 8 72 Q12 82 50 85 Q68 84 75 78 Q72 68 65 65Z" fill="url(#moda_bone_grad2)" stroke="#1D4ED8" stroke-width="1.5"/>
+    <!-- Brim curve highlight -->
+    <path d="M20 68 Q40 76 65 68" fill="none" stroke="#93C5FD" stroke-width="1.5" opacity="0.5"/>
+    <!-- Band -->
+    <rect x="20" y="62" width="80" height="6" rx="1" fill="#1E40AF" opacity="0.5"/>
+    <!-- Button on top -->
+    <circle cx="60" cy="20" r="4" fill="#1D4ED8" stroke="#1E40AF" stroke-width="1"/>
+    <circle cx="59" cy="19" r="1.5" fill="#93C5FD" opacity="0.6"/>
+    <!-- Star emblem -->
+    <polygon points="40,42 42,48 48,48 43,52 45,58 40,54 35,58 37,52 32,48 38,48" fill="#FBBF24" stroke="#F59E0B" stroke-width="0.5"/>
+  </g>
+</svg>

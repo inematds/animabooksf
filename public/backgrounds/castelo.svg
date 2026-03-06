@@ -1,0 +1,272 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1344 768">
+  <defs>
+    <linearGradient id="castelo-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#616161"/>
+      <stop offset="100%" stop-color="#424242"/>
+    </linearGradient>
+    <linearGradient id="castelo-wall-side" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4a4a4a"/>
+      <stop offset="100%" stop-color="#5a5a5a"/>
+    </linearGradient>
+    <linearGradient id="castelo-floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5d4037"/>
+      <stop offset="100%" stop-color="#3e2723"/>
+    </linearGradient>
+    <linearGradient id="castelo-carpet" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c62828"/>
+      <stop offset="50%" stop-color="#b71c1c"/>
+      <stop offset="100%" stop-color="#8e0000"/>
+    </linearGradient>
+    <linearGradient id="castelo-carpet-highlight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="rgba(255,215,0,0.3)"/>
+      <stop offset="10%" stop-color="rgba(255,215,0,0)"/>
+      <stop offset="90%" stop-color="rgba(255,215,0,0)"/>
+      <stop offset="100%" stop-color="rgba(255,215,0,0.3)"/>
+    </linearGradient>
+    <radialGradient id="castelo-torch-flame" cx="0.5" cy="0.6" r="0.5">
+      <stop offset="0%" stop-color="#fff9c4"/>
+      <stop offset="30%" stop-color="#ffeb3b"/>
+      <stop offset="60%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="rgba(255,87,34,0)"/>
+    </radialGradient>
+    <radialGradient id="castelo-torch-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="rgba(255,183,77,0.3)"/>
+      <stop offset="100%" stop-color="rgba(255,183,77,0)"/>
+    </radialGradient>
+    <linearGradient id="castelo-throne-back" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <linearGradient id="castelo-throne-seat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#7b1fa2"/>
+    </linearGradient>
+    <linearGradient id="castelo-pillar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#757575"/>
+      <stop offset="40%" stop-color="#9e9e9e"/>
+      <stop offset="100%" stop-color="#616161"/>
+    </linearGradient>
+    <linearGradient id="castelo-banner" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1565c0"/>
+      <stop offset="100%" stop-color="#0d47a1"/>
+    </linearGradient>
+    <linearGradient id="castelo-window" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a237e"/>
+      <stop offset="50%" stop-color="#283593"/>
+      <stop offset="100%" stop-color="#3949ab"/>
+    </linearGradient>
+    <radialGradient id="castelo-chandelier-light" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="rgba(255,236,179,0.4)"/>
+      <stop offset="100%" stop-color="rgba(255,236,179,0)"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Back wall -->
+  <rect width="1344" height="768" fill="url(#castelo-wall)"/>
+
+  <!-- Stone pattern on walls -->
+  <g stroke="#555" stroke-width="1" opacity="0.3">
+    <!-- Horizontal lines -->
+    <line x1="0" y1="60" x2="1344" y2="60"/>
+    <line x1="0" y1="120" x2="1344" y2="120"/>
+    <line x1="0" y1="180" x2="1344" y2="180"/>
+    <line x1="0" y1="240" x2="1344" y2="240"/>
+    <line x1="0" y1="300" x2="1344" y2="300"/>
+    <line x1="0" y1="360" x2="1344" y2="360"/>
+    <line x1="0" y1="420" x2="1344" y2="420"/>
+    <!-- Vertical offsets -->
+    <line x1="100" y1="0" x2="100" y2="60"/>
+    <line x1="250" y1="60" x2="250" y2="120"/>
+    <line x1="150" y1="120" x2="150" y2="180"/>
+    <line x1="300" y1="180" x2="300" y2="240"/>
+    <line x1="80" y1="240" x2="80" y2="300"/>
+    <line x1="200" y1="0" x2="200" y2="60"/>
+    <line x1="400" y1="60" x2="400" y2="120"/>
+    <line x1="350" y1="120" x2="350" y2="180"/>
+    <line x1="500" y1="0" x2="500" y2="60"/>
+    <line x1="600" y1="60" x2="600" y2="120"/>
+    <line x1="550" y1="120" x2="550" y2="180"/>
+    <line x1="700" y1="180" x2="700" y2="240"/>
+    <line x1="650" y1="240" x2="650" y2="300"/>
+    <line x1="800" y1="0" x2="800" y2="60"/>
+    <line x1="850" y1="60" x2="850" y2="120"/>
+    <line x1="900" y1="120" x2="900" y2="180"/>
+    <line x1="1000" y1="0" x2="1000" y2="60"/>
+    <line x1="1050" y1="60" x2="1050" y2="120"/>
+    <line x1="1100" y1="180" x2="1100" y2="240"/>
+    <line x1="1200" y1="0" x2="1200" y2="60"/>
+    <line x1="1250" y1="120" x2="1250" y2="180"/>
+  </g>
+
+  <!-- Floor -->
+  <path d="M0,500 L1344,500 L1344,768 L0,768Z" fill="url(#castelo-floor)"/>
+
+  <!-- Floor tile pattern -->
+  <g stroke="#2e1a0e" stroke-width="1" opacity="0.3">
+    <line x1="0" y1="560" x2="1344" y2="560"/>
+    <line x1="0" y1="630" x2="1344" y2="630"/>
+    <line x1="0" y1="700" x2="1344" y2="700"/>
+    <line x1="100" y1="500" x2="100" y2="768"/>
+    <line x1="250" y1="500" x2="250" y2="768"/>
+    <line x1="400" y1="500" x2="400" y2="768"/>
+    <line x1="550" y1="500" x2="550" y2="768"/>
+    <line x1="700" y1="500" x2="700" y2="768"/>
+    <line x1="850" y1="500" x2="850" y2="768"/>
+    <line x1="1000" y1="500" x2="1000" y2="768"/>
+    <line x1="1150" y1="500" x2="1150" y2="768"/>
+    <line x1="1300" y1="500" x2="1300" y2="768"/>
+  </g>
+
+  <!-- Red carpet -->
+  <path d="M520,500 L480,768 L864,768 L824,500Z" fill="url(#castelo-carpet)"/>
+  <path d="M520,500 L480,768 L864,768 L824,500Z" fill="url(#castelo-carpet-highlight)"/>
+  <!-- Carpet border -->
+  <line x1="530" y1="500" x2="492" y2="768" stroke="#ffd54f" stroke-width="2" opacity="0.5"/>
+  <line x1="814" y1="500" x2="852" y2="768" stroke="#ffd54f" stroke-width="2" opacity="0.5"/>
+
+  <!-- Pillars -->
+  <g>
+    <!-- Left pillars -->
+    <rect x="80" y="80" width="50" height="420" fill="url(#castelo-pillar)"/>
+    <rect x="75" y="80" width="60" height="20" rx="3" fill="#9e9e9e"/>
+    <rect x="75" y="480" width="60" height="20" rx="3" fill="#9e9e9e"/>
+
+    <rect x="280" y="80" width="50" height="420" fill="url(#castelo-pillar)"/>
+    <rect x="275" y="80" width="60" height="20" rx="3" fill="#9e9e9e"/>
+    <rect x="275" y="480" width="60" height="20" rx="3" fill="#9e9e9e"/>
+
+    <!-- Right pillars -->
+    <rect x="1010" y="80" width="50" height="420" fill="url(#castelo-pillar)"/>
+    <rect x="1005" y="80" width="60" height="20" rx="3" fill="#9e9e9e"/>
+    <rect x="1005" y="480" width="60" height="20" rx="3" fill="#9e9e9e"/>
+
+    <rect x="1210" y="80" width="50" height="420" fill="url(#castelo-pillar)"/>
+    <rect x="1205" y="80" width="60" height="20" rx="3" fill="#9e9e9e"/>
+    <rect x="1205" y="480" width="60" height="20" rx="3" fill="#9e9e9e"/>
+  </g>
+
+  <!-- Arched windows -->
+  <g>
+    <path d="M160,150 Q190,100 220,150 L220,280 L160,280Z" fill="url(#castelo-window)"/>
+    <path d="M160,150 Q190,100 220,150" stroke="#9e9e9e" stroke-width="3" fill="none"/>
+    <line x1="190" y1="105" x2="190" y2="280" stroke="#757575" stroke-width="2"/>
+    <line x1="160" y1="210" x2="220" y2="210" stroke="#757575" stroke-width="2"/>
+    <!-- Stars in window -->
+    <circle cx="175" cy="170" r="2" fill="#fff9c4"/>
+    <circle cx="205" cy="190" r="1.5" fill="#fff9c4"/>
+    <circle cx="180" cy="240" r="1" fill="#fff9c4"/>
+
+    <path d="M1120,150 Q1150,100 1180,150 L1180,280 L1120,280Z" fill="url(#castelo-window)"/>
+    <path d="M1120,150 Q1150,100 1180,150" stroke="#9e9e9e" stroke-width="3" fill="none"/>
+    <line x1="1150" y1="105" x2="1150" y2="280" stroke="#757575" stroke-width="2"/>
+    <line x1="1120" y1="210" x2="1180" y2="210" stroke="#757575" stroke-width="2"/>
+    <circle cx="1135" cy="175" r="2" fill="#fff9c4"/>
+    <circle cx="1165" cy="200" r="1.5" fill="#fff9c4"/>
+  </g>
+
+  <!-- Banners -->
+  <g>
+    <rect x="420" y="100" width="50" height="150" rx="2" fill="url(#castelo-banner)"/>
+    <polygon points="420,250 445,230 470,250" fill="url(#castelo-banner)"/>
+    <!-- Lion emblem -->
+    <circle cx="445" cy="165" r="15" fill="#ffd54f" opacity="0.6"/>
+    <path d="M438,170 Q445,155 452,170" stroke="#ffd54f" stroke-width="2" fill="none"/>
+
+    <rect x="874" y="100" width="50" height="150" rx="2" fill="url(#castelo-banner)"/>
+    <polygon points="874,250 899,230 924,250" fill="url(#castelo-banner)"/>
+    <circle cx="899" cy="165" r="15" fill="#ffd54f" opacity="0.6"/>
+    <path d="M892,170 Q899,155 906,170" stroke="#ffd54f" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- Throne platform -->
+  <path d="M550,500 L560,470 L784,470 L794,500Z" fill="#5d4037"/>
+  <path d="M570,470 L578,445 L766,445 L774,470Z" fill="#4e342e"/>
+
+  <!-- Throne -->
+  <g transform="translate(620,250)">
+    <!-- Back -->
+    <path d="M10,0 Q72,-30 134,0 L134,195 L10,195Z" fill="url(#castelo-throne-back)"/>
+    <!-- Crown top -->
+    <polygon points="10,0 30,-20 50,0 72,-30 94,0 114,-20 134,0" fill="#7b1fa2"/>
+    <!-- Gold trim on back -->
+    <rect x="10" y="60" width="124" height="4" fill="#ffd54f" rx="2"/>
+    <rect x="10" y="130" width="124" height="4" fill="#ffd54f" rx="2"/>
+    <!-- Seat -->
+    <rect x="0" y="140" width="144" height="30" rx="5" fill="url(#castelo-throne-seat)"/>
+    <!-- Armrests -->
+    <rect x="-10" y="120" width="20" height="60" rx="5" fill="#7b1fa2"/>
+    <rect x="134" y="120" width="20" height="60" rx="5" fill="#7b1fa2"/>
+    <!-- Gold knobs -->
+    <circle cx="0" cy="120" r="8" fill="#ffd54f"/>
+    <circle cx="144" cy="120" r="8" fill="#ffd54f"/>
+    <!-- Legs -->
+    <rect x="15" y="170" width="12" height="25" fill="#6a1b9a"/>
+    <rect x="117" y="170" width="12" height="25" fill="#6a1b9a"/>
+    <!-- Cushion -->
+    <ellipse cx="72" cy="148" rx="55" ry="12" fill="#ce93d8" opacity="0.5"/>
+  </g>
+
+  <!-- Torches -->
+  <g>
+    <!-- Left torch 1 -->
+    <rect x="100" y="280" width="8" height="40" fill="#5d4037"/>
+    <rect x="95" y="275" width="18" height="10" rx="3" fill="#795548"/>
+    <ellipse cx="104" cy="260" rx="12" ry="20" fill="url(#castelo-torch-flame)"/>
+    <circle cx="104" cy="280" r="50" fill="url(#castelo-torch-glow)"/>
+
+    <!-- Left torch 2 -->
+    <rect x="300" y="280" width="8" height="40" fill="#5d4037"/>
+    <rect x="295" y="275" width="18" height="10" rx="3" fill="#795548"/>
+    <ellipse cx="304" cy="260" rx="12" ry="20" fill="url(#castelo-torch-flame)"/>
+    <circle cx="304" cy="280" r="50" fill="url(#castelo-torch-glow)"/>
+
+    <!-- Right torch 1 -->
+    <rect x="1030" y="280" width="8" height="40" fill="#5d4037"/>
+    <rect x="1025" y="275" width="18" height="10" rx="3" fill="#795548"/>
+    <ellipse cx="1034" cy="260" rx="12" ry="20" fill="url(#castelo-torch-flame)"/>
+    <circle cx="1034" cy="280" r="50" fill="url(#castelo-torch-glow)"/>
+
+    <!-- Right torch 2 -->
+    <rect x="1230" y="280" width="8" height="40" fill="#5d4037"/>
+    <rect x="1225" y="275" width="18" height="10" rx="3" fill="#795548"/>
+    <ellipse cx="1234" cy="260" rx="12" ry="20" fill="url(#castelo-torch-flame)"/>
+    <circle cx="1234" cy="280" r="50" fill="url(#castelo-torch-glow)"/>
+  </g>
+
+  <!-- Chandelier -->
+  <g transform="translate(672,0)">
+    <line x1="0" y1="0" x2="0" y2="40" stroke="#bdbdbd" stroke-width="3"/>
+    <circle cx="0" cy="45" r="8" fill="#e0e0e0"/>
+    <path d="M-60,60 Q0,50 60,60" stroke="#bdbdbd" stroke-width="4" fill="none"/>
+    <path d="M-40,55 Q0,48 40,55" stroke="#e0e0e0" stroke-width="2" fill="none"/>
+    <!-- Candles on chandelier -->
+    <rect x="-63" y="48" width="6" height="14" fill="#fff9c4"/>
+    <ellipse cx="-60" cy="42" rx="5" ry="8" fill="url(#castelo-torch-flame)"/>
+    <rect x="-33" y="45" width="6" height="12" fill="#fff9c4"/>
+    <ellipse cx="-30" cy="39" rx="4" ry="7" fill="url(#castelo-torch-flame)"/>
+    <rect x="-3" y="43" width="6" height="12" fill="#fff9c4"/>
+    <ellipse cx="0" cy="37" rx="4" ry="7" fill="url(#castelo-torch-flame)"/>
+    <rect x="27" y="45" width="6" height="12" fill="#fff9c4"/>
+    <ellipse cx="30" cy="39" rx="4" ry="7" fill="url(#castelo-torch-flame)"/>
+    <rect x="57" y="48" width="6" height="14" fill="#fff9c4"/>
+    <ellipse cx="60" cy="42" rx="5" ry="8" fill="url(#castelo-torch-flame)"/>
+    <!-- Glow -->
+    <circle cx="0" cy="50" r="100" fill="url(#castelo-chandelier-light)"/>
+  </g>
+
+  <!-- Shield decorations on wall -->
+  <g>
+    <ellipse cx="500" cy="350" rx="25" ry="30" fill="#b71c1c"/>
+    <ellipse cx="500" cy="350" rx="25" ry="30" stroke="#ffd54f" stroke-width="2" fill="none"/>
+    <line x1="500" y1="325" x2="500" y2="375" stroke="#ffd54f" stroke-width="1.5"/>
+    <line x1="478" y1="350" x2="522" y2="350" stroke="#ffd54f" stroke-width="1.5"/>
+
+    <ellipse cx="844" cy="350" rx="25" ry="30" fill="#1565c0"/>
+    <ellipse cx="844" cy="350" rx="25" ry="30" stroke="#ffd54f" stroke-width="2" fill="none"/>
+    <line x1="844" y1="325" x2="844" y2="375" stroke="#ffd54f" stroke-width="1.5"/>
+    <line x1="822" y1="350" x2="866" y2="350" stroke="#ffd54f" stroke-width="1.5"/>
+  </g>
+
+  <!-- Ambient warm overlay -->
+  <rect width="1344" height="768" fill="rgba(255,183,77,0.05)"/>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="cupcake_wrapper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF85A2"/>
+      <stop offset="100%" stop-color="#E84393"/>
+    </linearGradient>
+    <linearGradient id="cupcake_cake" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F5D08C"/>
+      <stop offset="100%" stop-color="#D4A24C"/>
+    </linearGradient>
+    <radialGradient id="cupcake_frosting" cx="0.4" cy="0.3" r="0.6">
+      <stop offset="0%" stop-color="#FFB6E0"/>
+      <stop offset="100%" stop-color="#FF69B4"/>
+    </radialGradient>
+    <radialGradient id="cupcake_frosting_top" cx="0.4" cy="0.3" r="0.5">
+      <stop offset="0%" stop-color="#FFCCE5"/>
+      <stop offset="100%" stop-color="#FF85C0"/>
+    </radialGradient>
+    <radialGradient id="cupcake_cherry" cx="0.35" cy="0.3" r="0.5">
+      <stop offset="0%" stop-color="#FF4444"/>
+      <stop offset="100%" stop-color="#C62828"/>
+    </radialGradient>
+    <filter id="cupcake_shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+  </defs>
+  <!-- Wrapper (trapezoid) -->
+  <path d="M28,68 L35,110 L85,110 L92,68 Z" fill="url(#cupcake_wrapper)" filter="url(#cupcake_shadow)"/>
+  <!-- Wrapper ridges -->
+  <line x1="35" y1="68" x2="38" y2="110" stroke="#D6366E" stroke-width="1" opacity="0.4"/>
+  <line x1="45" y1="68" x2="46" y2="110" stroke="#D6366E" stroke-width="1" opacity="0.4"/>
+  <line x1="55" y1="68" x2="54" y2="110" stroke="#D6366E" stroke-width="1" opacity="0.4"/>
+  <line x1="65" y1="68" x2="62" y2="110" stroke="#D6366E" stroke-width="1" opacity="0.4"/>
+  <line x1="75" y1="68" x2="70" y2="110" stroke="#D6366E" stroke-width="1" opacity="0.4"/>
+  <line x1="85" y1="68" x2="78" y2="110" stroke="#D6366E" stroke-width="1" opacity="0.4"/>
+  <!-- Cake top peeking over wrapper -->
+  <rect x="28" y="60" width="64" height="12" rx="3" fill="url(#cupcake_cake)"/>
+  <!-- Frosting swirl -->
+  <ellipse cx="60" cy="52" rx="32" ry="14" fill="url(#cupcake_frosting)"/>
+  <ellipse cx="55" cy="42" rx="24" ry="12" fill="url(#cupcake_frosting)"/>
+  <ellipse cx="60" cy="34" rx="18" ry="10" fill="url(#cupcake_frosting_top)"/>
+  <ellipse cx="58" cy="28" rx="12" ry="8" fill="url(#cupcake_frosting_top)"/>
+  <!-- Frosting tip -->
+  <ellipse cx="55" cy="22" rx="6" ry="5" fill="#FFCCE5"/>
+  <!-- Cherry -->
+  <circle cx="55" cy="16" r="7" fill="url(#cupcake_cherry)"/>
+  <ellipse cx="52" cy="13" rx="2.5" ry="2" fill="#FF8A80" opacity="0.5"/>
+  <path d="M55,10 Q57,5 62,4" fill="none" stroke="#4E342E" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Sprinkles -->
+  <rect x="42" y="38" width="3" height="1.5" rx="0.5" fill="#FFD700" transform="rotate(20,43,38)"/>
+  <rect x="70" y="45" width="3" height="1.5" rx="0.5" fill="#4CAF50" transform="rotate(-30,71,45)"/>
+  <rect x="55" y="50" width="3" height="1.5" rx="0.5" fill="#5CB8E6" transform="rotate(45,56,50)"/>
+  <rect x="45" y="48" width="3" height="1.5" rx="0.5" fill="#FF5722" transform="rotate(-10,46,48)"/>
+  <rect x="65" y="36" width="2.5" height="1.2" rx="0.5" fill="#AB47BC" transform="rotate(30,66,36)"/>
+  <rect x="50" y="30" width="2.5" height="1.2" rx="0.5" fill="#FFD700" transform="rotate(-25,51,30)"/>
+  <rect x="38" y="52" width="2.5" height="1.2" rx="0.5" fill="#66BB6A" transform="rotate(15,39,52)"/>
+  <rect x="75" y="52" width="2.5" height="1.2" rx="0.5" fill="#FF5722" transform="rotate(-40,76,52)"/>
+</svg>

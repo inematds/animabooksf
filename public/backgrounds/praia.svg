@@ -1,0 +1,215 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1344 768">
+  <defs>
+    <linearGradient id="praia-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1565c0"/>
+      <stop offset="50%" stop-color="#42a5f5"/>
+      <stop offset="100%" stop-color="#90caf9"/>
+    </linearGradient>
+    <linearGradient id="praia-ocean" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0277bd"/>
+      <stop offset="40%" stop-color="#0288d1"/>
+      <stop offset="100%" stop-color="#4fc3f7"/>
+    </linearGradient>
+    <linearGradient id="praia-sand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffe0b2"/>
+      <stop offset="100%" stop-color="#ffcc80"/>
+    </linearGradient>
+    <linearGradient id="praia-wet-sand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d7ccc8"/>
+      <stop offset="100%" stop-color="#bcaaa4"/>
+    </linearGradient>
+    <radialGradient id="praia-sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#fff9c4"/>
+      <stop offset="40%" stop-color="#ffee58"/>
+      <stop offset="100%" stop-color="rgba(255,238,88,0)"/>
+    </radialGradient>
+    <linearGradient id="praia-palm-trunk" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6d4c41"/>
+      <stop offset="50%" stop-color="#8d6e63"/>
+      <stop offset="100%" stop-color="#5d4037"/>
+    </linearGradient>
+    <linearGradient id="praia-palm-leaf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="praia-wave" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.6)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+    <radialGradient id="praia-shell1" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#ffab91"/>
+      <stop offset="100%" stop-color="#e64a19"/>
+    </radialGradient>
+    <radialGradient id="praia-shell2" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#f8bbd0"/>
+      <stop offset="100%" stop-color="#c2185b"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1344" height="768" fill="url(#praia-sky)"/>
+
+  <!-- Sun -->
+  <circle cx="1100" cy="120" r="80" fill="url(#praia-sun)"/>
+  <circle cx="1100" cy="120" r="45" fill="#fff9c4"/>
+
+  <!-- Sun rays -->
+  <g stroke="#fff9c4" stroke-width="2" opacity="0.3">
+    <line x1="1100" y1="30" x2="1100" y2="10"/>
+    <line x1="1100" y1="210" x2="1100" y2="230"/>
+    <line x1="1010" y1="120" x2="990" y2="120"/>
+    <line x1="1190" y1="120" x2="1210" y2="120"/>
+    <line x1="1037" y1="57" x2="1023" y2="43"/>
+    <line x1="1163" y1="57" x2="1177" y2="43"/>
+    <line x1="1037" y1="183" x2="1023" y2="197"/>
+    <line x1="1163" y1="183" x2="1177" y2="197"/>
+  </g>
+
+  <!-- Clouds -->
+  <g fill="white" opacity="0.9">
+    <ellipse cx="200" cy="100" rx="80" ry="35"/>
+    <ellipse cx="250" cy="90" rx="60" ry="30"/>
+    <ellipse cx="160" cy="95" rx="50" ry="25"/>
+
+    <ellipse cx="600" cy="70" rx="70" ry="30"/>
+    <ellipse cx="650" cy="60" rx="55" ry="25"/>
+    <ellipse cx="560" cy="65" rx="45" ry="22"/>
+
+    <ellipse cx="900" cy="140" rx="60" ry="25"/>
+    <ellipse cx="940" cy="132" rx="45" ry="20"/>
+  </g>
+
+  <!-- Ocean -->
+  <rect x="0" y="350" width="1344" height="150" fill="url(#praia-ocean)"/>
+
+  <!-- Ocean shimmer -->
+  <g fill="rgba(255,255,255,0.2)">
+    <ellipse cx="200" cy="380" rx="40" ry="3"/>
+    <ellipse cx="500" cy="400" rx="50" ry="2.5"/>
+    <ellipse cx="800" cy="370" rx="35" ry="3"/>
+    <ellipse cx="1100" cy="390" rx="45" ry="2.5"/>
+    <ellipse cx="350" cy="420" rx="30" ry="2"/>
+    <ellipse cx="700" cy="440" rx="40" ry="2"/>
+    <ellipse cx="1000" cy="430" rx="35" ry="2.5"/>
+  </g>
+
+  <!-- Waves -->
+  <path d="M0,480 Q80,465 160,480 Q240,495 320,480 Q400,465 480,480 Q560,495 640,480 Q720,465 800,480 Q880,495 960,480 Q1040,465 1120,480 Q1200,495 1344,480 L1344,500 L0,500Z" fill="url(#praia-wave)"/>
+  <path d="M0,495 Q100,485 200,495 Q300,505 400,495 Q500,485 600,495 Q700,505 800,495 Q900,485 1000,495 Q1100,505 1200,495 Q1300,485 1344,495 L1344,510 L0,510Z" fill="rgba(255,255,255,0.3)"/>
+
+  <!-- Wet sand -->
+  <path d="M0,500 Q200,490 400,505 Q600,510 800,500 Q1000,490 1200,505 L1344,500 L1344,550 L0,550Z" fill="url(#praia-wet-sand)"/>
+
+  <!-- Dry sand -->
+  <rect x="0" y="540" width="1344" height="228" fill="url(#praia-sand)"/>
+  <path d="M0,540 Q300,530 672,535 Q1000,540 1344,530 L1344,560 L0,560Z" fill="url(#praia-sand)"/>
+
+  <!-- Sand texture dots -->
+  <g fill="rgba(210,180,140,0.3)">
+    <circle cx="100" cy="600" r="1.5"/>
+    <circle cx="250" cy="620" r="1"/>
+    <circle cx="400" cy="590" r="1.5"/>
+    <circle cx="550" cy="640" r="1"/>
+    <circle cx="700" cy="610" r="1.5"/>
+    <circle cx="850" cy="580" r="1"/>
+    <circle cx="1000" cy="630" r="1.5"/>
+    <circle cx="1150" cy="600" r="1"/>
+    <circle cx="300" cy="700" r="1.5"/>
+    <circle cx="600" cy="720" r="1"/>
+    <circle cx="900" cy="690" r="1.5"/>
+    <circle cx="1200" cy="710" r="1"/>
+  </g>
+
+  <!-- Palm tree -->
+  <path d="M180,620 Q170,500 185,350 Q195,280 200,250" stroke="url(#praia-palm-trunk)" stroke-width="20" fill="none" stroke-linecap="round"/>
+  <!-- Trunk texture -->
+  <g stroke="#5d4037" stroke-width="1" opacity="0.4">
+    <line x1="170" y1="580" x2="195" y2="578"/>
+    <line x1="172" y1="540" x2="193" y2="537"/>
+    <line x1="174" y1="500" x2="192" y2="496"/>
+    <line x1="177" y1="460" x2="193" y2="455"/>
+    <line x1="180" y1="420" x2="195" y2="414"/>
+    <line x1="182" y1="380" x2="196" y2="373"/>
+    <line x1="185" y1="340" x2="198" y2="332"/>
+    <line x1="188" y1="300" x2="200" y2="292"/>
+  </g>
+  <!-- Palm leaves -->
+  <g fill="url(#praia-palm-leaf)">
+    <path d="M200,250 Q280,200 350,230 Q280,220 200,250Z"/>
+    <path d="M200,250 Q300,240 370,280 Q290,255 200,250Z"/>
+    <path d="M200,250 Q250,180 280,150 Q260,200 200,250Z"/>
+    <path d="M200,250 Q150,180 120,150 Q160,200 200,250Z"/>
+    <path d="M200,250 Q120,210 60,230 Q130,225 200,250Z"/>
+    <path d="M200,250 Q110,250 50,290 Q120,260 200,250Z"/>
+    <path d="M200,250 Q230,170 210,130 Q220,190 200,250Z"/>
+  </g>
+  <!-- Coconuts -->
+  <circle cx="195" cy="258" r="8" fill="#795548"/>
+  <circle cx="208" cy="255" r="7" fill="#6d4c41"/>
+
+  <!-- Shells -->
+  <g transform="translate(500,660)">
+    <path d="M0,10 Q10,-5 20,10 Q10,5 0,10Z" fill="url(#praia-shell1)"/>
+    <line x1="10" y1="10" x2="5" y2="2" stroke="#bf360c" stroke-width="0.5"/>
+    <line x1="10" y1="10" x2="10" y2="0" stroke="#bf360c" stroke-width="0.5"/>
+    <line x1="10" y1="10" x2="15" y2="2" stroke="#bf360c" stroke-width="0.5"/>
+  </g>
+  <g transform="translate(800,680)">
+    <path d="M0,8 Q8,-4 16,8 Q8,3 0,8Z" fill="url(#praia-shell2)"/>
+    <line x1="8" y1="8" x2="4" y2="1" stroke="#880e4f" stroke-width="0.5"/>
+    <line x1="8" y1="8" x2="8" y2="0" stroke="#880e4f" stroke-width="0.5"/>
+    <line x1="8" y1="8" x2="12" y2="1" stroke="#880e4f" stroke-width="0.5"/>
+  </g>
+  <g transform="translate(350,690)">
+    <ellipse cx="8" cy="5" rx="8" ry="5" fill="#ffe0b2" stroke="#d7ccc8" stroke-width="1"/>
+    <path d="M2,5 Q8,0 14,5" stroke="#bcaaa4" stroke-width="0.5" fill="none"/>
+  </g>
+
+  <!-- Starfish -->
+  <g transform="translate(700,640)" fill="#ff7043">
+    <polygon points="12,0 14,8 22,10 16,15 17,23 12,18 7,23 8,15 2,10 10,8"/>
+  </g>
+
+  <!-- Sand castle -->
+  <g transform="translate(1000,620)">
+    <rect x="0" y="20" width="80" height="40" rx="3" fill="#e6c98a"/>
+    <rect x="10" y="5" width="20" height="20" rx="2" fill="#dbb974"/>
+    <rect x="50" y="5" width="20" height="20" rx="2" fill="#dbb974"/>
+    <rect x="30" y="-10" width="20" height="35" rx="2" fill="#d4a94c"/>
+    <!-- Flag -->
+    <line x1="40" y1="-10" x2="40" y2="-30" stroke="#5d4037" stroke-width="1.5"/>
+    <polygon points="40,-30 55,-25 40,-20" fill="#e53935"/>
+    <!-- Windows -->
+    <rect x="35" y="30" width="10" height="15" rx="5" fill="#a1887f"/>
+    <!-- Crenellations -->
+    <rect x="10" y="2" width="5" height="5" fill="#dbb974"/>
+    <rect x="20" y="2" width="5" height="5" fill="#dbb974"/>
+    <rect x="55" y="2" width="5" height="5" fill="#dbb974"/>
+  </g>
+
+  <!-- Beach umbrella -->
+  <line x1="650" y1="540" x2="650" y2="680" stroke="#8d6e63" stroke-width="5"/>
+  <path d="M580,545 Q615,490 650,540 Q685,490 720,545Z" fill="#e53935"/>
+  <path d="M580,545 Q615,500 650,545" fill="#ffeb3b"/>
+  <path d="M650,545 Q685,500 720,545" fill="#ffeb3b"/>
+
+  <!-- Beach towel -->
+  <rect x="660" y="660" width="70" height="40" rx="3" fill="#42a5f5" transform="rotate(-5,695,680)"/>
+  <rect x="660" y="670" width="70" height="8" rx="1" fill="#1e88e5" transform="rotate(-5,695,680)"/>
+  <rect x="660" y="688" width="70" height="8" rx="1" fill="#1e88e5" transform="rotate(-5,695,680)"/>
+
+  <!-- Distant sailboat -->
+  <g transform="translate(400,340)">
+    <rect x="0" y="10" width="40" height="8" rx="3" fill="#8d6e63"/>
+    <line x1="20" y1="10" x2="20" y2="-20" stroke="#5d4037" stroke-width="2"/>
+    <polygon points="20,-20 20,8 35,-5" fill="white"/>
+    <polygon points="20,-18 20,5 8,-3" fill="#e0e0e0"/>
+  </g>
+
+  <!-- Birds in sky -->
+  <g stroke="#37474f" stroke-width="1.5" fill="none">
+    <path d="M500,150 Q505,145 510,150 Q515,145 520,150"/>
+    <path d="M530,170 Q534,166 538,170 Q542,166 546,170"/>
+    <path d="M480,180 Q485,175 490,180 Q495,175 500,180"/>
+  </g>
+</svg>

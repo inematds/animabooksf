@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" width="200" height="300">
+  <defs>
+    <radialGradient id="kai-skin" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#DEB887"/>
+      <stop offset="100%" stop-color="#C8A06E"/>
+    </radialGradient>
+    <linearGradient id="kai-hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5C3A1E"/>
+      <stop offset="100%" stop-color="#3E2510"/>
+    </linearGradient>
+    <linearGradient id="kai-tank" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF9E3D"/>
+      <stop offset="100%" stop-color="#FF8800"/>
+    </linearGradient>
+    <linearGradient id="kai-shorts" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2EAAD4"/>
+      <stop offset="100%" stop-color="#1A8CB8"/>
+    </linearGradient>
+    <radialGradient id="kai-eye" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#4A90D9"/>
+      <stop offset="100%" stop-color="#2B6CB0"/>
+    </radialGradient>
+    <radialGradient id="kai-blush" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E8A080" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#E8A080" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="kai-shorts-stripe" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.1"/>
+    </linearGradient>
+    <filter id="kai-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+  </defs>
+  <g filter="url(#kai-shadow)">
+    <!-- Head -->
+    <ellipse cx="100" cy="88" rx="48" ry="50" fill="url(#kai-skin)"/>
+    <!-- Hair (messy) -->
+    <path d="M52 72 Q50 30, 100 22 Q150 30, 148 72 L145 60 Q138 48, 125 55 L118 45 Q108 35, 95 45 L88 38 Q78 32, 68 45 L62 50 Q54 55, 55 65 Z" fill="url(#kai-hair)"/>
+    <!-- Messy hair spikes -->
+    <path d="M70 35 Q65 20, 58 28 Q62 25, 68 38" fill="url(#kai-hair)"/>
+    <path d="M100 25 Q102 10, 110 18 Q105 15, 100 28" fill="url(#kai-hair)"/>
+    <path d="M130 35 Q138 18, 145 28 Q140 22, 132 38" fill="url(#kai-hair)"/>
+    <path d="M85 30 Q80 15, 75 25 Q78 20, 84 33" fill="url(#kai-hair)"/>
+    <path d="M115 28 Q120 12, 127 22 Q122 17, 116 32" fill="url(#kai-hair)"/>
+    <!-- Eyes -->
+    <ellipse cx="80" cy="90" rx="9" ry="10" fill="url(#kai-eye)"/>
+    <ellipse cx="120" cy="90" rx="9" ry="10" fill="url(#kai-eye)"/>
+    <!-- Eye highlights -->
+    <ellipse cx="83" cy="86" rx="3.5" ry="4" fill="white" opacity="0.9"/>
+    <ellipse cx="123" cy="86" rx="3.5" ry="4" fill="white" opacity="0.9"/>
+    <ellipse cx="78" cy="93" rx="1.5" ry="1.5" fill="white" opacity="0.6"/>
+    <ellipse cx="118" cy="93" rx="1.5" ry="1.5" fill="white" opacity="0.6"/>
+    <!-- Eyebrows -->
+    <path d="M69 76 Q80 72, 90 76" stroke="#3E2510" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M110 76 Q120 72, 131 76" stroke="#3E2510" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <!-- Nose -->
+    <ellipse cx="100" cy="101" rx="2.5" ry="2" fill="#C8986A" opacity="0.6"/>
+    <!-- Mouth (neutral smile) -->
+    <path d="M92 112 Q100 116, 108 112" stroke="#A0705A" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Blush -->
+    <ellipse cx="68" cy="103" rx="10" ry="6" fill="url(#kai-blush)"/>
+    <ellipse cx="132" cy="103" rx="10" ry="6" fill="url(#kai-blush)"/>
+    <!-- Neck -->
+    <rect x="90" y="132" width="20" height="16" rx="3" fill="url(#kai-skin)"/>
+    <!-- Body / Tank top -->
+    <path d="M65 146 Q65 142, 75 140 L90 138 Q100 137, 110 138 L125 140 Q135 142, 135 146 L138 200 Q138 205, 132 205 L68 205 Q62 205, 62 200 Z" fill="url(#kai-tank)"/>
+    <!-- Tank top neckline -->
+    <path d="M78 142 Q100 152, 122 142" stroke="#FF8800" stroke-width="2" fill="none"/>
+    <!-- Tank top design (wave) -->
+    <path d="M68 180 Q80 175, 90 180 Q100 185, 110 180 Q120 175, 132 180" stroke="white" stroke-width="1.5" fill="none" opacity="0.4"/>
+    <!-- Arms (tanned) -->
+    <path d="M65 150 Q48 165, 40 195 Q38 205, 46 207 Q52 205, 52 192 L58 170" fill="url(#kai-skin)" stroke="#C8986A" stroke-width="0.5"/>
+    <path d="M135 150 Q152 165, 160 195 Q162 205, 154 207 Q148 205, 148 192 L142 170" fill="url(#kai-skin)" stroke="#C8986A" stroke-width="0.5"/>
+    <!-- Hands -->
+    <ellipse cx="43" cy="207" rx="8" ry="7" fill="url(#kai-skin)"/>
+    <ellipse cx="157" cy="207" rx="8" ry="7" fill="url(#kai-skin)"/>
+    <!-- Board shorts -->
+    <path d="M62 203 L60 252 Q60 258, 68 258 L92 258 Q96 258, 96 252 L100 215 L104 252 Q104 258, 108 258 L132 258 Q140 258, 140 252 L138 203 Z" fill="url(#kai-shorts)"/>
+    <!-- Shorts stripe -->
+    <rect x="62" y="215" width="76" height="8" rx="2" fill="url(#kai-shorts-stripe)"/>
+    <!-- Shorts flower/hibiscus pattern -->
+    <circle cx="78" cy="235" r="5" fill="#FF6B6B" opacity="0.4"/>
+    <circle cx="122" cy="228" r="4" fill="#FF6B6B" opacity="0.4"/>
+    <!-- Legs -->
+    <rect x="76" y="256" width="18" height="20" rx="5" fill="url(#kai-skin)"/>
+    <rect x="106" y="256" width="18" height="20" rx="5" fill="url(#kai-skin)"/>
+    <!-- Feet / sandals -->
+    <path d="M72 272 L102 272 Q104 272, 104 276 L104 282 Q104 286, 100 286 L74 286 Q70 286, 70 282 L70 276 Q70 272, 72 272 Z" fill="#8B6914"/>
+    <path d="M102 272 L132 272 Q134 272, 134 276 L134 282 Q134 286, 130 286 L104 286 Q100 286, 100 282 L100 276 Q100 272, 102 272 Z" fill="#8B6914"/>
+    <!-- Sandal straps -->
+    <line x1="85" y1="272" x2="85" y2="286" stroke="#6B4F10" stroke-width="2"/>
+    <line x1="115" y1="272" x2="115" y2="286" stroke="#6B4F10" stroke-width="2"/>
+    <!-- Shell necklace -->
+    <path d="M82 142 Q90 148, 100 150 Q110 148, 118 142" stroke="#F5E6C8" stroke-width="1.5" fill="none"/>
+    <ellipse cx="100" cy="151" rx="4" ry="3" fill="#F5E6C8" stroke="#E0D0B0" stroke-width="0.5"/>
+  </g>
+</svg>

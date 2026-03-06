@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" width="200" height="300">
+  <defs>
+    <radialGradient id="yuki-skin" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#FFF0E0"/>
+      <stop offset="100%" stop-color="#F5D6B8"/>
+    </radialGradient>
+    <linearGradient id="yuki-hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2C2C2C"/>
+      <stop offset="100%" stop-color="#1A1A1A"/>
+    </linearGradient>
+    <linearGradient id="yuki-kimono" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E85D75"/>
+      <stop offset="50%" stop-color="#D94466"/>
+      <stop offset="100%" stop-color="#C23358"/>
+    </linearGradient>
+    <linearGradient id="yuki-kimono-inner" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFE4E9"/>
+      <stop offset="100%" stop-color="#FFD0D9"/>
+    </linearGradient>
+    <linearGradient id="yuki-obi" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="50%" stop-color="#FFC200"/>
+      <stop offset="100%" stop-color="#FFB300"/>
+    </linearGradient>
+    <radialGradient id="yuki-eye" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#5C3317"/>
+      <stop offset="100%" stop-color="#3B1F0B"/>
+    </radialGradient>
+    <radialGradient id="yuki-blush" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFB0B0" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FFB0B0" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="yuki-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+    <linearGradient id="yuki-hair-shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#555555" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#333333" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g filter="url(#yuki-shadow)">
+    <!-- Hair back -->
+    <path d="M55 60 Q55 30, 100 25 Q145 30, 145 60 L148 160 Q148 170, 140 170 L60 170 Q52 170, 52 160 Z" fill="url(#yuki-hair)"/>
+    <!-- Head -->
+    <ellipse cx="100" cy="90" rx="48" ry="52" fill="url(#yuki-skin)"/>
+    <!-- Hair front / bangs -->
+    <path d="M52 75 Q52 30, 100 25 Q148 30, 148 75 L145 62 Q140 55, 130 58 L125 65 Q115 50, 100 52 Q85 50, 75 65 L70 58 Q60 55, 55 62 Z" fill="url(#yuki-hair)"/>
+    <!-- Hair shine -->
+    <path d="M65 40 Q80 32, 100 30 Q120 32, 135 40 L130 50 Q115 42, 100 40 Q85 42, 70 50 Z" fill="url(#yuki-hair-shine)"/>
+    <!-- Eyes -->
+    <ellipse cx="80" cy="92" rx="9" ry="10" fill="url(#yuki-eye)"/>
+    <ellipse cx="120" cy="92" rx="9" ry="10" fill="url(#yuki-eye)"/>
+    <!-- Eye highlights -->
+    <ellipse cx="83" cy="88" rx="3.5" ry="4" fill="white" opacity="0.9"/>
+    <ellipse cx="123" cy="88" rx="3.5" ry="4" fill="white" opacity="0.9"/>
+    <ellipse cx="78" cy="95" rx="1.5" ry="1.5" fill="white" opacity="0.6"/>
+    <ellipse cx="118" cy="95" rx="1.5" ry="1.5" fill="white" opacity="0.6"/>
+    <!-- Eyebrows -->
+    <path d="M70 78 Q80 74, 90 78" stroke="#2C2C2C" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M110 78 Q120 74, 130 78" stroke="#2C2C2C" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Nose -->
+    <ellipse cx="100" cy="103" rx="2" ry="1.5" fill="#E8C4A8" opacity="0.7"/>
+    <!-- Mouth (neutral) -->
+    <path d="M93 113 Q100 117, 107 113" stroke="#C47A6C" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Blush -->
+    <ellipse cx="70" cy="105" rx="10" ry="6" fill="url(#yuki-blush)"/>
+    <ellipse cx="130" cy="105" rx="10" ry="6" fill="url(#yuki-blush)"/>
+    <!-- Neck -->
+    <rect x="90" y="135" width="20" height="15" rx="3" fill="url(#yuki-skin)"/>
+    <!-- Body / Kimono -->
+    <path d="M60 148 Q60 145, 65 143 L90 140 Q100 138, 110 140 L135 143 Q140 145, 140 148 L145 240 Q145 250, 135 250 L65 250 Q55 250, 55 240 Z" fill="url(#yuki-kimono)"/>
+    <!-- Kimono inner collar -->
+    <path d="M85 143 L100 170 L115 143" stroke="url(#yuki-kimono-inner)" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Obi (belt) -->
+    <rect x="58" y="185" width="84" height="18" rx="4" fill="url(#yuki-obi)"/>
+    <!-- Obi knot -->
+    <ellipse cx="100" cy="194" rx="8" ry="7" fill="#FFD700" stroke="#E6AC00" stroke-width="1"/>
+    <!-- Kimono flower pattern -->
+    <circle cx="75" cy="220" r="4" fill="#FFB0C0" opacity="0.6"/>
+    <circle cx="75" cy="220" r="2" fill="#FF8DA1" opacity="0.6"/>
+    <circle cx="125" cy="165" r="4" fill="#FFB0C0" opacity="0.6"/>
+    <circle cx="125" cy="165" r="2" fill="#FF8DA1" opacity="0.6"/>
+    <circle cx="130" cy="230" r="3.5" fill="#FFB0C0" opacity="0.6"/>
+    <!-- Arms -->
+    <path d="M60 155 Q45 170, 42 200 Q40 210, 48 212 Q55 210, 58 195 L60 175" fill="url(#yuki-kimono)" stroke="#C23358" stroke-width="1"/>
+    <path d="M140 155 Q155 170, 158 200 Q160 210, 152 212 Q145 210, 142 195 L140 175" fill="url(#yuki-kimono)" stroke="#C23358" stroke-width="1"/>
+    <!-- Hands -->
+    <ellipse cx="45" cy="212" rx="8" ry="6" fill="url(#yuki-skin)"/>
+    <ellipse cx="155" cy="212" rx="8" ry="6" fill="url(#yuki-skin)"/>
+    <!-- Legs / feet -->
+    <rect x="75" y="248" width="20" height="30" rx="5" fill="#F5D6B8"/>
+    <rect x="105" y="248" width="20" height="30" rx="5" fill="#F5D6B8"/>
+    <!-- Shoes (geta-inspired) -->
+    <rect x="72" y="274" width="26" height="10" rx="5" fill="#8B4513"/>
+    <rect x="102" y="274" width="26" height="10" rx="5" fill="#8B4513"/>
+    <!-- Hair ornament -->
+    <circle cx="140" cy="55" r="7" fill="#FFD700"/>
+    <circle cx="140" cy="55" r="4" fill="#FF6B8A"/>
+    <circle cx="148" cy="48" r="4" fill="#FFD700"/>
+    <circle cx="148" cy="48" r="2.5" fill="#FF8DA1"/>
+  </g>
+</svg>

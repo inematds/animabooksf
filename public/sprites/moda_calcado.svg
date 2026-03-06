@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="moda_calcado_grad1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F87171"/>
+      <stop offset="100%" stop-color="#DC2626"/>
+    </linearGradient>
+    <linearGradient id="moda_calcado_grad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FECACA"/>
+      <stop offset="100%" stop-color="#FCA5A5"/>
+    </linearGradient>
+    <filter id="moda_calcado_shadow">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <g filter="url(#moda_calcado_shadow)">
+    <!-- Left shoe -->
+    <!-- Sole -->
+    <path d="M8 82 Q6 88 8 92 L48 92 Q52 88 50 82Z" fill="#7F1D1D" rx="3"/>
+    <!-- Body -->
+    <path d="M12 50 L10 82 L48 82 Q52 70 40 60 L40 50Z" fill="url(#moda_calcado_grad1)" stroke="#B91C1C" stroke-width="1"/>
+    <!-- Tongue -->
+    <path d="M18 50 L16 38 Q26 34 32 38 L30 50Z" fill="url(#moda_calcado_grad2)"/>
+    <!-- Laces -->
+    <line x1="18" y1="50" x2="30" y2="50" stroke="white" stroke-width="2"/>
+    <line x1="17" y1="56" x2="31" y2="56" stroke="white" stroke-width="2"/>
+    <line x1="16" y1="62" x2="32" y2="62" stroke="white" stroke-width="2"/>
+    <!-- Toe cap -->
+    <path d="M38 82 Q52 70 40 60" fill="none" stroke="#FECACA" stroke-width="1.5" opacity="0.4"/>
+    <!-- Right shoe -->
+    <!-- Sole -->
+    <path d="M62 82 Q60 88 62 92 L102 92 Q106 88 104 82Z" fill="#7F1D1D"/>
+    <!-- Body -->
+    <path d="M66 50 L64 82 L102 82 Q106 70 94 60 L94 50Z" fill="url(#moda_calcado_grad1)" stroke="#B91C1C" stroke-width="1"/>
+    <!-- Tongue -->
+    <path d="M72 50 L70 38 Q80 34 86 38 L84 50Z" fill="url(#moda_calcado_grad2)"/>
+    <!-- Laces -->
+    <line x1="72" y1="50" x2="84" y2="50" stroke="white" stroke-width="2"/>
+    <line x1="71" y1="56" x2="85" y2="56" stroke="white" stroke-width="2"/>
+    <line x1="70" y1="62" x2="86" y2="62" stroke="white" stroke-width="2"/>
+    <!-- Toe cap -->
+    <path d="M92 82 Q106 70 94 60" fill="none" stroke="#FECACA" stroke-width="1.5" opacity="0.4"/>
+  </g>
+</svg>

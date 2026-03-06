@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="bici_frame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#44AAFF"/>
+      <stop offset="100%" stop-color="#2277DD"/>
+    </linearGradient>
+    <radialGradient id="bici_wheel" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#555"/>
+      <stop offset="100%" stop-color="#222"/>
+    </radialGradient>
+    <filter id="bici_shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="1" dy="3" stdDeviation="3" flood-color="#00000033"/>
+    </filter>
+  </defs>
+  <ellipse cx="60" cy="108" rx="42" ry="5" fill="#00000018"/>
+  <g filter="url(#bici_shadow)">
+    <!-- Back wheel -->
+    <circle cx="30" cy="82" r="18" fill="none" stroke="url(#bici_wheel)" stroke-width="4"/>
+    <circle cx="30" cy="82" r="3" fill="#888"/>
+    <!-- Front wheel -->
+    <circle cx="90" cy="82" r="18" fill="none" stroke="url(#bici_wheel)" stroke-width="4"/>
+    <circle cx="90" cy="82" r="3" fill="#888"/>
+    <!-- Spokes back -->
+    <line x1="30" y1="65" x2="30" y2="99" stroke="#AAA" stroke-width="1"/>
+    <line x1="13" y1="82" x2="47" y2="82" stroke="#AAA" stroke-width="1"/>
+    <!-- Spokes front -->
+    <line x1="90" y1="65" x2="90" y2="99" stroke="#AAA" stroke-width="1"/>
+    <line x1="73" y1="82" x2="107" y2="82" stroke="#AAA" stroke-width="1"/>
+    <!-- Frame -->
+    <line x1="30" y1="82" x2="55" y2="55" stroke="url(#bici_frame)" stroke-width="4" stroke-linecap="round"/>
+    <line x1="55" y1="55" x2="30" y2="55" stroke="url(#bici_frame)" stroke-width="4" stroke-linecap="round"/>
+    <line x1="55" y1="55" x2="90" y2="82" stroke="url(#bici_frame)" stroke-width="4" stroke-linecap="round"/>
+    <line x1="55" y1="55" x2="75" y2="48" stroke="url(#bici_frame)" stroke-width="4" stroke-linecap="round"/>
+    <!-- Handlebar -->
+    <line x1="75" y1="48" x2="90" y2="82" stroke="#666" stroke-width="3" stroke-linecap="round"/>
+    <line x1="68" y1="42" x2="82" y2="42" stroke="#666" stroke-width="4" stroke-linecap="round"/>
+    <!-- Seat -->
+    <ellipse cx="30" cy="52" rx="10" ry="4" fill="#FF6644" rx="3"/>
+    <!-- Pedal -->
+    <circle cx="55" cy="55" r="4" fill="#888"/>
+    <line x1="50" y1="60" x2="60" y2="50" stroke="#888" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Bell -->
+    <circle cx="80" cy="39" r="4" fill="#FFDD44"/>
+    <circle cx="80" cy="39" r="2" fill="#FFEE88"/>
+  </g>
+</svg>

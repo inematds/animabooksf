@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="moda_mascara_grad1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F87171"/>
+      <stop offset="100%" stop-color="#DC2626"/>
+    </linearGradient>
+    <linearGradient id="moda_mascara_grad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FCA5A5"/>
+      <stop offset="100%" stop-color="#EF4444"/>
+    </linearGradient>
+    <filter id="moda_mascara_shadow">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <g filter="url(#moda_mascara_shadow)">
+    <!-- Mask ties -->
+    <path d="M10 55 Q5 52 2 48" stroke="#DC2626" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M110 55 Q115 52 118 48" stroke="#DC2626" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Main mask shape -->
+    <path d="M10 45 Q10 35 25 30 Q40 26 60 28 Q80 26 95 30 Q110 35 110 45 L110 60 Q100 78 85 80 Q72 82 60 75 Q48 82 35 80 Q20 78 10 60Z" fill="url(#moda_mascara_grad1)" stroke="#B91C1C" stroke-width="2"/>
+    <!-- Brow ridge -->
+    <path d="M15 42 Q30 32 45 38" fill="none" stroke="url(#moda_mascara_grad2)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M105 42 Q90 32 75 38" fill="none" stroke="url(#moda_mascara_grad2)" stroke-width="3" stroke-linecap="round"/>
+    <!-- Left eye hole -->
+    <ellipse cx="37" cy="52" rx="15" ry="12" fill="white" stroke="#B91C1C" stroke-width="2"/>
+    <!-- Left eye point -->
+    <path d="M22 52 Q20 52 18 50" fill="none" stroke="#B91C1C" stroke-width="2" stroke-linecap="round"/>
+    <!-- Right eye hole -->
+    <ellipse cx="83" cy="52" rx="15" ry="12" fill="white" stroke="#B91C1C" stroke-width="2"/>
+    <!-- Right eye point -->
+    <path d="M98 52 Q100 52 102 50" fill="none" stroke="#B91C1C" stroke-width="2" stroke-linecap="round"/>
+    <!-- Nose bridge -->
+    <path d="M55 55 Q60 62 65 55" fill="url(#moda_mascara_grad1)" stroke="#B91C1C" stroke-width="1"/>
+    <!-- Decorative details -->
+    <path d="M25 38 Q30 35 35 38" fill="none" stroke="#FCA5A5" stroke-width="1.5" opacity="0.6"/>
+    <path d="M85 38 Q90 35 95 38" fill="none" stroke="#FCA5A5" stroke-width="1.5" opacity="0.6"/>
+    <!-- Shine highlights -->
+    <ellipse cx="30" cy="36" rx="5" ry="3" fill="white" opacity="0.25" transform="rotate(-15 30 36)"/>
+    <ellipse cx="90" cy="36" rx="5" ry="3" fill="white" opacity="0.25" transform="rotate(15 90 36)"/>
+    <!-- Star emblem on forehead -->
+    <polygon points="60,32 62,37 67,37 63,40 65,45 60,42 55,45 57,40 53,37 58,37" fill="#FBBF24" stroke="#F59E0B" stroke-width="0.5"/>
+  </g>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <radialGradient id="arbusto_main" cx="0.4" cy="0.35" r="0.6">
+      <stop offset="0%" stop-color="#66BB6A"/>
+      <stop offset="100%" stop-color="#2E7D32"/>
+    </radialGradient>
+    <radialGradient id="arbusto_light" cx="0.3" cy="0.3" r="0.5">
+      <stop offset="0%" stop-color="#81C784"/>
+      <stop offset="100%" stop-color="#4CAF50"/>
+    </radialGradient>
+    <radialGradient id="arbusto_dark" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#4CAF50"/>
+      <stop offset="100%" stop-color="#1B5E20"/>
+    </radialGradient>
+    <filter id="arbusto_shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+  </defs>
+  <!-- Base shadow -->
+  <ellipse cx="60" cy="108" rx="40" ry="6" fill="#1B5E20" opacity="0.2"/>
+  <!-- Back bush clusters -->
+  <ellipse cx="35" cy="78" rx="22" ry="20" fill="url(#arbusto_dark)" filter="url(#arbusto_shadow)"/>
+  <ellipse cx="85" cy="78" rx="22" ry="20" fill="url(#arbusto_dark)"/>
+  <!-- Main bush body -->
+  <ellipse cx="60" cy="72" rx="38" ry="32" fill="url(#arbusto_main)"/>
+  <!-- Top clusters -->
+  <ellipse cx="40" cy="55" rx="18" ry="16" fill="url(#arbusto_light)"/>
+  <ellipse cx="60" cy="48" rx="20" ry="18" fill="url(#arbusto_light)"/>
+  <ellipse cx="80" cy="55" rx="18" ry="16" fill="url(#arbusto_light)"/>
+  <!-- Highlight bumps -->
+  <ellipse cx="48" cy="42" rx="10" ry="9" fill="#81C784" opacity="0.7"/>
+  <ellipse cx="68" cy="44" rx="10" ry="8" fill="#81C784" opacity="0.6"/>
+  <!-- Small flowers -->
+  <circle cx="35" cy="60" r="3" fill="#FF85A2" opacity="0.8"/>
+  <circle cx="35" cy="60" r="1.2" fill="#FFD700"/>
+  <circle cx="75" cy="55" r="3" fill="#FFB6C1" opacity="0.8"/>
+  <circle cx="75" cy="55" r="1.2" fill="#FFD700"/>
+  <circle cx="55" cy="45" r="2.5" fill="#FF85A2" opacity="0.7"/>
+  <circle cx="55" cy="45" r="1" fill="#FFD700"/>
+  <circle cx="85" cy="70" r="2.5" fill="#FFB6C1" opacity="0.7"/>
+  <circle cx="85" cy="70" r="1" fill="#FFD700"/>
+</svg>

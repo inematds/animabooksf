@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <radialGradient id="boneca_skin" cx="45%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#FFDDBB"/>
+      <stop offset="100%" stop-color="#EEBB88"/>
+    </radialGradient>
+    <linearGradient id="boneca_dress" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF77AA"/>
+      <stop offset="100%" stop-color="#EE4488"/>
+    </linearGradient>
+    <linearGradient id="boneca_hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFCC44"/>
+      <stop offset="100%" stop-color="#DD9922"/>
+    </linearGradient>
+    <filter id="boneca_shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="1" dy="3" stdDeviation="3" flood-color="#00000033"/>
+    </filter>
+  </defs>
+  <ellipse cx="60" cy="112" rx="22" ry="4" fill="#00000020"/>
+  <g filter="url(#boneca_shadow)">
+    <!-- Hair back -->
+    <ellipse cx="60" cy="28" rx="22" ry="20" fill="url(#boneca_hair)"/>
+    <!-- Hair sides (pigtails) -->
+    <ellipse cx="35" cy="35" rx="8" ry="14" fill="url(#boneca_hair)" transform="rotate(10,35,35)"/>
+    <ellipse cx="85" cy="35" rx="8" ry="14" fill="url(#boneca_hair)" transform="rotate(-10,85,35)"/>
+    <!-- Hair bows -->
+    <polygon points="35,22 28,18 28,26" fill="#FF5577"/>
+    <polygon points="35,22 42,18 42,26" fill="#FF5577"/>
+    <circle cx="35" cy="22" r="3" fill="#FF6688"/>
+    <polygon points="85,22 78,18 78,26" fill="#FF5577"/>
+    <polygon points="85,22 92,18 92,26" fill="#FF5577"/>
+    <circle cx="85" cy="22" r="3" fill="#FF6688"/>
+    <!-- Head -->
+    <circle cx="60" cy="30" r="18" fill="url(#boneca_skin)"/>
+    <!-- Bangs -->
+    <path d="M42 22 Q48 12 60 14 Q72 12 78 22 Q74 18 60 17 Q46 18 42 22 Z" fill="url(#boneca_hair)"/>
+    <!-- Eyes -->
+    <ellipse cx="52" cy="28" rx="3.5" ry="4" fill="#4477CC"/>
+    <ellipse cx="68" cy="28" rx="3.5" ry="4" fill="#4477CC"/>
+    <circle cx="52" cy="28" r="2" fill="#222"/>
+    <circle cx="68" cy="28" r="2" fill="#222"/>
+    <circle cx="51" cy="27" r="1" fill="#FFF"/>
+    <circle cx="67" cy="27" r="1" fill="#FFF"/>
+    <!-- Eyelashes -->
+    <line x1="48" y1="25" x2="47" y2="23" stroke="#333" stroke-width="1" stroke-linecap="round"/>
+    <line x1="72" y1="25" x2="73" y2="23" stroke="#333" stroke-width="1" stroke-linecap="round"/>
+    <!-- Blush -->
+    <ellipse cx="46" cy="34" rx="4" ry="2.5" fill="#FFAAAA" opacity="0.5"/>
+    <ellipse cx="74" cy="34" rx="4" ry="2.5" fill="#FFAAAA" opacity="0.5"/>
+    <!-- Mouth -->
+    <path d="M55 37 Q60 42 65 37" stroke="#CC5566" stroke-width="1.5" fill="#FF8899" fill-opacity="0.4" stroke-linecap="round"/>
+    <!-- Neck -->
+    <rect x="56" y="46" width="8" height="6" fill="url(#boneca_skin)"/>
+    <!-- Dress body -->
+    <path d="M42 52 Q38 52 35 90 Q35 95 60 95 Q85 95 85 90 Q82 52 78 52 Z" fill="url(#boneca_dress)"/>
+    <!-- Dress collar -->
+    <path d="M48 52 Q60 58 72 52" stroke="#FFDDEE" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Dress decoration -->
+    <ellipse cx="60" cy="70" rx="3" ry="3" fill="#FFDDEE"/>
+    <ellipse cx="60" cy="80" rx="3" ry="3" fill="#FFDDEE"/>
+    <!-- Dress hem lace -->
+    <path d="M36 92 Q40 88 44 92 Q48 96 52 92 Q56 88 60 92 Q64 96 68 92 Q72 88 76 92 Q80 96 84 92" stroke="#FFDDEE" stroke-width="2" fill="none"/>
+    <!-- Arms -->
+    <ellipse cx="34" cy="62" rx="6" ry="15" fill="url(#boneca_dress)" transform="rotate(10,34,62)"/>
+    <circle cx="32" cy="75" r="5" fill="url(#boneca_skin)"/>
+    <ellipse cx="86" cy="62" rx="6" ry="15" fill="url(#boneca_dress)" transform="rotate(-10,86,62)"/>
+    <circle cx="88" cy="75" r="5" fill="url(#boneca_skin)"/>
+    <!-- Shoes -->
+    <ellipse cx="48" cy="100" rx="10" ry="5" fill="#CC3366"/>
+    <ellipse cx="72" cy="100" rx="10" ry="5" fill="#CC3366"/>
+    <ellipse cx="48" cy="99" rx="5" ry="2" fill="#FFAACC"/>
+    <ellipse cx="72" cy="99" rx="5" ry="2" fill="#FFAACC"/>
+  </g>
+</svg>

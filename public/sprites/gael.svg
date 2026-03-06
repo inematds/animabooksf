@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" width="200" height="300">
+  <defs>
+    <radialGradient id="gael-skin" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#C49060"/>
+      <stop offset="100%" stop-color="#A87545"/>
+    </radialGradient>
+    <linearGradient id="gael-hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2C1810"/>
+      <stop offset="100%" stop-color="#1A0E08"/>
+    </linearGradient>
+    <linearGradient id="gael-jacket" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#455A64"/>
+      <stop offset="50%" stop-color="#37474F"/>
+      <stop offset="100%" stop-color="#263238"/>
+    </linearGradient>
+    <linearGradient id="gael-shirt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EF5350"/>
+      <stop offset="100%" stop-color="#E53935"/>
+    </linearGradient>
+    <linearGradient id="gael-jeans" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5C6BC0"/>
+      <stop offset="100%" stop-color="#3949AB"/>
+    </linearGradient>
+    <linearGradient id="gael-headphones" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF7043"/>
+      <stop offset="100%" stop-color="#F4511E"/>
+    </linearGradient>
+    <linearGradient id="gael-headphones-pad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#424242"/>
+      <stop offset="100%" stop-color="#212121"/>
+    </linearGradient>
+    <radialGradient id="gael-eye" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#4E342E"/>
+      <stop offset="100%" stop-color="#2C1810"/>
+    </radialGradient>
+    <radialGradient id="gael-blush" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C07050" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#C07050" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="gael-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+  </defs>
+  <g filter="url(#gael-shadow)">
+    <!-- Hair back -->
+    <path d="M50 68 Q50 28, 100 20 Q150 28, 150 68 L152 120 Q152 135, 142 135 L58 135 Q48 135, 48 120 Z" fill="url(#gael-hair)"/>
+    <!-- Head -->
+    <ellipse cx="100" cy="90" rx="46" ry="50" fill="url(#gael-skin)"/>
+    <!-- Hair front (wavy) -->
+    <path d="M54 75 Q54 32, 100 24 Q146 32, 146 75 L143 62 Q138 50, 128 55 Q120 48, 112 52 Q105 42, 95 48 Q88 42, 78 52 Q68 48, 62 58 Z" fill="url(#gael-hair)"/>
+    <!-- Hair wave texture -->
+    <path d="M65 48 Q72 42, 80 48 Q88 38, 95 44" stroke="#3E2518" stroke-width="1.5" fill="none" opacity="0.4"/>
+    <path d="M105 40 Q112 35, 120 42 Q128 36, 135 45" stroke="#3E2518" stroke-width="1.5" fill="none" opacity="0.4"/>
+    <!-- Hair shine -->
+    <path d="M72 38 Q90 28, 100 26 Q110 28, 128 38 L124 46 Q108 36, 100 34 Q92 36, 76 46 Z" fill="#3E2518" opacity="0.3"/>
+    <!-- Headphones band -->
+    <path d="M48 65 Q48 20, 100 12 Q152 20, 152 65" stroke="url(#gael-headphones)" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <!-- Headphone inner band -->
+    <path d="M52 62 Q52 25, 100 18 Q148 25, 148 62" stroke="#BF360C" stroke-width="2" fill="none" opacity="0.3"/>
+    <!-- Headphone left ear cup -->
+    <ellipse cx="48" cy="80" rx="10" ry="16" fill="url(#gael-headphones-pad)"/>
+    <ellipse cx="48" cy="80" rx="7" ry="12" fill="#333" stroke="#444" stroke-width="0.5"/>
+    <ellipse cx="48" cy="80" rx="4" ry="8" fill="url(#gael-headphones)" opacity="0.3"/>
+    <!-- Headphone right ear cup -->
+    <ellipse cx="152" cy="80" rx="10" ry="16" fill="url(#gael-headphones-pad)"/>
+    <ellipse cx="152" cy="80" rx="7" ry="12" fill="#333" stroke="#444" stroke-width="0.5"/>
+    <ellipse cx="152" cy="80" rx="4" ry="8" fill="url(#gael-headphones)" opacity="0.3"/>
+    <!-- Eyes -->
+    <ellipse cx="80" cy="92" rx="9" ry="10" fill="url(#gael-eye)"/>
+    <ellipse cx="120" cy="92" rx="9" ry="10" fill="url(#gael-eye)"/>
+    <!-- Eye highlights -->
+    <ellipse cx="83" cy="88" rx="3.5" ry="4" fill="white" opacity="0.9"/>
+    <ellipse cx="123" cy="88" rx="3.5" ry="4" fill="white" opacity="0.9"/>
+    <ellipse cx="78" cy="95" rx="1.5" ry="1.5" fill="white" opacity="0.6"/>
+    <ellipse cx="118" cy="95" rx="1.5" ry="1.5" fill="white" opacity="0.6"/>
+    <!-- Eyebrows -->
+    <path d="M69 78 Q80 73, 90 77" stroke="#1A0E08" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M110 77 Q120 73, 131 78" stroke="#1A0E08" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <!-- Nose -->
+    <ellipse cx="100" cy="103" rx="2.5" ry="2" fill="#9A6842" opacity="0.5"/>
+    <!-- Mouth -->
+    <path d="M92 113 Q100 117, 108 113" stroke="#7A5035" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Blush -->
+    <ellipse cx="68" cy="105" rx="9" ry="5" fill="url(#gael-blush)"/>
+    <ellipse cx="132" cy="105" rx="9" ry="5" fill="url(#gael-blush)"/>
+    <!-- Neck -->
+    <rect x="90" y="134" width="20" height="14" rx="3" fill="url(#gael-skin)"/>
+    <!-- Body / Red T-shirt -->
+    <path d="M70 146 Q70 142, 80 140 L95 138 Q100 137, 105 138 L120 140 Q130 142, 130 146 L132 210 L68 210 Z" fill="url(#gael-shirt)"/>
+    <!-- T-shirt neckline -->
+    <path d="M80 142 Q100 150, 120 142" stroke="#C62828" stroke-width="2" fill="none"/>
+    <!-- Music note on shirt -->
+    <g transform="translate(95, 165)" fill="white" opacity="0.5">
+      <ellipse cx="0" cy="12" rx="5" ry="3.5" transform="rotate(-20 0 12)"/>
+      <rect x="4" y="-5" width="2" height="18"/>
+      <path d="M6 -5 Q12 -8, 12 -2 Q12 2, 6 0" fill="white" opacity="0.5"/>
+    </g>
+    <!-- Jacket (open) -->
+    <path d="M55 148 Q55 143, 65 141 L75 139 Q78 139, 78 145 L78 250 Q78 255, 72 255 L58 255 Q52 255, 52 250 Z" fill="url(#gael-jacket)" stroke="#263238" stroke-width="0.5"/>
+    <path d="M145 148 Q145 143, 135 141 L125 139 Q122 139, 122 145 L122 250 Q122 255, 128 255 L142 255 Q148 255, 148 250 Z" fill="url(#gael-jacket)" stroke="#263238" stroke-width="0.5"/>
+    <!-- Jacket collar -->
+    <path d="M78 145 L85 158 L78 160" fill="#37474F" stroke="#263238" stroke-width="0.5"/>
+    <path d="M122 145 L115 158 L122 160" fill="#37474F" stroke="#263238" stroke-width="0.5"/>
+    <!-- Jacket zipper line -->
+    <path d="M78 145 L78 250" stroke="#546E7A" stroke-width="1" opacity="0.6"/>
+    <path d="M122 145 L122 250" stroke="#546E7A" stroke-width="1" opacity="0.6"/>
+    <!-- Jacket pockets -->
+    <rect x="55" y="200" width="20" height="2" rx="1" fill="#263238"/>
+    <rect x="125" y="200" width="20" height="2" rx="1" fill="#263238"/>
+    <!-- Arms -->
+    <path d="M55 152 Q40 168, 34 198 Q32 208, 40 210 Q46 208, 44 194 L50 172" fill="url(#gael-jacket)" stroke="#263238" stroke-width="0.5"/>
+    <path d="M145 152 Q160 168, 166 198 Q168 208, 160 210 Q154 208, 156 194 L150 172" fill="url(#gael-jacket)" stroke="#263238" stroke-width="0.5"/>
+    <!-- Hands -->
+    <ellipse cx="37" cy="210" rx="8" ry="7" fill="url(#gael-skin)"/>
+    <ellipse cx="163" cy="210" rx="8" ry="7" fill="url(#gael-skin)"/>
+    <!-- Jeans -->
+    <path d="M68 248 L66 278 Q66 282, 72 282 L92 282 Q96 282, 96 278 L100 260 L104 278 Q104 282, 108 282 L128 282 Q134 282, 134 278 L132 248 Z" fill="url(#gael-jeans)"/>
+    <!-- Jean details -->
+    <line x1="100" y1="248" x2="100" y2="260" stroke="#3949AB" stroke-width="1" opacity="0.5"/>
+    <!-- Sneakers -->
+    <rect x="62" y="279" width="34" height="10" rx="5" fill="#212121"/>
+    <rect x="104" y="279" width="34" height="10" rx="5" fill="#212121"/>
+    <!-- Sneaker soles -->
+    <rect x="62" y="286" width="34" height="3" rx="1.5" fill="white"/>
+    <rect x="104" y="286" width="34" height="3" rx="1.5" fill="white"/>
+    <!-- Sneaker accents -->
+    <rect x="65" y="282" width="28" height="2" rx="1" fill="url(#gael-headphones)" opacity="0.6"/>
+    <rect x="107" y="282" width="28" height="2" rx="1" fill="url(#gael-headphones)" opacity="0.6"/>
+    <!-- Headphone cord (hanging) -->
+    <path d="M48 96 Q48 120, 55 135 Q60 145, 70 148 Q78 150, 85 155 Q90 160, 90 170" stroke="#333" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <!-- Cord plug -->
+    <rect x="88" y="168" width="4" height="8" rx="2" fill="#333" opacity="0.5"/>
+  </g>
+</svg>

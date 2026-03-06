@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="moda_laco_grad1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FCA5A5"/>
+      <stop offset="100%" stop-color="#EF4444"/>
+    </linearGradient>
+    <linearGradient id="moda_laco_grad2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F87171"/>
+      <stop offset="100%" stop-color="#DC2626"/>
+    </linearGradient>
+    <filter id="moda_laco_shadow">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <g filter="url(#moda_laco_shadow)">
+    <!-- Left bow loop -->
+    <path d="M60 60 Q30 30 15 45 Q5 55 20 65 Q35 75 60 60Z" fill="url(#moda_laco_grad1)" stroke="#B91C1C" stroke-width="1.5"/>
+    <!-- Left bow highlight -->
+    <path d="M55 55 Q35 40 25 50" fill="none" stroke="#FECACA" stroke-width="2" opacity="0.5" stroke-linecap="round"/>
+    <!-- Right bow loop -->
+    <path d="M60 60 Q90 30 105 45 Q115 55 100 65 Q85 75 60 60Z" fill="url(#moda_laco_grad1)" stroke="#B91C1C" stroke-width="1.5"/>
+    <!-- Right bow highlight -->
+    <path d="M65 55 Q85 40 95 50" fill="none" stroke="#FECACA" stroke-width="2" opacity="0.5" stroke-linecap="round"/>
+    <!-- Tails -->
+    <path d="M56 64 Q45 85 35 100 Q40 95 42 100 Q48 85 56 68Z" fill="url(#moda_laco_grad2)" stroke="#B91C1C" stroke-width="1"/>
+    <path d="M64 64 Q75 85 85 100 Q80 95 78 100 Q72 85 64 68Z" fill="url(#moda_laco_grad2)" stroke="#B91C1C" stroke-width="1"/>
+    <!-- Center knot -->
+    <ellipse cx="60" cy="60" rx="8" ry="10" fill="url(#moda_laco_grad2)" stroke="#B91C1C" stroke-width="1.5"/>
+    <!-- Knot highlight -->
+    <ellipse cx="57" cy="57" rx="3" ry="4" fill="white" opacity="0.3"/>
+    <!-- Polka dots -->
+    <circle cx="35" cy="50" r="2.5" fill="white" opacity="0.3"/>
+    <circle cx="45" cy="60" r="2" fill="white" opacity="0.3"/>
+    <circle cx="85" cy="50" r="2.5" fill="white" opacity="0.3"/>
+    <circle cx="75" cy="60" r="2" fill="white" opacity="0.3"/>
+  </g>
+</svg>

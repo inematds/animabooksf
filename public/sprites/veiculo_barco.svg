@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="barco_hull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF6644"/>
+      <stop offset="100%" stop-color="#CC4422"/>
+    </linearGradient>
+    <linearGradient id="barco_sail" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#EEEEFF"/>
+    </linearGradient>
+    <linearGradient id="barco_water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#55BBFF"/>
+      <stop offset="100%" stop-color="#3388DD"/>
+    </linearGradient>
+    <linearGradient id="barco_flag" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF4488"/>
+      <stop offset="100%" stop-color="#FF6699"/>
+    </linearGradient>
+    <filter id="barco_shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="1" dy="3" stdDeviation="3" flood-color="#00000033"/>
+    </filter>
+  </defs>
+  <!-- Water -->
+  <path d="M5 85 Q15 80 25 85 Q35 90 45 85 Q55 80 65 85 Q75 90 85 85 Q95 80 105 85 Q115 90 120 85 L120 110 Q110 105 100 110 Q90 115 80 110 Q70 105 60 110 Q50 115 40 110 Q30 105 20 110 Q10 115 0 110 L0 85 Z" fill="url(#barco_water)" opacity="0.5"/>
+  <g filter="url(#barco_shadow)">
+    <!-- Hull -->
+    <path d="M15 75 L25 95 Q28 100 35 100 L85 100 Q92 100 95 95 L105 75 Z" fill="url(#barco_hull)"/>
+    <!-- Hull stripe -->
+    <path d="M20 82 L27 95 Q28 98 35 98 L85 98 Q90 98 93 95 L100 82 Z" fill="#DD5533"/>
+    <!-- Deck -->
+    <rect x="18" y="72" width="84" height="6" rx="3" fill="#FFDDCC"/>
+    <!-- Cabin -->
+    <rect x="55" y="52" width="30" height="22" rx="4" fill="#FFFFFF"/>
+    <rect x="58" y="55" width="10" height="10" rx="2" fill="#AAE4FF"/>
+    <rect x="72" y="55" width="10" height="10" rx="2" fill="#AAE4FF"/>
+    <rect x="55" y="49" width="30" height="6" rx="3" fill="#FFDD44"/>
+    <!-- Mast -->
+    <line x1="40" y1="15" x2="40" y2="75" stroke="#AA8855" stroke-width="3" stroke-linecap="round"/>
+    <!-- Sail -->
+    <path d="M42 20 L42 65 L75 55 Z" fill="url(#barco_sail)" stroke="#DDDDEE" stroke-width="1"/>
+    <!-- Small front sail -->
+    <path d="M38 25 L38 55 L18 50 Z" fill="url(#barco_sail)" stroke="#DDDDEE" stroke-width="1" opacity="0.9"/>
+    <!-- Flag -->
+    <path d="M40 15 L40 8 L52 11.5 L40 15 Z" fill="url(#barco_flag)"/>
+    <!-- Porthole -->
+    <circle cx="35" cy="82" r="4" fill="#AAE4FF" stroke="#DD5533" stroke-width="1.5"/>
+    <circle cx="50" cy="82" r="4" fill="#AAE4FF" stroke="#DD5533" stroke-width="1.5"/>
+  </g>
+  <!-- More water in front -->
+  <path d="M0 95 Q10 90 20 95 Q30 100 40 95 Q50 90 60 95 Q70 100 80 95 Q90 90 100 95 Q110 100 120 95 L120 120 L0 120 Z" fill="url(#barco_water)" opacity="0.35"/>
+</svg>

@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" width="200" height="300">
+  <defs>
+    <radialGradient id="beto-skin" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#8D6E4C"/>
+      <stop offset="100%" stop-color="#704B2E"/>
+    </radialGradient>
+    <linearGradient id="beto-hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1A1A1A"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <linearGradient id="beto-jersey-green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4CAF50"/>
+      <stop offset="50%" stop-color="#388E3C"/>
+      <stop offset="100%" stop-color="#2E7D32"/>
+    </linearGradient>
+    <linearGradient id="beto-jersey-yellow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FDD835"/>
+      <stop offset="100%" stop-color="#F9A825"/>
+    </linearGradient>
+    <linearGradient id="beto-shorts" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FDD835"/>
+      <stop offset="100%" stop-color="#F9A825"/>
+    </linearGradient>
+    <linearGradient id="beto-socks" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4CAF50"/>
+      <stop offset="100%" stop-color="#388E3C"/>
+    </linearGradient>
+    <radialGradient id="beto-eye" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#4E342E"/>
+      <stop offset="100%" stop-color="#2C1810"/>
+    </radialGradient>
+    <radialGradient id="beto-blush" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#A06040" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#A06040" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="beto-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+  </defs>
+  <g filter="url(#beto-shadow)">
+    <!-- Head -->
+    <ellipse cx="100" cy="88" rx="46" ry="50" fill="url(#beto-skin)"/>
+    <!-- Hair (short, textured) -->
+    <path d="M55 70 Q55 32, 100 25 Q145 32, 145 70 L143 60 Q140 48, 128 50 Q115 42, 100 42 Q85 42, 72 50 Q60 48, 57 60 Z" fill="url(#beto-hair)"/>
+    <!-- Hair texture dots -->
+    <g fill="#333" opacity="0.3">
+      <circle cx="70" cy="42" r="1.5"/>
+      <circle cx="80" cy="36" r="1.5"/>
+      <circle cx="90" cy="33" r="1.5"/>
+      <circle cx="100" cy="32" r="1.5"/>
+      <circle cx="110" cy="33" r="1.5"/>
+      <circle cx="120" cy="36" r="1.5"/>
+      <circle cx="130" cy="42" r="1.5"/>
+      <circle cx="75" cy="50" r="1"/>
+      <circle cx="85" cy="45" r="1"/>
+      <circle cx="95" cy="40" r="1"/>
+      <circle cx="105" cy="40" r="1"/>
+      <circle cx="115" cy="45" r="1"/>
+      <circle cx="125" cy="50" r="1"/>
+    </g>
+    <!-- Eyes -->
+    <ellipse cx="80" cy="92" rx="9" ry="10" fill="url(#beto-eye)"/>
+    <ellipse cx="120" cy="92" rx="9" ry="10" fill="url(#beto-eye)"/>
+    <!-- Eye highlights -->
+    <ellipse cx="83" cy="88" rx="3.5" ry="4" fill="white" opacity="0.9"/>
+    <ellipse cx="123" cy="88" rx="3.5" ry="4" fill="white" opacity="0.9"/>
+    <ellipse cx="78" cy="95" rx="1.5" ry="1.5" fill="white" opacity="0.6"/>
+    <ellipse cx="118" cy="95" rx="1.5" ry="1.5" fill="white" opacity="0.6"/>
+    <!-- Eyebrows -->
+    <path d="M69 78 Q80 73, 90 77" stroke="#1A1A1A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M110 77 Q120 73, 131 78" stroke="#1A1A1A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <!-- Nose -->
+    <ellipse cx="100" cy="102" rx="3" ry="2.5" fill="#6B4530" opacity="0.5"/>
+    <!-- Mouth -->
+    <path d="M92 113 Q100 117, 108 113" stroke="#5A3520" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Blush -->
+    <ellipse cx="67" cy="105" rx="9" ry="5" fill="url(#beto-blush)"/>
+    <ellipse cx="133" cy="105" rx="9" ry="5" fill="url(#beto-blush)"/>
+    <!-- Ears -->
+    <ellipse cx="54" cy="90" rx="6" ry="8" fill="url(#beto-skin)"/>
+    <ellipse cx="146" cy="90" rx="6" ry="8" fill="url(#beto-skin)"/>
+    <!-- Neck -->
+    <rect x="90" y="132" width="20" height="16" rx="3" fill="url(#beto-skin)"/>
+    <!-- Body / Jersey -->
+    <path d="M62 146 Q62 142, 72 140 L90 138 Q100 137, 110 138 L128 140 Q138 142, 138 146 L140 215 Q140 220, 135 220 L65 220 Q60 220, 60 215 Z" fill="url(#beto-jersey-green)"/>
+    <!-- Jersey collar -->
+    <path d="M80 140 Q100 148, 120 140" stroke="#FDD835" stroke-width="3" fill="none"/>
+    <!-- Jersey number -->
+    <text x="100" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="url(#beto-jersey-yellow)" opacity="0.9">10</text>
+    <!-- Jersey shoulder stripes -->
+    <path d="M65 148 L68 155" stroke="#FDD835" stroke-width="3" stroke-linecap="round"/>
+    <path d="M135 148 L132 155" stroke="#FDD835" stroke-width="3" stroke-linecap="round"/>
+    <!-- Jersey side stripes -->
+    <rect x="60" y="150" width="4" height="65" rx="2" fill="#FDD835" opacity="0.6"/>
+    <rect x="136" y="150" width="4" height="65" rx="2" fill="#FDD835" opacity="0.6"/>
+    <!-- Arms -->
+    <path d="M62 150 Q46 166, 40 194 Q38 204, 46 206 Q52 204, 50 190 L56 170" fill="url(#beto-jersey-green)" stroke="#2E7D32" stroke-width="0.5"/>
+    <path d="M138 150 Q154 166, 160 194 Q162 204, 154 206 Q148 204, 150 190 L144 170" fill="url(#beto-jersey-green)" stroke="#2E7D32" stroke-width="0.5"/>
+    <!-- Sleeve trim -->
+    <path d="M50 188 Q46 192, 42 196" stroke="#FDD835" stroke-width="2" stroke-linecap="round"/>
+    <path d="M150 188 Q154 192, 158 196" stroke="#FDD835" stroke-width="2" stroke-linecap="round"/>
+    <!-- Hands -->
+    <ellipse cx="43" cy="206" rx="8" ry="7" fill="url(#beto-skin)"/>
+    <ellipse cx="157" cy="206" rx="8" ry="7" fill="url(#beto-skin)"/>
+    <!-- Shorts -->
+    <path d="M62 218 L60 252 Q60 256, 66 256 L92 256 Q96 256, 96 252 L100 235 L104 252 Q104 256, 108 256 L134 256 Q140 256, 140 252 L138 218 Z" fill="url(#beto-shorts)"/>
+    <!-- Shorts stripe -->
+    <rect x="62" y="220" width="3" height="34" rx="1.5" fill="#4CAF50" opacity="0.5"/>
+    <rect x="135" y="220" width="3" height="34" rx="1.5" fill="#4CAF50" opacity="0.5"/>
+    <!-- Socks -->
+    <rect x="72" y="254" width="22" height="18" rx="4" fill="url(#beto-socks)"/>
+    <rect x="106" y="254" width="22" height="18" rx="4" fill="url(#beto-socks)"/>
+    <!-- Sock stripes -->
+    <rect x="72" y="258" width="22" height="3" rx="1" fill="#FDD835" opacity="0.6"/>
+    <rect x="106" y="258" width="22" height="3" rx="1" fill="#FDD835" opacity="0.6"/>
+    <!-- Soccer cleats -->
+    <path d="M68 268 Q68 265, 72 265 L96 265 Q100 265, 100 268 L100 278 Q100 282, 96 282 L72 282 Q68 282, 68 278 Z" fill="#1A1A1A"/>
+    <path d="M104 268 Q104 265, 108 265 L132 265 Q136 265, 136 268 L136 278 Q136 282, 132 282 L108 282 Q104 282, 104 278 Z" fill="#1A1A1A"/>
+    <!-- Cleat studs -->
+    <circle cx="76" cy="282" r="2" fill="#666"/>
+    <circle cx="88" cy="282" r="2" fill="#666"/>
+    <circle cx="112" cy="282" r="2" fill="#666"/>
+    <circle cx="124" cy="282" r="2" fill="#666"/>
+    <!-- Cleat accents -->
+    <path d="M72 272 L96 272" stroke="#4CAF50" stroke-width="2"/>
+    <path d="M108 272 L132 272" stroke="#4CAF50" stroke-width="2"/>
+  </g>
+</svg>

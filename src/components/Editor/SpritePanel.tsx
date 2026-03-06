@@ -22,6 +22,7 @@ const CATEGORY_MAP: Record<string, { label: string; icon: string; order: number 
   brinquedo: { label: 'Brinquedos', icon: '🧸', order: 7 },
   escola: { label: 'Escola', icon: '📚', order: 8 },
   magia: { label: 'Magia', icon: '✨', order: 9 },
+  moda: { label: 'Moda', icon: '👗', order: 10 },
 };
 
 function getCategory(filename: string): string {

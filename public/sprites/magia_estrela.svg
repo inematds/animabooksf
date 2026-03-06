@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <radialGradient id="estrela_main" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFCC"/>
+      <stop offset="40%" stop-color="#FFEE44"/>
+      <stop offset="100%" stop-color="#FFAA00"/>
+    </radialGradient>
+    <radialGradient id="estrela_glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFF88" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#FFDD44" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#FFAA00" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="estrela_inner" cx="50%" cy="45%" r="40%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#FFEE88"/>
+    </radialGradient>
+    <filter id="estrela_shadow" x="-20%" y="-20%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#FFAA0044"/>
+    </filter>
+    <filter id="estrela_sparkle">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- Outer glow -->
+  <circle cx="60" cy="58" r="50" fill="url(#estrela_glow)"/>
+  <g filter="url(#estrela_shadow)">
+    <!-- Main star -->
+    <g filter="url(#estrela_sparkle)">
+      <polygon points="60,10 70,42 105,42 77,62 87,95 60,75 33,95 43,62 15,42 50,42" fill="url(#estrela_main)"/>
+    </g>
+    <!-- Inner star highlight -->
+    <polygon points="60,25 66,45 85,45 70,57 75,78 60,66 45,78 50,57 35,45 54,45" fill="url(#estrela_inner)" opacity="0.6"/>
+    <!-- Center glow -->
+    <circle cx="60" cy="55" r="12" fill="url(#estrela_inner)" opacity="0.5"/>
+    <!-- Eyes -->
+    <circle cx="52" cy="50" r="3" fill="#CC8800"/>
+    <circle cx="68" cy="50" r="3" fill="#CC8800"/>
+    <circle cx="51" cy="49" r="1.5" fill="#FFFFFF"/>
+    <circle cx="67" cy="49" r="1.5" fill="#FFFFFF"/>
+    <!-- Happy mouth -->
+    <path d="M53 58 Q60 65 67 58" stroke="#CC8800" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Blush -->
+    <ellipse cx="46" cy="56" rx="4" ry="2.5" fill="#FFAA44" opacity="0.4"/>
+    <ellipse cx="74" cy="56" rx="4" ry="2.5" fill="#FFAA44" opacity="0.4"/>
+  </g>
+  <!-- Sparkles around -->
+  <g filter="url(#estrela_sparkle)">
+    <polygon points="15,18 17,12 19,18 17,24" fill="#FFEE44" opacity="0.7"/>
+    <polygon points="100,20 102,14 104,20 102,26" fill="#FFEE44" opacity="0.6"/>
+    <polygon points="8,65 10,60 12,65 10,70" fill="#FFDD44" opacity="0.5"/>
+    <polygon points="108,70 110,65 112,70 110,75" fill="#FFDD44" opacity="0.5"/>
+    <polygon points="30,100 32,96 34,100 32,104" fill="#FFEE44" opacity="0.4"/>
+    <polygon points="88,102 90,98 92,102 90,106" fill="#FFEE44" opacity="0.4"/>
+    <circle cx="25" cy="35" r="2" fill="#FFEE88" opacity="0.6"/>
+    <circle cx="95" cy="38" r="2" fill="#FFEE88" opacity="0.5"/>
+    <circle cx="60" cy="105" r="2" fill="#FFEE88" opacity="0.4"/>
+    <!-- Cross sparkles -->
+    <line x1="10" y1="85" x2="16" y2="85" stroke="#FFEE44" stroke-width="1.5" opacity="0.5"/>
+    <line x1="13" y1="82" x2="13" y2="88" stroke="#FFEE44" stroke-width="1.5" opacity="0.5"/>
+    <line x1="105" y1="48" x2="111" y2="48" stroke="#FFEE44" stroke-width="1.5" opacity="0.5"/>
+    <line x1="108" y1="45" x2="108" y2="51" stroke="#FFEE44" stroke-width="1.5" opacity="0.5"/>
+  </g>
+</svg>

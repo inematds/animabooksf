@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" width="200" height="300">
+  <defs>
+    <radialGradient id="iris-skin" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#FFE0C8"/>
+      <stop offset="100%" stop-color="#F5CCA8"/>
+    </radialGradient>
+    <linearGradient id="iris-hair-base" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8B6914"/>
+      <stop offset="100%" stop-color="#6B5010"/>
+    </linearGradient>
+    <linearGradient id="iris-streak-red" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF4444"/>
+      <stop offset="100%" stop-color="#CC2222"/>
+    </linearGradient>
+    <linearGradient id="iris-streak-blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#42A5F5"/>
+      <stop offset="100%" stop-color="#1E88E5"/>
+    </linearGradient>
+    <linearGradient id="iris-streak-purple" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#AB47BC"/>
+      <stop offset="100%" stop-color="#8E24AA"/>
+    </linearGradient>
+    <linearGradient id="iris-streak-green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#66BB6A"/>
+      <stop offset="100%" stop-color="#43A047"/>
+    </linearGradient>
+    <linearGradient id="iris-streak-orange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFA726"/>
+      <stop offset="100%" stop-color="#FB8C00"/>
+    </linearGradient>
+    <linearGradient id="iris-overalls" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7E57C2"/>
+      <stop offset="50%" stop-color="#673AB7"/>
+      <stop offset="100%" stop-color="#5E35B1"/>
+    </linearGradient>
+    <linearGradient id="iris-shirt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFEE58"/>
+      <stop offset="100%" stop-color="#FDD835"/>
+    </linearGradient>
+    <radialGradient id="iris-eye" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#7E57C2"/>
+      <stop offset="100%" stop-color="#512DA8"/>
+    </radialGradient>
+    <radialGradient id="iris-blush" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFAB91" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#FFAB91" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="iris-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+  </defs>
+  <g filter="url(#iris-shadow)">
+    <!-- Hair back -->
+    <path d="M48 65 Q48 25, 100 18 Q152 25, 152 65 L155 140 Q155 155, 145 155 L55 155 Q45 155, 45 140 Z" fill="url(#iris-hair-base)"/>
+    <!-- Head -->
+    <ellipse cx="100" cy="88" rx="46" ry="50" fill="url(#iris-skin)"/>
+    <!-- Hair front with rainbow streaks -->
+    <path d="M54 72 Q54 30, 100 22 Q146 30, 146 72 L142 58 Q136 45, 122 50 L110 42 Q100 35, 90 42 L78 50 Q64 45, 58 58 Z" fill="url(#iris-hair-base)"/>
+    <!-- Rainbow streaks -->
+    <path d="M64 50 Q62 65, 55 80 L58 80 Q65 65, 67 50 Z" fill="url(#iris-streak-red)"/>
+    <path d="M78 42 Q74 58, 68 75 L71 76 Q77 60, 81 43 Z" fill="url(#iris-streak-orange)"/>
+    <path d="M92 38 Q88 55, 82 70 L85 71 Q91 56, 95 39 Z" fill="url(#iris-streak-green)"/>
+    <path d="M120 42 Q124 58, 130 75 L127 76 Q121 60, 117 43 Z" fill="url(#iris-streak-blue)"/>
+    <path d="M134 50 Q136 65, 143 80 L140 80 Q133 65, 131 50 Z" fill="url(#iris-streak-purple)"/>
+    <!-- Side hair with streaks -->
+    <path d="M50 75 Q48 100, 50 130 L55 130 Q53 100, 54 75 Z" fill="url(#iris-streak-blue)"/>
+    <path d="M146 75 Q148 100, 150 130 L145 130 Q143 100, 142 75 Z" fill="url(#iris-streak-red)"/>
+    <!-- Eyes -->
+    <ellipse cx="80" cy="92" rx="9" ry="10" fill="url(#iris-eye)"/>
+    <ellipse cx="120" cy="92" rx="9" ry="10" fill="url(#iris-eye)"/>
+    <!-- Eye highlights -->
+    <ellipse cx="83" cy="88" rx="3.5" ry="4" fill="white" opacity="0.9"/>
+    <ellipse cx="123" cy="88" rx="3.5" ry="4" fill="white" opacity="0.9"/>
+    <ellipse cx="78" cy="95" rx="1.5" ry="1.5" fill="white" opacity="0.6"/>
+    <ellipse cx="118" cy="95" rx="1.5" ry="1.5" fill="white" opacity="0.6"/>
+    <!-- Eyelashes -->
+    <path d="M70 86 L67 82" stroke="#512DA8" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M130 86 L133 82" stroke="#512DA8" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Eyebrows -->
+    <path d="M69 78 Q80 73, 90 77" stroke="#6B5010" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M110 77 Q120 73, 131 78" stroke="#6B5010" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Nose -->
+    <ellipse cx="100" cy="103" rx="2" ry="1.5" fill="#E0B090" opacity="0.6"/>
+    <!-- Mouth -->
+    <path d="M93 113 Q100 116, 107 113" stroke="#C08070" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Blush -->
+    <ellipse cx="68" cy="105" rx="10" ry="5" fill="url(#iris-blush)"/>
+    <ellipse cx="132" cy="105" rx="10" ry="5" fill="url(#iris-blush)"/>
+    <!-- Neck -->
+    <rect x="90" y="132" width="20" height="16" rx="3" fill="url(#iris-skin)"/>
+    <!-- Body / Yellow shirt -->
+    <path d="M68 146 Q68 142, 78 140 L95 138 Q100 137, 105 138 L122 140 Q132 142, 132 146 L134 205 L66 205 Z" fill="url(#iris-shirt)"/>
+    <!-- Overalls -->
+    <path d="M72 170 L72 260 Q72 265, 78 265 L95 265 Q100 265, 100 260 L100 220 L100 260 Q100 265, 105 265 L122 265 Q128 265, 128 260 L128 170 Z" fill="url(#iris-overalls)"/>
+    <!-- Overall straps -->
+    <path d="M78 170 L82 148 Q84 142, 90 142" stroke="url(#iris-overalls)" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M122 170 L118 148 Q116 142, 110 142" stroke="url(#iris-overalls)" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <!-- Overall buttons -->
+    <circle cx="82" cy="172" r="3" fill="#FDD835" stroke="#F9A825" stroke-width="0.5"/>
+    <circle cx="118" cy="172" r="3" fill="#FDD835" stroke="#F9A825" stroke-width="0.5"/>
+    <!-- Overall pocket -->
+    <rect x="88" y="200" width="24" height="20" rx="3" fill="#5E35B1" stroke="#4527A0" stroke-width="0.5"/>
+    <!-- Paint splatters on clothes -->
+    <circle cx="76" cy="235" r="5" fill="#FF4444" opacity="0.6"/>
+    <circle cx="120" cy="190" r="4" fill="#42A5F5" opacity="0.6"/>
+    <circle cx="90" cy="250" r="3.5" fill="#66BB6A" opacity="0.6"/>
+    <circle cx="115" cy="245" r="4" fill="#FFA726" opacity="0.6"/>
+    <circle cx="82" cy="195" r="3" fill="#AB47BC" opacity="0.5"/>
+    <!-- Paint on shirt -->
+    <circle cx="80" cy="158" r="3" fill="#FF4444" opacity="0.4"/>
+    <circle cx="118" cy="155" r="2.5" fill="#42A5F5" opacity="0.4"/>
+    <!-- Arms -->
+    <path d="M68 150 Q50 168, 42 198 Q40 208, 48 210 Q54 208, 52 194 L58 172" fill="url(#iris-shirt)" stroke="#F9A825" stroke-width="0.5"/>
+    <path d="M132 150 Q150 168, 158 198 Q160 208, 152 210 Q146 208, 148 194 L142 172" fill="url(#iris-shirt)" stroke="#F9A825" stroke-width="0.5"/>
+    <!-- Paint on arms -->
+    <circle cx="46" cy="195" r="2.5" fill="#AB47BC" opacity="0.5"/>
+    <circle cx="155" cy="192" r="2" fill="#FF4444" opacity="0.5"/>
+    <!-- Hands -->
+    <ellipse cx="45" cy="210" rx="8" ry="7" fill="url(#iris-skin)"/>
+    <ellipse cx="155" cy="210" rx="8" ry="7" fill="url(#iris-skin)"/>
+    <!-- Paint on hand -->
+    <circle cx="43" cy="208" r="2" fill="#42A5F5" opacity="0.5"/>
+    <!-- Feet / sneakers -->
+    <rect x="70" y="262" width="28" height="12" rx="6" fill="#AB47BC"/>
+    <rect x="102" y="262" width="28" height="12" rx="6" fill="#AB47BC"/>
+    <!-- Sneaker accents -->
+    <rect x="73" y="268" width="22" height="3" rx="1.5" fill="white" opacity="0.5"/>
+    <rect x="105" y="268" width="22" height="3" rx="1.5" fill="white" opacity="0.5"/>
+    <!-- Paintbrush behind ear -->
+    <line x1="148" y1="60" x2="162" y2="35" stroke="#8D6E63" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="164" cy="32" rx="4" ry="6" fill="#FF7043" transform="rotate(-20 164 32)"/>
+  </g>
+</svg>

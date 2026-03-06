@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="moda_chapeu_grad1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="moda_chapeu_grad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <filter id="moda_chapeu_shadow">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <g filter="url(#moda_chapeu_shadow)">
+    <!-- Brim -->
+    <ellipse cx="60" cy="72" rx="52" ry="16" fill="url(#moda_chapeu_grad2)" stroke="#B45309" stroke-width="1.5"/>
+    <!-- Brim highlight -->
+    <ellipse cx="60" cy="70" rx="48" ry="12" fill="none" stroke="#FDE68A" stroke-width="1" opacity="0.5"/>
+    <!-- Crown -->
+    <path d="M30 72 Q28 40 38 28 Q48 18 60 16 Q72 18 82 28 Q92 40 90 72Z" fill="url(#moda_chapeu_grad1)" stroke="#D97706" stroke-width="1.5"/>
+    <!-- Straw texture -->
+    <path d="M35 40 L85 40" stroke="#D97706" stroke-width="0.5" opacity="0.3"/>
+    <path d="M33 50 L87 50" stroke="#D97706" stroke-width="0.5" opacity="0.3"/>
+    <path d="M31 60 L89 60" stroke="#D97706" stroke-width="0.5" opacity="0.3"/>
+    <!-- Ribbon band -->
+    <path d="M30 65 Q60 58 90 65 Q60 72 30 65Z" fill="#F472B6" stroke="#EC4899" stroke-width="1"/>
+    <!-- Ribbon bow -->
+    <path d="M78 62 Q88 56 92 62 Q88 68 78 62Z" fill="#F472B6" stroke="#EC4899" stroke-width="1"/>
+    <path d="M78 62 Q72 56 68 62 Q72 68 78 62Z" fill="#F472B6" stroke="#EC4899" stroke-width="1"/>
+    <circle cx="78" cy="62" r="3" fill="#EC4899"/>
+    <!-- Ribbon tails -->
+    <path d="M82 65 Q88 75 85 85 Q87 82 90 85 Q90 72 84 65" fill="#F472B6" stroke="#EC4899" stroke-width="0.8"/>
+    <!-- Top indent -->
+    <path d="M45 20 Q60 25 75 20" fill="none" stroke="#D97706" stroke-width="1" opacity="0.4"/>
+    <!-- Shine -->
+    <ellipse cx="50" cy="35" rx="8" ry="5" fill="white" opacity="0.2" transform="rotate(-10 50 35)"/>
+  </g>
+</svg>

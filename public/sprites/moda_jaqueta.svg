@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="moda_jaqueta_grad1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="moda_jaqueta_grad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#93C5FD"/>
+      <stop offset="100%" stop-color="#60A5FA"/>
+    </linearGradient>
+    <filter id="moda_jaqueta_shadow">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <g filter="url(#moda_jaqueta_shadow)">
+    <!-- Collar -->
+    <path d="M44 18 L38 30 L52 28 Z" fill="#1D4ED8"/>
+    <path d="M76 18 L82 30 L68 28 Z" fill="#1D4ED8"/>
+    <!-- Body left -->
+    <path d="M38 28 L32 100 L58 100 L58 28 Q50 22 38 28Z" fill="url(#moda_jaqueta_grad1)" stroke="#2563EB" stroke-width="1.5"/>
+    <!-- Body right -->
+    <path d="M62 28 L62 100 L88 100 L82 28 Q70 22 62 28Z" fill="url(#moda_jaqueta_grad1)" stroke="#2563EB" stroke-width="1.5"/>
+    <!-- Center opening -->
+    <line x1="60" y1="28" x2="60" y2="100" stroke="#1D4ED8" stroke-width="2"/>
+    <!-- Left sleeve -->
+    <path d="M38 28 L14 40 L18 72 L32 60 L38 45Z" fill="url(#moda_jaqueta_grad2)" stroke="#2563EB" stroke-width="1.5"/>
+    <!-- Right sleeve -->
+    <path d="M82 28 L106 40 L102 72 L88 60 L82 45Z" fill="url(#moda_jaqueta_grad2)" stroke="#2563EB" stroke-width="1.5"/>
+    <!-- Cuffs -->
+    <path d="M14 40 L18 72 L22 70 L18 42Z" fill="#1D4ED8" opacity="0.4"/>
+    <path d="M106 40 L102 72 L98 70 L102 42Z" fill="#1D4ED8" opacity="0.4"/>
+    <!-- Buttons -->
+    <circle cx="55" cy="42" r="2.5" fill="#F59E0B" stroke="#D97706" stroke-width="0.8"/>
+    <circle cx="55" cy="58" r="2.5" fill="#F59E0B" stroke="#D97706" stroke-width="0.8"/>
+    <circle cx="55" cy="74" r="2.5" fill="#F59E0B" stroke="#D97706" stroke-width="0.8"/>
+    <!-- Pocket -->
+    <rect x="66" y="60" width="14" height="12" rx="2" fill="none" stroke="#2563EB" stroke-width="1.5"/>
+    <rect x="40" y="60" width="14" height="12" rx="2" fill="none" stroke="#2563EB" stroke-width="1.5"/>
+    <!-- Stitching -->
+    <path d="M32 95 L88 95" stroke="#93C5FD" stroke-width="1" stroke-dasharray="2 2" opacity="0.5"/>
+  </g>
+</svg>

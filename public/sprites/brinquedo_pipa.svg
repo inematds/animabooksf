@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="pipa_top" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF5577"/>
+      <stop offset="100%" stop-color="#FF3355"/>
+    </linearGradient>
+    <linearGradient id="pipa_bottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#44BBFF"/>
+      <stop offset="100%" stop-color="#2299DD"/>
+    </linearGradient>
+    <linearGradient id="pipa_left" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFCC44"/>
+      <stop offset="100%" stop-color="#FFAA22"/>
+    </linearGradient>
+    <linearGradient id="pipa_right" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#44DD88"/>
+      <stop offset="100%" stop-color="#22BB66"/>
+    </linearGradient>
+    <filter id="pipa_shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#00000025"/>
+    </filter>
+  </defs>
+  <g filter="url(#pipa_shadow)">
+    <!-- Kite body - diamond shape split into 4 colored sections -->
+    <!-- Top left -->
+    <polygon points="60,8 60,48 28,38" fill="url(#pipa_top)"/>
+    <!-- Top right -->
+    <polygon points="60,8 60,48 92,38" fill="url(#pipa_left)"/>
+    <!-- Bottom left -->
+    <polygon points="60,48 28,38 60,82" fill="url(#pipa_bottom)"/>
+    <!-- Bottom right -->
+    <polygon points="60,48 92,38 60,82" fill="url(#pipa_right)"/>
+    <!-- Frame cross -->
+    <line x1="60" y1="8" x2="60" y2="82" stroke="#FFFFFF" stroke-width="2" opacity="0.6"/>
+    <line x1="28" y1="38" x2="92" y2="38" stroke="#FFFFFF" stroke-width="2" opacity="0.6"/>
+    <!-- Face on kite -->
+    <circle cx="52" cy="35" r="2.5" fill="#333"/>
+    <circle cx="68" cy="35" r="2.5" fill="#333"/>
+    <circle cx="51" cy="34" r="1" fill="#FFF"/>
+    <circle cx="67" cy="34" r="1" fill="#FFF"/>
+    <path d="M54 43 Q60 48 66 43" stroke="#333" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <!-- Tail string -->
+    <path d="M60 82 Q55 90 65 95 Q55 100 62 108 Q58 112 60 118" stroke="#FF5577" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Tail bows -->
+    <polygon points="63,93 70,90 70,96" fill="#FFCC44"/>
+    <polygon points="57,93 50,90 50,96" fill="#FFCC44"/>
+    <polygon points="60,105 67,102 67,108" fill="#44DD88"/>
+    <polygon points="56,105 49,102 49,108" fill="#44DD88"/>
+    <polygon points="61,115 68,112 68,118" fill="#FF5577"/>
+    <polygon points="57,115 50,112 50,118" fill="#FF5577"/>
+    <!-- String -->
+    <line x1="60" y1="82" x2="95" y2="115" stroke="#AAA" stroke-width="1" stroke-dasharray="3,2"/>
+  </g>
+</svg>

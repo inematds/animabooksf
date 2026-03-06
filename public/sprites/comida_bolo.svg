@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="bolo_cake" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F5C26B"/>
+      <stop offset="100%" stop-color="#D4A24C"/>
+    </linearGradient>
+    <linearGradient id="bolo_frosting" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF85A2"/>
+      <stop offset="100%" stop-color="#E84393"/>
+    </linearGradient>
+    <linearGradient id="bolo_plate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F0F0F0"/>
+      <stop offset="100%" stop-color="#D0D0D0"/>
+    </linearGradient>
+    <linearGradient id="bolo_candle" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5CB8E6"/>
+      <stop offset="100%" stop-color="#3A8FBF"/>
+    </linearGradient>
+    <radialGradient id="bolo_flame" cx="0.5" cy="0.7" r="0.5">
+      <stop offset="0%" stop-color="#FFEB3B"/>
+      <stop offset="60%" stop-color="#FFA726"/>
+      <stop offset="100%" stop-color="#FF5722" stop-opacity="0.8"/>
+    </radialGradient>
+    <filter id="bolo_shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+  </defs>
+  <!-- Plate -->
+  <ellipse cx="60" cy="105" rx="48" ry="8" fill="url(#bolo_plate)" filter="url(#bolo_shadow)"/>
+  <!-- Bottom tier -->
+  <rect x="20" y="72" width="80" height="32" rx="4" fill="url(#bolo_cake)"/>
+  <ellipse cx="60" cy="72" rx="40" ry="6" fill="#F5D08C"/>
+  <!-- Bottom frosting drip -->
+  <path d="M20,75 Q25,82 30,75 Q35,82 40,75 Q45,82 50,75 Q55,82 60,75 Q65,82 70,75 Q75,82 80,75 Q85,82 90,75 Q95,82 100,75" fill="none" stroke="url(#bolo_frosting)" stroke-width="4" stroke-linecap="round"/>
+  <!-- Top tier -->
+  <rect x="32" y="48" width="56" height="26" rx="4" fill="url(#bolo_cake)"/>
+  <ellipse cx="60" cy="48" rx="28" ry="5" fill="#F5D08C"/>
+  <!-- Top frosting drip -->
+  <path d="M32,52 Q37,58 42,52 Q47,58 52,52 Q57,58 62,52 Q67,58 72,52 Q77,58 82,52 Q87,58 88,52" fill="none" stroke="url(#bolo_frosting)" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Candles -->
+  <rect x="44" y="28" width="4" height="22" rx="2" fill="url(#bolo_candle)"/>
+  <rect x="58" y="24" width="4" height="26" rx="2" fill="#FF85A2"/>
+  <rect x="72" y="28" width="4" height="22" rx="2" fill="url(#bolo_candle)"/>
+  <!-- Stripes on candles -->
+  <line x1="44" y1="35" x2="48" y2="33" stroke="white" stroke-width="1" opacity="0.5"/>
+  <line x1="44" y1="40" x2="48" y2="38" stroke="white" stroke-width="1" opacity="0.5"/>
+  <line x1="58" y1="31" x2="62" y2="29" stroke="white" stroke-width="1" opacity="0.5"/>
+  <line x1="58" y1="36" x2="62" y2="34" stroke="white" stroke-width="1" opacity="0.5"/>
+  <line x1="72" y1="35" x2="76" y2="33" stroke="white" stroke-width="1" opacity="0.5"/>
+  <line x1="72" y1="40" x2="76" y2="38" stroke="white" stroke-width="1" opacity="0.5"/>
+  <!-- Flames -->
+  <ellipse cx="46" cy="24" rx="3" ry="5" fill="url(#bolo_flame)"/>
+  <ellipse cx="60" cy="20" rx="3" ry="5" fill="url(#bolo_flame)"/>
+  <ellipse cx="74" cy="24" rx="3" ry="5" fill="url(#bolo_flame)"/>
+  <!-- Sprinkles -->
+  <rect x="35" y="80" width="3" height="1.5" rx="0.5" fill="#FF5722" transform="rotate(30,36,80)"/>
+  <rect x="50" y="85" width="3" height="1.5" rx="0.5" fill="#4CAF50" transform="rotate(-20,51,85)"/>
+  <rect x="65" y="82" width="3" height="1.5" rx="0.5" fill="#FFD700" transform="rotate(45,66,82)"/>
+  <rect x="80" y="86" width="3" height="1.5" rx="0.5" fill="#5CB8E6" transform="rotate(-15,81,86)"/>
+  <rect x="42" y="58" width="2.5" height="1.2" rx="0.5" fill="#FF5722" transform="rotate(25,43,58)"/>
+  <rect x="68" y="56" width="2.5" height="1.2" rx="0.5" fill="#4CAF50" transform="rotate(-30,69,56)"/>
+</svg>
