@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- Logs -->
+  <rect x="10" y="58" width="60" height="8" fill="#6D4C41" rx="4" transform="rotate(-10,40,62)"/>
+  <rect x="15" y="55" width="55" height="8" fill="#795548" rx="4" transform="rotate(8,40,59)"/>
+  <rect x="20" y="60" width="40" height="7" fill="#5D4037" rx="3"/>
+  <!-- Fire glow -->
+  <ellipse cx="40" cy="50" rx="20" ry="10" fill="#FF9800" opacity="0.2"/>
+  <!-- Fire outer -->
+  <path d="M25 58 Q28 35 35 28 Q38 40 40 25 Q42 40 45 28 Q52 35 55 58 Z" fill="#FF5722"/>
+  <!-- Fire middle -->
+  <path d="M30 58 Q32 40 37 32 Q39 42 40 30 Q41 42 43 32 Q48 40 50 58 Z" fill="#FF9800"/>
+  <!-- Fire inner -->
+  <path d="M35 58 Q36 45 38 38 Q40 48 40 36 Q40 48 42 38 Q44 45 45 58 Z" fill="#FFEB3B"/>
+  <!-- Fire core -->
+  <path d="M38 58 Q39 48 40 42 Q41 48 42 58 Z" fill="#FFF9C4"/>
+  <!-- Sparks -->
+  <circle cx="35" cy="22" r="1.5" fill="#FF9800" opacity="0.7"/>
+  <circle cx="45" cy="18" r="1" fill="#FFEB3B" opacity="0.6"/>
+  <circle cx="30" cy="25" r="1" fill="#FF5722" opacity="0.5"/>
+  <circle cx="50" cy="20" r="1.5" fill="#FF9800" opacity="0.6"/>
+  <!-- Rocks around fire -->
+  <circle cx="18" cy="65" r="5" fill="#757575"/>
+  <circle cx="28" cy="68" r="4" fill="#616161"/>
+  <circle cx="52" cy="68" r="4" fill="#757575"/>
+  <circle cx="62" cy="65" r="5" fill="#616161"/>
+  <circle cx="40" cy="70" r="4" fill="#757575"/>
+</svg>

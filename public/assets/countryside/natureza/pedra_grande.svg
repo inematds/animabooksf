@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- Shadow -->
+  <ellipse cx="42" cy="72" rx="30" ry="6" fill="#333" opacity="0.15"/>
+  <!-- Main boulder -->
+  <ellipse cx="40" cy="50" rx="30" ry="22" fill="#78909C"/>
+  <!-- Top section -->
+  <ellipse cx="38" cy="40" rx="26" ry="18" fill="#90A4AE"/>
+  <!-- Highlight -->
+  <ellipse cx="32" cy="36" rx="14" ry="8" fill="#B0BEC5" opacity="0.6"/>
+  <!-- Cracks -->
+  <path d="M30 42 L35 50 L32 58" stroke="#607D8B" stroke-width="1" fill="none"/>
+  <path d="M50 38 L55 45" stroke="#607D8B" stroke-width="1" fill="none"/>
+  <!-- Small rock beside -->
+  <ellipse cx="66" cy="62" rx="10" ry="8" fill="#78909C"/>
+  <ellipse cx="65" cy="60" rx="7" ry="5" fill="#90A4AE"/>
+  <!-- Tiny rock -->
+  <ellipse cx="15" cy="66" rx="7" ry="5" fill="#78909C"/>
+  <ellipse cx="14" cy="65" rx="5" ry="3" fill="#90A4AE"/>
+  <!-- Moss on top -->
+  <ellipse cx="35" cy="34" rx="8" ry="3" fill="#66BB6A" opacity="0.5"/>
+  <ellipse cx="45" cy="36" rx="5" ry="2" fill="#81C784" opacity="0.4"/>
+</svg>

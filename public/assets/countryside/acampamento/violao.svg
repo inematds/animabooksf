@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- Neck -->
+  <rect x="36" y="5" width="8" height="35" fill="#8D6E63" rx="2"/>
+  <!-- Frets -->
+  <line x1="36" y1="12" x2="44" y2="12" stroke="#FFD700" stroke-width="1"/>
+  <line x1="36" y1="18" x2="44" y2="18" stroke="#FFD700" stroke-width="1"/>
+  <line x1="36" y1="24" x2="44" y2="24" stroke="#FFD700" stroke-width="1"/>
+  <line x1="36" y1="30" x2="44" y2="30" stroke="#FFD700" stroke-width="1"/>
+  <!-- Strings -->
+  <line x1="38" y1="5" x2="38" y2="68" stroke="#E0E0E0" stroke-width="0.5"/>
+  <line x1="40" y1="5" x2="40" y2="68" stroke="#E0E0E0" stroke-width="0.5"/>
+  <line x1="42" y1="5" x2="42" y2="68" stroke="#E0E0E0" stroke-width="0.5"/>
+  <!-- Head/tuning pegs -->
+  <rect x="34" y="2" width="12" height="6" fill="#5D4037" rx="2"/>
+  <circle cx="35" cy="4" r="1.5" fill="#FFD700"/>
+  <circle cx="35" cy="7" r="1.5" fill="#FFD700"/>
+  <circle cx="45" cy="4" r="1.5" fill="#FFD700"/>
+  <circle cx="45" cy="7" r="1.5" fill="#FFD700"/>
+  <!-- Upper bout -->
+  <ellipse cx="40" cy="42" rx="14" ry="10" fill="#D7CCC8"/>
+  <ellipse cx="40" cy="42" rx="14" ry="10" fill="none" stroke="#8D6E63" stroke-width="1.5"/>
+  <!-- Lower bout (bigger) -->
+  <ellipse cx="40" cy="60" rx="18" ry="14" fill="#D7CCC8"/>
+  <ellipse cx="40" cy="60" rx="18" ry="14" fill="none" stroke="#8D6E63" stroke-width="1.5"/>
+  <!-- Waist connection -->
+  <rect x="28" y="46" width="24" height="10" fill="#D7CCC8"/>
+  <line x1="28" y1="46" x2="28" y2="56" stroke="#8D6E63" stroke-width="1.5"/>
+  <line x1="52" y1="46" x2="52" y2="56" stroke="#8D6E63" stroke-width="1.5"/>
+  <!-- Sound hole -->
+  <circle cx="40" cy="55" r="7" fill="#5D4037"/>
+  <circle cx="40" cy="55" r="8" fill="none" stroke="#A1887F" stroke-width="1.5"/>
+  <!-- Bridge -->
+  <rect x="34" y="65" width="12" height="3" fill="#5D4037" rx="1"/>
+  <!-- Rosette decoration -->
+  <circle cx="40" cy="55" r="9" fill="none" stroke="#FFD700" stroke-width="0.5" opacity="0.6"/>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- Bridge/connector -->
+  <rect x="30" y="30" width="20" height="10" fill="#424242" rx="3"/>
+  <!-- Left barrel -->
+  <rect x="10" y="22" width="22" height="36" fill="#333" rx="5"/>
+  <!-- Right barrel -->
+  <rect x="48" y="22" width="22" height="36" fill="#333" rx="5"/>
+  <!-- Left lens outer -->
+  <ellipse cx="21" cy="58" rx="12" ry="5" fill="#1A237E"/>
+  <ellipse cx="21" cy="58" rx="10" ry="4" fill="#283593"/>
+  <!-- Right lens outer -->
+  <ellipse cx="59" cy="58" rx="12" ry="5" fill="#1A237E"/>
+  <ellipse cx="59" cy="58" rx="10" ry="4" fill="#283593"/>
+  <!-- Left eyepiece -->
+  <ellipse cx="21" cy="22" rx="10" ry="4" fill="#424242"/>
+  <ellipse cx="21" cy="22" rx="8" ry="3" fill="#555"/>
+  <!-- Right eyepiece -->
+  <ellipse cx="59" cy="22" rx="10" ry="4" fill="#424242"/>
+  <ellipse cx="59" cy="22" rx="8" ry="3" fill="#555"/>
+  <!-- Grip texture -->
+  <rect x="12" y="32" width="18" height="2" fill="#444" rx="1"/>
+  <rect x="12" y="36" width="18" height="2" fill="#444" rx="1"/>
+  <rect x="12" y="40" width="18" height="2" fill="#444" rx="1"/>
+  <rect x="50" y="32" width="18" height="2" fill="#444" rx="1"/>
+  <rect x="50" y="36" width="18" height="2" fill="#444" rx="1"/>
+  <rect x="50" y="40" width="18" height="2" fill="#444" rx="1"/>
+  <!-- Focus wheel -->
+  <rect x="35" y="26" width="10" height="6" fill="#555" rx="2"/>
+  <line x1="37" y1="27" x2="37" y2="31" stroke="#666" stroke-width="1"/>
+  <line x1="40" y1="27" x2="40" y2="31" stroke="#666" stroke-width="1"/>
+  <line x1="43" y1="27" x2="43" y2="31" stroke="#666" stroke-width="1"/>
+  <!-- Lens reflection -->
+  <ellipse cx="18" cy="56" rx="4" ry="2" fill="#42A5F5" opacity="0.3"/>
+  <ellipse cx="56" cy="56" rx="4" ry="2" fill="#42A5F5" opacity="0.3"/>
+  <!-- Strap -->
+  <path d="M12 24 Q6 15 12 10" stroke="#8D6E63" stroke-width="3" fill="none"/>
+  <path d="M68 24 Q74 15 68 10" stroke="#8D6E63" stroke-width="3" fill="none"/>
+  <path d="M12 10 Q40 4 68 10" stroke="#8D6E63" stroke-width="3" fill="none"/>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <!-- Sky -->
+  <rect width="960" height="540" fill="#81D4FA"/>
+  <!-- Sun -->
+  <circle cx="800" cy="70" r="45" fill="#FFD700"/>
+  <!-- Clouds -->
+  <ellipse cx="200" cy="60" rx="60" ry="25" fill="white" opacity="0.85"/>
+  <ellipse cx="500" cy="80" rx="70" ry="28" fill="white" opacity="0.85"/>
+  <!-- Far trees -->
+  <rect y="200" width="960" height="30" fill="#388E3C"/>
+  <polygon points="50,200 75,150 100,200" fill="#2E7D32"/>
+  <polygon points="130,200 160,140 190,200" fill="#388E3C"/>
+  <polygon points="250,200 280,145 310,200" fill="#2E7D32"/>
+  <polygon points="650,200 680,140 710,200" fill="#2E7D32"/>
+  <polygon points="770,200 800,150 830,200" fill="#388E3C"/>
+  <polygon points="880,200 910,145 940,200" fill="#2E7D32"/>
+  <!-- Shore left -->
+  <path d="M0 300 Q200 280 350 340 L350 540 L0 540 Z" fill="#43A047"/>
+  <!-- Shore right -->
+  <path d="M610 340 Q800 280 960 300 L960 540 L610 540 Z" fill="#43A047"/>
+  <!-- Lake water -->
+  <path d="M0 300 Q200 280 350 340 Q480 400 610 340 Q800 280 960 300 L960 540 L0 540 Z" fill="#29B6F6" opacity="0.7"/>
+  <!-- Water reflections -->
+  <rect x="400" y="360" width="60" height="3" fill="white" opacity="0.3" rx="1"/>
+  <rect x="500" y="400" width="40" height="3" fill="white" opacity="0.3" rx="1"/>
+  <rect x="350" y="430" width="50" height="3" fill="white" opacity="0.3" rx="1"/>
+  <rect x="550" y="450" width="45" height="3" fill="white" opacity="0.3" rx="1"/>
+  <rect x="420" y="480" width="55" height="3" fill="white" opacity="0.3" rx="1"/>
+  <!-- Shore grass and details -->
+  <ellipse cx="100" cy="380" rx="30" ry="15" fill="#388E3C"/>
+  <ellipse cx="200" cy="420" rx="25" ry="12" fill="#388E3C"/>
+  <ellipse cx="800" cy="380" rx="30" ry="15" fill="#388E3C"/>
+  <ellipse cx="880" cy="400" rx="25" ry="12" fill="#388E3C"/>
+  <!-- Trees near shore -->
+  <rect x="60" y="300" width="10" height="50" fill="#5D4037"/>
+  <circle cx="65" cy="280" r="30" fill="#4CAF50"/>
+  <rect x="850" y="290" width="10" height="50" fill="#5D4037"/>
+  <circle cx="855" cy="270" r="28" fill="#4CAF50"/>
+  <!-- Rocks on shore -->
+  <ellipse cx="320" cy="350" rx="12" ry="8" fill="#757575"/>
+  <ellipse cx="640" cy="345" rx="10" ry="7" fill="#616161"/>
+  <!-- Water lilies -->
+  <ellipse cx="450" cy="370" rx="8" ry="5" fill="#4CAF50"/>
+  <circle cx="450" cy="368" r="4" fill="#FF80AB"/>
+  <ellipse cx="530" cy="410" rx="8" ry="5" fill="#4CAF50"/>
+  <circle cx="530" cy="408" r="4" fill="#F8BBD0"/>
+</svg>

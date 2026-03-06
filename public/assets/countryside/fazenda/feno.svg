@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- Shadow -->
+  <ellipse cx="40" cy="72" rx="30" ry="6" fill="#333" opacity="0.1"/>
+  <!-- Hay bale body -->
+  <ellipse cx="40" cy="45" rx="28" ry="22" fill="#F9A825"/>
+  <!-- Side circle (showing the roll) -->
+  <ellipse cx="12" cy="45" rx="12" ry="22" fill="#F57F17"/>
+  <ellipse cx="12" cy="45" rx="10" ry="20" fill="#FBC02D"/>
+  <!-- Roll spiral -->
+  <circle cx="12" cy="45" r="14" fill="none" stroke="#F9A825" stroke-width="1.5"/>
+  <circle cx="12" cy="45" r="8" fill="none" stroke="#F9A825" stroke-width="1.5"/>
+  <circle cx="12" cy="45" r="3" fill="#F57F17"/>
+  <!-- Straw texture lines -->
+  <line x1="25" y1="30" x2="55" y2="30" stroke="#F57F17" stroke-width="1" opacity="0.5"/>
+  <line x1="22" y1="38" x2="58" y2="38" stroke="#F57F17" stroke-width="1" opacity="0.5"/>
+  <line x1="22" y1="46" x2="58" y2="46" stroke="#F57F17" stroke-width="1" opacity="0.5"/>
+  <line x1="25" y1="54" x2="55" y2="54" stroke="#F57F17" stroke-width="1" opacity="0.5"/>
+  <line x1="30" y1="62" x2="50" y2="62" stroke="#F57F17" stroke-width="1" opacity="0.5"/>
+  <!-- Binding twine -->
+  <line x1="30" y1="24" x2="30" y2="66" stroke="#8D6E63" stroke-width="2"/>
+  <line x1="50" y1="26" x2="50" y2="64" stroke="#8D6E63" stroke-width="2"/>
+  <!-- Loose straw -->
+  <line x1="55" y1="35" x2="65" y2="30" stroke="#FFD54F" stroke-width="1.5"/>
+  <line x1="56" y1="50" x2="68" y2="48" stroke="#FFD54F" stroke-width="1.5"/>
+  <line x1="52" y1="60" x2="62" y2="62" stroke="#FFD54F" stroke-width="1.5"/>
+</svg>

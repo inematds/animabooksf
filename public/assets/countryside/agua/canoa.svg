@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 60">
+  <!-- Canoe body -->
+  <path d="M5 35 Q15 20 40 18 Q65 20 75 35 Q65 45 40 47 Q15 45 5 35 Z" fill="#8D6E63"/>
+  <!-- Inner canoe -->
+  <path d="M12 33 Q20 24 40 22 Q60 24 68 33 Q60 40 40 42 Q20 40 12 33 Z" fill="#A1887F"/>
+  <!-- Seat plank 1 -->
+  <rect x="25" y="28" width="12" height="3" fill="#6D4C41" rx="1"/>
+  <!-- Seat plank 2 -->
+  <rect x="45" y="28" width="12" height="3" fill="#6D4C41" rx="1"/>
+  <!-- Canoe rim -->
+  <path d="M5 35 Q15 20 40 18 Q65 20 75 35" fill="none" stroke="#6D4C41" stroke-width="2"/>
+  <path d="M5 35 Q15 45 40 47 Q65 45 75 35" fill="none" stroke="#6D4C41" stroke-width="2"/>
+  <!-- Bow and stern tips -->
+  <circle cx="5" cy="35" r="2" fill="#6D4C41"/>
+  <circle cx="75" cy="35" r="2" fill="#6D4C41"/>
+  <!-- Paddle -->
+  <rect x="55" y="8" width="3" height="35" fill="#A1887F" rx="1" transform="rotate(25,56,25)"/>
+  <ellipse cx="68" cy="42" rx="5" ry="8" fill="#8D6E63" transform="rotate(25,68,42)"/>
+</svg>

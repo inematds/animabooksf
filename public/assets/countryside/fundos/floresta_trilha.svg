@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <!-- Sky peeking through canopy -->
+  <rect width="960" height="540" fill="#81C784"/>
+  <!-- Sky patches -->
+  <ellipse cx="480" cy="50" rx="200" ry="60" fill="#87CEEB" opacity="0.6"/>
+  <ellipse cx="200" cy="80" rx="100" ry="40" fill="#87CEEB" opacity="0.4"/>
+  <ellipse cx="800" cy="60" rx="120" ry="45" fill="#87CEEB" opacity="0.4"/>
+  <!-- Canopy -->
+  <circle cx="0" cy="50" r="120" fill="#2E7D32"/>
+  <circle cx="150" cy="30" r="100" fill="#388E3C"/>
+  <circle cx="350" cy="50" r="110" fill="#2E7D32"/>
+  <circle cx="550" cy="20" r="90" fill="#388E3C"/>
+  <circle cx="700" cy="40" r="100" fill="#2E7D32"/>
+  <circle cx="900" cy="30" r="120" fill="#388E3C"/>
+  <circle cx="960" cy="60" r="100" fill="#2E7D32"/>
+  <!-- Tree trunks left -->
+  <rect x="50" y="80" width="25" height="460" fill="#5D4037"/>
+  <rect x="180" y="60" width="20" height="480" fill="#4E342E"/>
+  <!-- Tree trunks right -->
+  <rect x="760" y="70" width="22" height="470" fill="#5D4037"/>
+  <rect x="880" y="50" width="25" height="490" fill="#4E342E"/>
+  <!-- Mid trees -->
+  <rect x="300" y="100" width="18" height="440" fill="#5D4037" opacity="0.6"/>
+  <circle cx="309" cy="80" r="50" fill="#388E3C" opacity="0.7"/>
+  <rect x="650" y="90" width="18" height="450" fill="#5D4037" opacity="0.6"/>
+  <circle cx="659" cy="70" r="55" fill="#2E7D32" opacity="0.7"/>
+  <!-- Forest floor -->
+  <rect y="350" width="960" height="190" fill="#33691E"/>
+  <!-- Trail/path -->
+  <path d="M400 540 Q430 450 460 400 Q470 370 480 300 Q490 250 500 200 Q510 160 520 120" stroke="#8D6E63" stroke-width="60" fill="none" stroke-linecap="round"/>
+  <path d="M410 540 Q435 450 462 400 Q472 370 480 300 Q490 250 500 200 Q510 160 518 120" stroke="#A1887F" stroke-width="40" fill="none" stroke-linecap="round"/>
+  <!-- Ferns and ground plants -->
+  <polygon points="120,400 140,360 160,400" fill="#4CAF50"/>
+  <polygon points="115,410 140,370 165,410" fill="#388E3C"/>
+  <polygon points="700,420 720,380 740,420" fill="#4CAF50"/>
+  <polygon points="695,430 720,390 745,430" fill="#388E3C"/>
+  <!-- Mushrooms -->
+  <rect x="250" y="430" width="6" height="12" fill="#F5F5F5"/>
+  <ellipse cx="253" cy="430" rx="10" ry="6" fill="#E53935"/>
+  <circle cx="248" cy="428" r="2" fill="white"/>
+  <circle cx="258" cy="429" r="2" fill="white"/>
+  <rect x="800" y="440" width="5" height="10" fill="#F5F5F5"/>
+  <ellipse cx="802" cy="440" rx="8" ry="5" fill="#E53935"/>
+  <circle cx="798" cy="438" r="2" fill="white"/>
+  <circle cx="806" cy="439" r="2" fill="white"/>
+  <!-- Fallen leaves -->
+  <ellipse cx="350" cy="480" rx="6" ry="3" fill="#FF8F00" opacity="0.6" transform="rotate(30,350,480)"/>
+  <ellipse cx="600" cy="470" rx="5" ry="3" fill="#E65100" opacity="0.6" transform="rotate(-20,600,470)"/>
+  <ellipse cx="450" cy="510" rx="6" ry="3" fill="#FF8F00" opacity="0.6" transform="rotate(45,450,510)"/>
+  <!-- Light rays -->
+  <polygon points="470,0 490,0 520,350 450,350" fill="#FFEB3B" opacity="0.08"/>
+  <polygon points="350,0 370,0 400,300 330,300" fill="#FFEB3B" opacity="0.06"/>
+</svg>

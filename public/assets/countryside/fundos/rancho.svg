@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <!-- Sky -->
+  <rect width="960" height="540" fill="#87CEEB"/>
+  <!-- Sun -->
+  <circle cx="120" cy="80" r="45" fill="#FFD700"/>
+  <!-- Clouds -->
+  <ellipse cx="400" cy="60" rx="65" ry="26" fill="white" opacity="0.85"/>
+  <ellipse cx="700" cy="80" rx="55" ry="22" fill="white" opacity="0.85"/>
+  <!-- Far hills -->
+  <ellipse cx="480" cy="260" rx="550" ry="50" fill="#66BB6A"/>
+  <!-- Ground -->
+  <rect y="260" width="960" height="280" fill="#8D6E63" opacity="0.3"/>
+  <rect y="260" width="960" height="280" fill="#43A047"/>
+  <!-- Corral fence -->
+  <rect x="400" y="300" width="8" height="60" fill="#8D6E63" rx="2"/>
+  <rect x="500" y="300" width="8" height="60" fill="#8D6E63" rx="2"/>
+  <rect x="600" y="300" width="8" height="60" fill="#8D6E63" rx="2"/>
+  <rect x="700" y="300" width="8" height="60" fill="#8D6E63" rx="2"/>
+  <rect x="800" y="300" width="8" height="60" fill="#8D6E63" rx="2"/>
+  <rect x="400" y="310" width="408" height="5" fill="#A1887F" rx="2"/>
+  <rect x="400" y="335" width="408" height="5" fill="#A1887F" rx="2"/>
+  <!-- Back fence -->
+  <rect x="800" y="300" width="5" height="60" fill="#8D6E63" rx="2"/>
+  <rect x="800" y="300" width="5" height="60" fill="#8D6E63" rx="2"/>
+  <line x1="800" y1="310" x2="800" y2="310" stroke="#A1887F" stroke-width="5"/>
+  <!-- Corral side fence -->
+  <rect x="400" y="300" width="5" height="120" fill="#8D6E63" rx="2"/>
+  <rect x="800" y="300" width="5" height="120" fill="#8D6E63" rx="2"/>
+  <rect x="400" y="380" width="8" height="60" fill="#8D6E63" rx="2"/>
+  <rect x="500" y="380" width="8" height="60" fill="#8D6E63" rx="2"/>
+  <rect x="600" y="380" width="8" height="60" fill="#8D6E63" rx="2"/>
+  <rect x="700" y="380" width="8" height="60" fill="#8D6E63" rx="2"/>
+  <rect x="800" y="380" width="8" height="60" fill="#8D6E63" rx="2"/>
+  <rect x="400" y="390" width="408" height="5" fill="#A1887F" rx="2"/>
+  <rect x="400" y="415" width="408" height="5" fill="#A1887F" rx="2"/>
+  <!-- Ranch house -->
+  <rect x="50" y="220" width="200" height="120" fill="#BCAAA4"/>
+  <polygon points="50,220 150,160 250,220" fill="#795548"/>
+  <!-- Porch -->
+  <rect x="50" y="300" width="200" height="40" fill="#8D6E63"/>
+  <rect x="60" y="280" width="8" height="60" fill="#6D4C41"/>
+  <rect x="232" y="280" width="8" height="60" fill="#6D4C41"/>
+  <!-- Door -->
+  <rect x="120" y="260" width="40" height="60" fill="#5D4037" rx="2"/>
+  <circle cx="152" cy="292" r="3" fill="#FFD700"/>
+  <!-- Windows -->
+  <rect x="70" y="245" width="30" height="25" fill="#B3E5FC" rx="2"/>
+  <line x1="85" y1="245" x2="85" y2="270" stroke="#795548" stroke-width="2"/>
+  <line x1="70" y1="257" x2="100" y2="257" stroke="#795548" stroke-width="2"/>
+  <rect x="180" y="245" width="30" height="25" fill="#B3E5FC" rx="2"/>
+  <line x1="195" y1="245" x2="195" y2="270" stroke="#795548" stroke-width="2"/>
+  <line x1="180" y1="257" x2="210" y2="257" stroke="#795548" stroke-width="2"/>
+  <!-- Water trough -->
+  <rect x="310" y="350" width="60" height="20" fill="#78909C" rx="3"/>
+  <rect x="315" y="345" width="50" height="12" fill="#4FC3F7" rx="2"/>
+  <!-- Dirt in corral -->
+  <ellipse cx="600" cy="360" rx="150" ry="40" fill="#A1887F" opacity="0.4"/>
+  <!-- Open field grass -->
+  <rect y="500" width="960" height="40" fill="#388E3C"/>
+  <line x1="50" y1="520" x2="55" y2="505" stroke="#2E7D32" stroke-width="2"/>
+  <line x1="300" y1="510" x2="295" y2="495" stroke="#2E7D32" stroke-width="2"/>
+  <line x1="900" y1="515" x2="905" y2="500" stroke="#2E7D32" stroke-width="2"/>
+</svg>

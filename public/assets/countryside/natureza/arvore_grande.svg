@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- Trunk -->
+  <rect x="32" y="45" width="16" height="30" fill="#6D4C41" rx="3"/>
+  <!-- Trunk texture -->
+  <line x1="36" y1="50" x2="36" y2="65" stroke="#5D4037" stroke-width="1"/>
+  <line x1="44" y1="48" x2="44" y2="70" stroke="#5D4037" stroke-width="1"/>
+  <!-- Roots -->
+  <path d="M32 72 Q26 75 22 74" stroke="#6D4C41" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M48 72 Q54 75 58 74" stroke="#6D4C41" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- Main canopy -->
+  <circle cx="40" cy="28" r="22" fill="#4CAF50"/>
+  <!-- Canopy details -->
+  <circle cx="25" cy="32" r="14" fill="#43A047"/>
+  <circle cx="55" cy="30" r="14" fill="#43A047"/>
+  <circle cx="40" cy="18" r="15" fill="#66BB6A"/>
+  <circle cx="30" cy="22" r="12" fill="#4CAF50"/>
+  <circle cx="50" cy="22" r="12" fill="#4CAF50"/>
+  <!-- Shadow areas -->
+  <circle cx="35" cy="35" r="8" fill="#388E3C" opacity="0.5"/>
+  <circle cx="48" cy="33" r="6" fill="#388E3C" opacity="0.4"/>
+  <!-- Branch hint -->
+  <line x1="36" y1="45" x2="25" y2="35" stroke="#6D4C41" stroke-width="3"/>
+  <line x1="44" y1="45" x2="55" y2="32" stroke="#6D4C41" stroke-width="3"/>
+</svg>

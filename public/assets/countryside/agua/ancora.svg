@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 60">
+  <!-- Ring at top -->
+  <circle cx="40" cy="10" r="6" fill="none" stroke="#455A64" stroke-width="4"/>
+  <!-- Shaft -->
+  <rect x="38" y="14" width="4" height="32" fill="#455A64" rx="1"/>
+  <!-- Cross bar -->
+  <rect x="22" y="24" width="36" height="5" fill="#455A64" rx="2"/>
+  <!-- Left arm -->
+  <path d="M22 46 Q22 30 28 26" stroke="#455A64" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- Right arm -->
+  <path d="M58 46 Q58 30 52 26" stroke="#455A64" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- Left fluke -->
+  <polygon points="16,48 22,46 26,52" fill="#455A64"/>
+  <!-- Right fluke -->
+  <polygon points="64,48 58,46 54,52" fill="#455A64"/>
+  <!-- Bottom point -->
+  <polygon points="38,46 40,54 42,46" fill="#455A64"/>
+  <!-- Highlights -->
+  <line x1="40" y1="18" x2="40" y2="35" stroke="#607D8B" stroke-width="1.5"/>
+  <ellipse cx="40" cy="8" rx="3" ry="3" fill="none" stroke="#607D8B" stroke-width="1"/>
+  <!-- Rope -->
+  <path d="M40 4 Q35 0 38 -2 Q42 -4 45 0 Q48 4 44 4" stroke="#8D6E63" stroke-width="2" fill="none"/>
+</svg>

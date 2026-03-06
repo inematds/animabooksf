@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <!-- Sky -->
+  <rect width="960" height="540" fill="#5DA9E9"/>
+  <!-- Clouds -->
+  <ellipse cx="300" cy="60" rx="60" ry="25" fill="white" opacity="0.8"/>
+  <ellipse cx="700" cy="80" rx="70" ry="28" fill="white" opacity="0.8"/>
+  <!-- Trees background -->
+  <polygon points="0,220 40,100 80,220" fill="#2E7D32"/>
+  <polygon points="60,220 100,80 140,220" fill="#388E3C"/>
+  <polygon points="120,220 165,90 210,220" fill="#2E7D32"/>
+  <polygon points="780,220 820,90 860,220" fill="#2E7D32"/>
+  <polygon points="840,220 880,80 920,220" fill="#388E3C"/>
+  <polygon points="900,220 940,100 960,180 960,220" fill="#2E7D32"/>
+  <!-- Tree trunks -->
+  <rect x="35" y="200" width="12" height="40" fill="#5D4037"/>
+  <rect x="95" y="200" width="12" height="40" fill="#5D4037"/>
+  <rect x="160" y="200" width="12" height="40" fill="#5D4037"/>
+  <rect x="815" y="200" width="12" height="40" fill="#5D4037"/>
+  <rect x="875" y="200" width="12" height="40" fill="#5D4037"/>
+  <!-- Ground -->
+  <rect y="300" width="960" height="240" fill="#43A047"/>
+  <!-- Clearing (dirt) -->
+  <ellipse cx="480" cy="400" rx="250" ry="100" fill="#8D6E63" opacity="0.4"/>
+  <!-- Campfire area -->
+  <ellipse cx="480" cy="420" rx="30" ry="12" fill="#5D4037"/>
+  <rect x="460" y="410" width="10" height="15" fill="#795548" rx="2" transform="rotate(-15,465,420)"/>
+  <rect x="490" y="410" width="10" height="15" fill="#795548" rx="2" transform="rotate(15,495,420)"/>
+  <rect x="472" y="408" width="15" height="6" fill="#8D6E63" rx="2"/>
+  <!-- Fire -->
+  <ellipse cx="480" cy="400" rx="12" ry="18" fill="#FF9800" opacity="0.8"/>
+  <ellipse cx="480" cy="395" rx="7" ry="12" fill="#FFEB3B" opacity="0.9"/>
+  <ellipse cx="480" cy="390" rx="4" ry="7" fill="#FFF9C4"/>
+  <!-- Rocks around fire -->
+  <circle cx="458" cy="418" r="6" fill="#757575"/>
+  <circle cx="470" cy="425" r="5" fill="#616161"/>
+  <circle cx="490" cy="425" r="6" fill="#757575"/>
+  <circle cx="502" cy="418" r="5" fill="#616161"/>
+  <!-- Logs for sitting -->
+  <rect x="420" y="450" width="50" height="12" fill="#6D4C41" rx="6"/>
+  <rect x="510" y="450" width="50" height="12" fill="#6D4C41" rx="6"/>
+  <!-- Side trees -->
+  <polygon points="350,300 380,160 410,300" fill="#388E3C"/>
+  <rect x="375" y="280" width="10" height="30" fill="#5D4037"/>
+  <polygon points="560,300 590,170 620,300" fill="#2E7D32"/>
+  <rect x="585" y="280" width="10" height="30" fill="#5D4037"/>
+  <!-- Grass tufts -->
+  <line x1="100" y1="500" x2="105" y2="485" stroke="#2E7D32" stroke-width="2"/>
+  <line x1="300" y1="490" x2="295" y2="475" stroke="#2E7D32" stroke-width="2"/>
+  <line x1="700" y1="500" x2="705" y2="485" stroke="#2E7D32" stroke-width="2"/>
+  <line x1="850" y1="480" x2="845" y2="465" stroke="#2E7D32" stroke-width="2"/>
+</svg>

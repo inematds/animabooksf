@@ -18,6 +18,7 @@ const TYPE_ICONS: Record<ProjectType, string> = {
   construction: '🔨',
   city: '🌆',
   fashion: '👗',
+  countryside: '🏕️',
 };
 
 const TYPE_LABELS: Record<ProjectType, string> = {
@@ -25,6 +26,7 @@ const TYPE_LABELS: Record<ProjectType, string> = {
   construction: 'Construcao',
   city: 'Cidade',
   fashion: 'Moda',
+  countryside: 'Campo',
 };
 
 export default function GalleryPage() {

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- Sleeping bag body -->
+  <rect x="10" y="25" width="60" height="35" fill="#42A5F5" rx="8"/>
+  <!-- Bottom round -->
+  <ellipse cx="10" cy="42" rx="8" ry="18" fill="#42A5F5"/>
+  <!-- Top fold/opening -->
+  <rect x="55" y="22" width="18" height="40" fill="#1E88E5" rx="10"/>
+  <rect x="58" y="25" width="14" height="34" fill="#FF8A65" rx="8"/>
+  <!-- Inner lining visible -->
+  <rect x="60" y="28" width="10" height="28" fill="#FFAB91" rx="6"/>
+  <!-- Zipper line -->
+  <line x1="15" y1="42" x2="60" y2="42" stroke="#1565C0" stroke-width="2"/>
+  <!-- Zipper pull -->
+  <rect x="58" y="40" width="5" height="5" fill="#FFD700" rx="1"/>
+  <!-- Stitch lines -->
+  <line x1="15" y1="32" x2="55" y2="32" stroke="#1E88E5" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="15" y1="52" x2="55" y2="52" stroke="#1E88E5" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- Pattern (stars) -->
+  <circle cx="25" cy="37" r="2" fill="#BBDEFB"/>
+  <circle cx="38" cy="34" r="2" fill="#BBDEFB"/>
+  <circle cx="48" cy="48" r="2" fill="#BBDEFB"/>
+  <circle cx="30" cy="50" r="1.5" fill="#BBDEFB"/>
+</svg>

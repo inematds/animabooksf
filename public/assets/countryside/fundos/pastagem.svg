@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <!-- Sky -->
+  <rect width="960" height="540" fill="#87CEEB"/>
+  <!-- Sun -->
+  <circle cx="800" cy="80" r="50" fill="#FFD700"/>
+  <!-- Clouds -->
+  <ellipse cx="200" cy="80" rx="70" ry="30" fill="white" opacity="0.9"/>
+  <ellipse cx="250" cy="70" rx="50" ry="25" fill="white" opacity="0.9"/>
+  <ellipse cx="600" cy="110" rx="60" ry="25" fill="white" opacity="0.9"/>
+  <ellipse cx="650" cy="100" rx="50" ry="22" fill="white" opacity="0.9"/>
+  <!-- Far hills -->
+  <ellipse cx="200" cy="300" rx="300" ry="80" fill="#66BB6A"/>
+  <ellipse cx="600" cy="280" rx="350" ry="90" fill="#5CAD5C"/>
+  <ellipse cx="900" cy="310" rx="200" ry="70" fill="#66BB6A"/>
+  <!-- Middle hills -->
+  <ellipse cx="480" cy="340" rx="500" ry="60" fill="#4CAF50"/>
+  <!-- Ground -->
+  <rect y="330" width="960" height="210" fill="#43A047"/>
+  <!-- Grass texture -->
+  <rect y="520" width="960" height="20" fill="#388E3C"/>
+  <!-- Fence posts -->
+  <rect x="100" y="350" width="8" height="60" fill="#8D6E63" rx="2"/>
+  <rect x="200" y="350" width="8" height="60" fill="#8D6E63" rx="2"/>
+  <rect x="300" y="350" width="8" height="60" fill="#8D6E63" rx="2"/>
+  <rect x="400" y="350" width="8" height="60" fill="#8D6E63" rx="2"/>
+  <rect x="500" y="350" width="8" height="60" fill="#8D6E63" rx="2"/>
+  <rect x="600" y="350" width="8" height="60" fill="#8D6E63" rx="2"/>
+  <rect x="700" y="350" width="8" height="60" fill="#8D6E63" rx="2"/>
+  <rect x="800" y="350" width="8" height="60" fill="#8D6E63" rx="2"/>
+  <!-- Fence rails -->
+  <rect x="100" y="360" width="700" height="5" fill="#A1887F" rx="2"/>
+  <rect x="100" y="385" width="700" height="5" fill="#A1887F" rx="2"/>
+  <!-- Wildflowers -->
+  <circle cx="150" cy="480" r="4" fill="#FF6B6B"/>
+  <circle cx="350" cy="460" r="4" fill="#FFD93D"/>
+  <circle cx="550" cy="490" r="4" fill="#FF6B6B"/>
+  <circle cx="750" cy="470" r="4" fill="#E040FB"/>
+  <circle cx="250" cy="500" r="4" fill="#FFD93D"/>
+  <circle cx="650" cy="450" r="3" fill="#FF6B6B"/>
+  <circle cx="450" cy="510" r="3" fill="#E040FB"/>
+  <!-- Grass blades -->
+  <line x1="120" y1="530" x2="125" y2="515" stroke="#2E7D32" stroke-width="2"/>
+  <line x1="320" y1="530" x2="318" y2="512" stroke="#2E7D32" stroke-width="2"/>
+  <line x1="520" y1="530" x2="525" y2="510" stroke="#2E7D32" stroke-width="2"/>
+  <line x1="720" y1="530" x2="715" y2="515" stroke="#2E7D32" stroke-width="2"/>
+  <line x1="880" y1="530" x2="885" y2="518" stroke="#2E7D32" stroke-width="2"/>
+</svg>

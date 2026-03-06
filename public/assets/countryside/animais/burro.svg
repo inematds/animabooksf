@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- Body -->
+  <ellipse cx="38" cy="44" rx="20" ry="13" fill="#9E9E9E"/>
+  <!-- Neck -->
+  <rect x="50" y="26" width="10" height="20" fill="#9E9E9E" rx="4"/>
+  <!-- Head -->
+  <ellipse cx="60" cy="22" rx="10" ry="8" fill="#BDBDBD"/>
+  <!-- Snout -->
+  <ellipse cx="68" cy="25" rx="6" ry="4" fill="#E0E0E0"/>
+  <!-- Nostrils -->
+  <circle cx="67" cy="25" r="1" fill="#555"/>
+  <circle cx="70" cy="25" r="1" fill="#555"/>
+  <!-- Eye -->
+  <circle cx="60" cy="20" r="2" fill="#333"/>
+  <!-- Long ears -->
+  <ellipse cx="54" cy="10" rx="4" ry="10" fill="#BDBDBD"/>
+  <ellipse cx="54" cy="10" rx="2" ry="8" fill="#E0E0E0"/>
+  <ellipse cx="64" cy="10" rx="4" ry="10" fill="#BDBDBD"/>
+  <ellipse cx="64" cy="10" rx="2" ry="8" fill="#E0E0E0"/>
+  <!-- Mane -->
+  <path d="M52 16 Q50 20 52 28" stroke="#616161" stroke-width="4" fill="none"/>
+  <!-- Belly -->
+  <ellipse cx="38" cy="50" rx="14" ry="6" fill="#BDBDBD"/>
+  <!-- Legs -->
+  <rect x="22" y="53" width="5" height="18" fill="#9E9E9E" rx="2"/>
+  <rect x="32" y="53" width="5" height="18" fill="#9E9E9E" rx="2"/>
+  <rect x="44" y="53" width="5" height="18" fill="#9E9E9E" rx="2"/>
+  <rect x="52" y="53" width="5" height="18" fill="#9E9E9E" rx="2"/>
+  <!-- Hooves -->
+  <rect x="21" y="69" width="7" height="4" fill="#424242" rx="1"/>
+  <rect x="31" y="69" width="7" height="4" fill="#424242" rx="1"/>
+  <rect x="43" y="69" width="7" height="4" fill="#424242" rx="1"/>
+  <rect x="51" y="69" width="7" height="4" fill="#424242" rx="1"/>
+  <!-- Tail -->
+  <path d="M18 40 Q12 44 14 54" stroke="#616161" stroke-width="2" fill="none"/>
+  <ellipse cx="14" cy="55" rx="3" ry="2" fill="#616161"/>
+</svg>

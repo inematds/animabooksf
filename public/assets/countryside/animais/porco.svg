@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- Body -->
+  <ellipse cx="40" cy="45" rx="20" ry="15" fill="#F8BBD0"/>
+  <!-- Head -->
+  <circle cx="62" cy="38" r="12" fill="#F48FB1"/>
+  <!-- Snout -->
+  <ellipse cx="70" cy="40" rx="7" ry="5" fill="#F06292"/>
+  <!-- Nostrils -->
+  <circle cx="68" cy="39" r="1.5" fill="#AD1457"/>
+  <circle cx="72" cy="39" r="1.5" fill="#AD1457"/>
+  <!-- Eyes -->
+  <circle cx="62" cy="34" r="2.5" fill="#333"/>
+  <circle cx="63" cy="33" r="1" fill="white"/>
+  <!-- Ears -->
+  <polygon points="55,28 52,18 60,24" fill="#F06292"/>
+  <polygon points="65,26 68,16 70,25" fill="#F06292"/>
+  <!-- Legs -->
+  <rect x="24" y="55" width="6" height="14" fill="#F48FB1" rx="2"/>
+  <rect x="34" y="55" width="6" height="14" fill="#F48FB1" rx="2"/>
+  <rect x="44" y="55" width="6" height="14" fill="#F48FB1" rx="2"/>
+  <rect x="52" y="55" width="6" height="14" fill="#F48FB1" rx="2"/>
+  <!-- Hooves -->
+  <rect x="23" y="67" width="8" height="4" fill="#AD1457" rx="1"/>
+  <rect x="33" y="67" width="8" height="4" fill="#AD1457" rx="1"/>
+  <rect x="43" y="67" width="8" height="4" fill="#AD1457" rx="1"/>
+  <rect x="51" y="67" width="8" height="4" fill="#AD1457" rx="1"/>
+  <!-- Curly tail -->
+  <path d="M20 40 Q14 35 16 42 Q18 48 14 45" stroke="#F06292" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Cheek blush -->
+  <circle cx="65" cy="42" r="3" fill="#F48FB1" opacity="0.5"/>
+</svg>

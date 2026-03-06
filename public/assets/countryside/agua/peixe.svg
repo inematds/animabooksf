@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 60">
+  <!-- Tail fin -->
+  <polygon points="10,30 2,20 2,40" fill="#FF7043"/>
+  <!-- Body -->
+  <ellipse cx="40" cy="30" rx="28" ry="14" fill="#FF9800"/>
+  <!-- Belly -->
+  <ellipse cx="42" cy="35" rx="22" ry="8" fill="#FFE0B2"/>
+  <!-- Dorsal fin -->
+  <path d="M30 16 Q40 6 50 16" fill="#FF7043"/>
+  <!-- Bottom fin -->
+  <path d="M35 44 Q40 50 45 44" fill="#FF7043"/>
+  <!-- Pectoral fin -->
+  <ellipse cx="48" cy="34" rx="6" ry="4" fill="#FF7043" transform="rotate(-20,48,34)"/>
+  <!-- Eye -->
+  <circle cx="58" cy="26" r="5" fill="white"/>
+  <circle cx="59" cy="26" r="3" fill="#333"/>
+  <circle cx="60" cy="25" r="1.2" fill="white"/>
+  <!-- Mouth -->
+  <path d="M66 30 Q68 32 66 34" stroke="#E65100" stroke-width="1.5" fill="none"/>
+  <!-- Scales pattern -->
+  <path d="M25 28 Q28 25 31 28" stroke="#FF8F00" stroke-width="0.8" fill="none" opacity="0.5"/>
+  <path d="M30 32 Q33 29 36 32" stroke="#FF8F00" stroke-width="0.8" fill="none" opacity="0.5"/>
+  <path d="M35 26 Q38 23 41 26" stroke="#FF8F00" stroke-width="0.8" fill="none" opacity="0.5"/>
+  <path d="M20 32 Q23 29 26 32" stroke="#FF8F00" stroke-width="0.8" fill="none" opacity="0.5"/>
+  <path d="M40 30 Q43 27 46 30" stroke="#FF8F00" stroke-width="0.8" fill="none" opacity="0.5"/>
+  <!-- Cheek blush -->
+  <circle cx="55" cy="32" r="3" fill="#FF5722" opacity="0.3"/>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- Posts -->
+  <rect x="4" y="15" width="8" height="55" fill="#8D6E63" rx="2"/>
+  <rect x="36" y="15" width="8" height="55" fill="#8D6E63" rx="2"/>
+  <rect x="68" y="15" width="8" height="55" fill="#8D6E63" rx="2"/>
+  <!-- Post tops (pointed) -->
+  <polygon points="4,15 8,6 12,15" fill="#8D6E63"/>
+  <polygon points="36,15 40,6 44,15" fill="#8D6E63"/>
+  <polygon points="68,15 72,6 76,15" fill="#8D6E63"/>
+  <!-- Top rail -->
+  <rect x="4" y="22" width="72" height="6" fill="#A1887F" rx="2"/>
+  <!-- Middle rail -->
+  <rect x="4" y="40" width="72" height="6" fill="#A1887F" rx="2"/>
+  <!-- Bottom rail -->
+  <rect x="4" y="56" width="72" height="6" fill="#A1887F" rx="2"/>
+  <!-- Nail details -->
+  <circle cx="8" cy="25" r="1.5" fill="#5D4037"/>
+  <circle cx="40" cy="25" r="1.5" fill="#5D4037"/>
+  <circle cx="72" cy="25" r="1.5" fill="#5D4037"/>
+  <circle cx="8" cy="43" r="1.5" fill="#5D4037"/>
+  <circle cx="40" cy="43" r="1.5" fill="#5D4037"/>
+  <circle cx="72" cy="43" r="1.5" fill="#5D4037"/>
+  <circle cx="8" cy="59" r="1.5" fill="#5D4037"/>
+  <circle cx="40" cy="59" r="1.5" fill="#5D4037"/>
+  <circle cx="72" cy="59" r="1.5" fill="#5D4037"/>
+  <!-- Wood grain -->
+  <line x1="7" y1="18" x2="7" y2="68" stroke="#795548" stroke-width="0.8" opacity="0.5"/>
+  <line x1="39" y1="18" x2="39" y2="68" stroke="#795548" stroke-width="0.8" opacity="0.5"/>
+  <line x1="71" y1="18" x2="71" y2="68" stroke="#795548" stroke-width="0.8" opacity="0.5"/>
+</svg>

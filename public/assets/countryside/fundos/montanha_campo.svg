@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <!-- Sky -->
+  <rect width="960" height="540" fill="#87CEEB"/>
+  <!-- Sun -->
+  <circle cx="780" cy="80" r="45" fill="#FFD700"/>
+  <!-- Clouds -->
+  <ellipse cx="200" cy="70" rx="60" ry="24" fill="white" opacity="0.85"/>
+  <ellipse cx="550" cy="55" rx="55" ry="22" fill="white" opacity="0.85"/>
+  <!-- Mountains -->
+  <polygon points="0,300 150,80 300,300" fill="#78909C"/>
+  <polygon points="200,300 400,50 600,300" fill="#607D8B"/>
+  <polygon points="500,300 700,100 900,300" fill="#78909C"/>
+  <polygon points="750,300 900,120 960,220 960,300" fill="#607D8B"/>
+  <!-- Snow caps -->
+  <polygon points="150,80 120,140 180,140" fill="white"/>
+  <polygon points="400,50 360,120 440,120" fill="white"/>
+  <polygon points="700,100 660,170 740,170" fill="white"/>
+  <!-- Meadow -->
+  <rect y="280" width="960" height="260" fill="#66BB6A"/>
+  <rect y="300" width="960" height="240" fill="#4CAF50"/>
+  <!-- Wildflowers scattered -->
+  <circle cx="80" cy="350" r="5" fill="#FF6B6B"/>
+  <circle cx="85" cy="345" r="4" fill="#FF8A80"/>
+  <circle cx="180" cy="380" r="5" fill="#FFD93D"/>
+  <circle cx="175" cy="375" r="4" fill="#FFEB3B"/>
+  <circle cx="300" cy="340" r="5" fill="#E040FB"/>
+  <circle cx="305" cy="335" r="4" fill="#EA80FC"/>
+  <circle cx="420" cy="370" r="5" fill="#FF6B6B"/>
+  <circle cx="530" cy="350" r="5" fill="#FFD93D"/>
+  <circle cx="640" cy="380" r="5" fill="#E040FB"/>
+  <circle cx="750" cy="340" r="5" fill="#FF6B6B"/>
+  <circle cx="850" cy="360" r="5" fill="#FFD93D"/>
+  <circle cx="150" cy="420" r="4" fill="#64B5F6"/>
+  <circle cx="350" cy="450" r="4" fill="#FF6B6B"/>
+  <circle cx="550" cy="430" r="4" fill="#E040FB"/>
+  <circle cx="700" cy="460" r="4" fill="#FFD93D"/>
+  <circle cx="900" cy="440" r="4" fill="#64B5F6"/>
+  <!-- Flower stems -->
+  <line x1="80" y1="355" x2="80" y2="370" stroke="#388E3C" stroke-width="2"/>
+  <line x1="180" y1="385" x2="180" y2="400" stroke="#388E3C" stroke-width="2"/>
+  <line x1="300" y1="345" x2="300" y2="360" stroke="#388E3C" stroke-width="2"/>
+  <line x1="420" y1="375" x2="420" y2="390" stroke="#388E3C" stroke-width="2"/>
+  <line x1="530" y1="355" x2="530" y2="370" stroke="#388E3C" stroke-width="2"/>
+  <line x1="640" y1="385" x2="640" y2="400" stroke="#388E3C" stroke-width="2"/>
+  <line x1="750" y1="345" x2="750" y2="360" stroke="#388E3C" stroke-width="2"/>
+  <line x1="850" y1="365" x2="850" y2="380" stroke="#388E3C" stroke-width="2"/>
+  <!-- Butterflies -->
+  <g transform="translate(400,320)">
+    <ellipse cx="-6" cy="0" rx="5" ry="3" fill="#FF9800" opacity="0.8"/>
+    <ellipse cx="6" cy="0" rx="5" ry="3" fill="#FF9800" opacity="0.8"/>
+    <rect x="-1" y="-3" width="2" height="6" fill="#5D4037" rx="1"/>
+  </g>
+  <g transform="translate(700,310)">
+    <ellipse cx="-5" cy="0" rx="4" ry="3" fill="#7C4DFF" opacity="0.8"/>
+    <ellipse cx="5" cy="0" rx="4" ry="3" fill="#7C4DFF" opacity="0.8"/>
+    <rect x="-1" y="-3" width="2" height="6" fill="#5D4037" rx="1"/>
+  </g>
+  <!-- Grass -->
+  <rect y="520" width="960" height="20" fill="#388E3C"/>
+</svg>

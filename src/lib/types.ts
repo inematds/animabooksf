@@ -28,7 +28,7 @@ export interface Story {
 
 // --- Creative Modes (Decoration, Construction, City) ---
 
-export type ProjectType = 'decoration' | 'construction' | 'city' | 'fashion';
+export type ProjectType = 'decoration' | 'construction' | 'city' | 'fashion' | 'countryside';
 
 export interface PlacedItem {
   id: string;

@@ -31,6 +31,11 @@ const CATEGORY_LABELS: Record<string, string> = {
   calcados: 'Calcados',
   chapeus: 'Chapeus',
   bolsas: 'Bolsas',
+  // Countryside categories
+  animais: 'Animais',
+  acampamento: 'Acampamento',
+  agua: 'Agua',
+  fazenda: 'Fazenda',
   // Sprite categories (shared assets)
   'sprites:personagens': 'Personagens',
   'sprites:animais': 'Animais',
@@ -61,6 +66,10 @@ const CATEGORY_ICONS: Record<string, string> = {
   calcados: '👟',
   chapeus: '🎩',
   bolsas: '👜',
+  animais: '🐴',
+  acampamento: '⛺',
+  agua: '🌊',
+  fazenda: '🚜',
   'sprites:personagens': '🧒',
   'sprites:animais': '🐾',
   'sprites:natureza': '🌿',

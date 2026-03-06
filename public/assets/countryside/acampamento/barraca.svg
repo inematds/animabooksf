@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- Tent body -->
+  <polygon points="40,10 5,70 75,70" fill="#42A5F5"/>
+  <!-- Tent shadow side -->
+  <polygon points="40,10 75,70 58,70 40,30" fill="#1E88E5"/>
+  <!-- Door opening -->
+  <polygon points="40,30 30,70 50,70" fill="#1565C0"/>
+  <!-- Door flap -->
+  <polygon points="40,30 30,70 38,70 40,40" fill="#0D47A1" opacity="0.5"/>
+  <!-- Ground line -->
+  <rect x="2" y="68" width="76" height="4" fill="#8D6E63" rx="2"/>
+  <!-- Tent pole top -->
+  <circle cx="40" cy="10" r="2" fill="#FF7043"/>
+  <!-- Flag -->
+  <polygon points="42,10 52,6 52,14" fill="#FF7043"/>
+  <!-- Tent stripes -->
+  <line x1="40" y1="10" x2="22" y2="70" stroke="#1E88E5" stroke-width="1.5"/>
+  <line x1="40" y1="10" x2="58" y2="70" stroke="#1565C0" stroke-width="1.5"/>
+  <!-- Pegs -->
+  <line x1="5" y1="70" x2="2" y2="75" stroke="#8D6E63" stroke-width="2"/>
+  <line x1="75" y1="70" x2="78" y2="75" stroke="#8D6E63" stroke-width="2"/>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- Body -->
+  <ellipse cx="40" cy="50" rx="20" ry="14" fill="#4CAF50"/>
+  <!-- Belly -->
+  <ellipse cx="40" cy="54" rx="14" ry="10" fill="#A5D6A7"/>
+  <!-- Head -->
+  <ellipse cx="40" cy="36" rx="18" ry="12" fill="#66BB6A"/>
+  <!-- Eye bumps -->
+  <circle cx="30" cy="28" r="7" fill="#66BB6A"/>
+  <circle cx="50" cy="28" r="7" fill="#66BB6A"/>
+  <!-- Eyes -->
+  <circle cx="30" cy="26" r="5" fill="white"/>
+  <circle cx="50" cy="26" r="5" fill="white"/>
+  <circle cx="30" cy="26" r="3" fill="#333"/>
+  <circle cx="50" cy="26" r="3" fill="#333"/>
+  <circle cx="31" cy="25" r="1" fill="white"/>
+  <circle cx="51" cy="25" r="1" fill="white"/>
+  <!-- Mouth (smile) -->
+  <path d="M28 40 Q40 48 52 40" stroke="#2E7D32" stroke-width="2" fill="none"/>
+  <!-- Nostrils -->
+  <circle cx="36" cy="35" r="1" fill="#2E7D32"/>
+  <circle cx="44" cy="35" r="1" fill="#2E7D32"/>
+  <!-- Front legs -->
+  <rect x="18" y="48" width="6" height="10" fill="#4CAF50" rx="3" transform="rotate(20,21,53)"/>
+  <rect x="56" y="48" width="6" height="10" fill="#4CAF50" rx="3" transform="rotate(-20,59,53)"/>
+  <!-- Front feet -->
+  <path d="M14 58 L10 62 M14 58 L14 63 M14 58 L18 62" stroke="#388E3C" stroke-width="2" stroke-linecap="round"/>
+  <path d="M66 58 L62 62 M66 58 L66 63 M66 58 L70 62" stroke="#388E3C" stroke-width="2" stroke-linecap="round"/>
+  <!-- Back legs -->
+  <ellipse cx="22" cy="58" rx="8" ry="5" fill="#4CAF50" transform="rotate(-10,22,58)"/>
+  <ellipse cx="58" cy="58" rx="8" ry="5" fill="#4CAF50" transform="rotate(10,58,58)"/>
+  <!-- Back feet -->
+  <path d="M14 64 L8 70 M14 64 L14 71 M14 64 L20 70" stroke="#388E3C" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M66 64 L60 70 M66 64 L66 71 M66 64 L72 70" stroke="#388E3C" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Spots -->
+  <circle cx="30" cy="48" r="3" fill="#388E3C" opacity="0.5"/>
+  <circle cx="50" cy="46" r="2.5" fill="#388E3C" opacity="0.5"/>
+  <circle cx="40" cy="44" r="2" fill="#388E3C" opacity="0.5"/>
+</svg>

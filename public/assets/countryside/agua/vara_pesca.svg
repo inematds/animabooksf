@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 60">
+  <!-- Rod -->
+  <line x1="5" y1="55" x2="65" y2="5" stroke="#8D6E63" stroke-width="3" stroke-linecap="round"/>
+  <line x1="5" y1="55" x2="45" y2="20" stroke="#A1887F" stroke-width="4" stroke-linecap="round"/>
+  <!-- Rod handle -->
+  <rect x="2" y="50" width="12" height="5" fill="#5D4037" rx="2" transform="rotate(-40,8,52)"/>
+  <!-- Reel -->
+  <circle cx="18" cy="45" r="5" fill="#757575"/>
+  <circle cx="18" cy="45" r="3" fill="#9E9E9E"/>
+  <circle cx="18" cy="45" r="1" fill="#555"/>
+  <!-- Reel handle -->
+  <line x1="22" y1="44" x2="25" y2="42" stroke="#555" stroke-width="1.5"/>
+  <circle cx="25" cy="42" r="1.5" fill="#757575"/>
+  <!-- Fishing line -->
+  <path d="M65 5 Q75 15 72 30 Q70 40 75 50" stroke="#90A4AE" stroke-width="0.8" fill="none"/>
+  <!-- Hook -->
+  <path d="M75 50 L75 55 Q75 58 72 56 L73 54" stroke="#9E9E9E" stroke-width="1.5" fill="none"/>
+  <!-- Bobber -->
+  <circle cx="72" cy="34" r="3" fill="#E53935"/>
+  <circle cx="72" cy="31" r="2.5" fill="white"/>
+  <!-- Line guides on rod -->
+  <circle cx="30" cy="34" r="1.5" fill="none" stroke="#757575" stroke-width="1"/>
+  <circle cx="48" cy="18" r="1.5" fill="none" stroke="#757575" stroke-width="1"/>
+</svg>

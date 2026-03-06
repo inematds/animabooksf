@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- Tower -->
+  <path d="M25 75 L30 25 L50 25 L55 75 Z" fill="#BCAAA4"/>
+  <!-- Tower roof -->
+  <polygon points="28,25 40,10 52,25" fill="#795548"/>
+  <!-- Blades/sails -->
+  <!-- Top blade -->
+  <rect x="38" y="-5" width="4" height="30" fill="#8D6E63" rx="1"/>
+  <rect x="36" y="-3" width="8" height="26" fill="white" opacity="0.7" rx="1"/>
+  <!-- Bottom blade -->
+  <rect x="38" y="27" width="4" height="30" fill="#8D6E63" rx="1"/>
+  <rect x="36" y="29" width="8" height="26" fill="white" opacity="0.7" rx="1"/>
+  <!-- Left blade -->
+  <rect x="10" y="23" width="30" height="4" fill="#8D6E63" rx="1"/>
+  <rect x="12" y="21" width="26" height="8" fill="white" opacity="0.7" rx="1"/>
+  <!-- Right blade -->
+  <rect x="42" y="23" width="30" height="4" fill="#8D6E63" rx="1"/>
+  <rect x="44" y="21" width="26" height="8" fill="white" opacity="0.7" rx="1"/>
+  <!-- Hub -->
+  <circle cx="40" cy="25" r="5" fill="#795548"/>
+  <circle cx="40" cy="25" r="3" fill="#6D4C41"/>
+  <!-- Windows -->
+  <rect x="35" y="40" width="10" height="10" fill="#FFF9C4" rx="1"/>
+  <line x1="40" y1="40" x2="40" y2="50" stroke="#A1887F" stroke-width="1"/>
+  <line x1="35" y1="45" x2="45" y2="45" stroke="#A1887F" stroke-width="1"/>
+  <rect x="36" y="58" width="8" height="8" fill="#FFF9C4" rx="1"/>
+  <!-- Door -->
+  <rect x="35" y="65" width="10" height="10" fill="#6D4C41" rx="1"/>
+  <circle cx="43" cy="70" r="1" fill="#FFD700"/>
+  <!-- Stone texture -->
+  <line x1="32" y1="35" x2="48" y2="35" stroke="#A1887F" stroke-width="0.5"/>
+  <line x1="31" y1="55" x2="49" y2="55" stroke="#A1887F" stroke-width="0.5"/>
+</svg>

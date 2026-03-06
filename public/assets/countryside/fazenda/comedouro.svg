@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- Legs -->
+  <rect x="14" y="42" width="5" height="28" fill="#795548" rx="1" transform="rotate(-5,16,56)"/>
+  <rect x="61" y="42" width="5" height="28" fill="#795548" rx="1" transform="rotate(5,63,56)"/>
+  <!-- Cross brace -->
+  <rect x="16" y="55" width="48" height="3" fill="#6D4C41" rx="1"/>
+  <!-- Trough body -->
+  <path d="M8 32 L15 52 L65 52 L72 32 Z" fill="#A1887F"/>
+  <!-- Inner -->
+  <path d="M13 34 L18 50 L62 50 L67 34 Z" fill="#8D6E63"/>
+  <!-- Feed/grain -->
+  <path d="M16 38 L20 48 L60 48 L64 38 Z" fill="#FFD54F"/>
+  <ellipse cx="40" cy="38" rx="22" ry="4" fill="#FBC02D"/>
+  <!-- Grain texture -->
+  <circle cx="30" cy="38" r="1.5" fill="#F9A825" opacity="0.6"/>
+  <circle cx="40" cy="36" r="1.5" fill="#F9A825" opacity="0.6"/>
+  <circle cx="50" cy="38" r="1.5" fill="#F9A825" opacity="0.6"/>
+  <circle cx="35" cy="40" r="1" fill="#F9A825" opacity="0.5"/>
+  <circle cx="45" cy="40" r="1" fill="#F9A825" opacity="0.5"/>
+  <!-- Rim -->
+  <rect x="6" y="30" width="68" height="4" fill="#8D6E63" rx="2"/>
+  <!-- Bolts -->
+  <circle cx="15" cy="32" r="1.5" fill="#616161"/>
+  <circle cx="65" cy="32" r="1.5" fill="#616161"/>
+  <!-- Wood grain -->
+  <line x1="25" y1="34" x2="28" y2="50" stroke="#795548" stroke-width="0.5" opacity="0.4"/>
+  <line x1="50" y1="34" x2="52" y2="50" stroke="#795548" stroke-width="0.5" opacity="0.4"/>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 60">
+  <!-- Water ripple -->
+  <ellipse cx="40" cy="38" rx="35" ry="12" fill="none" stroke="#81D4FA" stroke-width="1" opacity="0.4"/>
+  <ellipse cx="40" cy="38" rx="28" ry="9" fill="none" stroke="#81D4FA" stroke-width="1" opacity="0.3"/>
+  <!-- Lily pad -->
+  <ellipse cx="40" cy="38" rx="22" ry="12" fill="#4CAF50"/>
+  <!-- Lily pad notch -->
+  <polygon points="40,26 48,38 40,38" fill="#29B6F6" opacity="0.5"/>
+  <!-- Pad veins -->
+  <line x1="40" y1="38" x2="22" y2="32" stroke="#388E3C" stroke-width="0.8"/>
+  <line x1="40" y1="38" x2="20" y2="40" stroke="#388E3C" stroke-width="0.8"/>
+  <line x1="40" y1="38" x2="28" y2="48" stroke="#388E3C" stroke-width="0.8"/>
+  <line x1="40" y1="38" x2="52" y2="48" stroke="#388E3C" stroke-width="0.8"/>
+  <line x1="40" y1="38" x2="60" y2="40" stroke="#388E3C" stroke-width="0.8"/>
+  <line x1="40" y1="38" x2="58" y2="32" stroke="#388E3C" stroke-width="0.8"/>
+  <!-- Flower -->
+  <ellipse cx="40" cy="24" rx="5" ry="8" fill="#F8BBD0"/>
+  <ellipse cx="35" cy="28" rx="5" ry="7" fill="#F48FB1" transform="rotate(-30,35,28)"/>
+  <ellipse cx="45" cy="28" rx="5" ry="7" fill="#F48FB1" transform="rotate(30,45,28)"/>
+  <ellipse cx="38" cy="22" rx="4" ry="7" fill="#FCE4EC" transform="rotate(-15,38,22)"/>
+  <ellipse cx="42" cy="22" rx="4" ry="7" fill="#FCE4EC" transform="rotate(15,42,22)"/>
+  <!-- Flower center -->
+  <circle cx="40" cy="26" r="4" fill="#FFD93D"/>
+  <circle cx="40" cy="26" r="2" fill="#FF8F00"/>
+  <!-- Small lily pad -->
+  <ellipse cx="65" cy="42" rx="10" ry="6" fill="#66BB6A"/>
+</svg>

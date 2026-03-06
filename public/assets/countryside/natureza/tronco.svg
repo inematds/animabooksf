@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- Main log -->
+  <rect x="5" y="35" width="65" height="22" fill="#8D6E63" rx="10"/>
+  <!-- Log end (right) -->
+  <ellipse cx="70" cy="46" rx="10" ry="11" fill="#A1887F"/>
+  <ellipse cx="70" cy="46" rx="8" ry="9" fill="#BCAAA4"/>
+  <!-- Rings -->
+  <ellipse cx="70" cy="46" rx="6" ry="7" fill="none" stroke="#A1887F" stroke-width="1"/>
+  <ellipse cx="70" cy="46" rx="3.5" ry="4" fill="none" stroke="#A1887F" stroke-width="1"/>
+  <circle cx="70" cy="46" r="1.5" fill="#8D6E63"/>
+  <!-- Log end (left) -->
+  <ellipse cx="5" cy="46" rx="6" ry="11" fill="#795548"/>
+  <!-- Bark texture -->
+  <line x1="15" y1="37" x2="15" y2="55" stroke="#795548" stroke-width="1.5" opacity="0.5"/>
+  <line x1="30" y1="36" x2="30" y2="56" stroke="#795548" stroke-width="1.5" opacity="0.5"/>
+  <line x1="45" y1="37" x2="45" y2="55" stroke="#795548" stroke-width="1.5" opacity="0.5"/>
+  <!-- Branch stub -->
+  <circle cx="25" cy="36" r="4" fill="#795548"/>
+  <circle cx="25" cy="36" r="2.5" fill="#A1887F"/>
+  <!-- Moss -->
+  <ellipse cx="40" cy="35" rx="12" ry="3" fill="#66BB6A" opacity="0.6"/>
+  <ellipse cx="55" cy="36" rx="8" ry="2" fill="#81C784" opacity="0.5"/>
+  <!-- Small mushroom on log -->
+  <rect x="48" y="32" width="2" height="4" fill="#F5F5F5"/>
+  <ellipse cx="49" cy="32" rx="4" ry="2" fill="#E53935"/>
+  <circle cx="47" cy="31" r="1" fill="white"/>
+  <circle cx="51" cy="31" r="0.8" fill="white"/>
+</svg>

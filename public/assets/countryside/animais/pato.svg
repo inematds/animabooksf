@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- Body -->
+  <ellipse cx="38" cy="48" rx="18" ry="13" fill="#FFF9C4"/>
+  <!-- Breast -->
+  <ellipse cx="48" cy="50" rx="10" ry="11" fill="white"/>
+  <!-- Neck -->
+  <rect x="50" y="30" width="8" height="14" fill="#FFF9C4" rx="3"/>
+  <!-- Head -->
+  <circle cx="56" cy="26" r="10" fill="#FFF9C4"/>
+  <!-- Beak -->
+  <ellipse cx="66" cy="28" rx="8" ry="4" fill="#FF8F00"/>
+  <line x1="60" y1="28" x2="73" y2="28" stroke="#E65100" stroke-width="1"/>
+  <!-- Eye -->
+  <circle cx="58" cy="24" r="2.5" fill="#333"/>
+  <circle cx="58.5" cy="23.5" r="1" fill="white"/>
+  <!-- Wing -->
+  <ellipse cx="30" cy="46" rx="12" ry="8" fill="#FFE082" transform="rotate(-5,30,46)"/>
+  <!-- Tail -->
+  <polygon points="20,44 14,38 16,46" fill="#FFE082"/>
+  <polygon points="20,46 12,42 15,50" fill="#FFF9C4"/>
+  <!-- Legs -->
+  <line x1="38" y1="58" x2="38" y2="68" stroke="#FF8F00" stroke-width="3"/>
+  <line x1="48" y1="58" x2="48" y2="68" stroke="#FF8F00" stroke-width="3"/>
+  <!-- Feet (webbed) -->
+  <path d="M32 68 Q38 74 44 68" fill="#FF8F00"/>
+  <path d="M42 68 Q48 74 54 68" fill="#FF8F00"/>
+</svg>

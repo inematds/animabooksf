@@ -18,6 +18,7 @@ const MODE_LABELS: Record<ProjectType, string> = {
   construction: 'Construcao',
   city: 'Cidade',
   fashion: 'Moda',
+  countryside: 'Campo',
 };
 
 const MODE_ICONS: Record<ProjectType, string> = {
@@ -25,6 +26,7 @@ const MODE_ICONS: Record<ProjectType, string> = {
   construction: '🔨',
   city: '🌆',
   fashion: '👗',
+  countryside: '🏕️',
 };
 
 export default function CreativeEditor({ initialProject, onSave }: CreativeEditorProps) {

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- Pole -->
+  <rect x="38" y="30" width="4" height="48" fill="#8D6E63" rx="1"/>
+  <!-- Cross beam -->
+  <rect x="12" y="32" width="56" height="4" fill="#8D6E63" rx="1"/>
+  <!-- Hat -->
+  <rect x="28" y="5" width="24" height="14" fill="#795548" rx="3"/>
+  <rect x="22" y="17" width="36" height="4" fill="#6D4C41" rx="2"/>
+  <!-- Hat band -->
+  <rect x="28" y="14" width="24" height="3" fill="#FF7043"/>
+  <!-- Head (sack) -->
+  <circle cx="40" cy="26" r="9" fill="#FFE0B2"/>
+  <!-- Eyes (X) -->
+  <line x1="34" y1="24" x2="37" y2="27" stroke="#333" stroke-width="1.5"/>
+  <line x1="37" y1="24" x2="34" y2="27" stroke="#333" stroke-width="1.5"/>
+  <line x1="43" y1="24" x2="46" y2="27" stroke="#333" stroke-width="1.5"/>
+  <line x1="46" y1="24" x2="43" y2="27" stroke="#333" stroke-width="1.5"/>
+  <!-- Mouth (stitched) -->
+  <path d="M35 30 Q37 32 39 30 Q41 32 43 30 Q45 32 46 30" stroke="#333" stroke-width="1.5" fill="none"/>
+  <!-- Shirt -->
+  <rect x="30" y="34" width="20" height="20" fill="#42A5F5" rx="2"/>
+  <!-- Shirt buttons -->
+  <circle cx="40" cy="40" r="1.5" fill="#1E88E5"/>
+  <circle cx="40" cy="46" r="1.5" fill="#1E88E5"/>
+  <!-- Patches -->
+  <rect x="32" y="38" width="6" height="6" fill="#66BB6A" rx="1"/>
+  <rect x="44" y="42" width="5" height="5" fill="#FF7043" rx="1"/>
+  <!-- Arms (straw sticking out) -->
+  <line x1="12" y1="34" x2="8" y2="30" stroke="#FFD54F" stroke-width="2"/>
+  <line x1="12" y1="34" x2="6" y2="35" stroke="#FFD54F" stroke-width="2"/>
+  <line x1="12" y1="34" x2="8" y2="38" stroke="#FFD54F" stroke-width="2"/>
+  <line x1="68" y1="34" x2="72" y2="30" stroke="#FFD54F" stroke-width="2"/>
+  <line x1="68" y1="34" x2="74" y2="35" stroke="#FFD54F" stroke-width="2"/>
+  <line x1="68" y1="34" x2="72" y2="38" stroke="#FFD54F" stroke-width="2"/>
+  <!-- Pants -->
+  <rect x="32" y="54" width="7" height="16" fill="#8D6E63" rx="2"/>
+  <rect x="41" y="54" width="7" height="16" fill="#8D6E63" rx="2"/>
+  <!-- Straw at bottom -->
+  <line x1="32" y1="70" x2="28" y2="74" stroke="#FFD54F" stroke-width="2"/>
+  <line x1="35" y1="70" x2="35" y2="75" stroke="#FFD54F" stroke-width="2"/>
+  <line x1="48" y1="70" x2="52" y2="74" stroke="#FFD54F" stroke-width="2"/>
+  <line x1="45" y1="70" x2="45" y2="75" stroke="#FFD54F" stroke-width="2"/>
+  <!-- Bird on arm -->
+  <ellipse cx="18" cy="30" rx="4" ry="3" fill="#333"/>
+  <circle cx="21" cy="28" r="2.5" fill="#333"/>
+  <polygon points="23,28 26,27 23,26" fill="#FF8F00"/>
+</svg>

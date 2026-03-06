@@ -49,6 +49,15 @@ const modes = [
     hue: 300,
     href: '/create/fashion/new',
   },
+  {
+    type: 'countryside',
+    icon: '🏕️',
+    title: 'Campo',
+    desc: 'Crie cenas no campo com animais, acampamento, rios e fazendas.',
+    color: 'from-green-500 to-emerald-500',
+    hue: 140,
+    href: '/create/countryside/new',
+  },
 ];
 
 export default function CreateHubPage() {

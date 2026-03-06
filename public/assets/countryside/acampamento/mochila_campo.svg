@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- Main bag -->
+  <rect x="18" y="20" width="44" height="48" fill="#FF7043" rx="6"/>
+  <!-- Top flap -->
+  <rect x="16" y="16" width="48" height="14" fill="#E64A19" rx="5"/>
+  <!-- Flap buckle -->
+  <rect x="36" y="28" width="8" height="5" fill="#FFD700" rx="1"/>
+  <!-- Front pocket -->
+  <rect x="24" y="40" width="32" height="20" fill="#F4511E" rx="4"/>
+  <rect x="36" y="40" width="8" height="3" fill="#FFD700" rx="1"/>
+  <!-- Side pocket left -->
+  <rect x="12" y="35" width="8" height="20" fill="#E64A19" rx="3"/>
+  <!-- Side pocket right -->
+  <rect x="60" y="35" width="8" height="20" fill="#E64A19" rx="3"/>
+  <!-- Straps -->
+  <rect x="22" y="18" width="6" height="50" fill="#BF360C" rx="2"/>
+  <rect x="52" y="18" width="6" height="50" fill="#BF360C" rx="2"/>
+  <!-- Strap buckles -->
+  <rect x="22" y="60" width="6" height="4" fill="#FFD700" rx="1"/>
+  <rect x="52" y="60" width="6" height="4" fill="#FFD700" rx="1"/>
+  <!-- Handle -->
+  <path d="M34 16 Q40 8 46 16" stroke="#BF360C" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- Sleeping pad roll on top -->
+  <ellipse cx="40" cy="12" rx="14" ry="5" fill="#81C784"/>
+  <ellipse cx="26" cy="12" rx="5" ry="5" fill="#66BB6A"/>
+  <circle cx="26" cy="12" r="2" fill="#4CAF50"/>
+  <ellipse cx="54" cy="12" rx="5" ry="5" fill="#66BB6A"/>
+  <circle cx="54" cy="12" r="2" fill="#4CAF50"/>
+</svg>

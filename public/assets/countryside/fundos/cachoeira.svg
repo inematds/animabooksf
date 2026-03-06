@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <!-- Sky -->
+  <rect width="960" height="540" fill="#81D4FA"/>
+  <!-- Clouds -->
+  <ellipse cx="200" cy="50" rx="55" ry="22" fill="white" opacity="0.8"/>
+  <ellipse cx="700" cy="70" rx="65" ry="25" fill="white" opacity="0.8"/>
+  <!-- Cliff left -->
+  <rect x="0" y="100" width="380" height="440" fill="#6D4C41"/>
+  <rect x="0" y="100" width="380" height="30" fill="#43A047"/>
+  <!-- Cliff right -->
+  <rect x="580" y="100" width="380" height="440" fill="#6D4C41"/>
+  <rect x="580" y="100" width="380" height="30" fill="#43A047"/>
+  <!-- Cliff vegetation -->
+  <circle cx="100" cy="110" r="25" fill="#388E3C"/>
+  <circle cx="200" cy="105" r="30" fill="#4CAF50"/>
+  <circle cx="320" cy="110" r="25" fill="#388E3C"/>
+  <circle cx="650" cy="110" r="25" fill="#388E3C"/>
+  <circle cx="780" cy="105" r="30" fill="#4CAF50"/>
+  <circle cx="900" cy="110" r="25" fill="#388E3C"/>
+  <!-- Rocks on cliffs -->
+  <ellipse cx="350" cy="250" rx="30" ry="20" fill="#5D4037"/>
+  <ellipse cx="610" cy="230" rx="25" ry="18" fill="#5D4037"/>
+  <ellipse cx="370" cy="350" rx="20" ry="15" fill="#4E342E"/>
+  <ellipse cx="595" cy="370" rx="22" ry="16" fill="#4E342E"/>
+  <!-- Waterfall -->
+  <rect x="380" y="100" width="200" height="300" fill="#4FC3F7" opacity="0.7"/>
+  <!-- Waterfall white streaks -->
+  <rect x="400" y="100" width="8" height="300" fill="white" opacity="0.4" rx="3"/>
+  <rect x="440" y="100" width="6" height="300" fill="white" opacity="0.5" rx="3"/>
+  <rect x="480" y="100" width="10" height="300" fill="white" opacity="0.4" rx="3"/>
+  <rect x="520" y="100" width="7" height="300" fill="white" opacity="0.5" rx="3"/>
+  <rect x="550" y="100" width="6" height="300" fill="white" opacity="0.3" rx="3"/>
+  <!-- Splash at bottom -->
+  <ellipse cx="480" cy="410" rx="120" ry="30" fill="#B3E5FC" opacity="0.6"/>
+  <ellipse cx="480" cy="400" rx="80" ry="15" fill="white" opacity="0.5"/>
+  <!-- Pool -->
+  <ellipse cx="480" cy="450" rx="200" ry="70" fill="#29B6F6" opacity="0.8"/>
+  <!-- Pool reflections -->
+  <rect x="400" y="440" width="40" height="3" fill="white" opacity="0.3" rx="1"/>
+  <rect x="500" y="460" width="50" height="3" fill="white" opacity="0.3" rx="1"/>
+  <!-- Rocks around pool -->
+  <ellipse cx="300" cy="440" rx="25" ry="15" fill="#757575"/>
+  <ellipse cx="660" cy="430" rx="22" ry="14" fill="#616161"/>
+  <ellipse cx="400" cy="490" rx="18" ry="12" fill="#757575"/>
+  <ellipse cx="560" cy="500" rx="20" ry="13" fill="#616161"/>
+  <!-- Bottom ground -->
+  <rect y="500" width="960" height="40" fill="#43A047"/>
+  <!-- Mist particles -->
+  <circle cx="450" cy="380" r="5" fill="white" opacity="0.3"/>
+  <circle cx="510" cy="375" r="4" fill="white" opacity="0.3"/>
+  <circle cx="470" cy="385" r="3" fill="white" opacity="0.25"/>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- Stem -->
+  <line x1="40" y1="40" x2="40" y2="75" stroke="#4CAF50" stroke-width="3"/>
+  <!-- Leaves -->
+  <ellipse cx="32" cy="58" rx="8" ry="4" fill="#66BB6A" transform="rotate(-30,32,58)"/>
+  <ellipse cx="48" cy="52" rx="8" ry="4" fill="#66BB6A" transform="rotate(25,48,52)"/>
+  <!-- Petals -->
+  <ellipse cx="40" cy="18" rx="6" ry="10" fill="#FF6B6B"/>
+  <ellipse cx="40" cy="42" rx="6" ry="10" fill="#FF6B6B"/>
+  <ellipse cx="22" cy="30" rx="10" ry="6" fill="#FF6B6B"/>
+  <ellipse cx="58" cy="30" rx="10" ry="6" fill="#FF6B6B"/>
+  <ellipse cx="27" cy="20" rx="6" ry="10" fill="#FF8A80" transform="rotate(45,27,20)"/>
+  <ellipse cx="53" cy="20" rx="6" ry="10" fill="#FF8A80" transform="rotate(-45,53,20)"/>
+  <ellipse cx="27" cy="40" rx="6" ry="10" fill="#FF8A80" transform="rotate(-45,27,40)"/>
+  <ellipse cx="53" cy="40" rx="6" ry="10" fill="#FF8A80" transform="rotate(45,53,40)"/>
+  <!-- Center -->
+  <circle cx="40" cy="30" r="8" fill="#FFD93D"/>
+  <circle cx="40" cy="30" r="5" fill="#FF8F00"/>
+  <!-- Center dots -->
+  <circle cx="38" cy="28" r="1" fill="#FFD93D"/>
+  <circle cx="42" cy="32" r="1" fill="#FFD93D"/>
+  <circle cx="40" cy="30" r="1" fill="#FFD93D"/>
+</svg>

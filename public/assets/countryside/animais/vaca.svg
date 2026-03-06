@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- Body -->
+  <ellipse cx="40" cy="45" rx="22" ry="14" fill="white"/>
+  <!-- Spots -->
+  <ellipse cx="32" cy="42" rx="8" ry="6" fill="#333"/>
+  <ellipse cx="50" cy="48" rx="6" ry="5" fill="#333"/>
+  <ellipse cx="42" cy="38" rx="5" ry="4" fill="#333"/>
+  <!-- Neck -->
+  <rect x="54" y="30" width="10" height="18" fill="white" rx="3"/>
+  <!-- Head -->
+  <ellipse cx="62" cy="26" rx="10" ry="9" fill="white"/>
+  <!-- Snout -->
+  <ellipse cx="68" cy="29" rx="6" ry="4" fill="#FFCCBC"/>
+  <!-- Nostrils -->
+  <circle cx="66" cy="29" r="1" fill="#795548"/>
+  <circle cx="70" cy="29" r="1" fill="#795548"/>
+  <!-- Eyes -->
+  <circle cx="62" cy="23" r="2.5" fill="#333"/>
+  <circle cx="63" cy="22" r="1" fill="white"/>
+  <!-- Ears -->
+  <ellipse cx="55" cy="19" rx="5" ry="3" fill="#FFCCBC" transform="rotate(-30,55,19)"/>
+  <ellipse cx="67" cy="18" rx="5" ry="3" fill="#FFCCBC" transform="rotate(20,67,18)"/>
+  <!-- Horns -->
+  <path d="M57 17 Q55 10 58 8" stroke="#FDD835" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M65 16 Q67 10 64 8" stroke="#FDD835" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Legs -->
+  <rect x="22" y="55" width="6" height="16" fill="white" rx="2"/>
+  <rect x="33" y="55" width="6" height="16" fill="white" rx="2"/>
+  <rect x="44" y="55" width="6" height="16" fill="white" rx="2"/>
+  <rect x="53" y="55" width="6" height="16" fill="white" rx="2"/>
+  <!-- Hooves -->
+  <rect x="22" y="69" width="6" height="4" fill="#333" rx="1"/>
+  <rect x="33" y="69" width="6" height="4" fill="#333" rx="1"/>
+  <rect x="44" y="69" width="6" height="4" fill="#333" rx="1"/>
+  <rect x="53" y="69" width="6" height="4" fill="#333" rx="1"/>
+  <!-- Tail -->
+  <path d="M18 42 Q12 48 14 56" stroke="#333" stroke-width="2" fill="none"/>
+  <ellipse cx="14" cy="57" rx="3" ry="2" fill="#333"/>
+  <!-- Udder -->
+  <ellipse cx="40" cy="58" rx="6" ry="4" fill="#FFCCBC"/>
+</svg>

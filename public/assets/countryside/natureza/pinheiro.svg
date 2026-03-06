@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- Trunk -->
+  <rect x="35" y="60" width="10" height="16" fill="#6D4C41" rx="2"/>
+  <!-- Bottom layer -->
+  <polygon points="10,62 40,35 70,62" fill="#2E7D32"/>
+  <!-- Middle layer -->
+  <polygon points="16,48 40,22 64,48" fill="#388E3C"/>
+  <!-- Top layer -->
+  <polygon points="22,35 40,8 58,35" fill="#43A047"/>
+  <!-- Snow/highlight tips -->
+  <polygon points="40,8 36,16 44,16" fill="#66BB6A"/>
+  <!-- Trunk base -->
+  <rect x="34" y="74" width="12" height="4" fill="#5D4037" rx="1"/>
+</svg>

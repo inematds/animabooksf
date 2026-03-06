@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- Body -->
+  <ellipse cx="40" cy="45" rx="22" ry="14" fill="#8D6E63"/>
+  <!-- Neck -->
+  <rect x="52" y="25" width="12" height="25" fill="#8D6E63" rx="4" transform="rotate(-15,58,37)"/>
+  <!-- Head -->
+  <ellipse cx="62" cy="22" rx="10" ry="8" fill="#7C5C4F"/>
+  <!-- Snout -->
+  <ellipse cx="70" cy="24" rx="5" ry="4" fill="#A1887F"/>
+  <!-- Eye -->
+  <circle cx="64" cy="20" r="2" fill="#333"/>
+  <!-- Ear -->
+  <polygon points="58,14 61,6 64,14" fill="#7C5C4F"/>
+  <!-- Mane -->
+  <path d="M55 15 Q52 20 54 28 Q56 22 58 18" fill="#5D4037"/>
+  <path d="M57 13 Q54 18 56 26" stroke="#5D4037" stroke-width="3" fill="none"/>
+  <!-- Legs -->
+  <rect x="22" y="55" width="5" height="18" fill="#7C5C4F" rx="2"/>
+  <rect x="32" y="55" width="5" height="18" fill="#7C5C4F" rx="2"/>
+  <rect x="44" y="55" width="5" height="18" fill="#7C5C4F" rx="2"/>
+  <rect x="54" y="55" width="5" height="18" fill="#7C5C4F" rx="2"/>
+  <!-- Hooves -->
+  <rect x="21" y="71" width="7" height="4" fill="#4E342E" rx="1"/>
+  <rect x="31" y="71" width="7" height="4" fill="#4E342E" rx="1"/>
+  <rect x="43" y="71" width="7" height="4" fill="#4E342E" rx="1"/>
+  <rect x="53" y="71" width="7" height="4" fill="#4E342E" rx="1"/>
+  <!-- Tail -->
+  <path d="M18 40 Q10 45 12 55 Q14 50 16 48" fill="#5D4037"/>
+</svg>

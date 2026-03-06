@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- Body -->
+  <ellipse cx="38" cy="44" rx="20" ry="13" fill="#A1887F"/>
+  <!-- Neck -->
+  <rect x="52" y="24" width="8" height="22" fill="#A1887F" rx="3"/>
+  <!-- Head -->
+  <ellipse cx="60" cy="22" rx="9" ry="8" fill="#BCAAA4"/>
+  <!-- Snout -->
+  <ellipse cx="67" cy="25" rx="5" ry="3" fill="#D7CCC8"/>
+  <!-- Nose -->
+  <circle cx="70" cy="24" r="2" fill="#333"/>
+  <!-- Eye -->
+  <circle cx="62" cy="20" r="2.5" fill="#333"/>
+  <circle cx="62.5" cy="19.5" r="1" fill="white"/>
+  <!-- Ears -->
+  <ellipse cx="54" cy="16" rx="4" ry="6" fill="#BCAAA4" transform="rotate(-20,54,16)"/>
+  <ellipse cx="54" cy="16" rx="2" ry="4" fill="#FFCCBC" transform="rotate(-20,54,16)"/>
+  <ellipse cx="64" cy="14" rx="4" ry="6" fill="#BCAAA4" transform="rotate(20,64,14)"/>
+  <ellipse cx="64" cy="14" rx="2" ry="4" fill="#FFCCBC" transform="rotate(20,64,14)"/>
+  <!-- Antlers -->
+  <path d="M56 14 L52 4 L48 8 M52 4 L56 2" stroke="#8D6E63" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M62 12 L66 2 L70 6 M66 2 L62 0" stroke="#8D6E63" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- White spots -->
+  <circle cx="32" cy="40" r="2" fill="white" opacity="0.5"/>
+  <circle cx="40" cy="38" r="2" fill="white" opacity="0.5"/>
+  <circle cx="36" cy="46" r="2" fill="white" opacity="0.5"/>
+  <circle cx="46" cy="42" r="2" fill="white" opacity="0.5"/>
+  <!-- Belly -->
+  <ellipse cx="38" cy="50" rx="12" ry="5" fill="#D7CCC8"/>
+  <!-- Legs -->
+  <rect x="22" y="53" width="4" height="18" fill="#8D6E63" rx="2"/>
+  <rect x="32" y="53" width="4" height="18" fill="#8D6E63" rx="2"/>
+  <rect x="44" y="53" width="4" height="18" fill="#8D6E63" rx="2"/>
+  <rect x="52" y="53" width="4" height="18" fill="#8D6E63" rx="2"/>
+  <!-- Hooves -->
+  <rect x="21" y="69" width="6" height="4" fill="#4E342E" rx="1"/>
+  <rect x="31" y="69" width="6" height="4" fill="#4E342E" rx="1"/>
+  <rect x="43" y="69" width="6" height="4" fill="#4E342E" rx="1"/>
+  <rect x="51" y="69" width="6" height="4" fill="#4E342E" rx="1"/>
+  <!-- Short tail -->
+  <ellipse cx="18" cy="40" rx="4" ry="3" fill="white"/>
+</svg>
