@@ -6,7 +6,7 @@ import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
 import { Story } from '@/lib/types';
 import { useGame } from '@/lib/GameContext';
 import SpriteLayer from './SpriteLayer';
-import DialogueBox from './DialogueBox';
+import DialogueBox, { DialogueBoxHandle } from './DialogueBox';
 
 interface SceneViewProps {
   story: Story;
@@ -18,6 +18,7 @@ export default function SceneView({ story }: SceneViewProps) {
   const [showTitle, setShowTitle] = useState(true);
   const hasMounted = useRef(false);
   const hasRecordedRead = useRef(false);
+  const dialogueRef = useRef<DialogueBoxHandle>(null);
   useEffect(() => { hasMounted.current = true; }, []);
   const scene = story.scenes[sceneIndex];
   const totalScenes = story.scenes.length;
@@ -46,12 +47,16 @@ export default function SceneView({ story }: SceneViewProps) {
     }
   }, [sceneIndex, totalScenes, goToScene, recordStoryRead]);
 
-  // Keyboard navigation
+  const advanceDialogue = useCallback(() => {
+    dialogueRef.current?.advance();
+  }, []);
+
+  // Keyboard navigation — advance dialogue first, scene change happens via onComplete
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'ArrowRight' || e.key === ' ') {
         e.preventDefault();
-        goToScene(sceneIndex + 1);
+        advanceDialogue();
       } else if (e.key === 'ArrowLeft') {
         e.preventDefault();
         goToScene(sceneIndex - 1);
@@ -59,9 +64,9 @@ export default function SceneView({ story }: SceneViewProps) {
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [sceneIndex, goToScene]);
+  }, [sceneIndex, goToScene, advanceDialogue]);
 
-  // Touch swipe support
+  // Touch swipe support — swipe right advances dialogue, swipe left goes back
   useEffect(() => {
     let startX = 0;
     const handleTouchStart = (e: TouchEvent) => {
@@ -70,7 +75,7 @@ export default function SceneView({ story }: SceneViewProps) {
     const handleTouchEnd = (e: TouchEvent) => {
       const diff = startX - e.changedTouches[0].clientX;
       if (Math.abs(diff) > 50) {
-        if (diff > 0) goToScene(sceneIndex + 1);
+        if (diff > 0) advanceDialogue();
         else goToScene(sceneIndex - 1);
       }
     };
@@ -80,7 +85,7 @@ export default function SceneView({ story }: SceneViewProps) {
       window.removeEventListener('touchstart', handleTouchStart);
       window.removeEventListener('touchend', handleTouchEnd);
     };
-  }, [sceneIndex, goToScene]);
+  }, [sceneIndex, goToScene, advanceDialogue]);
 
   if (!scene) return null;
 
@@ -170,6 +175,7 @@ export default function SceneView({ story }: SceneViewProps) {
 
         {/* Dialogue */}
         <DialogueBox
+          ref={dialogueRef}
           key={sceneIndex}
           dialogues={scene.dialogues}
           narrator={scene.narrator}
@@ -204,32 +210,26 @@ export default function SceneView({ story }: SceneViewProps) {
           )}
         </AnimatePresence>
 
-        <AnimatePresence>
-          {sceneIndex < totalScenes - 1 && (
-            <motion.button
-              initial={{ opacity: 0, x: 10 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 10 }}
-              whileHover={{ scale: 1.15 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={(e) => {
-                e.stopPropagation();
-                goToScene(sceneIndex + 1);
-              }}
-              className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 z-40 w-11 h-11 sm:w-14 sm:h-14 rounded-full flex items-center justify-center text-white text-xl sm:text-2xl font-bold"
-              style={{
-                background:
-                  'linear-gradient(135deg, rgba(255,255,255,0.25), rgba(255,255,255,0.10))',
-                backdropFilter: 'blur(8px)',
-                border: '2px solid rgba(255,255,255,0.25)',
-                boxShadow:
-                  '0 4px 16px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.15)',
-              }}
-            >
-              <span className="ml-0.5">&#8250;</span>
-            </motion.button>
-          )}
-        </AnimatePresence>
+        {/* Right arrow: advances dialogue, then scene via onComplete */}
+        <motion.button
+          whileHover={{ scale: 1.15 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={(e) => {
+            e.stopPropagation();
+            advanceDialogue();
+          }}
+          className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 z-40 w-11 h-11 sm:w-14 sm:h-14 rounded-full flex items-center justify-center text-white text-xl sm:text-2xl font-bold"
+          style={{
+            background:
+              'linear-gradient(135deg, rgba(255,255,255,0.25), rgba(255,255,255,0.10))',
+            backdropFilter: 'blur(8px)',
+            border: '2px solid rgba(255,255,255,0.25)',
+            boxShadow:
+              '0 4px 16px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.15)',
+          }}
+        >
+          <span className="ml-0.5">&#8250;</span>
+        </motion.button>
       </div>
 
       {/* Progress stars */}

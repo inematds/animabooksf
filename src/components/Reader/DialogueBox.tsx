@@ -1,8 +1,12 @@
 'use client';
 
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useCallback, useMemo, useImperativeHandle, forwardRef } from 'react';
 import { motion } from 'framer-motion';
 import { Dialogue } from '@/lib/types';
+
+export interface DialogueBoxHandle {
+  advance: () => void;
+}
 
 interface DialogueBoxProps {
   dialogues: Dialogue[];
@@ -24,7 +28,7 @@ function getCharacterPalette(name: string) {
   return { hue, emoji: emojis[Math.abs(hue) % emojis.length] };
 }
 
-export default function DialogueBox({ dialogues, narrator, onComplete }: DialogueBoxProps) {
+const DialogueBox = forwardRef<DialogueBoxHandle, DialogueBoxProps>(function DialogueBox({ dialogues, narrator, onComplete }, ref) {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
@@ -71,14 +75,14 @@ export default function DialogueBox({ dialogues, narrator, onComplete }: Dialogu
     return () => clearTimeout(timer);
   }, [displayedText, isTyping, fullText]);
 
-  const handleClick = useCallback(() => {
+  const advance = useCallback(() => {
     // Still typing → show full text
     if (isTyping) {
       setDisplayedText(fullText);
       setIsTyping(false);
       return;
     }
-    // Advance
+    // Advance to next dialogue item
     if (itemIndex < items.length - 1) {
       setItemIndex(itemIndex + 1);
       setDisplayedText('');
@@ -87,6 +91,10 @@ export default function DialogueBox({ dialogues, narrator, onComplete }: Dialogu
       onComplete();
     }
   }, [isTyping, fullText, itemIndex, items.length, onComplete]);
+
+  useImperativeHandle(ref, () => ({ advance }), [advance]);
+
+  const handleClick = advance;
 
   if (items.length === 0 || !currentItem) return null;
 
@@ -172,4 +180,6 @@ export default function DialogueBox({ dialogues, narrator, onComplete }: Dialogu
       </motion.div>
     </div>
   );
-}
+});
+
+export default DialogueBox;
