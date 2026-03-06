@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 60">
+  <!-- Cap crown -->
+  <path d="M10 35 Q10 12 35 10 Q60 12 60 35Z" fill="#42a5f5"/>
+  <!-- Brim -->
+  <path d="M5 35 Q2 32 5 30 L60 30 Q75 32 75 38 Q70 42 50 40 Q30 42 5 35Z" fill="#1e88e5"/>
+  <!-- Cap panels -->
+  <line x1="35" y1="10" x2="35" y2="35" stroke="#1e88e5" stroke-width="1" opacity="0.3"/>
+  <line x1="22" y1="14" x2="18" y2="35" stroke="#1e88e5" stroke-width="1" opacity="0.3"/>
+  <line x1="48" y1="14" x2="52" y2="35" stroke="#1e88e5" stroke-width="1" opacity="0.3"/>
+  <!-- Button on top -->
+  <circle cx="35" cy="10" r="3" fill="#ffd54f"/>
+  <!-- Star design -->
+  <polygon points="35,18 37,23 42,23 38,26 39,31 35,28 31,31 32,26 28,23 33,23" fill="#ffd54f"/>
+  <!-- Brim edge -->
+  <path d="M5 35 Q30 40 60 35" stroke="#0d47a1" stroke-width="1.5" fill="none"/>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <!-- Floor -->
+  <rect x="0" y="400" width="960" height="140" fill="#e8c9a0"/>
+  <!-- Wall -->
+  <rect x="0" y="0" width="960" height="400" fill="#fce4ec"/>
+  <!-- Curtain left -->
+  <path d="M0 0 Q40 80 20 160 Q0 240 30 320 Q10 400 0 400Z" fill="#d81b60" opacity="0.8"/>
+  <path d="M30 0 Q70 80 50 160 Q30 240 60 320 Q40 400 30 400Z" fill="#c2185b" opacity="0.7"/>
+  <!-- Curtain right -->
+  <path d="M960 0 Q920 80 940 160 Q960 240 930 320 Q950 400 960 400Z" fill="#d81b60" opacity="0.8"/>
+  <path d="M930 0 Q890 80 910 160 Q930 240 900 320 Q920 400 930 400Z" fill="#c2185b" opacity="0.7"/>
+  <!-- Curtain rod -->
+  <rect x="0" y="0" width="960" height="12" fill="#ffd54f" rx="6"/>
+  <!-- Mirror frame -->
+  <rect x="350" y="60" width="260" height="320" rx="20" fill="#ffd54f"/>
+  <rect x="365" y="75" width="230" height="290" rx="14" fill="#e3f2fd" opacity="0.7"/>
+  <!-- Mirror shine -->
+  <path d="M380 90 L420 90 L380 200Z" fill="white" opacity="0.3"/>
+  <!-- Vanity table -->
+  <rect x="320" y="370" width="320" height="30" rx="8" fill="#8d6e63"/>
+  <!-- Vanity legs -->
+  <rect x="340" y="400" width="12" height="60" fill="#6d4c41"/>
+  <rect x="608" y="400" width="12" height="60" fill="#6d4c41"/>
+  <!-- Light bulbs around mirror -->
+  <circle cx="360" cy="80" r="12" fill="#fff9c4"/>
+  <circle cx="360" cy="140" r="12" fill="#fff9c4"/>
+  <circle cx="360" cy="200" r="12" fill="#fff9c4"/>
+  <circle cx="360" cy="260" r="12" fill="#fff9c4"/>
+  <circle cx="360" cy="320" r="12" fill="#fff9c4"/>
+  <circle cx="600" cy="80" r="12" fill="#fff9c4"/>
+  <circle cx="600" cy="140" r="12" fill="#fff9c4"/>
+  <circle cx="600" cy="200" r="12" fill="#fff9c4"/>
+  <circle cx="600" cy="260" r="12" fill="#fff9c4"/>
+  <circle cx="600" cy="320" r="12" fill="#fff9c4"/>
+  <!-- Makeup items on table -->
+  <rect x="380" y="355" width="20" height="18" rx="4" fill="#e91e63"/>
+  <rect x="420" y="358" width="16" height="15" rx="3" fill="#9c27b0"/>
+  <circle cx="470" cy="365" r="10" fill="#ff7043"/>
+  <rect x="500" y="356" width="24" height="17" rx="4" fill="#f06292"/>
+  <!-- Rug on floor -->
+  <ellipse cx="480" cy="480" rx="180" ry="40" fill="#f48fb1" opacity="0.6"/>
+  <!-- Stars decoration -->
+  <polygon points="150,50 155,65 170,65 158,74 163,89 150,80 137,89 142,74 130,65 145,65" fill="#ffd54f" opacity="0.6"/>
+  <polygon points="800,100 805,115 820,115 808,124 813,139 800,130 787,139 792,124 780,115 795,115" fill="#ffd54f" opacity="0.6"/>
+</svg>

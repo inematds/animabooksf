@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 60">
+  <!-- Beanie body -->
+  <path d="M10 48 Q8 30 15 20 Q25 10 35 8 Q45 10 55 20 Q62 30 60 48Z" fill="#ab47bc"/>
+  <!-- Pompom -->
+  <circle cx="35" cy="7" r="7" fill="#ffd54f"/>
+  <circle cx="32" cy="5" r="3" fill="#ffb300" opacity="0.5"/>
+  <circle cx="38" cy="5" r="3" fill="#ffb300" opacity="0.5"/>
+  <circle cx="35" cy="9" r="3" fill="#ffb300" opacity="0.5"/>
+  <!-- Folded brim -->
+  <path d="M10 48 Q35 55 60 48 Q62 42 60 38 Q35 45 10 38 Q8 42 10 48Z" fill="#9c27b0"/>
+  <!-- Knit texture -->
+  <path d="M18 20 L20 28 L22 20 L24 28 L26 20 L28 28" stroke="#9c27b0" stroke-width="1" fill="none" opacity="0.4"/>
+  <path d="M32 18 L34 26 L36 18 L38 26 L40 18 L42 26" stroke="#9c27b0" stroke-width="1" fill="none" opacity="0.4"/>
+  <path d="M46 20 L48 28 L50 20 L52 28 L54 20" stroke="#9c27b0" stroke-width="1" fill="none" opacity="0.4"/>
+  <!-- Brim knit texture -->
+  <path d="M15 42 Q35 48 55 42" stroke="#7b1fa2" stroke-width="1" fill="none" opacity="0.3"/>
+  <!-- Snowflake decoration -->
+  <circle cx="35" cy="28" r="1" fill="white" opacity="0.6"/>
+  <line x1="35" y1="24" x2="35" y2="32" stroke="white" stroke-width="0.8" opacity="0.6"/>
+  <line x1="31" y1="28" x2="39" y2="28" stroke="white" stroke-width="0.8" opacity="0.6"/>
+</svg>

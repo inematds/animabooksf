@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <!-- Sky -->
+  <rect width="960" height="540" fill="#90CAF9"/>
+  <!-- Clouds -->
+  <ellipse cx="200" cy="50" rx="55" ry="20" fill="#fff" opacity="0.85"/>
+  <ellipse cx="240" cy="42" rx="45" ry="18" fill="#fff" opacity="0.85"/>
+  <ellipse cx="700" cy="65" rx="50" ry="18" fill="#fff" opacity="0.8"/>
+  <!-- Sun -->
+  <circle cx="850" cy="75" r="45" fill="#FFD54F"/>
+  <!-- Distant buildings -->
+  <rect x="30" y="160" width="50" height="120" fill="#B0BEC5" rx="2"/>
+  <rect x="90" y="140" width="40" height="140" fill="#90A4AE" rx="2"/>
+  <rect x="140" y="170" width="45" height="110" fill="#B0BEC5" rx="2"/>
+  <rect x="750" y="150" width="50" height="130" fill="#90A4AE" rx="2"/>
+  <rect x="810" y="165" width="55" height="115" fill="#B0BEC5" rx="2"/>
+  <rect x="875" y="145" width="45" height="135" fill="#90A4AE" rx="2"/>
+  <!-- Ground -->
+  <rect y="280" width="960" height="260" fill="#81C784"/>
+  <!-- Station platform (main) -->
+  <rect x="50" y="340" width="860" height="80" fill="#BDBDBD"/>
+  <rect x="50" y="335" width="860" height="8" fill="#E0E0E0"/>
+  <!-- Platform edge (yellow safety line) -->
+  <rect x="50" y="340" width="860" height="4" fill="#FFD54F"/>
+  <rect x="50" y="416" width="860" height="4" fill="#FFD54F"/>
+  <!-- Train tracks (top) -->
+  <rect x="0" y="320" width="960" height="20" fill="#795548"/>
+  <!-- Rails -->
+  <line x1="0" y1="323" x2="960" y2="323" stroke="#9E9E9E" stroke-width="3"/>
+  <line x1="0" y1="337" x2="960" y2="337" stroke="#9E9E9E" stroke-width="3"/>
+  <!-- Ties -->
+  <g fill="#6D4C41">
+    <rect x="20" y="320" width="8" height="20"/><rect x="50" y="320" width="8" height="20"/>
+    <rect x="80" y="320" width="8" height="20"/><rect x="110" y="320" width="8" height="20"/>
+    <rect x="140" y="320" width="8" height="20"/><rect x="170" y="320" width="8" height="20"/>
+    <rect x="200" y="320" width="8" height="20"/><rect x="230" y="320" width="8" height="20"/>
+    <rect x="260" y="320" width="8" height="20"/><rect x="290" y="320" width="8" height="20"/>
+    <rect x="320" y="320" width="8" height="20"/><rect x="350" y="320" width="8" height="20"/>
+    <rect x="380" y="320" width="8" height="20"/><rect x="410" y="320" width="8" height="20"/>
+    <rect x="440" y="320" width="8" height="20"/><rect x="470" y="320" width="8" height="20"/>
+    <rect x="500" y="320" width="8" height="20"/><rect x="530" y="320" width="8" height="20"/>
+    <rect x="560" y="320" width="8" height="20"/><rect x="590" y="320" width="8" height="20"/>
+    <rect x="620" y="320" width="8" height="20"/><rect x="650" y="320" width="8" height="20"/>
+    <rect x="680" y="320" width="8" height="20"/><rect x="710" y="320" width="8" height="20"/>
+    <rect x="740" y="320" width="8" height="20"/><rect x="770" y="320" width="8" height="20"/>
+    <rect x="800" y="320" width="8" height="20"/><rect x="830" y="320" width="8" height="20"/>
+    <rect x="860" y="320" width="8" height="20"/><rect x="890" y="320" width="8" height="20"/>
+    <rect x="920" y="320" width="8" height="20"/><rect x="950" y="320" width="8" height="20"/>
+  </g>
+  <!-- Train tracks (bottom) -->
+  <rect x="0" y="420" width="960" height="20" fill="#795548"/>
+  <line x1="0" y1="423" x2="960" y2="423" stroke="#9E9E9E" stroke-width="3"/>
+  <line x1="0" y1="437" x2="960" y2="437" stroke="#9E9E9E" stroke-width="3"/>
+  <g fill="#6D4C41">
+    <rect x="20" y="420" width="8" height="20"/><rect x="50" y="420" width="8" height="20"/>
+    <rect x="80" y="420" width="8" height="20"/><rect x="110" y="420" width="8" height="20"/>
+    <rect x="140" y="420" width="8" height="20"/><rect x="170" y="420" width="8" height="20"/>
+    <rect x="200" y="420" width="8" height="20"/><rect x="230" y="420" width="8" height="20"/>
+    <rect x="260" y="420" width="8" height="20"/><rect x="290" y="420" width="8" height="20"/>
+    <rect x="320" y="420" width="8" height="20"/><rect x="350" y="420" width="8" height="20"/>
+    <rect x="380" y="420" width="8" height="20"/><rect x="410" y="420" width="8" height="20"/>
+    <rect x="440" y="420" width="8" height="20"/><rect x="470" y="420" width="8" height="20"/>
+    <rect x="500" y="420" width="8" height="20"/><rect x="530" y="420" width="8" height="20"/>
+    <rect x="560" y="420" width="8" height="20"/><rect x="590" y="420" width="8" height="20"/>
+    <rect x="620" y="420" width="8" height="20"/><rect x="650" y="420" width="8" height="20"/>
+    <rect x="680" y="420" width="8" height="20"/><rect x="710" y="420" width="8" height="20"/>
+    <rect x="740" y="420" width="8" height="20"/><rect x="770" y="420" width="8" height="20"/>
+    <rect x="800" y="420" width="8" height="20"/><rect x="830" y="420" width="8" height="20"/>
+    <rect x="860" y="420" width="8" height="20"/><rect x="890" y="420" width="8" height="20"/>
+    <rect x="920" y="420" width="8" height="20"/><rect x="950" y="420" width="8" height="20"/>
+  </g>
+  <!-- Station canopy / roof -->
+  <rect x="250" y="350" width="200" height="8" fill="#78909C"/>
+  <rect x="250" y="350" width="4" height="60" fill="#757575"/>
+  <rect x="446" y="350" width="4" height="60" fill="#757575"/>
+  <rect x="346" y="350" width="4" height="60" fill="#757575"/>
+  <rect x="550" y="350" width="200" height="8" fill="#78909C"/>
+  <rect x="550" y="350" width="4" height="60" fill="#757575"/>
+  <rect x="746" y="350" width="4" height="60" fill="#757575"/>
+  <rect x="646" y="350" width="4" height="60" fill="#757575"/>
+  <!-- Benches on platform -->
+  <rect x="280" y="395" width="30" height="4" fill="#8D6E63" rx="1"/>
+  <rect x="282" y="399" width="4" height="8" fill="#795548"/>
+  <rect x="304" y="399" width="4" height="8" fill="#795548"/>
+  <rect x="580" y="395" width="30" height="4" fill="#8D6E63" rx="1"/>
+  <rect x="582" y="399" width="4" height="8" fill="#795548"/>
+  <rect x="604" y="399" width="4" height="8" fill="#795548"/>
+  <!-- Clock -->
+  <circle cx="480" cy="362" r="10" fill="#FAFAFA" stroke="#757575" stroke-width="2"/>
+  <line x1="480" y1="362" x2="480" y2="356" stroke="#424242" stroke-width="2"/>
+  <line x1="480" y1="362" x2="485" y2="362" stroke="#424242" stroke-width="1.5"/>
+  <!-- Road below -->
+  <rect x="0" y="460" width="960" height="40" fill="#757575"/>
+  <line x1="0" y1="480" x2="960" y2="480" stroke="#FFF" stroke-width="2" stroke-dasharray="18 14"/>
+  <!-- Sidewalks -->
+  <rect x="0" y="455" width="960" height="8" fill="#BDBDBD"/>
+  <rect x="0" y="500" width="960" height="8" fill="#BDBDBD"/>
+  <!-- Parking area -->
+  <rect x="0" y="508" width="960" height="32" fill="#9E9E9E"/>
+  <g stroke="#FFF" stroke-width="1.5">
+    <line x1="80" y1="508" x2="80" y2="540"/>
+    <line x1="160" y1="508" x2="160" y2="540"/>
+    <line x1="240" y1="508" x2="240" y2="540"/>
+    <line x1="320" y1="508" x2="320" y2="540"/>
+    <line x1="400" y1="508" x2="400" y2="540"/>
+    <line x1="480" y1="508" x2="480" y2="540"/>
+    <line x1="560" y1="508" x2="560" y2="540"/>
+    <line x1="640" y1="508" x2="640" y2="540"/>
+    <line x1="720" y1="508" x2="720" y2="540"/>
+    <line x1="800" y1="508" x2="800" y2="540"/>
+    <line x1="880" y1="508" x2="880" y2="540"/>
+  </g>
+  <!-- Signal light -->
+  <rect x="130" y="295" width="8" height="25" fill="#424242"/>
+  <circle cx="134" cy="300" r="4" fill="#EF5350"/>
+  <circle cx="134" cy="312" r="4" fill="#66BB6A"/>
+</svg>

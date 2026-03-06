@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <!-- Sky -->
+  <rect width="960" height="540" fill="#81D4FA"/>
+  <!-- Clouds -->
+  <ellipse cx="300" cy="50" rx="60" ry="22" fill="#fff" opacity="0.8"/>
+  <ellipse cx="345" cy="42" rx="48" ry="18" fill="#fff" opacity="0.8"/>
+  <ellipse cx="700" cy="75" rx="55" ry="20" fill="#fff" opacity="0.75"/>
+  <!-- Small airplane in sky -->
+  <g transform="translate(150, 100) rotate(-10)">
+    <ellipse cx="0" cy="0" rx="25" ry="6" fill="#FAFAFA"/>
+    <path d="M-5 0 L-15 -20 L10 -5 Z" fill="#90CAF9"/>
+    <path d="M-5 0 L-15 20 L10 5 Z" fill="#90CAF9"/>
+    <path d="M-22 0 L-30 -8 L-25 0 L-30 8 Z" fill="#90CAF9"/>
+  </g>
+  <!-- Ground -->
+  <rect y="300" width="960" height="240" fill="#81C784"/>
+  <!-- Main runway -->
+  <rect x="100" y="340" width="760" height="70" fill="#616161"/>
+  <!-- Runway markings -->
+  <line x1="140" y1="375" x2="820" y2="375" stroke="#FFF" stroke-width="3" stroke-dasharray="30 20"/>
+  <!-- Runway threshold markings -->
+  <g fill="#FFF">
+    <rect x="110" y="348" width="25" height="4"/><rect x="110" y="356" width="25" height="4"/>
+    <rect x="110" y="364" width="25" height="4"/><rect x="110" y="372" width="25" height="4"/>
+    <rect x="110" y="380" width="25" height="4"/><rect x="110" y="388" width="25" height="4"/>
+    <rect x="110" y="396" width="25" height="4"/>
+    <rect x="825" y="348" width="25" height="4"/><rect x="825" y="356" width="25" height="4"/>
+    <rect x="825" y="364" width="25" height="4"/><rect x="825" y="372" width="25" height="4"/>
+    <rect x="825" y="380" width="25" height="4"/><rect x="825" y="388" width="25" height="4"/>
+    <rect x="825" y="396" width="25" height="4"/>
+  </g>
+  <!-- Runway number -->
+  <text x="155" y="383" font-family="Arial" font-size="20" fill="#FFF" font-weight="bold">09</text>
+  <text x="790" y="383" font-family="Arial" font-size="20" fill="#FFF" font-weight="bold">27</text>
+  <!-- Taxiway -->
+  <rect x="400" y="410" width="50" height="60" fill="#757575"/>
+  <rect x="200" y="410" width="50" height="60" fill="#757575"/>
+  <!-- Taxiway markings -->
+  <line x1="425" y1="410" x2="425" y2="470" stroke="#FFD54F" stroke-width="2" stroke-dasharray="8 6"/>
+  <line x1="225" y1="410" x2="225" y2="470" stroke="#FFD54F" stroke-width="2" stroke-dasharray="8 6"/>
+  <!-- Apron / tarmac area -->
+  <rect x="0" y="470" width="960" height="30" fill="#9E9E9E"/>
+  <!-- Terminal building area -->
+  <rect x="0" y="500" width="960" height="40" fill="#BDBDBD"/>
+  <!-- Control tower -->
+  <rect x="60" y="430" width="20" height="50" fill="#E0E0E0"/>
+  <rect x="50" y="420" width="40" height="15" fill="#42A5F5" rx="3"/>
+  <rect x="55" y="422" width="30" height="8" fill="#B3E5FC" rx="2"/>
+  <!-- Hangar -->
+  <path d="M700 470 L700 430 Q740 410 780 430 L780 470 Z" fill="#78909C"/>
+  <rect x="720" y="445" width="40" height="25" fill="#90A4AE"/>
+  <!-- Windsock -->
+  <rect x="880" y="310" width="4" height="30" fill="#757575"/>
+  <path d="M884 312 L910 318 L884 324 Z" fill="#FF7043"/>
+  <!-- Runway lights -->
+  <circle cx="100" cy="340" r="3" fill="#66BB6A"/>
+  <circle cx="100" cy="410" r="3" fill="#66BB6A"/>
+  <circle cx="860" cy="340" r="3" fill="#EF5350"/>
+  <circle cx="860" cy="410" r="3" fill="#EF5350"/>
+  <!-- Grass between areas -->
+  <rect x="0" y="300" width="960" height="40" fill="#66BB6A"/>
+  <!-- Taxi road to terminal -->
+  <rect x="0" y="490" width="960" height="10" fill="#757575"/>
+  <line x1="0" y1="495" x2="960" y2="495" stroke="#FFD54F" stroke-width="1" stroke-dasharray="10 8"/>
+  <!-- Parked plane silhouette on apron -->
+  <g transform="translate(500, 475)">
+    <ellipse cx="0" cy="0" rx="20" ry="5" fill="#E0E0E0"/>
+    <path d="M-3 0 L-10 -15 L8 -4 Z" fill="#BDBDBD"/>
+    <path d="M-3 0 L-10 15 L8 4 Z" fill="#BDBDBD"/>
+  </g>
+</svg>

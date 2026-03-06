@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 60">
+  <!-- Sole -->
+  <path d="M15 25 Q10 22 12 18 Q18 10 40 8 Q62 10 68 18 Q70 22 65 28 Q58 38 40 42 Q22 38 15 25Z" fill="#26c6da"/>
+  <!-- Sole texture -->
+  <path d="M18 25 Q15 22 17 19 Q22 13 40 11 Q58 13 63 19 Q65 22 62 28 Q55 35 40 38 Q25 35 18 25Z" fill="#4dd0e1"/>
+  <!-- V-strap -->
+  <path d="M25 8 L40 22 L55 8" stroke="#e91e63" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Strap texture -->
+  <path d="M27 10 L40 22" stroke="#f06292" stroke-width="1" fill="none"/>
+  <path d="M53 10 L40 22" stroke="#f06292" stroke-width="1" fill="none"/>
+  <!-- Flower on strap -->
+  <circle cx="40" cy="18" r="3" fill="#ffd54f"/>
+  <circle cx="40" cy="18" r="1.5" fill="#ff7043"/>
+  <!-- Toe print -->
+  <ellipse cx="35" cy="12" rx="2" ry="3" fill="#00acc1" opacity="0.3"/>
+  <ellipse cx="40" cy="11" rx="2" ry="3" fill="#00acc1" opacity="0.3"/>
+  <ellipse cx="45" cy="12" rx="2" ry="3" fill="#00acc1" opacity="0.3"/>
+</svg>

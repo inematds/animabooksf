@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 100">
+  <!-- Long dress -->
+  <path d="M28 5 Q40 0 52 5 L54 20 L56 25 L60 28 L55 32 L56 45 Q60 70 65 97 L15 97 Q20 70 24 45 L25 32 L20 28 L24 25 L26 20Z" fill="#7c4dff"/>
+  <!-- Bodice -->
+  <path d="M28 5 Q40 0 52 5 L54 20 Q40 25 26 20Z" fill="#651fff"/>
+  <!-- V-neck detail -->
+  <path d="M35 5 L40 18 L45 5" fill="#b388ff" opacity="0.4"/>
+  <!-- Waist sash -->
+  <path d="M24 30 Q40 26 56 30 Q40 34 24 30Z" fill="#b388ff"/>
+  <!-- Flowing skirt lines -->
+  <path d="M30 35 Q25 65 18 97" stroke="#651fff" stroke-width="1" fill="none" opacity="0.3"/>
+  <path d="M40 35 Q40 65 40 97" stroke="#651fff" stroke-width="1" fill="none" opacity="0.3"/>
+  <path d="M50 35 Q55 65 62 97" stroke="#651fff" stroke-width="1" fill="none" opacity="0.3"/>
+  <!-- Sparkle details -->
+  <circle cx="35" cy="55" r="1.5" fill="#e8eaf6" opacity="0.7"/>
+  <circle cx="48" cy="70" r="1.5" fill="#e8eaf6" opacity="0.7"/>
+  <circle cx="30" cy="80" r="1.5" fill="#e8eaf6" opacity="0.7"/>
+  <circle cx="52" cy="88" r="1.5" fill="#e8eaf6" opacity="0.7"/>
+</svg>

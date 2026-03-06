@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <!-- Sky -->
+  <rect width="960" height="540" fill="#90CAF9"/>
+  <!-- Clouds -->
+  <ellipse cx="300" cy="50" rx="55" ry="20" fill="#fff" opacity="0.8"/>
+  <ellipse cx="340" cy="42" rx="45" ry="18" fill="#fff" opacity="0.8"/>
+  <ellipse cx="750" cy="65" rx="50" ry="18" fill="#fff" opacity="0.75"/>
+  <!-- Background buildings silhouettes -->
+  <rect x="20" y="120" width="80" height="200" fill="#78909C" rx="3"/>
+  <rect x="110" y="90" width="60" height="230" fill="#90A4AE" rx="3"/>
+  <rect x="180" y="140" width="70" height="180" fill="#78909C" rx="3"/>
+  <rect x="260" y="70" width="55" height="250" fill="#B0BEC5" rx="3"/>
+  <rect x="330" y="110" width="90" height="210" fill="#90A4AE" rx="3"/>
+  <rect x="430" y="60" width="65" height="260" fill="#78909C" rx="3"/>
+  <rect x="510" y="130" width="75" height="190" fill="#B0BEC5" rx="3"/>
+  <rect x="600" y="80" width="60" height="240" fill="#90A4AE" rx="3"/>
+  <rect x="670" y="100" width="85" height="220" fill="#78909C" rx="3"/>
+  <rect x="770" y="140" width="70" height="180" fill="#B0BEC5" rx="3"/>
+  <rect x="850" y="90" width="90" height="230" fill="#90A4AE" rx="3"/>
+  <!-- Building windows (dots of light) -->
+  <g fill="#FFE082" opacity="0.7">
+    <rect x="35" y="140" width="10" height="12" rx="1"/><rect x="55" y="140" width="10" height="12" rx="1"/><rect x="75" y="140" width="10" height="12" rx="1"/>
+    <rect x="35" y="170" width="10" height="12" rx="1"/><rect x="55" y="170" width="10" height="12" rx="1"/><rect x="75" y="170" width="10" height="12" rx="1"/>
+    <rect x="35" y="200" width="10" height="12" rx="1"/><rect x="55" y="200" width="10" height="12" rx="1"/>
+    <rect x="120" y="110" width="8" height="10" rx="1"/><rect x="140" y="110" width="8" height="10" rx="1"/>
+    <rect x="120" y="140" width="8" height="10" rx="1"/><rect x="140" y="140" width="8" height="10" rx="1"/>
+    <rect x="120" y="170" width="8" height="10" rx="1"/><rect x="140" y="170" width="8" height="10" rx="1"/>
+    <rect x="275" y="95" width="8" height="10" rx="1"/><rect x="295" y="95" width="8" height="10" rx="1"/>
+    <rect x="275" y="125" width="8" height="10" rx="1"/><rect x="295" y="125" width="8" height="10" rx="1"/>
+    <rect x="445" y="85" width="8" height="10" rx="1"/><rect x="465" y="85" width="8" height="10" rx="1"/>
+    <rect x="445" y="115" width="8" height="10" rx="1"/><rect x="465" y="115" width="8" height="10" rx="1"/>
+    <rect x="610" y="105" width="8" height="10" rx="1"/><rect x="630" y="105" width="8" height="10" rx="1"/>
+    <rect x="610" y="135" width="8" height="10" rx="1"/><rect x="630" y="135" width="8" height="10" rx="1"/>
+    <rect x="860" y="115" width="10" height="12" rx="1"/><rect x="880" y="115" width="10" height="12" rx="1"/><rect x="900" y="115" width="10" height="12" rx="1"/>
+    <rect x="860" y="145" width="10" height="12" rx="1"/><rect x="880" y="145" width="10" height="12" rx="1"/>
+  </g>
+  <!-- Main ground -->
+  <rect y="320" width="960" height="220" fill="#E0E0E0"/>
+  <!-- Main avenue (wide) -->
+  <rect x="0" y="330" width="960" height="80" fill="#616161"/>
+  <line x1="0" y1="370" x2="960" y2="370" stroke="#FFF" stroke-width="3" stroke-dasharray="22 16"/>
+  <line x1="0" y1="340" x2="960" y2="340" stroke="#FFD54F" stroke-width="2"/>
+  <line x1="0" y1="400" x2="960" y2="400" stroke="#FFD54F" stroke-width="2"/>
+  <!-- Crosswalks -->
+  <g fill="#FFF">
+    <rect x="230" y="332" width="8" height="76"/><rect x="244" y="332" width="8" height="76"/>
+    <rect x="258" y="332" width="8" height="76"/><rect x="272" y="332" width="8" height="76"/>
+    <rect x="700" y="332" width="8" height="76"/><rect x="714" y="332" width="8" height="76"/>
+    <rect x="728" y="332" width="8" height="76"/><rect x="742" y="332" width="8" height="76"/>
+  </g>
+  <!-- Sidewalks -->
+  <rect x="0" y="410" width="960" height="12" fill="#BDBDBD"/>
+  <rect x="0" y="318" width="960" height="12" fill="#BDBDBD"/>
+  <!-- Perpendicular streets -->
+  <rect x="240" y="420" width="50" height="120" fill="#757575"/>
+  <rect x="710" y="420" width="50" height="120" fill="#757575"/>
+  <!-- Plaza area -->
+  <rect x="400" y="430" width="160" height="100" fill="#A5D6A7" rx="8"/>
+  <circle cx="480" cy="480" r="20" fill="#66BB6A"/>
+  <rect x="477" y="450" width="6" height="30" fill="#795548"/>
+  <!-- Traffic lights -->
+  <rect x="225" y="290" width="10" height="28" fill="#424242" rx="2"/>
+  <circle cx="230" cy="297" r="4" fill="#EF5350"/>
+  <circle cx="230" cy="308" r="4" fill="#66BB6A"/>
+  <rect x="745" y="290" width="10" height="28" fill="#424242" rx="2"/>
+  <circle cx="750" cy="297" r="4" fill="#66BB6A"/>
+  <circle cx="750" cy="308" r="4" fill="#EF5350"/>
+  <!-- Street lamps -->
+  <rect x="100" y="285" width="4" height="35" fill="#757575"/>
+  <ellipse cx="102" cy="283" rx="10" ry="4" fill="#FFE082"/>
+  <rect x="550" y="285" width="4" height="35" fill="#757575"/>
+  <ellipse cx="552" cy="283" rx="10" ry="4" fill="#FFE082"/>
+  <rect x="880" y="285" width="4" height="35" fill="#757575"/>
+  <ellipse cx="882" cy="283" rx="10" ry="4" fill="#FFE082"/>
+</svg>

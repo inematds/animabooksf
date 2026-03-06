@@ -17,12 +17,14 @@ const MODE_LABELS: Record<ProjectType, string> = {
   decoration: 'Decoracao',
   construction: 'Construcao',
   city: 'Cidade',
+  fashion: 'Moda',
 };
 
 const MODE_ICONS: Record<ProjectType, string> = {
   decoration: '🏠',
   construction: '🔨',
   city: '🌆',
+  fashion: '👗',
 };
 
 export default function CreativeEditor({ initialProject, onSave }: CreativeEditorProps) {
@@ -32,13 +34,12 @@ export default function CreativeEditor({ initialProject, onSave }: CreativeEdito
   const [saveMsg, setSaveMsg] = useState('');
   const [bgError, setBgError] = useState(false);
   const [showBgPicker, setShowBgPicker] = useState(false);
-  const [backgrounds, setBackgrounds] = useState<string[]>([]);
+  const [backgrounds, setBackgrounds] = useState<{ filename: string; path: string }[]>([]);
   const pendingDrag = useRef<{ assetPath: string; filename: string } | null>(null);
   const projectRef = useRef(project);
   projectRef.current = project;
 
   const mode = project.type;
-  const bgPath = `/assets/${mode}/fundos/`;
 
   // Load backgrounds
   useEffect(() => {
@@ -47,6 +48,18 @@ export default function CreativeEditor({ initialProject, onSave }: CreativeEdito
       .then((data) => setBackgrounds(data.backgrounds || []))
       .catch(() => setBackgrounds([]));
   }, [mode]);
+
+  // Get background image src from project background string
+  // Format: "path:filename" or just "filename" (legacy)
+  const bgSrc = (() => {
+    const bg = project.background;
+    if (bg.includes(':')) {
+      const [path, filename] = bg.split(':');
+      return `${path}${filename}`;
+    }
+    // Legacy or mode-specific default
+    return `/assets/${mode}/fundos/${bg}`;
+  })();
 
   // Auto-save every 30s
   useEffect(() => {
@@ -193,7 +206,7 @@ export default function CreativeEditor({ initialProject, onSave }: CreativeEdito
             <div className="w-full max-w-4xl">
               <CreativeCanvas
                 background={project.background}
-                backgroundPath={bgPath}
+                backgroundSrc={bgSrc}
                 items={project.items}
                 selectedItemId={selectedItemId}
                 onSelectItem={setSelectedItemId}
@@ -226,24 +239,27 @@ export default function CreativeEditor({ initialProject, onSave }: CreativeEdito
               <button onClick={() => setShowBgPicker(false)} className="text-gray-400 hover:text-gray-600">✕</button>
             </div>
             <div className="p-4 grid grid-cols-3 gap-3 overflow-y-auto">
-              {backgrounds.map((bg) => (
-                <button
-                  key={bg}
-                  onClick={() => {
-                    setProject((prev) => ({ ...prev, background: bg }));
-                    setBgError(false);
-                    setShowBgPicker(false);
-                  }}
-                  className={`relative aspect-video rounded-lg overflow-hidden border-2 transition ${
-                    bg === project.background ? 'border-purple-500 shadow-lg' : 'border-gray-200 hover:border-purple-300'
-                  }`}
-                >
-                  <Image src={`${bgPath}${bg}`} alt={bg} fill className="object-cover" />
-                  <span className="absolute bottom-0 left-0 right-0 text-[10px] bg-black/50 text-white text-center py-0.5 truncate">
-                    {bg.replace(/\.\w+$/, '')}
-                  </span>
-                </button>
-              ))}
+              {backgrounds.map((bg) => {
+                const bgValue = `${bg.path}:${bg.filename}`;
+                return (
+                  <button
+                    key={bgValue}
+                    onClick={() => {
+                      setProject((prev) => ({ ...prev, background: bgValue }));
+                      setBgError(false);
+                      setShowBgPicker(false);
+                    }}
+                    className={`relative aspect-video rounded-lg overflow-hidden border-2 transition ${
+                      project.background === bgValue ? 'border-purple-500 shadow-lg' : 'border-gray-200 hover:border-purple-300'
+                    }`}
+                  >
+                    <Image src={`${bg.path}${bg.filename}`} alt={bg.filename} fill className="object-cover" />
+                    <span className="absolute bottom-0 left-0 right-0 text-[10px] bg-black/50 text-white text-center py-0.5 truncate">
+                      {bg.filename.replace(/\.\w+$/, '')}
+                    </span>
+                  </button>
+                );
+              })}
               {backgrounds.length === 0 && (
                 <p className="col-span-3 text-sm text-gray-400 text-center py-8">Nenhum fundo disponivel.</p>
               )}

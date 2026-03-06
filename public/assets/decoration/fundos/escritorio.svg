@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <!-- Wall -->
+  <rect width="960" height="540" fill="#FFF3E0"/>
+  <!-- Floor -->
+  <rect y="390" width="960" height="150" fill="#C8A882"/>
+  <!-- Floor wood planks -->
+  <line x1="0" y1="420" x2="960" y2="420" stroke="#BDA078" stroke-width="1"/>
+  <line x1="0" y1="450" x2="960" y2="450" stroke="#BDA078" stroke-width="1"/>
+  <line x1="0" y1="480" x2="960" y2="480" stroke="#BDA078" stroke-width="1"/>
+  <line x1="0" y1="510" x2="960" y2="510" stroke="#BDA078" stroke-width="1"/>
+  <line x1="160" y1="390" x2="160" y2="540" stroke="#BDA078" stroke-width="0.5"/>
+  <line x1="320" y1="390" x2="320" y2="540" stroke="#BDA078" stroke-width="0.5"/>
+  <line x1="480" y1="390" x2="480" y2="540" stroke="#BDA078" stroke-width="0.5"/>
+  <line x1="640" y1="390" x2="640" y2="540" stroke="#BDA078" stroke-width="0.5"/>
+  <line x1="800" y1="390" x2="800" y2="540" stroke="#BDA078" stroke-width="0.5"/>
+  <!-- Baseboard -->
+  <rect y="383" width="960" height="7" fill="#A08060"/>
+  <!-- Large window -->
+  <rect x="340" y="50" width="280" height="260" rx="5" fill="#87CEEB"/>
+  <!-- Window frame -->
+  <rect x="335" y="45" width="290" height="270" rx="5" fill="none" stroke="#FFFFFF" stroke-width="8"/>
+  <rect x="335" y="45" width="290" height="270" rx="5" fill="none" stroke="#D4B896" stroke-width="3"/>
+  <!-- Window cross -->
+  <line x1="480" y1="45" x2="480" y2="315" stroke="#D4B896" stroke-width="4"/>
+  <line x1="335" y1="180" x2="625" y2="180" stroke="#D4B896" stroke-width="4"/>
+  <!-- Sky through window -->
+  <circle cx="420" cy="110" r="30" fill="#FFF9C4" opacity="0.8"/>
+  <!-- Clouds -->
+  <ellipse cx="530" cy="100" rx="35" ry="15" fill="#FFFFFF" opacity="0.7"/>
+  <ellipse cx="555" cy="95" rx="25" ry="12" fill="#FFFFFF" opacity="0.7"/>
+  <!-- Window sill -->
+  <rect x="325" y="310" width="310" height="14" rx="3" fill="#D4B896"/>
+  <!-- Desk area (simple outline on wall) -->
+  <rect x="280" y="320" width="400" height="70" rx="4" fill="#E8D5B7" stroke="#D4B896" stroke-width="2"/>
+  <!-- Desk legs -->
+  <rect x="290" y="390" width="12" height="80" fill="#D4B896"/>
+  <rect x="658" y="390" width="12" height="80" fill="#D4B896"/>
+  <!-- Wall decoration - small shelf -->
+  <rect x="720" y="180" width="150" height="10" rx="2" fill="#D4B896"/>
+  <rect x="720" y="180" width="6" height="30" fill="#D4B896"/>
+  <rect x="864" y="180" width="6" height="30" fill="#D4B896"/>
+  <!-- Electrical outlet -->
+  <rect x="140" y="300" width="24" height="32" rx="4" fill="#F5F5F5" stroke="#E0E0E0" stroke-width="1.5"/>
+  <circle cx="149" cy="314" r="3" fill="#E0E0E0"/>
+  <circle cx="157" cy="314" r="3" fill="#E0E0E0"/>
+</svg>

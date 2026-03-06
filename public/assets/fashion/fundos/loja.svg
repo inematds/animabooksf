@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <!-- Floor -->
+  <rect x="0" y="380" width="960" height="160" fill="#f5e6d3"/>
+  <!-- Floor tiles -->
+  <rect x="0" y="380" width="120" height="160" fill="#eedcc8" opacity="0.5"/>
+  <rect x="240" y="380" width="120" height="160" fill="#eedcc8" opacity="0.5"/>
+  <rect x="480" y="380" width="120" height="160" fill="#eedcc8" opacity="0.5"/>
+  <rect x="720" y="380" width="120" height="160" fill="#eedcc8" opacity="0.5"/>
+  <!-- Wall -->
+  <rect x="0" y="0" width="960" height="380" fill="#fff3e0"/>
+  <!-- Clothing rack left -->
+  <rect x="60" y="120" width="8" height="250" fill="#bdbdbd"/>
+  <rect x="220" y="120" width="8" height="250" fill="#bdbdbd"/>
+  <rect x="55" y="120" width="178" height="8" rx="4" fill="#9e9e9e"/>
+  <!-- Hangers with clothes -->
+  <path d="M100 128 L100 140 L80 155 M100 140 L120 155" stroke="#757575" stroke-width="3" fill="none"/>
+  <path d="M80 155 Q100 175 120 155 L115 200 Q100 205 85 200Z" fill="#e91e63"/>
+  <path d="M150 128 L150 140 L130 155 M150 140 L170 155" stroke="#757575" stroke-width="3" fill="none"/>
+  <path d="M130 155 Q150 175 170 155 L165 210 Q150 215 135 210Z" fill="#42a5f5"/>
+  <path d="M200 128 L200 140 L180 155 M200 140 L220 155" stroke="#757575" stroke-width="3" fill="none"/>
+  <path d="M180 155 Q200 175 220 155 L215 200 Q200 205 185 200Z" fill="#ffb74d"/>
+  <!-- Clothing rack right -->
+  <rect x="700" y="120" width="8" height="250" fill="#bdbdbd"/>
+  <rect x="880" y="120" width="8" height="250" fill="#bdbdbd"/>
+  <rect x="695" y="120" width="198" height="8" rx="4" fill="#9e9e9e"/>
+  <!-- Hangers with clothes right -->
+  <path d="M740 128 L740 140 L720 155 M740 140 L760 155" stroke="#757575" stroke-width="3" fill="none"/>
+  <path d="M720 155 Q740 175 760 155 L755 200 Q740 205 725 200Z" fill="#ab47bc"/>
+  <path d="M810 128 L810 140 L790 155 M810 140 L830 155" stroke="#757575" stroke-width="3" fill="none"/>
+  <path d="M790 155 Q810 175 830 155 L825 210 Q810 215 795 210Z" fill="#66bb6a"/>
+  <path d="M870 128 L870 140 L850 155 M870 140 L890 155" stroke="#757575" stroke-width="3" fill="none"/>
+  <path d="M850 155 Q870 175 890 155 L885 195 Q870 200 855 195Z" fill="#ef5350"/>
+  <!-- Counter -->
+  <rect x="350" y="300" width="260" height="80" rx="10" fill="#8d6e63"/>
+  <rect x="350" y="295" width="260" height="15" rx="6" fill="#a1887f"/>
+  <!-- Cash register -->
+  <rect x="440" y="260" width="80" height="40" rx="6" fill="#78909c"/>
+  <rect x="455" y="265" width="50" height="20" rx="3" fill="#b2ebf2"/>
+  <!-- Shopping bags -->
+  <rect x="100" y="340" width="40" height="45" rx="5" fill="#f48fb1"/>
+  <path d="M108 340 Q120 325 132 340" stroke="#e91e63" stroke-width="2" fill="none"/>
+  <rect x="160" y="345" width="35" height="40" rx="5" fill="#ce93d8"/>
+  <path d="M167 345 Q177 332 187 345" stroke="#9c27b0" stroke-width="2" fill="none"/>
+  <!-- Store sign -->
+  <rect x="330" y="20" width="300" height="60" rx="15" fill="#f06292"/>
+  <text x="480" y="58" text-anchor="middle" font-family="Arial" font-size="28" font-weight="bold" fill="white">MODA</text>
+  <!-- Decorative hearts -->
+  <path d="M50 30 Q50 20 60 20 Q70 20 70 30 Q70 40 60 50 Q50 40 50 30Z" fill="#f48fb1" opacity="0.6"/>
+  <path d="M890 50 Q890 40 900 40 Q910 40 910 50 Q910 60 900 70 Q890 60 890 50Z" fill="#f48fb1" opacity="0.6"/>
+</svg>

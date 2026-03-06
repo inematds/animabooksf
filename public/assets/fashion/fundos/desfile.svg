@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <!-- Background dark -->
+  <rect x="0" y="0" width="960" height="540" fill="#1a237e"/>
+  <!-- Curtain backdrop -->
+  <rect x="100" y="0" width="760" height="350" fill="#880e4f"/>
+  <path d="M100 0 Q140 60 120 120 Q100 180 130 240 Q110 300 100 350Z" fill="#ad1457" opacity="0.6"/>
+  <path d="M860 0 Q820 60 840 120 Q860 180 830 240 Q850 300 860 350Z" fill="#ad1457" opacity="0.6"/>
+  <!-- Stage floor -->
+  <rect x="0" y="340" width="960" height="200" fill="#4a148c"/>
+  <rect x="0" y="340" width="960" height="15" fill="#7b1fa2"/>
+  <!-- Stage lights strip -->
+  <rect x="100" y="335" width="760" height="8" fill="#ffd54f"/>
+  <circle cx="150" cy="339" r="6" fill="#fff9c4"/>
+  <circle cx="250" cy="339" r="6" fill="#f48fb1"/>
+  <circle cx="350" cy="339" r="6" fill="#80deea"/>
+  <circle cx="450" cy="339" r="6" fill="#fff9c4"/>
+  <circle cx="550" cy="339" r="6" fill="#f48fb1"/>
+  <circle cx="650" cy="339" r="6" fill="#80deea"/>
+  <circle cx="750" cy="339" r="6" fill="#fff9c4"/>
+  <circle cx="810" cy="339" r="6" fill="#f48fb1"/>
+  <!-- Spotlights from ceiling -->
+  <rect x="250" y="0" width="30" height="30" rx="5" fill="#333"/>
+  <polygon points="265,30 200,340 330,340" fill="#fff9c4" opacity="0.06"/>
+  <rect x="470" y="0" width="30" height="30" rx="5" fill="#333"/>
+  <polygon points="485,30 420,340 550,340" fill="#f48fb1" opacity="0.06"/>
+  <rect x="690" y="0" width="30" height="30" rx="5" fill="#333"/>
+  <polygon points="705,30 640,340 770,340" fill="#80deea" opacity="0.06"/>
+  <!-- Audience silhouettes -->
+  <circle cx="100" cy="460" r="18" fill="#311b92" opacity="0.7"/>
+  <circle cx="150" cy="470" r="18" fill="#311b92" opacity="0.7"/>
+  <circle cx="200" cy="455" r="18" fill="#311b92" opacity="0.7"/>
+  <circle cx="250" cy="468" r="18" fill="#311b92" opacity="0.7"/>
+  <circle cx="700" cy="462" r="18" fill="#311b92" opacity="0.7"/>
+  <circle cx="750" cy="470" r="18" fill="#311b92" opacity="0.7"/>
+  <circle cx="800" cy="458" r="18" fill="#311b92" opacity="0.7"/>
+  <circle cx="850" cy="465" r="18" fill="#311b92" opacity="0.7"/>
+  <circle cx="120" cy="500" r="18" fill="#1a0e56" opacity="0.7"/>
+  <circle cx="180" cy="510" r="18" fill="#1a0e56" opacity="0.7"/>
+  <circle cx="240" cy="505" r="18" fill="#1a0e56" opacity="0.7"/>
+  <circle cx="730" cy="505" r="18" fill="#1a0e56" opacity="0.7"/>
+  <circle cx="790" cy="510" r="18" fill="#1a0e56" opacity="0.7"/>
+  <circle cx="850" cy="500" r="18" fill="#1a0e56" opacity="0.7"/>
+  <!-- Stars decorations -->
+  <polygon points="480,50 485,65 500,65 488,74 493,89 480,80 467,89 472,74 460,65 475,65" fill="#ffd54f" opacity="0.7"/>
+  <polygon points="350,80 353,88 362,88 355,93 358,101 350,96 342,101 345,93 338,88 347,88" fill="#ffd54f" opacity="0.5"/>
+  <polygon points="620,70 623,78 632,78 625,83 628,91 620,86 612,91 615,83 608,78 617,78" fill="#ffd54f" opacity="0.5"/>
+</svg>

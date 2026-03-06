@@ -26,6 +26,22 @@ const CATEGORY_LABELS: Record<string, string> = {
   ruas: 'Ruas',
   veiculos: 'Veiculos',
   personagens: 'Personagens',
+  roupas: 'Roupas',
+  acessorios: 'Acessorios',
+  calcados: 'Calcados',
+  chapeus: 'Chapeus',
+  bolsas: 'Bolsas',
+  // Sprite categories (shared assets)
+  'sprites:personagens': 'Personagens',
+  'sprites:animais': 'Animais',
+  'sprites:natureza': 'Natureza',
+  'sprites:comida': 'Comida',
+  'sprites:moveis': 'Moveis',
+  'sprites:veiculos': 'Veiculos',
+  'sprites:brinquedos': 'Brinquedos',
+  'sprites:escola': 'Escola',
+  'sprites:magia': 'Magia',
+  'sprites:moda_items': 'Moda',
 };
 
 const CATEGORY_ICONS: Record<string, string> = {
@@ -40,6 +56,21 @@ const CATEGORY_ICONS: Record<string, string> = {
   ruas: '🛣️',
   veiculos: '🚗',
   personagens: '🧑',
+  roupas: '👗',
+  acessorios: '💍',
+  calcados: '👟',
+  chapeus: '🎩',
+  bolsas: '👜',
+  'sprites:personagens': '🧒',
+  'sprites:animais': '🐾',
+  'sprites:natureza': '🌿',
+  'sprites:comida': '🍰',
+  'sprites:moveis': '🪑',
+  'sprites:veiculos': '🚗',
+  'sprites:brinquedos': '🧸',
+  'sprites:escola': '📚',
+  'sprites:magia': '✨',
+  'sprites:moda_items': '👗',
 };
 
 export default function ItemPalette({ mode, onStartDrag }: ItemPaletteProps) {
@@ -91,7 +122,11 @@ export default function ItemPalette({ mode, onStartDrag }: ItemPaletteProps) {
             {openCat === cat.category && (
               <div className="grid grid-cols-2 gap-1 p-2">
                 {cat.files.map((filename) => {
-                  const assetPath = `${mode}/${cat.category}`;
+                  const isSprite = cat.category.startsWith('sprites:');
+                  const assetPath = isSprite ? 'sprites:' : `${mode}/${cat.category}`;
+                  const imgSrc = isSprite
+                    ? `/sprites/${filename}`
+                    : `/assets/${mode}/${cat.category}/${filename}`;
                   return (
                     <div
                       key={filename}
@@ -101,7 +136,7 @@ export default function ItemPalette({ mode, onStartDrag }: ItemPaletteProps) {
                       title={filename.replace(/\.\w+$/, '')}
                     >
                       <Image
-                        src={`/assets/${assetPath}/${filename}`}
+                        src={imgSrc}
                         alt={filename}
                         fill
                         className="object-contain p-1"

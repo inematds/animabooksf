@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 60">
+  <!-- Shoe body -->
+  <path d="M8 35 Q5 28 10 22 Q20 12 40 10 Q55 10 65 18 Q70 22 68 30 L68 40 Q60 48 40 50 Q20 48 10 42Z" fill="#e91e63"/>
+  <!-- Sole -->
+  <path d="M10 42 Q20 48 40 50 Q60 48 68 42 Q70 45 68 48 Q60 52 40 54 Q18 52 8 48 Q6 45 10 42Z" fill="#c2185b"/>
+  <!-- Strap -->
+  <path d="M30 18 Q40 12 50 18" stroke="#c2185b" stroke-width="3" fill="none"/>
+  <!-- Button on strap -->
+  <circle cx="50" cy="18" r="3" fill="#ffd54f"/>
+  <circle cx="50" cy="18" r="1.5" fill="#ffb300"/>
+  <!-- Toe shine -->
+  <path d="M12 30 Q18 20 28 18" stroke="white" stroke-width="1" fill="none" opacity="0.3"/>
+  <!-- Decorative bow -->
+  <path d="M18 28 Q14 24 16 28 Q14 32 18 30Z" fill="#f48fb1"/>
+  <path d="M24 28 Q28 24 26 28 Q28 32 24 30Z" fill="#f48fb1"/>
+  <circle cx="21" cy="29" r="1.5" fill="#c2185b"/>
+</svg>

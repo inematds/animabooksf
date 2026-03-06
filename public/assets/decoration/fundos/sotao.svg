@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <!-- Back wall -->
+  <rect width="960" height="540" fill="#F5EFE6"/>
+  <!-- Sloped ceiling - left -->
+  <polygon points="0,0 480,0 480,120 0,280" fill="#E8DDD0"/>
+  <!-- Sloped ceiling - right -->
+  <polygon points="480,0 960,0 960,280 480,120" fill="#E8DDD0"/>
+  <!-- Ceiling beam lines -->
+  <line x1="0" y1="0" x2="480" y2="120" stroke="#D4C4B0" stroke-width="4"/>
+  <line x1="960" y1="0" x2="480" y2="120" stroke="#D4C4B0" stroke-width="4"/>
+  <!-- Horizontal beam at peak -->
+  <rect x="0" y="0" width="960" height="4" fill="#D4C4B0"/>
+  <!-- Cross beams on left slope -->
+  <line x1="80" y1="0" x2="80" y2="225" stroke="#D4C4B0" stroke-width="3"/>
+  <line x1="240" y1="0" x2="240" y2="165" stroke="#D4C4B0" stroke-width="3"/>
+  <line x1="400" y1="0" x2="400" y2="135" stroke="#D4C4B0" stroke-width="3"/>
+  <!-- Cross beams on right slope -->
+  <line x1="560" y1="0" x2="560" y2="135" stroke="#D4C4B0" stroke-width="3"/>
+  <line x1="720" y1="0" x2="720" y2="165" stroke="#D4C4B0" stroke-width="3"/>
+  <line x1="880" y1="0" x2="880" y2="225" stroke="#D4C4B0" stroke-width="3"/>
+  <!-- Wall below slopes -->
+  <rect x="0" y="280" width="960" height="260" fill="#F5EFE6"/>
+  <!-- Floor -->
+  <rect y="400" width="960" height="140" fill="#C9AD8C"/>
+  <!-- Floor wood planks -->
+  <line x1="0" y1="435" x2="960" y2="435" stroke="#BFA280" stroke-width="1"/>
+  <line x1="0" y1="470" x2="960" y2="470" stroke="#BFA280" stroke-width="1"/>
+  <line x1="0" y1="505" x2="960" y2="505" stroke="#BFA280" stroke-width="1"/>
+  <line x1="192" y1="400" x2="192" y2="540" stroke="#BFA280" stroke-width="0.5"/>
+  <line x1="384" y1="400" x2="384" y2="540" stroke="#BFA280" stroke-width="0.5"/>
+  <line x1="576" y1="400" x2="576" y2="540" stroke="#BFA280" stroke-width="0.5"/>
+  <line x1="768" y1="400" x2="768" y2="540" stroke="#BFA280" stroke-width="0.5"/>
+  <!-- Baseboard -->
+  <rect y="395" width="960" height="6" fill="#B09878"/>
+  <!-- Dormer window (center, in the peak area) -->
+  <rect x="400" y="20" width="160" height="95" rx="4" fill="#87CEEB"/>
+  <rect x="395" y="15" width="170" height="105" rx="4" fill="none" stroke="#FFFFFF" stroke-width="5"/>
+  <rect x="395" y="15" width="170" height="105" rx="4" fill="none" stroke="#D4C4B0" stroke-width="2.5"/>
+  <line x1="480" y1="15" x2="480" y2="120" stroke="#D4C4B0" stroke-width="3"/>
+  <line x1="395" y1="67" x2="565" y2="67" stroke="#D4C4B0" stroke-width="3"/>
+  <!-- Light from window -->
+  <polygon points="400,120 560,120 620,400 340,400" fill="#FFF9C4" opacity="0.1"/>
+  <!-- Small round window on right -->
+  <circle cx="800" cy="200" r="45" fill="#B5E4F7"/>
+  <circle cx="800" cy="200" r="45" fill="none" stroke="#FFFFFF" stroke-width="5"/>
+  <circle cx="800" cy="200" r="45" fill="none" stroke="#D4C4B0" stroke-width="2.5"/>
+  <line x1="800" y1="155" x2="800" y2="245" stroke="#D4C4B0" stroke-width="2.5"/>
+  <line x1="755" y1="200" x2="845" y2="200" stroke="#D4C4B0" stroke-width="2.5"/>
+  <!-- Cobweb in corner (charming detail) -->
+  <path d="M0,280 Q30,270 40,250" fill="none" stroke="#E0D8D0" stroke-width="1" opacity="0.5"/>
+  <path d="M0,275 Q25,260 30,240" fill="none" stroke="#E0D8D0" stroke-width="1" opacity="0.5"/>
+  <path d="M0,270 Q15,258 20,240" fill="none" stroke="#E0D8D0" stroke-width="1" opacity="0.5"/>
+</svg>

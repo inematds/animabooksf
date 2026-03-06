@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 60">
+  <!-- Sole -->
+  <path d="M8 45 Q5 42 8 40 L70 38 Q78 40 78 45 Q75 50 50 52 Q20 52 8 45Z" fill="white"/>
+  <!-- Shoe body -->
+  <path d="M10 42 Q8 30 15 22 Q25 14 40 12 Q55 14 65 20 L72 38 L10 42Z" fill="#42a5f5"/>
+  <!-- Toe cap -->
+  <path d="M8 42 Q8 35 12 30 Q18 24 30 22 Q20 30 15 38 L8 42Z" fill="white"/>
+  <!-- Tongue -->
+  <path d="M35 14 Q40 8 45 14" fill="#1e88e5"/>
+  <!-- Laces -->
+  <line x1="34" y1="18" x2="46" y2="18" stroke="white" stroke-width="1.5"/>
+  <line x1="33" y1="23" x2="47" y2="22" stroke="white" stroke-width="1.5"/>
+  <line x1="32" y1="28" x2="48" y2="26" stroke="white" stroke-width="1.5"/>
+  <!-- Star logo -->
+  <polygon points="60,28 61,31 64,31 62,33 63,36 60,34 57,36 58,33 56,31 59,31" fill="#ffd54f"/>
+  <!-- Sole line -->
+  <line x1="10" y1="44" x2="75" y2="42" stroke="#e0e0e0" stroke-width="1"/>
+  <!-- Color accent stripe -->
+  <path d="M15 38 Q30 35 50 34 Q65 34 72 36" stroke="#e91e63" stroke-width="3" fill="none"/>
+</svg>

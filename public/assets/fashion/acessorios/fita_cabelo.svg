@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <!-- Hair ribbon - bow -->
+  <!-- Left loop -->
+  <path d="M30 25 Q15 15 10 25 Q5 35 20 35 Q25 35 30 30Z" fill="#e91e63"/>
+  <path d="M30 25 Q20 20 15 25 Q12 30 22 32Z" fill="#f06292" opacity="0.5"/>
+  <!-- Right loop -->
+  <path d="M30 25 Q45 15 50 25 Q55 35 40 35 Q35 35 30 30Z" fill="#e91e63"/>
+  <path d="M30 25 Q40 20 45 25 Q48 30 38 32Z" fill="#f06292" opacity="0.5"/>
+  <!-- Center knot -->
+  <circle cx="30" cy="28" r="5" fill="#c2185b"/>
+  <!-- Trailing ribbons -->
+  <path d="M28 33 Q22 42 18 55" stroke="#e91e63" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M32 33 Q38 42 42 55" stroke="#e91e63" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- Ribbon ends -->
+  <path d="M16 53 L18 55 L15 58" fill="#e91e63"/>
+  <path d="M44 53 L42 55 L45 58" fill="#e91e63"/>
+  <!-- Polka dots -->
+  <circle cx="18" cy="25" r="1.5" fill="#f8bbd0" opacity="0.7"/>
+  <circle cx="42" cy="25" r="1.5" fill="#f8bbd0" opacity="0.7"/>
+  <circle cx="24" cy="30" r="1.5" fill="#f8bbd0" opacity="0.7"/>
+  <circle cx="36" cy="30" r="1.5" fill="#f8bbd0" opacity="0.7"/>
+</svg>

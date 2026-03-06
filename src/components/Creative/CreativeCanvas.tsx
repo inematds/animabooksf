@@ -6,7 +6,7 @@ import { PlacedItem } from '@/lib/types';
 
 interface CreativeCanvasProps {
   background: string;
-  backgroundPath: string; // ex: "/assets/decoration/fundos/"
+  backgroundSrc: string; // full resolved src path
   items: PlacedItem[];
   selectedItemId: string | null;
   onSelectItem: (id: string | null) => void;
@@ -18,7 +18,7 @@ interface CreativeCanvasProps {
 
 export default function CreativeCanvas({
   background,
-  backgroundPath,
+  backgroundSrc,
   items,
   selectedItemId,
   onSelectItem,
@@ -108,7 +108,7 @@ export default function CreativeCanvas({
         </div>
       ) : (
         <Image
-          src={`${backgroundPath}${background}`}
+          src={backgroundSrc}
           alt="Fundo"
           fill
           className="object-cover pointer-events-none"
@@ -137,7 +137,9 @@ export default function CreativeCanvas({
             onMouseDown={(e) => handleMouseDown(e, item.id)}
           >
             <Image
-              src={`/assets/${item.category.split('/').length > 1 ? item.category : ''}/${item.assetId}`}
+              src={item.category.startsWith('sprites:')
+                ? `/sprites/${item.assetId}`
+                : `/assets/${item.category}/${item.assetId}`}
               alt={item.assetId}
               width={80}
               height={80}

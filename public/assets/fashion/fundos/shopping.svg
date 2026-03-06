@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <!-- Floor -->
+  <rect x="0" y="380" width="960" height="160" fill="#e0e0e0"/>
+  <!-- Floor tiles pattern -->
+  <rect x="0" y="380" width="96" height="80" fill="#eeeeee" opacity="0.5"/>
+  <rect x="192" y="380" width="96" height="80" fill="#eeeeee" opacity="0.5"/>
+  <rect x="384" y="380" width="96" height="80" fill="#eeeeee" opacity="0.5"/>
+  <rect x="576" y="380" width="96" height="80" fill="#eeeeee" opacity="0.5"/>
+  <rect x="768" y="380" width="96" height="80" fill="#eeeeee" opacity="0.5"/>
+  <rect x="96" y="460" width="96" height="80" fill="#eeeeee" opacity="0.5"/>
+  <rect x="288" y="460" width="96" height="80" fill="#eeeeee" opacity="0.5"/>
+  <rect x="480" y="460" width="96" height="80" fill="#eeeeee" opacity="0.5"/>
+  <rect x="672" y="460" width="96" height="80" fill="#eeeeee" opacity="0.5"/>
+  <rect x="864" y="460" width="96" height="80" fill="#eeeeee" opacity="0.5"/>
+  <!-- Ceiling -->
+  <rect x="0" y="0" width="960" height="60" fill="#fafafa"/>
+  <!-- Skylight -->
+  <rect x="300" y="0" width="360" height="50" rx="8" fill="#81d4fa" opacity="0.5"/>
+  <rect x="300" y="0" width="360" height="50" rx="8" stroke="#bdbdbd" stroke-width="3" fill="none"/>
+  <line x1="420" y1="0" x2="420" y2="50" stroke="#bdbdbd" stroke-width="2"/>
+  <line x1="540" y1="0" x2="540" y2="50" stroke="#bdbdbd" stroke-width="2"/>
+  <!-- Store 1 - Pink fashion -->
+  <rect x="20" y="60" width="270" height="320" fill="#fce4ec"/>
+  <rect x="20" y="60" width="270" height="45" rx="4" fill="#e91e63"/>
+  <text x="155" y="90" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="white">PINK STYLE</text>
+  <!-- Store 1 display -->
+  <rect x="50" y="130" width="60" height="80" rx="6" fill="#f48fb1"/>
+  <rect x="130" y="125" width="60" height="85" rx="6" fill="#f06292"/>
+  <rect x="210" y="130" width="60" height="80" rx="6" fill="#ec407a"/>
+  <!-- Store 2 - Blue accessories -->
+  <rect x="350" y="60" width="260" height="320" fill="#e3f2fd"/>
+  <rect x="350" y="60" width="260" height="45" rx="4" fill="#42a5f5"/>
+  <text x="480" y="90" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="white">ACESSORIOS</text>
+  <!-- Store 2 display -->
+  <circle cx="420" cy="180" r="30" fill="#90caf9"/>
+  <circle cx="480" cy="175" r="35" fill="#64b5f6"/>
+  <circle cx="540" cy="180" r="30" fill="#90caf9"/>
+  <!-- Store 3 - Shoes -->
+  <rect x="670" y="60" width="270" height="320" fill="#fff3e0"/>
+  <rect x="670" y="60" width="270" height="45" rx="4" fill="#ff9800"/>
+  <text x="805" y="90" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="white">SAPATOS</text>
+  <!-- Store 3 shoe displays -->
+  <rect x="700" y="140" width="50" height="25" rx="6" fill="#ffb74d"/>
+  <rect x="770" y="135" width="50" height="30" rx="6" fill="#ffa726"/>
+  <rect x="840" y="140" width="50" height="25" rx="6" fill="#ff9800"/>
+  <rect x="700" y="200" width="50" height="25" rx="6" fill="#e65100"/>
+  <rect x="770" y="195" width="50" height="30" rx="6" fill="#ffcc02"/>
+  <rect x="840" y="200" width="50" height="25" rx="6" fill="#ef6c00"/>
+  <!-- Benches -->
+  <rect x="380" y="420" width="200" height="20" rx="8" fill="#8d6e63"/>
+  <rect x="390" y="440" width="15" height="25" fill="#6d4c41"/>
+  <rect x="555" y="440" width="15" height="25" fill="#6d4c41"/>
+  <!-- Plants -->
+  <rect x="330" y="400" width="16" height="40" fill="#795548"/>
+  <circle cx="338" cy="390" r="22" fill="#66bb6a"/>
+  <circle cx="330" cy="382" r="16" fill="#81c784"/>
+  <rect x="614" y="400" width="16" height="40" fill="#795548"/>
+  <circle cx="622" cy="390" r="22" fill="#66bb6a"/>
+  <circle cx="630" cy="382" r="16" fill="#81c784"/>
+  <!-- Hanging signs -->
+  <line x1="155" y1="50" x2="155" y2="60" stroke="#bdbdbd" stroke-width="2"/>
+  <line x1="480" y1="50" x2="480" y2="60" stroke="#bdbdbd" stroke-width="2"/>
+  <line x1="805" y1="50" x2="805" y2="60" stroke="#bdbdbd" stroke-width="2"/>
+</svg>

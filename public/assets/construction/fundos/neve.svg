@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <defs>
+    <linearGradient id="nSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#90CAF9"/>
+      <stop offset="100%" stop-color="#E3F2FD"/>
+    </linearGradient>
+  </defs>
+  <!-- Sky -->
+  <rect width="960" height="540" fill="url(#nSky)"/>
+  <!-- Distant snowy mountains -->
+  <polygon points="0,320 150,160 300,320" fill="#CFD8DC"/>
+  <polygon points="200,320 400,130 600,320" fill="#ECEFF1"/>
+  <polygon points="500,320 700,170 900,320" fill="#CFD8DC"/>
+  <polygon points="700,320 850,180 960,320" fill="#ECEFF1"/>
+  <!-- Snow caps -->
+  <polygon points="150,160 125,210 175,210" fill="white"/>
+  <polygon points="400,130 370,190 430,190" fill="white"/>
+  <polygon points="700,170 675,220 725,220" fill="white"/>
+  <!-- Snow hills -->
+  <ellipse cx="200" cy="380" rx="300" ry="70" fill="#F5F5F5"/>
+  <ellipse cx="600" cy="370" rx="350" ry="80" fill="white"/>
+  <ellipse cx="900" cy="385" rx="200" ry="65" fill="#F5F5F5"/>
+  <!-- Main snow ground -->
+  <rect x="0" y="400" width="960" height="140" fill="white"/>
+  <!-- Snow bumps -->
+  <ellipse cx="150" cy="430" rx="100" ry="20" fill="#F5F5F5"/>
+  <ellipse cx="500" cy="450" rx="120" ry="18" fill="#ECEFF1"/>
+  <ellipse cx="800" cy="440" rx="90" ry="15" fill="#F5F5F5"/>
+  <!-- Pine trees with snow -->
+  <polygon points="80,340 100,280 120,340" fill="#2E7D32"/>
+  <polygon points="85,310 100,260 115,310" fill="#388E3C"/>
+  <ellipse cx="100" cy="270" rx="20" ry="8" fill="white"/>
+  <rect x="96" y="340" width="8" height="20" fill="#5D4037"/>
+  <polygon points="830,330 850,265 870,330" fill="#2E7D32"/>
+  <polygon points="835,300 850,245 865,300" fill="#388E3C"/>
+  <ellipse cx="850" cy="255" rx="18" ry="7" fill="white"/>
+  <rect x="846" y="330" width="8" height="20" fill="#5D4037"/>
+  <!-- Snowman -->
+  <circle cx="700" cy="440" r="25" fill="white" stroke="#E0E0E0" stroke-width="1"/>
+  <circle cx="700" cy="410" r="18" fill="white" stroke="#E0E0E0" stroke-width="1"/>
+  <circle cx="700" cy="388" r="12" fill="white" stroke="#E0E0E0" stroke-width="1"/>
+  <circle cx="696" cy="385" r="2" fill="#333"/>
+  <circle cx="704" cy="385" r="2" fill="#333"/>
+  <circle cx="700" cy="390" r="2" fill="#FF7043"/>
+  <!-- Snowflakes -->
+  <circle cx="100" cy="100" r="3" fill="white" opacity="0.8"/>
+  <circle cx="300" cy="150" r="2" fill="white" opacity="0.7"/>
+  <circle cx="500" cy="80" r="3" fill="white" opacity="0.8"/>
+  <circle cx="650" cy="120" r="2" fill="white" opacity="0.7"/>
+  <circle cx="800" cy="90" r="3" fill="white" opacity="0.8"/>
+  <circle cx="200" cy="200" r="2" fill="white" opacity="0.6"/>
+  <circle cx="450" cy="180" r="3" fill="white" opacity="0.7"/>
+  <circle cx="750" cy="200" r="2" fill="white" opacity="0.6"/>
+  <circle cx="900" cy="160" r="3" fill="white" opacity="0.7"/>
+</svg>

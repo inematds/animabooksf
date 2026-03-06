@@ -14,7 +14,15 @@ export default async function ViewProjectPage({ params }: Props) {
 
   if (!project) notFound();
 
-  const bgPath = `/assets/${project.type}/fundos/`;
+  // Resolve background path - new format "path:filename" or legacy "filename"
+  const bgSrc = (() => {
+    const bg = project.background;
+    if (bg.includes(':')) {
+      const [path, filename] = bg.split(':');
+      return `${path}${filename}`;
+    }
+    return `/assets/${project.type}/fundos/${bg}`;
+  })();
   const layerOrder = { back: 0, main: 1, front: 2 };
   const sortedItems = [...project.items].sort((a: PlacedItem, b: PlacedItem) => {
     const layerDiff = layerOrder[a.layer] - layerOrder[b.layer];
@@ -47,7 +55,7 @@ export default async function ViewProjectPage({ params }: Props) {
       >
         {/* Background */}
         <Image
-          src={`${bgPath}${project.background}`}
+          src={bgSrc}
           alt="Fundo"
           fill
           className="object-cover"
@@ -68,7 +76,9 @@ export default async function ViewProjectPage({ params }: Props) {
               }}
             >
               <Image
-                src={`/assets/${item.category}/${item.assetId}`}
+                src={item.category.startsWith('sprites:')
+                ? `/sprites/${item.assetId}`
+                : `/assets/${item.category}/${item.assetId}`}
                 alt={item.assetId}
                 width={80}
                 height={80}

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <!-- Watch band top -->
+  <rect x="20" y="2" width="20" height="18" rx="4" fill="#f48fb1"/>
+  <!-- Watch band bottom -->
+  <rect x="20" y="40" width="20" height="18" rx="4" fill="#f48fb1"/>
+  <!-- Band holes -->
+  <circle cx="30" cy="48" r="1.5" fill="#e91e63"/>
+  <circle cx="30" cy="53" r="1.5" fill="#e91e63"/>
+  <!-- Watch face -->
+  <circle cx="30" cy="30" r="16" fill="#ffd54f"/>
+  <circle cx="30" cy="30" r="13" fill="#fff9c4"/>
+  <!-- Clock numbers -->
+  <circle cx="30" cy="19" r="1.5" fill="#e91e63"/>
+  <circle cx="41" cy="30" r="1.5" fill="#e91e63"/>
+  <circle cx="30" cy="41" r="1.5" fill="#e91e63"/>
+  <circle cx="19" cy="30" r="1.5" fill="#e91e63"/>
+  <!-- Clock hands -->
+  <line x1="30" y1="30" x2="30" y2="21" stroke="#e91e63" stroke-width="2" stroke-linecap="round"/>
+  <line x1="30" y1="30" x2="38" y2="30" stroke="#e91e63" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Center dot -->
+  <circle cx="30" cy="30" r="2" fill="#e91e63"/>
+  <!-- Cat ears on watch -->
+  <path d="M18 18 L22 10 L26 18" fill="#ffd54f"/>
+  <path d="M34 18 L38 10 L42 18" fill="#ffd54f"/>
+</svg>

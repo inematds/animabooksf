@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <defs>
+    <linearGradient id="iSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4FC3F7"/>
+      <stop offset="100%" stop-color="#81D4FA"/>
+    </linearGradient>
+    <linearGradient id="iOcean" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#29B6F6"/>
+      <stop offset="100%" stop-color="#0277BD"/>
+    </linearGradient>
+  </defs>
+  <!-- Sky -->
+  <rect width="960" height="540" fill="url(#iSky)"/>
+  <!-- Sun -->
+  <circle cx="780" cy="80" r="50" fill="#FFF176" opacity="0.9"/>
+  <circle cx="780" cy="80" r="40" fill="#FFEE58"/>
+  <!-- Clouds -->
+  <ellipse cx="150" cy="70" rx="70" ry="25" fill="white" opacity="0.8"/>
+  <ellipse cx="195" cy="65" rx="50" ry="20" fill="white" opacity="0.8"/>
+  <ellipse cx="500" cy="50" rx="60" ry="20" fill="white" opacity="0.7"/>
+  <!-- Ocean -->
+  <rect x="0" y="220" width="960" height="320" fill="url(#iOcean)"/>
+  <!-- Water waves -->
+  <path d="M0,260 Q80,245 160,260 Q240,275 320,260 Q400,245 480,260 Q560,275 640,260 Q720,245 800,260 Q880,275 960,260 L960,280 L0,280Z" fill="#039BE5" opacity="0.5"/>
+  <path d="M0,470 Q80,458 160,470 Q240,482 320,470 Q400,458 480,470 Q560,482 640,470 Q720,458 800,470 Q880,482 960,470 L960,490 L0,490Z" fill="#0288D1" opacity="0.4"/>
+  <!-- Island base - sand -->
+  <ellipse cx="480" cy="400" rx="280" ry="100" fill="#F0D68A"/>
+  <ellipse cx="480" cy="420" rx="260" ry="80" fill="#E8C878"/>
+  <!-- Island green top -->
+  <ellipse cx="480" cy="370" rx="240" ry="60" fill="#66BB6A"/>
+  <ellipse cx="480" cy="360" rx="200" ry="45" fill="#4CAF50"/>
+  <!-- Palm tree left -->
+  <path d="M380,380 Q375,320 385,270" stroke="#8D6E63" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <ellipse cx="365" cy="270" rx="40" ry="10" fill="#66BB6A" transform="rotate(-25 365 270)"/>
+  <ellipse cx="405" cy="265" rx="40" ry="10" fill="#4CAF50" transform="rotate(15 405 265)"/>
+  <ellipse cx="375" cy="260" rx="35" ry="8" fill="#81C784" transform="rotate(-45 375 260)"/>
+  <!-- Palm tree right -->
+  <path d="M580,380 Q585,315 575,265" stroke="#8D6E63" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <ellipse cx="555" cy="265" rx="40" ry="10" fill="#66BB6A" transform="rotate(-15 555 265)"/>
+  <ellipse cx="595" cy="260" rx="40" ry="10" fill="#4CAF50" transform="rotate(25 595 260)"/>
+  <ellipse cx="570" cy="255" rx="35" ry="8" fill="#81C784" transform="rotate(40 570 255)"/>
+  <!-- Coconuts -->
+  <circle cx="383" cy="275" r="5" fill="#795548"/>
+  <circle cx="390" cy="280" r="5" fill="#795548"/>
+  <circle cx="577" cy="270" r="5" fill="#795548"/>
+  <!-- Small rocks in water -->
+  <ellipse cx="150" cy="380" rx="30" ry="15" fill="#90A4AE"/>
+  <ellipse cx="800" cy="360" rx="25" ry="12" fill="#90A4AE"/>
+  <!-- Sand details -->
+  <ellipse cx="420" cy="440" rx="8" ry="4" fill="#FFE082"/>
+  <ellipse cx="540" cy="450" rx="6" ry="3" fill="#FFE082"/>
+  <!-- Starfish on beach -->
+  <polygon points="350,430 352,436 359,436 354,440 356,447 350,443 344,447 346,440 341,436 348,436" fill="#FF8A65"/>
+</svg>

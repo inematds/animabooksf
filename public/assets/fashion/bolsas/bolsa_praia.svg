@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 70">
+  <!-- Beach bag body -->
+  <path d="M5 20 L8 62 Q30 68 52 62 L55 20Z" fill="#26c6da"/>
+  <!-- Woven texture -->
+  <line x1="5" y1="30" x2="55" y2="30" stroke="#00acc1" stroke-width="1" opacity="0.4"/>
+  <line x1="6" y1="40" x2="54" y2="40" stroke="#00acc1" stroke-width="1" opacity="0.4"/>
+  <line x1="7" y1="50" x2="53" y2="50" stroke="#00acc1" stroke-width="1" opacity="0.4"/>
+  <line x1="15" y1="20" x2="16" y2="62" stroke="#00acc1" stroke-width="1" opacity="0.4"/>
+  <line x1="30" y1="20" x2="30" y2="65" stroke="#00acc1" stroke-width="1" opacity="0.4"/>
+  <line x1="45" y1="20" x2="44" y2="62" stroke="#00acc1" stroke-width="1" opacity="0.4"/>
+  <!-- Top trim -->
+  <rect x="5" y="18" width="50" height="6" rx="3" fill="#00897b"/>
+  <!-- Rope handles -->
+  <path d="M15 18 Q15 5 25 3" stroke="#8d6e63" stroke-width="3" fill="none"/>
+  <path d="M45 18 Q45 5 35 3" stroke="#8d6e63" stroke-width="3" fill="none"/>
+  <!-- Sun decoration -->
+  <circle cx="30" cy="42" r="8" fill="#ffd54f"/>
+  <line x1="30" y1="32" x2="30" y2="30" stroke="#ffd54f" stroke-width="2"/>
+  <line x1="30" y1="52" x2="30" y2="54" stroke="#ffd54f" stroke-width="2"/>
+  <line x1="20" y1="42" x2="18" y2="42" stroke="#ffd54f" stroke-width="2"/>
+  <line x1="40" y1="42" x2="42" y2="42" stroke="#ffd54f" stroke-width="2"/>
+  <!-- Starfish peeking out -->
+  <polygon points="48,18 49,14 52,16 51,12 54,13 52,10 55,10 52,8 54,5 51,7 50,4 49,7 46,5 48,8 45,10" fill="#ff7043" opacity="0.7"/>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 60">
+  <!-- Wide brim -->
+  <ellipse cx="35" cy="40" rx="33" ry="10" fill="#ffb74d"/>
+  <!-- Crown -->
+  <path d="M18 40 Q18 15 35 12 Q52 15 52 40Z" fill="#ffa726"/>
+  <!-- Ribbon band -->
+  <rect x="18" y="32" width="34" height="6" rx="2" fill="#e91e63"/>
+  <!-- Ribbon bow -->
+  <path d="M48 32 Q55 28 52 35 Q55 42 48 38Z" fill="#e91e63"/>
+  <circle cx="49" cy="35" r="2" fill="#c2185b"/>
+  <!-- Brim edge -->
+  <ellipse cx="35" cy="40" rx="33" ry="10" fill="none" stroke="#f57c00" stroke-width="1.5"/>
+  <!-- Straw texture lines -->
+  <line x1="22" y1="20" x2="48" y2="20" stroke="#f57c00" stroke-width="0.5" opacity="0.3"/>
+  <line x1="20" y1="25" x2="50" y2="25" stroke="#f57c00" stroke-width="0.5" opacity="0.3"/>
+  <!-- Flower on ribbon -->
+  <circle cx="40" cy="34" r="3" fill="#f48fb1"/>
+  <circle cx="40" cy="34" r="1.5" fill="#ffd54f"/>
+</svg>

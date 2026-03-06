@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 100">
+  <!-- Party dress -->
+  <path d="M30 5 Q40 0 50 5 L52 20 Q55 25 60 28 L70 35 L65 40 L55 35 L58 50 Q65 70 72 95 L8 95 Q15 70 22 50 L25 35 L15 40 L10 35 L20 28 Q25 25 28 20Z" fill="#e91e63"/>
+  <!-- Bodice detail -->
+  <path d="M30 5 Q40 0 50 5 L52 20 Q40 25 28 20Z" fill="#c2185b"/>
+  <!-- Sparkles -->
+  <circle cx="35" cy="50" r="2" fill="#fff9c4" opacity="0.8"/>
+  <circle cx="50" cy="65" r="2" fill="#fff9c4" opacity="0.8"/>
+  <circle cx="25" cy="70" r="2" fill="#fff9c4" opacity="0.8"/>
+  <circle cx="45" cy="80" r="2" fill="#fff9c4" opacity="0.8"/>
+  <circle cx="30" cy="85" r="1.5" fill="#fff9c4" opacity="0.8"/>
+  <circle cx="55" cy="55" r="1.5" fill="#fff9c4" opacity="0.8"/>
+  <!-- Waist ribbon -->
+  <rect x="20" y="35" width="40" height="5" rx="2" fill="#f48fb1"/>
+  <!-- Bow -->
+  <path d="M37 35 Q32 30 35 37 Q32 44 37 39Z" fill="#f48fb1"/>
+  <path d="M43 35 Q48 30 45 37 Q48 44 43 39Z" fill="#f48fb1"/>
+  <circle cx="40" cy="37" r="2" fill="#f06292"/>
+</svg>

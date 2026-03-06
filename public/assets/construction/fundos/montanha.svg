@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <defs>
+    <linearGradient id="mSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4FC3F7"/>
+      <stop offset="100%" stop-color="#B3E5FC"/>
+    </linearGradient>
+  </defs>
+  <!-- Sky -->
+  <rect width="960" height="540" fill="url(#mSky)"/>
+  <!-- Clouds -->
+  <ellipse cx="200" cy="80" rx="80" ry="30" fill="white" opacity="0.8"/>
+  <ellipse cx="250" cy="75" rx="60" ry="25" fill="white" opacity="0.8"/>
+  <ellipse cx="700" cy="60" rx="70" ry="25" fill="white" opacity="0.7"/>
+  <ellipse cx="740" cy="55" rx="50" ry="20" fill="white" opacity="0.7"/>
+  <!-- Far mountains -->
+  <polygon points="0,350 120,150 240,350" fill="#7986CB"/>
+  <polygon points="150,350 320,100 490,350" fill="#9FA8DA"/>
+  <polygon points="400,350 560,120 720,350" fill="#7986CB"/>
+  <polygon points="620,350 780,140 960,350" fill="#9FA8DA"/>
+  <!-- Snow caps -->
+  <polygon points="120,150 100,200 140,200" fill="white"/>
+  <polygon points="320,100 295,160 345,160" fill="white"/>
+  <polygon points="560,120 535,175 585,175" fill="white"/>
+  <polygon points="780,140 758,195 802,195" fill="white"/>
+  <!-- Near hills -->
+  <ellipse cx="150" cy="400" rx="250" ry="80" fill="#66BB6A"/>
+  <ellipse cx="500" cy="410" rx="300" ry="70" fill="#4CAF50"/>
+  <ellipse cx="850" cy="400" rx="250" ry="80" fill="#66BB6A"/>
+  <!-- Ground -->
+  <rect x="0" y="420" width="960" height="120" fill="#4CAF50"/>
+  <!-- Grass tufts -->
+  <ellipse cx="100" cy="460" rx="60" ry="15" fill="#43A047"/>
+  <ellipse cx="350" cy="480" rx="70" ry="12" fill="#388E3C"/>
+  <ellipse cx="600" cy="470" rx="55" ry="14" fill="#43A047"/>
+  <ellipse cx="800" cy="490" rx="65" ry="12" fill="#388E3C"/>
+  <!-- Small rocks -->
+  <ellipse cx="250" cy="500" rx="18" ry="10" fill="#9E9E9E"/>
+  <ellipse cx="680" cy="510" rx="14" ry="8" fill="#BDBDBD"/>
+  <!-- Flat ground area -->
+  <rect x="0" y="500" width="960" height="40" fill="#388E3C"/>
+  <!-- Pine trees far -->
+  <polygon points="50,380 65,340 80,380" fill="#2E7D32"/>
+  <rect x="61" y="380" width="8" height="15" fill="#5D4037"/>
+  <polygon points="880,375 895,330 910,375" fill="#2E7D32"/>
+  <rect x="891" y="375" width="8" height="15" fill="#5D4037"/>
+</svg>

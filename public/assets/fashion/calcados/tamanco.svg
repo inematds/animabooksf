@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 60">
+  <!-- Platform sole -->
+  <path d="M10 35 Q8 30 12 25 Q18 20 40 18 Q62 20 68 25 Q72 30 70 38 Q65 48 40 50 Q15 48 10 35Z" fill="#8d6e63"/>
+  <!-- Thick sole layers -->
+  <path d="M10 38 Q15 45 40 48 Q65 45 70 38 Q72 42 70 45 Q65 50 40 52 Q15 50 8 45 Q6 42 10 38Z" fill="#6d4c41"/>
+  <path d="M8 45 Q15 50 40 52 Q65 50 72 45 Q74 48 72 50 Q65 55 40 56 Q15 55 6 50 Q4 48 8 45Z" fill="#5d4037"/>
+  <!-- Shoe upper -->
+  <path d="M12 30 Q10 22 18 18 Q30 12 45 14 Q55 15 60 20 Q62 24 60 30" fill="#e91e63"/>
+  <!-- Strap -->
+  <path d="M20 22 Q35 15 55 22" stroke="#c2185b" stroke-width="3" fill="none"/>
+  <!-- Flower decoration -->
+  <circle cx="38" cy="18" r="4" fill="#ffd54f"/>
+  <circle cx="38" cy="18" r="2" fill="#ff7043"/>
+  <!-- Wood grain on sole -->
+  <path d="M15 40 Q30 38 50 40 Q65 42 70 40" stroke="#795548" stroke-width="0.8" fill="none" opacity="0.5"/>
+  <path d="M12 45 Q30 43 50 45 Q65 47 72 45" stroke="#795548" stroke-width="0.8" fill="none" opacity="0.5"/>
+</svg>

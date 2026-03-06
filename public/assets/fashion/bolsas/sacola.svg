@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 70">
+  <!-- Shopping bag body -->
+  <rect x="5" y="18" width="50" height="48" rx="3" fill="#ab47bc"/>
+  <!-- Tissue paper peeking out -->
+  <path d="M10 18 Q15 10 20 18 Q25 8 30 18 Q35 10 40 18 Q45 8 50 18" fill="#f8bbd0" opacity="0.6"/>
+  <!-- Handles -->
+  <path d="M15 18 Q15 8 22 5" stroke="#9c27b0" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M45 18 Q45 8 38 5" stroke="#9c27b0" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Logo area -->
+  <rect x="15" y="32" width="30" height="20" rx="4" fill="#9c27b0"/>
+  <!-- Star logo -->
+  <polygon points="30,35 33,42 40,42 34,46 36,53 30,49 24,53 26,46 20,42 27,42" fill="#ffd54f"/>
+  <!-- Fold lines -->
+  <line x1="20" y1="18" x2="20" y2="66" stroke="#9c27b0" stroke-width="1" opacity="0.3"/>
+  <line x1="40" y1="18" x2="40" y2="66" stroke="#9c27b0" stroke-width="1" opacity="0.3"/>
+  <!-- Bottom fold -->
+  <rect x="5" y="60" width="50" height="6" rx="2" fill="#7b1fa2" opacity="0.3"/>
+</svg>

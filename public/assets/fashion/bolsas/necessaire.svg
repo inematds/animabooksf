@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 70">
+  <!-- Makeup bag body -->
+  <path d="M8 25 Q5 25 5 30 L5 55 Q5 60 10 60 L50 60 Q55 60 55 55 L55 30 Q55 25 52 25Z" fill="#f48fb1"/>
+  <!-- Top curve -->
+  <path d="M8 25 Q30 18 52 25" fill="#e91e63"/>
+  <!-- Zipper -->
+  <path d="M8 25 Q30 18 52 25" stroke="#ffd54f" stroke-width="2" fill="none"/>
+  <circle cx="52" cy="25" r="3" fill="#ffd54f"/>
+  <!-- Pattern - hearts -->
+  <path d="M18 35 Q18 32 20 32 Q22 32 22 35 Q22 38 20 40 Q18 38 18 35Z" fill="#e91e63" opacity="0.5"/>
+  <path d="M30 40 Q30 37 32 37 Q34 37 34 40 Q34 43 32 45 Q30 43 30 40Z" fill="#e91e63" opacity="0.5"/>
+  <path d="M42 33 Q42 30 44 30 Q46 30 46 33 Q46 36 44 38 Q42 36 42 33Z" fill="#e91e63" opacity="0.5"/>
+  <path d="M24 48 Q24 45 26 45 Q28 45 28 48 Q28 51 26 53 Q24 51 24 48Z" fill="#e91e63" opacity="0.5"/>
+  <path d="M38 50 Q38 47 40 47 Q42 47 42 50 Q42 53 40 55 Q38 53 38 50Z" fill="#e91e63" opacity="0.5"/>
+  <!-- Lipstick peeking out -->
+  <rect x="12" y="18" width="6" height="10" rx="2" fill="#e91e63"/>
+  <rect x="13" y="15" width="4" height="5" rx="2" fill="#c2185b"/>
+</svg>

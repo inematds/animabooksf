@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <!-- Sky gradient -->
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4FC3F7"/>
+      <stop offset="100%" stop-color="#B3E5FC"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#skyGrad)"/>
+  <!-- Clouds -->
+  <ellipse cx="150" cy="60" rx="55" ry="20" fill="#fff" opacity="0.9"/>
+  <ellipse cx="190" cy="52" rx="45" ry="18" fill="#fff" opacity="0.9"/>
+  <ellipse cx="700" cy="80" rx="50" ry="18" fill="#fff" opacity="0.8"/>
+  <!-- Far mountains (darker) -->
+  <path d="M-20 300 L120 140 L260 280 L350 160 L500 300 L600 180 L750 290 L850 150 L980 300 L980 540 L-20 540 Z" fill="#7986CB"/>
+  <!-- Snow caps -->
+  <path d="M120 140 L140 170 L100 170 Z" fill="#fff"/>
+  <path d="M350 160 L370 190 L330 190 Z" fill="#fff"/>
+  <path d="M850 150 L870 180 L830 180 Z" fill="#fff"/>
+  <!-- Mid mountains -->
+  <path d="M-20 350 L100 230 L220 330 L330 240 L480 350 L580 260 L700 340 L820 250 L980 350 L980 540 L-20 540 Z" fill="#66BB6A"/>
+  <!-- Near hills -->
+  <path d="M-20 400 L150 320 L300 390 L450 330 L600 400 L750 340 L900 390 L980 370 L980 540 L-20 540 Z" fill="#4CAF50"/>
+  <!-- Trees on hills -->
+  <circle cx="100" cy="340" r="18" fill="#388E3C"/>
+  <circle cx="130" cy="345" r="15" fill="#2E7D32"/>
+  <circle cx="160" cy="335" r="20" fill="#388E3C"/>
+  <circle cx="430" cy="348" r="16" fill="#2E7D32"/>
+  <circle cx="460" cy="340" r="20" fill="#388E3C"/>
+  <circle cx="780" cy="350" r="18" fill="#388E3C"/>
+  <circle cx="810" cy="355" r="15" fill="#2E7D32"/>
+  <!-- Ground / meadow -->
+  <rect y="400" width="960" height="140" fill="#66BB6A"/>
+  <!-- Winding road -->
+  <path d="M0 470 Q120 440 240 470 Q360 500 480 470 Q600 440 720 470 Q840 500 960 470" fill="none" stroke="#757575" stroke-width="36" stroke-linecap="round"/>
+  <path d="M0 470 Q120 440 240 470 Q360 500 480 470 Q600 440 720 470 Q840 500 960 470" fill="none" stroke="#FFF" stroke-width="2" stroke-dasharray="18 14"/>
+  <!-- Small stream -->
+  <path d="M300 400 Q320 420 310 450 Q300 480 320 510 Q340 540 340 540" fill="none" stroke="#42A5F5" stroke-width="10" stroke-linecap="round" opacity="0.7"/>
+  <!-- Flowers -->
+  <circle cx="80" cy="430" r="4" fill="#FF7043"/>
+  <circle cx="200" cy="445" r="4" fill="#FFD54F"/>
+  <circle cx="520" cy="425" r="4" fill="#EF5350"/>
+  <circle cx="650" cy="450" r="4" fill="#FF7043"/>
+  <circle cx="850" cy="435" r="4" fill="#FFD54F"/>
+  <circle cx="400" cy="510" r="4" fill="#E040FB"/>
+  <circle cx="560" cy="520" r="4" fill="#FF7043"/>
+  <!-- Grass patches -->
+  <rect y="530" width="960" height="10" fill="#558B2F"/>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <!-- Sky -->
+  <rect width="960" height="540" fill="#90CAF9"/>
+  <!-- Clouds -->
+  <ellipse cx="200" cy="55" rx="55" ry="22" fill="#fff" opacity="0.85"/>
+  <ellipse cx="240" cy="47" rx="45" ry="18" fill="#fff" opacity="0.85"/>
+  <ellipse cx="650" cy="70" rx="50" ry="18" fill="#fff" opacity="0.8"/>
+  <!-- Sun -->
+  <circle cx="880" cy="70" r="45" fill="#FFD54F"/>
+  <!-- Ocean / water -->
+  <rect y="280" width="960" height="260" fill="#1E88E5"/>
+  <!-- Water ripples -->
+  <path d="M0 320 Q50 310 100 320 Q150 330 200 320 Q250 310 300 320 Q350 330 400 320 Q450 310 500 320 Q550 330 600 320 Q650 310 700 320 Q750 330 800 320 Q850 310 900 320 Q950 330 960 325" fill="none" stroke="#42A5F5" stroke-width="2"/>
+  <path d="M0 370 Q60 360 120 370 Q180 380 240 370 Q300 360 360 370 Q420 380 480 370 Q540 360 600 370 Q660 380 720 370 Q780 360 840 370 Q900 380 960 370" fill="none" stroke="#42A5F5" stroke-width="2"/>
+  <path d="M0 420 Q45 412 90 420 Q135 428 180 420 Q225 412 270 420 Q315 428 360 420 Q405 412 450 420 Q495 428 540 420" fill="none" stroke="#42A5F5" stroke-width="2"/>
+  <!-- Dock / pier area (left side) -->
+  <rect x="0" y="260" width="500" height="120" fill="#8D6E63"/>
+  <rect x="0" y="255" width="500" height="10" fill="#A1887F"/>
+  <!-- Dock planks -->
+  <line x1="40" y1="265" x2="40" y2="380" stroke="#795548" stroke-width="1" opacity="0.5"/>
+  <line x1="80" y1="265" x2="80" y2="380" stroke="#795548" stroke-width="1" opacity="0.5"/>
+  <line x1="120" y1="265" x2="120" y2="380" stroke="#795548" stroke-width="1" opacity="0.5"/>
+  <line x1="160" y1="265" x2="160" y2="380" stroke="#795548" stroke-width="1" opacity="0.5"/>
+  <line x1="200" y1="265" x2="200" y2="380" stroke="#795548" stroke-width="1" opacity="0.5"/>
+  <line x1="240" y1="265" x2="240" y2="380" stroke="#795548" stroke-width="1" opacity="0.5"/>
+  <line x1="280" y1="265" x2="280" y2="380" stroke="#795548" stroke-width="1" opacity="0.5"/>
+  <line x1="320" y1="265" x2="320" y2="380" stroke="#795548" stroke-width="1" opacity="0.5"/>
+  <line x1="360" y1="265" x2="360" y2="380" stroke="#795548" stroke-width="1" opacity="0.5"/>
+  <line x1="400" y1="265" x2="400" y2="380" stroke="#795548" stroke-width="1" opacity="0.5"/>
+  <line x1="440" y1="265" x2="440" y2="380" stroke="#795548" stroke-width="1" opacity="0.5"/>
+  <!-- Pier extending into water -->
+  <rect x="180" y="370" width="60" height="120" fill="#A1887F"/>
+  <rect x="360" y="370" width="60" height="100" fill="#A1887F"/>
+  <!-- Bollards -->
+  <circle cx="195" cy="375" r="6" fill="#757575"/>
+  <circle cx="225" cy="375" r="6" fill="#757575"/>
+  <circle cx="375" cy="375" r="6" fill="#757575"/>
+  <circle cx="405" cy="375" r="6" fill="#757575"/>
+  <!-- Crane -->
+  <rect x="80" y="180" width="12" height="80" fill="#FF7043"/>
+  <rect x="40" y="178" width="100" height="8" fill="#FF7043"/>
+  <line x1="130" y1="182" x2="130" y2="250" stroke="#757575" stroke-width="2"/>
+  <rect x="120" y="248" width="20" height="12" fill="#757575"/>
+  <!-- Lighthouse -->
+  <rect x="460" y="190" width="25" height="70" fill="#FAFAFA" rx="3"/>
+  <rect x="460" y="210" width="25" height="10" fill="#EF5350"/>
+  <rect x="460" y="240" width="25" height="10" fill="#EF5350"/>
+  <rect x="455" y="185" width="35" height="10" fill="#E0E0E0" rx="2"/>
+  <circle cx="472" cy="182" r="8" fill="#FFD54F"/>
+  <!-- Road along dock -->
+  <rect x="0" y="210" width="500" height="45" fill="#757575"/>
+  <line x1="0" y1="232" x2="500" y2="232" stroke="#FFF" stroke-width="2" stroke-dasharray="18 12"/>
+  <!-- Land area (right side) -->
+  <rect x="500" y="210" width="460" height="70" fill="#81C784"/>
+  <rect x="500" y="210" width="460" height="45" fill="#757575"/>
+  <line x1="500" y1="232" x2="960" y2="232" stroke="#FFF" stroke-width="2" stroke-dasharray="18 12"/>
+  <!-- Container boxes on dock -->
+  <rect x="30" y="270" width="30" height="20" fill="#EF5350" rx="2"/>
+  <rect x="65" y="270" width="30" height="20" fill="#42A5F5" rx="2"/>
+  <rect x="30" y="295" width="30" height="20" fill="#FFD54F" rx="2"/>
+  <rect x="65" y="295" width="30" height="20" fill="#66BB6A" rx="2"/>
+  <rect x="100" y="280" width="30" height="20" fill="#FF7043" rx="2"/>
+  <!-- Ship in water -->
+  <path d="M620 340 L700 340 L720 365 L600 365 Z" fill="#EF5350"/>
+  <rect x="640" y="310" width="40" height="30" fill="#FAFAFA" rx="2"/>
+  <rect x="655" y="290" width="4" height="22" fill="#757575"/>
+  <rect x="658" y="292" width="20" height="12" fill="#42A5F5"/>
+  <!-- Small boat -->
+  <path d="M810 310 L850 310 L860 325 L800 325 Z" fill="#FFD54F"/>
+  <rect x="828" y="295" width="3" height="16" fill="#795548"/>
+</svg>

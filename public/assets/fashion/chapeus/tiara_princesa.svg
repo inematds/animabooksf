@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 60">
+  <!-- Tiara band -->
+  <path d="M5 45 Q5 35 15 32 Q25 30 35 28 Q45 30 55 32 Q65 35 65 45" fill="none" stroke="#ffd54f" stroke-width="4"/>
+  <!-- Crown points -->
+  <path d="M15 32 L12 18 L20 25 L28 10 L35 25 L42 10 L50 25 L58 18 L55 32" fill="#ffd54f"/>
+  <!-- Inner decoration -->
+  <path d="M18 32 L15 22 L22 27 L28 16 L35 27 L42 16 L48 27 L55 22 L52 32" fill="#ffb300"/>
+  <!-- Gems -->
+  <circle cx="28" cy="14" r="3" fill="#e91e63"/>
+  <circle cx="28" cy="14" r="1.5" fill="#f48fb1"/>
+  <circle cx="42" cy="14" r="3" fill="#e91e63"/>
+  <circle cx="42" cy="14" r="1.5" fill="#f48fb1"/>
+  <!-- Center gem (bigger) -->
+  <circle cx="35" cy="10" r="4" fill="#7c4dff"/>
+  <circle cx="35" cy="10" r="2" fill="#b388ff"/>
+  <!-- Base gems -->
+  <circle cx="20" cy="30" r="2" fill="#e91e63"/>
+  <circle cx="35" cy="28" r="2" fill="#e91e63"/>
+  <circle cx="50" cy="30" r="2" fill="#e91e63"/>
+  <!-- Sparkles -->
+  <path d="M8 15 L10 12 M9 10 L9 17 M6 13 L12 13" stroke="#fff9c4" stroke-width="0.8"/>
+  <path d="M60 12 L62 9 M61 7 L61 14 M58 10 L64 10" stroke="#fff9c4" stroke-width="0.8"/>
+</svg>

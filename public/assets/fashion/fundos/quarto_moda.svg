@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <!-- Floor -->
+  <rect x="0" y="400" width="960" height="140" fill="#d7ccc8"/>
+  <!-- Wall -->
+  <rect x="0" y="0" width="960" height="400" fill="#f3e5f5"/>
+  <!-- Polka dots on wall -->
+  <circle cx="80" cy="60" r="12" fill="#e1bee7" opacity="0.5"/>
+  <circle cx="200" cy="120" r="12" fill="#e1bee7" opacity="0.5"/>
+  <circle cx="350" cy="50" r="12" fill="#e1bee7" opacity="0.5"/>
+  <circle cx="600" cy="80" r="12" fill="#e1bee7" opacity="0.5"/>
+  <circle cx="750" cy="140" r="12" fill="#e1bee7" opacity="0.5"/>
+  <circle cx="900" cy="60" r="12" fill="#e1bee7" opacity="0.5"/>
+  <!-- Wardrobe -->
+  <rect x="50" y="80" width="250" height="320" rx="8" fill="#ab47bc"/>
+  <rect x="60" y="90" width="110" height="300" rx="4" fill="#ce93d8"/>
+  <rect x="180" y="90" width="110" height="300" rx="4" fill="#ce93d8"/>
+  <!-- Wardrobe handles -->
+  <circle cx="162" cy="240" r="8" fill="#ffd54f"/>
+  <circle cx="188" cy="240" r="8" fill="#ffd54f"/>
+  <!-- Wardrobe peek clothes -->
+  <rect x="75" y="130" width="30" height="50" rx="4" fill="#e91e63" opacity="0.6"/>
+  <rect x="115" y="125" width="30" height="55" rx="4" fill="#42a5f5" opacity="0.6"/>
+  <!-- Bed -->
+  <rect x="550" y="280" width="360" height="120" rx="12" fill="#f48fb1"/>
+  <rect x="540" y="250" width="120" height="150" rx="10" fill="#ec407a"/>
+  <!-- Pillow -->
+  <ellipse cx="600" cy="300" rx="45" ry="25" fill="#fff9c4"/>
+  <!-- Blanket pattern -->
+  <rect x="660" y="300" width="240" height="80" rx="8" fill="#f06292"/>
+  <circle cx="700" cy="340" r="10" fill="#f8bbd0" opacity="0.5"/>
+  <circle cx="740" cy="320" r="10" fill="#f8bbd0" opacity="0.5"/>
+  <circle cx="780" cy="345" r="10" fill="#f8bbd0" opacity="0.5"/>
+  <circle cx="820" cy="325" r="10" fill="#f8bbd0" opacity="0.5"/>
+  <circle cx="860" cy="340" r="10" fill="#f8bbd0" opacity="0.5"/>
+  <!-- Full-length mirror -->
+  <rect x="370" y="100" width="100" height="250" rx="50" fill="#ffd54f"/>
+  <rect x="380" y="110" width="80" height="230" rx="40" fill="#e3f2fd" opacity="0.6"/>
+  <path d="M390 120 L410 120 L395 200Z" fill="white" opacity="0.3"/>
+  <!-- Rug -->
+  <ellipse cx="480" cy="460" rx="200" ry="50" fill="#f8bbd0" opacity="0.5"/>
+  <!-- Fairy lights on wall -->
+  <circle cx="50" cy="25" r="6" fill="#fff176"/>
+  <circle cx="120" cy="20" r="6" fill="#f48fb1"/>
+  <circle cx="190" cy="25" r="6" fill="#80deea"/>
+  <circle cx="260" cy="18" r="6" fill="#fff176"/>
+  <circle cx="330" cy="22" r="6" fill="#f48fb1"/>
+  <line x1="50" y1="25" x2="120" y2="20" stroke="#bdbdbd" stroke-width="1"/>
+  <line x1="120" y1="20" x2="190" y2="25" stroke="#bdbdbd" stroke-width="1"/>
+  <line x1="190" y1="25" x2="260" y2="18" stroke="#bdbdbd" stroke-width="1"/>
+  <line x1="260" y1="18" x2="330" y2="22" stroke="#bdbdbd" stroke-width="1"/>
+</svg>

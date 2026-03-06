@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 60">
+  <!-- Brim -->
+  <ellipse cx="35" cy="48" rx="32" ry="8" fill="#4a148c"/>
+  <!-- Cone -->
+  <path d="M15 48 L35 3 L55 48Z" fill="#7b1fa2"/>
+  <!-- Cone curve at top -->
+  <path d="M35 3 Q42 8 38 15" stroke="#7b1fa2" stroke-width="4" fill="none"/>
+  <!-- Band -->
+  <rect x="17" y="40" width="36" height="6" rx="2" fill="#ffd54f"/>
+  <!-- Buckle -->
+  <rect x="30" y="38" width="10" height="10" rx="2" fill="#ffd54f"/>
+  <rect x="33" y="41" width="4" height="4" rx="1" fill="#7b1fa2"/>
+  <!-- Stars on hat -->
+  <polygon points="25,25 26,28 29,28 27,30 28,33 25,31 22,33 23,30 21,28 24,28" fill="#ffd54f" opacity="0.7"/>
+  <polygon points="40,18 41,20 43,20 41,22 42,24 40,23 38,24 39,22 37,20 39,20" fill="#ffd54f" opacity="0.6"/>
+  <!-- Moon -->
+  <path d="M45 28 Q50 25 48 32 Q46 35 42 32 Q45 32 45 28Z" fill="#fff9c4" opacity="0.6"/>
+  <!-- Brim edge -->
+  <ellipse cx="35" cy="48" rx="32" ry="8" fill="none" stroke="#6a1b9a" stroke-width="1.5"/>
+</svg>

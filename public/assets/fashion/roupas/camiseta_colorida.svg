@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 100">
+  <!-- T-shirt body -->
+  <path d="M25 10 Q40 5 55 10 L58 15 Q65 18 72 22 L68 38 L58 32 L58 90 L22 90 L22 32 L12 38 L8 22 Q15 18 22 15Z" fill="#42a5f5"/>
+  <!-- Collar -->
+  <path d="M25 10 Q40 15 55 10 Q50 18 40 18 Q30 18 25 10Z" fill="#1e88e5"/>
+  <!-- Sleeve edges -->
+  <path d="M22 30 L12 36 L8 22 Q15 18 22 15Z" fill="#1e88e5" opacity="0.3"/>
+  <path d="M58 30 L68 36 L72 22 Q65 18 58 15Z" fill="#1e88e5" opacity="0.3"/>
+  <!-- Rainbow stripe -->
+  <rect x="22" y="45" width="36" height="6" fill="#e91e63"/>
+  <rect x="22" y="51" width="36" height="6" fill="#ff9800"/>
+  <rect x="22" y="57" width="36" height="6" fill="#fdd835"/>
+  <rect x="22" y="63" width="36" height="6" fill="#66bb6a"/>
+  <!-- Star decoration -->
+  <polygon points="40,25 42,31 48,31 43,35 45,41 40,37 35,41 37,35 32,31 38,31" fill="#fff9c4"/>
+</svg>

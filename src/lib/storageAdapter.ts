@@ -314,26 +314,80 @@ export async function listCreativeAssets(mode: ProjectType): Promise<CreativeAss
   const { fs, path } = getFsModules();
   const baseDir = path.join(process.cwd(), 'public', 'assets', mode);
 
-  if (!fs.existsSync(baseDir)) return [];
-
   const categories: CreativeAssetCategory[] = [];
-  const dirs = fs.readdirSync(baseDir, { withFileTypes: true });
 
-  for (const d of dirs) {
-    if (!d.isDirectory() || d.name === 'fundos') continue;
-    const catPath = path.join(baseDir, d.name);
-    const files = fs.readdirSync(catPath).filter((f: string) => /\.(png|jpg|jpeg|webp|svg)$/i.test(f));
-    if (files.length > 0) {
-      categories.push({ category: d.name, files });
+  // Mode-specific assets from public/assets/<mode>/
+  if (fs.existsSync(baseDir)) {
+    const dirs = fs.readdirSync(baseDir, { withFileTypes: true });
+    for (const d of dirs) {
+      if (!d.isDirectory() || d.name === 'fundos') continue;
+      const catPath = path.join(baseDir, d.name);
+      const files = fs.readdirSync(catPath).filter((f: string) => /\.(png|jpg|jpeg|webp|svg)$/i.test(f));
+      if (files.length > 0) {
+        categories.push({ category: d.name, files });
+      }
     }
   }
+
+  // Also include shared sprites from public/sprites/ (available in all modes)
+  // These use special "sprites:" prefix in category to distinguish path
+  const spritesDir = path.join(process.cwd(), 'public', 'sprites');
+  if (fs.existsSync(spritesDir)) {
+    const allSprites = fs.readdirSync(spritesDir).filter((f: string) => /\.(png|jpg|jpeg|webp|svg)$/i.test(f));
+    const spriteCategories: Record<string, string[]> = { 'sprites:personagens': [] };
+    const prefixMap: Record<string, string> = {
+      animal: 'sprites:animais', natureza: 'sprites:natureza', comida: 'sprites:comida',
+      movel: 'sprites:moveis', veiculo: 'sprites:veiculos', brinquedo: 'sprites:brinquedos',
+      escola: 'sprites:escola', magia: 'sprites:magia', moda: 'sprites:moda_items',
+    };
+    for (const f of allSprites) {
+      const prefix = f.split('_')[0];
+      if (prefixMap[prefix]) {
+        const cat = prefixMap[prefix];
+        if (!spriteCategories[cat]) spriteCategories[cat] = [];
+        spriteCategories[cat].push(f);
+      } else {
+        spriteCategories['sprites:personagens'].push(f);
+      }
+    }
+    for (const [cat, files] of Object.entries(spriteCategories)) {
+      if (files.length > 0) {
+        categories.push({ category: cat, files });
+      }
+    }
+  }
+
   return categories;
 }
 
-export async function listCreativeBackgrounds(mode: ProjectType): Promise<string[]> {
-  const { fs, path } = getFsModules();
-  const bgDir = path.join(process.cwd(), 'public', 'assets', mode, 'fundos');
+export interface CreativeBackground {
+  filename: string;
+  path: string; // full path from public/, e.g. "/assets/decoration/fundos/" or "/backgrounds/"
+}
 
-  if (!fs.existsSync(bgDir)) return [];
-  return fs.readdirSync(bgDir).filter((f: string) => /\.(png|jpg|jpeg|webp|svg)$/i.test(f));
+export async function listCreativeBackgrounds(mode: ProjectType): Promise<CreativeBackground[]> {
+  const { fs, path } = getFsModules();
+  const backgrounds: CreativeBackground[] = [];
+
+  // Mode-specific backgrounds
+  const bgDir = path.join(process.cwd(), 'public', 'assets', mode, 'fundos');
+  if (fs.existsSync(bgDir)) {
+    const files = fs.readdirSync(bgDir).filter((f: string) => /\.(png|jpg|jpeg|webp|svg)$/i.test(f));
+    for (const f of files) {
+      backgrounds.push({ filename: f, path: `/assets/${mode}/fundos/` });
+    }
+  }
+
+  // Also include shared backgrounds from public/backgrounds/
+  const sharedDir = path.join(process.cwd(), 'public', 'backgrounds');
+  if (fs.existsSync(sharedDir)) {
+    const shared = fs.readdirSync(sharedDir).filter((f: string) => /\.(png|jpg|jpeg|webp|svg)$/i.test(f));
+    for (const f of shared) {
+      if (!backgrounds.find((b) => b.filename === f)) {
+        backgrounds.push({ filename: f, path: '/backgrounds/' });
+      }
+    }
+  }
+
+  return backgrounds;
 }

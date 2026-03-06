@@ -17,12 +17,14 @@ const TYPE_ICONS: Record<ProjectType, string> = {
   decoration: '🏠',
   construction: '🔨',
   city: '🌆',
+  fashion: '👗',
 };
 
 const TYPE_LABELS: Record<ProjectType, string> = {
   decoration: 'Decoracao',
   construction: 'Construcao',
   city: 'Cidade',
+  fashion: 'Moda',
 };
 
 export default function GalleryPage() {

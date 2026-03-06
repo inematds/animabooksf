@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <!-- Wall -->
+  <rect width="960" height="540" fill="#FFF8E1"/>
+  <!-- Wainscoting (lower wall panel) -->
+  <rect y="260" width="960" height="130" fill="#FFECB3"/>
+  <line x1="0" y1="260" x2="960" y2="260" stroke="#FFD54F" stroke-width="2"/>
+  <!-- Wainscoting vertical lines -->
+  <line x1="120" y1="260" x2="120" y2="390" stroke="#FFE082" stroke-width="1.5"/>
+  <line x1="240" y1="260" x2="240" y2="390" stroke="#FFE082" stroke-width="1.5"/>
+  <line x1="360" y1="260" x2="360" y2="390" stroke="#FFE082" stroke-width="1.5"/>
+  <line x1="480" y1="260" x2="480" y2="390" stroke="#FFE082" stroke-width="1.5"/>
+  <line x1="600" y1="260" x2="600" y2="390" stroke="#FFE082" stroke-width="1.5"/>
+  <line x1="720" y1="260" x2="720" y2="390" stroke="#FFE082" stroke-width="1.5"/>
+  <line x1="840" y1="260" x2="840" y2="390" stroke="#FFE082" stroke-width="1.5"/>
+  <!-- Floor -->
+  <rect y="390" width="960" height="150" fill="#D7A86E"/>
+  <!-- Wood floor planks -->
+  <line x1="0" y1="420" x2="960" y2="420" stroke="#C89A60" stroke-width="1"/>
+  <line x1="0" y1="450" x2="960" y2="450" stroke="#C89A60" stroke-width="1"/>
+  <line x1="0" y1="480" x2="960" y2="480" stroke="#C89A60" stroke-width="1"/>
+  <line x1="0" y1="510" x2="960" y2="510" stroke="#C89A60" stroke-width="1"/>
+  <!-- Baseboard -->
+  <rect y="385" width="960" height="8" fill="#C49A6C"/>
+  <!-- Window left -->
+  <rect x="60" y="60" width="160" height="180" rx="4" fill="#B5E4F7"/>
+  <rect x="55" y="55" width="170" height="190" rx="4" fill="none" stroke="#FFFFFF" stroke-width="6"/>
+  <rect x="55" y="55" width="170" height="190" rx="4" fill="none" stroke="#E0C8A8" stroke-width="2.5"/>
+  <line x1="140" y1="55" x2="140" y2="245" stroke="#E0C8A8" stroke-width="3"/>
+  <line x1="55" y1="150" x2="225" y2="150" stroke="#E0C8A8" stroke-width="3"/>
+  <!-- Curtain left -->
+  <rect x="35" y="45" width="30" height="200" rx="3" fill="#FFCC80" opacity="0.6"/>
+  <rect x="215" y="45" width="30" height="200" rx="3" fill="#FFCC80" opacity="0.6"/>
+  <!-- Curtain rod -->
+  <rect x="25" y="40" width="230" height="6" rx="3" fill="#C49A6C"/>
+  <!-- Window right -->
+  <rect x="740" y="60" width="160" height="180" rx="4" fill="#B5E4F7"/>
+  <rect x="735" y="55" width="170" height="190" rx="4" fill="none" stroke="#FFFFFF" stroke-width="6"/>
+  <rect x="735" y="55" width="170" height="190" rx="4" fill="none" stroke="#E0C8A8" stroke-width="2.5"/>
+  <line x1="820" y1="55" x2="820" y2="245" stroke="#E0C8A8" stroke-width="3"/>
+  <line x1="735" y1="150" x2="905" y2="150" stroke="#E0C8A8" stroke-width="3"/>
+  <!-- Curtain right -->
+  <rect x="715" y="45" width="30" height="200" rx="3" fill="#FFCC80" opacity="0.6"/>
+  <rect x="895" y="45" width="30" height="200" rx="3" fill="#FFCC80" opacity="0.6"/>
+  <!-- Curtain rod right -->
+  <rect x="705" y="40" width="230" height="6" rx="3" fill="#C49A6C"/>
+  <!-- Dining table -->
+  <ellipse cx="480" cy="350" rx="200" ry="40" fill="#D4A76A" stroke="#C49A5C" stroke-width="2"/>
+  <!-- Table legs -->
+  <rect x="340" y="385" width="10" height="90" fill="#C49A5C"/>
+  <rect x="610" y="385" width="10" height="90" fill="#C49A5C"/>
+  <!-- Ceiling light fixture -->
+  <rect x="470" y="0" width="20" height="40" fill="#E0E0E0"/>
+  <circle cx="480" cy="55" r="20" fill="#FFF9C4" stroke="#FFE082" stroke-width="2"/>
+  <circle cx="480" cy="55" r="10" fill="#FFFFFF" opacity="0.6"/>
+</svg>

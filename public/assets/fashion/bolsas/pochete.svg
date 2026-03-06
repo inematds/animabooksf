@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 70">
+  <!-- Belt/strap -->
+  <path d="M0 30 L60 30" stroke="#e91e63" stroke-width="4"/>
+  <!-- Main pouch -->
+  <path d="M10 25 L50 25 Q55 25 55 30 L55 50 Q55 55 50 55 L10 55 Q5 55 5 50 L5 30 Q5 25 10 25Z" fill="#e91e63"/>
+  <!-- Front pocket -->
+  <rect x="12" y="32" width="36" height="16" rx="5" fill="#c2185b"/>
+  <!-- Zipper -->
+  <line x1="15" y1="32" x2="45" y2="32" stroke="#ffd54f" stroke-width="1.5"/>
+  <circle cx="35" cy="32" r="2" fill="#ffd54f"/>
+  <!-- Buckle -->
+  <rect x="24" y="26" width="12" height="8" rx="2" fill="#ffd54f"/>
+  <rect x="27" y="28" width="6" height="4" rx="1" fill="#e91e63"/>
+  <!-- Pattern dots -->
+  <circle cx="20" cy="48" r="2" fill="#f48fb1" opacity="0.6"/>
+  <circle cx="30" cy="50" r="2" fill="#f48fb1" opacity="0.6"/>
+  <circle cx="40" cy="48" r="2" fill="#f48fb1" opacity="0.6"/>
+  <!-- Lightning bolt decoration -->
+  <path d="M28 38 L32 38 L30 42 L34 42 L28 50 L30 44 L26 44Z" fill="#ffd54f"/>
+  <!-- Strap ends -->
+  <rect x="0" y="28" width="5" height="4" rx="1" fill="#c2185b"/>
+  <rect x="55" y="28" width="5" height="4" rx="1" fill="#c2185b"/>
+</svg>

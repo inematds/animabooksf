@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 60">
+  <!-- Headband -->
+  <path d="M8 35 Q8 20 35 18 Q62 20 62 35" fill="none" stroke="#e91e63" stroke-width="5"/>
+  <!-- Visor brim -->
+  <path d="M5 35 Q2 32 5 28 L60 26 Q72 30 72 36 Q68 42 45 42 Q20 42 5 35Z" fill="#e91e63"/>
+  <!-- Brim underside -->
+  <path d="M8 35 Q20 40 45 40 Q65 38 70 35 Q68 40 45 42 Q20 42 5 37Z" fill="#c2185b"/>
+  <!-- Brim edge -->
+  <path d="M5 34 Q20 40 45 40 Q68 38 72 34" stroke="#ad1457" stroke-width="1" fill="none"/>
+  <!-- Sparkle decoration -->
+  <polygon points="35,22 37,27 42,27 38,30 39,35 35,32 31,35 32,30 28,27 33,27" fill="#ffd54f"/>
+  <!-- Side dots -->
+  <circle cx="15" cy="28" r="2" fill="#f48fb1"/>
+  <circle cx="55" cy="28" r="2" fill="#f48fb1"/>
+  <!-- Velcro back indicator -->
+  <rect x="8" y="30" width="8" height="4" rx="1" fill="#ad1457"/>
+  <rect x="54" y="30" width="8" height="4" rx="1" fill="#ad1457"/>
+</svg>

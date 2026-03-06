@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 100">
+  <!-- Jeans -->
+  <path d="M20 5 L60 5 L62 8 L62 45 L55 45 L55 95 L42 95 L42 45 L38 45 L38 95 L25 95 L25 45 L18 45 L18 8Z" fill="#1565c0"/>
+  <!-- Waistband -->
+  <rect x="18" y="3" width="44" height="10" rx="3" fill="#0d47a1"/>
+  <!-- Button -->
+  <circle cx="40" cy="8" r="3" fill="#ffd54f"/>
+  <!-- Pockets -->
+  <path d="M22 15 L35 15 L33 30 L22 28Z" fill="#1976d2" opacity="0.5"/>
+  <path d="M58 15 L45 15 L47 30 L58 28Z" fill="#1976d2" opacity="0.5"/>
+  <!-- Stitching -->
+  <line x1="30" y1="15" x2="30" y2="42" stroke="#90caf9" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <line x1="50" y1="15" x2="50" y2="42" stroke="#90caf9" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <!-- Cuffs -->
+  <rect x="25" y="90" width="13" height="5" rx="2" fill="#0d47a1"/>
+  <rect x="42" y="90" width="13" height="5" rx="2" fill="#0d47a1"/>
+</svg>

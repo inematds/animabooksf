@@ -5,12 +5,22 @@ import { motion } from 'framer-motion';
 
 const modes = [
   {
+    type: 'story',
+    icon: '📖',
+    title: 'Historias',
+    desc: 'Crie historias interativas com personagens, cenarios e dialogos.',
+    color: 'from-purple-500 to-violet-500',
+    hue: 270,
+    href: '/editor/new',
+  },
+  {
     type: 'decoration',
     icon: '🏠',
     title: 'Decoracao',
     desc: 'Decore quartos, salas e jardins com moveis, plantas e objetos.',
     color: 'from-pink-500 to-rose-500',
     hue: 340,
+    href: '/create/decoration/new',
   },
   {
     type: 'construction',
@@ -19,6 +29,7 @@ const modes = [
     desc: 'Construa casas e estruturas com blocos, portas e telhados.',
     color: 'from-amber-500 to-orange-500',
     hue: 30,
+    href: '/create/construction/new',
   },
   {
     type: 'city',
@@ -27,16 +38,26 @@ const modes = [
     desc: 'Crie cidades com predios, ruas, veiculos e personagens.',
     color: 'from-blue-500 to-indigo-500',
     hue: 220,
+    href: '/create/city/new',
+  },
+  {
+    type: 'fashion',
+    icon: '👗',
+    title: 'Moda',
+    desc: 'Vista personagens com roupas, acessorios, calcados e chapeus.',
+    color: 'from-fuchsia-500 to-pink-500',
+    hue: 300,
+    href: '/create/fashion/new',
   },
 ];
 
 export default function CreateHubPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-50 via-purple-50 to-pink-50">
-      <div className="max-w-4xl mx-auto px-4 py-10">
+      <div className="max-w-5xl mx-auto px-4 py-10">
         {/* Header */}
         <div className="flex items-center gap-3 mb-2">
-          <Link href="/" className="text-sm text-gray-400 hover:text-purple-600">← Inicio</Link>
+          <Link href="/" className="text-sm text-gray-400 hover:text-purple-600">&#8592; Inicio</Link>
         </div>
 
         <motion.div
@@ -55,15 +76,15 @@ export default function CreateHubPage() {
         </motion.div>
 
         {/* Mode cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {modes.map((mode, idx) => (
             <motion.div
               key={mode.type}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: idx * 0.1 }}
+              transition={{ delay: idx * 0.08 }}
             >
-              <Link href={`/create/${mode.type}/new`}>
+              <Link href={mode.href}>
                 <motion.div
                   whileHover={{ y: -6, scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
@@ -89,18 +110,6 @@ export default function CreateHubPage() {
             </motion.div>
           ))}
         </div>
-
-        {/* Link to stories */}
-        <motion.div
-          className="text-center mt-8"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-        >
-          <Link href="/editor/new" className="text-purple-500 hover:text-purple-700 text-sm font-medium">
-            Ou crie uma Historia →
-          </Link>
-        </motion.div>
       </div>
     </div>
   );

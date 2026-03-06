@@ -10,12 +10,14 @@ const DEFAULT_BACKGROUNDS: Record<ProjectType, string> = {
   decoration: 'quarto.svg',
   construction: 'gramado.svg',
   city: 'cidade_base.svg',
+  fashion: 'camarim.svg',
 };
 
 const MODE_TITLES: Record<ProjectType, string> = {
   decoration: 'Minha Decoracao',
   construction: 'Minha Construcao',
   city: 'Minha Cidade',
+  fashion: 'Meu Look',
 };
 
 function createDefaultProject(mode: ProjectType): CreativeProject {

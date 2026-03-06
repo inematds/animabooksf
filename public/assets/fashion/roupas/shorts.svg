@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 100">
+  <!-- Shorts -->
+  <path d="M15 10 L65 10 L68 15 L68 40 L55 40 L52 65 L42 65 L42 40 L38 40 L38 65 L28 65 L25 40 L12 40 L12 15Z" fill="#fdd835"/>
+  <!-- Waistband -->
+  <rect x="12" y="8" width="56" height="10" rx="4" fill="#f9a825"/>
+  <!-- Drawstring -->
+  <path d="M35 13 Q38 18 40 13 Q42 18 45 13" stroke="white" stroke-width="1.5" fill="none"/>
+  <!-- Side stripes -->
+  <path d="M12 18 L12 40 L25 40 L28 65" stroke="white" stroke-width="3" fill="none" opacity="0.5"/>
+  <path d="M68 18 L68 40 L55 40 L52 65" stroke="white" stroke-width="3" fill="none" opacity="0.5"/>
+  <!-- Pocket -->
+  <path d="M18 20 L32 20 L30 35 L18 33Z" fill="#f9a825" opacity="0.5"/>
+  <!-- Flower decoration -->
+  <circle cx="50" cy="30" r="4" fill="#fff9c4"/>
+  <circle cx="50" cy="30" r="2" fill="#ff7043"/>
+</svg>

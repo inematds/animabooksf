@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 60">
+  <!-- Sole -->
+  <path d="M8 42 Q5 38 8 35 L70 33 Q78 35 78 40 Q75 48 50 50 Q20 50 8 42Z" fill="#e0e0e0"/>
+  <!-- Shoe body -->
+  <path d="M10 38 Q8 28 15 20 Q25 12 42 10 Q58 12 68 20 Q72 25 70 35 L10 38Z" fill="#f48fb1"/>
+  <!-- Toe cap -->
+  <path d="M10 38 Q8 30 14 24 Q20 18 32 16 Q22 24 16 32 L10 38Z" fill="#fce4ec"/>
+  <!-- Casual lace area -->
+  <path d="M35 12 Q40 6 48 12" fill="#e91e63"/>
+  <!-- Elastic laces -->
+  <path d="M34 18 Q40 14 48 18" stroke="white" stroke-width="1.5" fill="none"/>
+  <path d="M33 24 Q40 20 50 24" stroke="white" stroke-width="1.5" fill="none"/>
+  <!-- Side swoosh -->
+  <path d="M18 35 Q35 25 60 28 Q55 30 20 36Z" fill="#e91e63"/>
+  <!-- Back tab -->
+  <rect x="65" y="15" width="8" height="10" rx="2" fill="#ffd54f"/>
+  <!-- Sole accent line -->
+  <line x1="10" y1="40" x2="75" y2="38" stroke="#bdbdbd" stroke-width="1"/>
+</svg>

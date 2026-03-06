@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <!-- Sky -->
+  <rect width="960" height="540" fill="#64B5F6"/>
+  <!-- Sun -->
+  <circle cx="820" cy="80" r="55" fill="#FFD54F"/>
+  <!-- Clouds -->
+  <ellipse cx="200" cy="70" rx="60" ry="25" fill="#fff" opacity="0.85"/>
+  <ellipse cx="240" cy="60" rx="50" ry="22" fill="#fff" opacity="0.85"/>
+  <ellipse cx="600" cy="100" rx="55" ry="20" fill="#fff" opacity="0.8"/>
+  <ellipse cx="640" cy="90" rx="45" ry="18" fill="#fff" opacity="0.8"/>
+  <!-- Ocean -->
+  <rect y="320" width="960" height="220" fill="#1E88E5"/>
+  <!-- Waves -->
+  <path d="M0 360 Q40 345 80 360 Q120 375 160 360 Q200 345 240 360 Q280 375 320 360 Q360 345 400 360 Q440 375 480 360 Q520 345 560 360 Q600 375 640 360 Q680 345 720 360 Q760 375 800 360 Q840 345 880 360 Q920 375 960 360" fill="none" stroke="#42A5F5" stroke-width="3"/>
+  <path d="M0 400 Q50 385 100 400 Q150 415 200 400 Q250 385 300 400 Q350 415 400 400 Q450 385 500 400 Q550 415 600 400 Q650 385 700 400 Q750 415 800 400 Q850 385 900 400 Q950 415 960 408" fill="none" stroke="#2196F3" stroke-width="2"/>
+  <!-- Beach sand -->
+  <path d="M0 380 Q200 340 400 360 Q600 380 960 340 L960 540 L0 540 Z" fill="#FFE082"/>
+  <!-- Wet sand near water -->
+  <path d="M0 380 Q200 340 400 360 Q600 380 960 340 L960 380 Q700 400 500 385 Q300 370 0 400 Z" fill="#FFCA28" opacity="0.5"/>
+  <!-- Boardwalk / road -->
+  <rect x="0" y="460" width="960" height="40" fill="#8D6E63" rx="3"/>
+  <rect x="20" y="465" width="60" height="30" fill="#795548" rx="2"/>
+  <rect x="100" y="465" width="60" height="30" fill="#795548" rx="2"/>
+  <rect x="180" y="465" width="60" height="30" fill="#795548" rx="2"/>
+  <rect x="260" y="465" width="60" height="30" fill="#795548" rx="2"/>
+  <rect x="340" y="465" width="60" height="30" fill="#795548" rx="2"/>
+  <rect x="420" y="465" width="60" height="30" fill="#795548" rx="2"/>
+  <rect x="500" y="465" width="60" height="30" fill="#795548" rx="2"/>
+  <rect x="580" y="465" width="60" height="30" fill="#795548" rx="2"/>
+  <rect x="660" y="465" width="60" height="30" fill="#795548" rx="2"/>
+  <rect x="740" y="465" width="60" height="30" fill="#795548" rx="2"/>
+  <rect x="820" y="465" width="60" height="30" fill="#795548" rx="2"/>
+  <rect x="900" y="465" width="50" height="30" fill="#795548" rx="2"/>
+  <!-- Sidewalk -->
+  <rect x="0" y="500" width="960" height="40" fill="#BDBDBD"/>
+  <!-- Palm trees -->
+  <rect x="148" y="390" width="8" height="70" fill="#795548" rx="3"/>
+  <path d="M120 395 Q152 370 152 390" fill="#66BB6A"/>
+  <path d="M152 390 Q152 370 185 395" fill="#43A047"/>
+  <path d="M135 385 Q152 360 170 385" fill="#4CAF50"/>
+  <rect x="708" y="400" width="8" height="60" fill="#795548" rx="3"/>
+  <path d="M680 405 Q712 380 712 400" fill="#66BB6A"/>
+  <path d="M712 400 Q712 380 745 405" fill="#43A047"/>
+  <path d="M695 395 Q712 370 730 395" fill="#4CAF50"/>
+  <!-- Small boat on water -->
+  <path d="M700 340 L730 355 L670 355 Z" fill="#EF5350"/>
+  <rect x="698" y="320" width="3" height="22" fill="#795548"/>
+</svg>

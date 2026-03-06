@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <!-- Background -->
+  <rect x="0" y="0" width="960" height="540" fill="#1a1a2e"/>
+  <!-- Spotlights beams -->
+  <polygon points="200,0 100,540 300,540" fill="#fff9c4" opacity="0.08"/>
+  <polygon points="480,0 380,540 580,540" fill="#fff9c4" opacity="0.08"/>
+  <polygon points="760,0 660,540 860,540" fill="#fff9c4" opacity="0.08"/>
+  <!-- Runway -->
+  <polygon points="330,200 630,200 750,540 210,540" fill="#e0e0e0"/>
+  <polygon points="340,200 620,200 740,540 220,540" fill="#f5f5f5"/>
+  <!-- Runway center line -->
+  <polygon points="475,200 485,200 510,540 450,540" fill="#e8b4c8" opacity="0.5"/>
+  <!-- Stage back -->
+  <rect x="280" y="180" width="400" height="25" rx="4" fill="#9c27b0"/>
+  <!-- Spotlights -->
+  <circle cx="200" cy="30" r="25" fill="#ffd54f"/>
+  <circle cx="200" cy="30" r="15" fill="#fff9c4"/>
+  <circle cx="480" cy="30" r="25" fill="#ffd54f"/>
+  <circle cx="480" cy="30" r="15" fill="#fff9c4"/>
+  <circle cx="760" cy="30" r="25" fill="#ffd54f"/>
+  <circle cx="760" cy="30" r="15" fill="#fff9c4"/>
+  <!-- Side seats left -->
+  <rect x="50" y="350" width="140" height="30" rx="6" fill="#7b1fa2"/>
+  <rect x="30" y="400" width="160" height="30" rx="6" fill="#6a1b9a"/>
+  <rect x="10" y="450" width="180" height="30" rx="6" fill="#4a148c"/>
+  <!-- Side seats right -->
+  <rect x="770" y="350" width="140" height="30" rx="6" fill="#7b1fa2"/>
+  <rect x="770" y="400" width="160" height="30" rx="6" fill="#6a1b9a"/>
+  <rect x="770" y="450" width="180" height="30" rx="6" fill="#4a148c"/>
+  <!-- Camera flashes -->
+  <circle cx="80" cy="340" r="5" fill="white" opacity="0.8"/>
+  <circle cx="880" cy="390" r="5" fill="white" opacity="0.8"/>
+  <circle cx="120" cy="440" r="4" fill="white" opacity="0.6"/>
+  <!-- Stars -->
+  <circle cx="100" cy="80" r="2" fill="white" opacity="0.5"/>
+  <circle cx="860" cy="120" r="2" fill="white" opacity="0.5"/>
+  <circle cx="400" cy="60" r="2" fill="white" opacity="0.4"/>
+  <circle cx="600" cy="90" r="2" fill="white" opacity="0.4"/>
+</svg>

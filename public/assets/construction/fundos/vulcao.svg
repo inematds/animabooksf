@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <defs>
+    <linearGradient id="vSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF8A65"/>
+      <stop offset="40%" stop-color="#FFAB91"/>
+      <stop offset="100%" stop-color="#FFE0B2"/>
+    </linearGradient>
+    <linearGradient id="lava" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF5722"/>
+      <stop offset="100%" stop-color="#FF8A65"/>
+    </linearGradient>
+  </defs>
+  <!-- Sky - warm sunset tones -->
+  <rect width="960" height="540" fill="url(#vSky)"/>
+  <!-- Distant clouds with warm glow -->
+  <ellipse cx="200" cy="60" rx="80" ry="25" fill="#FFCC80" opacity="0.6"/>
+  <ellipse cx="700" cy="80" rx="70" ry="22" fill="#FFCC80" opacity="0.5"/>
+  <!-- Volcano -->
+  <polygon points="600,350 750,80 900,350" fill="#6D4C41"/>
+  <polygon points="620,350 750,100 880,350" fill="#795548"/>
+  <!-- Volcano crater -->
+  <ellipse cx="750" cy="95" rx="35" ry="12" fill="#5D4037"/>
+  <ellipse cx="750" cy="95" rx="25" ry="8" fill="#D84315"/>
+  <!-- Lava glow -->
+  <ellipse cx="750" cy="85" rx="15" ry="8" fill="#FF6D00" opacity="0.8"/>
+  <!-- Smoke puffs -->
+  <circle cx="750" cy="50" r="20" fill="#BDBDBD" opacity="0.5"/>
+  <circle cx="740" cy="30" r="18" fill="#BDBDBD" opacity="0.4"/>
+  <circle cx="760" cy="15" r="15" fill="#BDBDBD" opacity="0.3"/>
+  <circle cx="745" cy="0" r="12" fill="#BDBDBD" opacity="0.2"/>
+  <!-- Lava streams on volcano -->
+  <path d="M750,95 Q745,150 740,200 Q738,250 742,300 Q744,330 748,350" stroke="#FF6D00" stroke-width="6" fill="none" opacity="0.7"/>
+  <path d="M755,100 Q770,160 775,220 Q778,280 774,350" stroke="#FF8F00" stroke-width="4" fill="none" opacity="0.6"/>
+  <!-- Far dark hills -->
+  <ellipse cx="150" cy="350" rx="250" ry="60" fill="#5D4037"/>
+  <ellipse cx="450" cy="360" rx="200" ry="50" fill="#4E342E"/>
+  <!-- Rocky terrain -->
+  <rect x="0" y="350" width="960" height="190" fill="#795548"/>
+  <!-- Terrain texture -->
+  <ellipse cx="200" cy="390" rx="150" ry="25" fill="#6D4C41"/>
+  <ellipse cx="550" cy="400" rx="180" ry="20" fill="#6D4C41"/>
+  <ellipse cx="850" cy="385" rx="120" ry="22" fill="#6D4C41"/>
+  <!-- Lava pools -->
+  <ellipse cx="350" cy="450" rx="50" ry="15" fill="#E65100" opacity="0.7"/>
+  <ellipse cx="350" cy="450" rx="35" ry="10" fill="#FF6D00" opacity="0.8"/>
+  <ellipse cx="350" cy="448" rx="20" ry="6" fill="#FFAB00" opacity="0.6"/>
+  <!-- Rocks -->
+  <ellipse cx="120" cy="430" rx="25" ry="15" fill="#5D4037"/>
+  <ellipse cx="500" cy="460" rx="20" ry="12" fill="#4E342E"/>
+  <ellipse cx="700" cy="440" rx="30" ry="14" fill="#5D4037"/>
+  <ellipse cx="250" cy="480" rx="18" ry="10" fill="#4E342E"/>
+  <ellipse cx="820" cy="475" rx="22" ry="11" fill="#5D4037"/>
+  <!-- Volcanic rocks / boulders -->
+  <circle cx="80" cy="500" r="15" fill="#4E342E"/>
+  <circle cx="450" cy="510" r="12" fill="#3E2723"/>
+  <circle cx="650" cy="505" r="14" fill="#4E342E"/>
+  <!-- Ground base -->
+  <rect x="0" y="510" width="960" height="30" fill="#4E342E"/>
+  <!-- Small lava cracks -->
+  <line x1="150" y1="490" x2="180" y2="495" stroke="#FF6D00" stroke-width="2" opacity="0.5"/>
+  <line x1="550" y1="485" x2="575" y2="490" stroke="#FF6D00" stroke-width="2" opacity="0.5"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 60">
+  <!-- Ballet flat shoe -->
+  <path d="M10 35 Q5 30 10 25 Q20 15 45 15 Q65 15 75 25 Q78 30 75 38 Q70 45 50 48 Q30 50 15 45 Q10 42 10 35Z" fill="#e91e63"/>
+  <!-- Inner sole visible -->
+  <path d="M15 35 Q12 30 15 27 Q25 20 45 20 Q60 20 70 27 Q72 30 70 35 Q65 40 50 42 Q30 44 18 40Z" fill="#f06292"/>
+  <!-- Toe detail -->
+  <path d="M10 32 Q20 20 45 18 Q60 18 70 25" fill="none" stroke="#c2185b" stroke-width="1" opacity="0.5"/>
+  <!-- Bow -->
+  <path d="M42 28 Q36 23 38 28 Q36 33 42 30Z" fill="#f48fb1"/>
+  <path d="M48 28 Q54 23 52 28 Q54 33 48 30Z" fill="#f48fb1"/>
+  <circle cx="45" cy="29" r="2" fill="#c2185b"/>
+</svg>

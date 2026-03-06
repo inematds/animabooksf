@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <!-- Wall background -->
+  <rect width="960" height="540" fill="#E8F4F8"/>
+  <!-- Tile pattern on walls -->
+  <rect y="0" width="960" height="380" fill="#D4EEF7"/>
+  <!-- Horizontal tile lines -->
+  <line x1="0" y1="76" x2="960" y2="76" stroke="#B8DFF0" stroke-width="1.5"/>
+  <line x1="0" y1="152" x2="960" y2="152" stroke="#B8DFF0" stroke-width="1.5"/>
+  <line x1="0" y1="228" x2="960" y2="228" stroke="#B8DFF0" stroke-width="1.5"/>
+  <line x1="0" y1="304" x2="960" y2="304" stroke="#B8DFF0" stroke-width="1.5"/>
+  <line x1="0" y1="380" x2="960" y2="380" stroke="#B8DFF0" stroke-width="1.5"/>
+  <!-- Vertical tile lines -->
+  <line x1="96" y1="0" x2="96" y2="380" stroke="#B8DFF0" stroke-width="1.5"/>
+  <line x1="192" y1="0" x2="192" y2="380" stroke="#B8DFF0" stroke-width="1.5"/>
+  <line x1="288" y1="0" x2="288" y2="380" stroke="#B8DFF0" stroke-width="1.5"/>
+  <line x1="384" y1="0" x2="384" y2="380" stroke="#B8DFF0" stroke-width="1.5"/>
+  <line x1="480" y1="0" x2="480" y2="380" stroke="#B8DFF0" stroke-width="1.5"/>
+  <line x1="576" y1="0" x2="576" y2="380" stroke="#B8DFF0" stroke-width="1.5"/>
+  <line x1="672" y1="0" x2="672" y2="380" stroke="#B8DFF0" stroke-width="1.5"/>
+  <line x1="768" y1="0" x2="768" y2="380" stroke="#B8DFF0" stroke-width="1.5"/>
+  <line x1="864" y1="0" x2="864" y2="380" stroke="#B8DFF0" stroke-width="1.5"/>
+  <!-- Floor -->
+  <rect y="380" width="960" height="160" fill="#F5E6D3"/>
+  <!-- Floor tiles -->
+  <rect x="0" y="380" width="120" height="80" fill="#EDD9C4" stroke="#E8D0B8" stroke-width="1"/>
+  <rect x="120" y="380" width="120" height="80" fill="#F5E6D3" stroke="#E8D0B8" stroke-width="1"/>
+  <rect x="240" y="380" width="120" height="80" fill="#EDD9C4" stroke="#E8D0B8" stroke-width="1"/>
+  <rect x="360" y="380" width="120" height="80" fill="#F5E6D3" stroke="#E8D0B8" stroke-width="1"/>
+  <rect x="480" y="380" width="120" height="80" fill="#EDD9C4" stroke="#E8D0B8" stroke-width="1"/>
+  <rect x="600" y="380" width="120" height="80" fill="#F5E6D3" stroke="#E8D0B8" stroke-width="1"/>
+  <rect x="720" y="380" width="120" height="80" fill="#EDD9C4" stroke="#E8D0B8" stroke-width="1"/>
+  <rect x="840" y="380" width="120" height="80" fill="#F5E6D3" stroke="#E8D0B8" stroke-width="1"/>
+  <rect x="0" y="460" width="120" height="80" fill="#F5E6D3" stroke="#E8D0B8" stroke-width="1"/>
+  <rect x="120" y="460" width="120" height="80" fill="#EDD9C4" stroke="#E8D0B8" stroke-width="1"/>
+  <rect x="240" y="460" width="120" height="80" fill="#F5E6D3" stroke="#E8D0B8" stroke-width="1"/>
+  <rect x="360" y="460" width="120" height="80" fill="#EDD9C4" stroke="#E8D0B8" stroke-width="1"/>
+  <rect x="480" y="460" width="120" height="80" fill="#F5E6D3" stroke="#E8D0B8" stroke-width="1"/>
+  <rect x="600" y="460" width="120" height="80" fill="#EDD9C4" stroke="#E8D0B8" stroke-width="1"/>
+  <rect x="720" y="460" width="120" height="80" fill="#F5E6D3" stroke="#E8D0B8" stroke-width="1"/>
+  <rect x="840" y="460" width="120" height="80" fill="#EDD9C4" stroke="#E8D0B8" stroke-width="1"/>
+  <!-- Bathtub -->
+  <rect x="560" y="260" width="340" height="120" rx="20" fill="#FFFFFF" stroke="#D0D0D0" stroke-width="3"/>
+  <rect x="570" y="270" width="320" height="100" rx="15" fill="#E0F2F7"/>
+  <!-- Bathtub feet -->
+  <ellipse cx="580" cy="385" rx="12" ry="8" fill="#D0D0D0"/>
+  <ellipse cx="880" cy="385" rx="12" ry="8" fill="#D0D0D0"/>
+  <!-- Faucet -->
+  <rect x="870" y="220" width="12" height="50" rx="3" fill="#C0C0C0"/>
+  <rect x="855" y="215" width="42" height="12" rx="4" fill="#C0C0C0"/>
+  <circle cx="876" cy="215" r="6" fill="#D4D4D4"/>
+  <!-- Mirror -->
+  <rect x="100" y="60" width="160" height="200" rx="80" fill="#E8F8FF" stroke="#FFFFFF" stroke-width="5"/>
+  <rect x="100" y="60" width="160" height="200" rx="80" fill="none" stroke="#D0D0D0" stroke-width="2"/>
+  <!-- Mirror shine -->
+  <ellipse cx="145" cy="110" rx="15" ry="25" fill="#FFFFFF" opacity="0.5" transform="rotate(-15,145,110)"/>
+  <!-- Baseboard -->
+  <rect y="373" width="960" height="7" fill="#C8DCE8"/>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 100">
+  <!-- Hoodie body -->
+  <path d="M22 20 L58 20 L60 25 Q68 28 75 32 L70 52 L60 46 L62 92 L18 92 L20 46 L10 52 L5 32 Q12 28 20 25Z" fill="#66bb6a"/>
+  <!-- Hood -->
+  <path d="M22 20 Q25 5 40 2 Q55 5 58 20" fill="#4caf50"/>
+  <path d="M28 20 Q30 10 40 8 Q50 10 52 20" fill="#388e3c" opacity="0.4"/>
+  <!-- Pocket -->
+  <rect x="25" y="55" width="30" height="20" rx="6" fill="#4caf50"/>
+  <line x1="40" y1="55" x2="40" y2="75" stroke="#388e3c" stroke-width="1"/>
+  <!-- Hood strings -->
+  <line x1="35" y1="20" x2="33" y2="35" stroke="white" stroke-width="1.5"/>
+  <line x1="45" y1="20" x2="47" y2="35" stroke="white" stroke-width="1.5"/>
+  <!-- Cuffs -->
+  <rect x="18" y="88" width="44" height="6" rx="3" fill="#4caf50"/>
+  <!-- Sleeve cuffs -->
+  <rect x="5" y="48" width="15" height="5" rx="2" fill="#4caf50" transform="rotate(-20, 12, 50)"/>
+  <rect x="60" y="48" width="15" height="5" rx="2" fill="#4caf50" transform="rotate(20, 68, 50)"/>
+  <!-- Smiley face on chest -->
+  <circle cx="40" cy="38" r="8" fill="#fff9c4"/>
+  <circle cx="37" cy="36" r="1.5" fill="#333"/>
+  <circle cx="43" cy="36" r="1.5" fill="#333"/>
+  <path d="M36 40 Q40 44 44 40" stroke="#333" stroke-width="1" fill="none"/>
+</svg>

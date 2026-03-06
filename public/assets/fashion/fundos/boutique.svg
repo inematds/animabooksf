@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <!-- Floor -->
+  <rect x="0" y="400" width="960" height="140" fill="#f5e6d3"/>
+  <!-- Floor pattern -->
+  <rect x="0" y="400" width="80" height="80" fill="#eedcc8" opacity="0.4"/>
+  <rect x="160" y="400" width="80" height="80" fill="#eedcc8" opacity="0.4"/>
+  <rect x="320" y="400" width="80" height="80" fill="#eedcc8" opacity="0.4"/>
+  <rect x="480" y="400" width="80" height="80" fill="#eedcc8" opacity="0.4"/>
+  <rect x="640" y="400" width="80" height="80" fill="#eedcc8" opacity="0.4"/>
+  <rect x="800" y="400" width="80" height="80" fill="#eedcc8" opacity="0.4"/>
+  <rect x="80" y="460" width="80" height="80" fill="#eedcc8" opacity="0.4"/>
+  <rect x="240" y="460" width="80" height="80" fill="#eedcc8" opacity="0.4"/>
+  <rect x="400" y="460" width="80" height="80" fill="#eedcc8" opacity="0.4"/>
+  <rect x="560" y="460" width="80" height="80" fill="#eedcc8" opacity="0.4"/>
+  <rect x="720" y="460" width="80" height="80" fill="#eedcc8" opacity="0.4"/>
+  <!-- Wall -->
+  <rect x="0" y="0" width="960" height="400" fill="#fce4ec"/>
+  <!-- Crown molding -->
+  <rect x="0" y="0" width="960" height="20" fill="#f8bbd0"/>
+  <!-- Chandelier -->
+  <line x1="480" y1="20" x2="480" y2="60" stroke="#ffd54f" stroke-width="2"/>
+  <circle cx="480" cy="70" r="15" fill="#ffd54f"/>
+  <path d="M440 75 Q460 90 480 75 Q500 90 520 75" stroke="#ffd54f" stroke-width="2" fill="none"/>
+  <circle cx="445" cy="80" r="5" fill="#fff9c4"/>
+  <circle cx="480" cy="85" r="5" fill="#fff9c4"/>
+  <circle cx="515" cy="80" r="5" fill="#fff9c4"/>
+  <!-- Display mannequin left -->
+  <circle cx="200" cy="180" r="20" fill="#ffccbc"/>
+  <rect x="185" y="200" width="30" height="60" rx="6" fill="#e91e63"/>
+  <path d="M185 260 L180 340 M215 260 L220 340" stroke="#ffccbc" stroke-width="6"/>
+  <!-- Display mannequin right -->
+  <circle cx="760" cy="180" r="20" fill="#ffccbc"/>
+  <rect x="745" y="200" width="30" height="60" rx="6" fill="#7c4dff"/>
+  <path d="M745 260 L740 340 M775 260 L780 340" stroke="#ffccbc" stroke-width="6"/>
+  <!-- Shelves with shoes -->
+  <rect x="400" y="150" width="200" height="8" fill="#d4a574"/>
+  <rect x="400" y="250" width="200" height="8" fill="#d4a574"/>
+  <!-- Shoes on shelves -->
+  <path d="M430 140 L450 140 Q455 145 455 150 L425 150 Q425 145 430 140Z" fill="#e91e63"/>
+  <path d="M490 138 L510 138 Q515 143 515 150 L485 150 Q485 143 490 138Z" fill="#42a5f5"/>
+  <path d="M550 140 L570 140 Q575 145 575 150 L545 150 Q545 145 550 140Z" fill="#ffd54f"/>
+  <path d="M430 240 L450 240 Q455 245 455 250 L425 250 Q425 245 430 240Z" fill="#66bb6a"/>
+  <path d="M490 238 L510 238 Q515 243 515 250 L485 250 Q485 243 490 238Z" fill="#ff7043"/>
+  <!-- Fancy door frame -->
+  <rect x="0" y="100" width="40" height="300" fill="#d4a574"/>
+  <rect x="920" y="100" width="40" height="300" fill="#d4a574"/>
+  <!-- Plants -->
+  <rect x="60" y="340" width="20" height="60" fill="#a1887f"/>
+  <circle cx="70" cy="330" r="25" fill="#66bb6a"/>
+  <circle cx="60" cy="320" r="18" fill="#81c784"/>
+  <!-- Shopping bag -->
+  <rect x="850" y="360" width="50" height="55" rx="6" fill="#f48fb1"/>
+  <path d="M860 360 Q875 340 890 360" stroke="#e91e63" stroke-width="2" fill="none"/>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 60">
+  <!-- Beret body -->
+  <path d="M10 42 Q5 30 15 20 Q25 10 40 8 Q55 10 60 20 Q65 30 60 42Z" fill="#e91e63"/>
+  <!-- Beret puff top -->
+  <path d="M15 20 Q25 5 40 4 Q55 5 55 15 Q50 10 40 8 Q30 10 20 18Z" fill="#c2185b" opacity="0.4"/>
+  <!-- Band -->
+  <path d="M10 42 Q35 48 60 42" stroke="#c2185b" stroke-width="3" fill="none"/>
+  <!-- Stem on top -->
+  <circle cx="38" cy="6" r="3" fill="#c2185b"/>
+  <!-- Texture lines -->
+  <path d="M20 25 Q35 20 50 25" stroke="#c2185b" stroke-width="0.8" fill="none" opacity="0.3"/>
+  <path d="M18 32 Q35 27 55 32" stroke="#c2185b" stroke-width="0.8" fill="none" opacity="0.3"/>
+  <!-- Cute detail - small heart -->
+  <path d="M45 30 Q45 27 47 27 Q49 27 49 30 Q49 33 47 35 Q45 33 45 30Z" fill="#f8bbd0"/>
+</svg>

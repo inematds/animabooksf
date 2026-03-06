@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <defs>
+    <linearGradient id="cSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#42A5F5"/>
+      <stop offset="100%" stop-color="#90CAF9"/>
+    </linearGradient>
+  </defs>
+  <!-- Sky -->
+  <rect width="960" height="540" fill="url(#cSky)"/>
+  <!-- Sun -->
+  <circle cx="150" cy="90" r="55" fill="#FFF176" opacity="0.9"/>
+  <circle cx="150" cy="90" r="45" fill="#FFEE58"/>
+  <!-- Clouds -->
+  <ellipse cx="400" cy="70" rx="80" ry="28" fill="white" opacity="0.85"/>
+  <ellipse cx="450" cy="65" rx="60" ry="22" fill="white" opacity="0.85"/>
+  <ellipse cx="700" cy="100" rx="70" ry="25" fill="white" opacity="0.7"/>
+  <ellipse cx="745" cy="95" rx="55" ry="20" fill="white" opacity="0.7"/>
+  <ellipse cx="850" cy="55" rx="50" ry="18" fill="white" opacity="0.6"/>
+  <!-- Far hills -->
+  <ellipse cx="200" cy="310" rx="250" ry="60" fill="#81C784"/>
+  <ellipse cx="550" cy="300" rx="300" ry="70" fill="#A5D6A7"/>
+  <ellipse cx="850" cy="310" rx="200" ry="55" fill="#81C784"/>
+  <!-- Main green field -->
+  <rect x="0" y="320" width="960" height="220" fill="#66BB6A"/>
+  <!-- Rolling ground -->
+  <ellipse cx="250" cy="360" rx="300" ry="30" fill="#76d67a"/>
+  <ellipse cx="700" cy="370" rx="280" ry="25" fill="#76d67a"/>
+  <!-- Grass patches -->
+  <ellipse cx="100" cy="420" rx="80" ry="12" fill="#4CAF50"/>
+  <ellipse cx="400" cy="450" rx="90" ry="10" fill="#4CAF50"/>
+  <ellipse cx="700" cy="430" rx="70" ry="12" fill="#4CAF50"/>
+  <ellipse cx="850" cy="470" rx="80" ry="10" fill="#4CAF50"/>
+  <!-- Flowers scattered -->
+  <circle cx="120" cy="390" r="5" fill="#FFEB3B"/>
+  <circle cx="120" cy="390" r="2.5" fill="#FF9800"/>
+  <circle cx="300" cy="420" r="5" fill="#E91E63"/>
+  <circle cx="300" cy="420" r="2.5" fill="#FFEB3B"/>
+  <circle cx="550" cy="400" r="5" fill="#FFEB3B"/>
+  <circle cx="550" cy="400" r="2.5" fill="#FF9800"/>
+  <circle cx="780" cy="410" r="5" fill="#E91E63"/>
+  <circle cx="780" cy="410" r="2.5" fill="#FFEB3B"/>
+  <circle cx="450" cy="470" r="4" fill="#AB47BC"/>
+  <circle cx="450" cy="470" r="2" fill="#FFEB3B"/>
+  <circle cx="650" cy="480" r="4" fill="#FF7043"/>
+  <circle cx="650" cy="480" r="2" fill="#FFEB3B"/>
+  <!-- Butterfly -->
+  <ellipse cx="350" cy="340" rx="8" ry="5" fill="#FF80AB" transform="rotate(-20 350 340)"/>
+  <ellipse cx="365" cy="340" rx="8" ry="5" fill="#FF80AB" transform="rotate(20 365 340)"/>
+  <ellipse cx="357" cy="340" rx="2" ry="4" fill="#333"/>
+  <!-- Dirt path hint -->
+  <ellipse cx="480" cy="500" rx="200" ry="15" fill="#A1887F" opacity="0.3"/>
+  <!-- Ground base -->
+  <rect x="0" y="510" width="960" height="30" fill="#4CAF50"/>
+</svg>

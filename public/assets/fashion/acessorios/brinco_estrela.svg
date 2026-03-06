@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <!-- Hook left -->
+  <path d="M15 5 Q12 5 12 10 L12 18" stroke="#ffd54f" stroke-width="2" fill="none"/>
+  <!-- Star left -->
+  <polygon points="15,18 17,26 25,26 19,31 21,39 15,34 9,39 11,31 5,26 13,26" fill="#ffd54f"/>
+  <polygon points="15,22 16,26 20,26 17,28 18,32 15,30 12,32 13,28 10,26 14,26" fill="#fff9c4"/>
+  <!-- Hook right -->
+  <path d="M45 5 Q42 5 42 10 L42 18" stroke="#ffd54f" stroke-width="2" fill="none"/>
+  <!-- Star right -->
+  <polygon points="45,18 47,26 55,26 49,31 51,39 45,34 39,39 41,31 35,26 43,26" fill="#ffd54f"/>
+  <polygon points="45,22 46,26 50,26 47,28 48,32 45,30 42,32 43,28 40,26 44,26" fill="#fff9c4"/>
+  <!-- Sparkles -->
+  <circle cx="8" cy="20" r="1" fill="#ffd54f" opacity="0.6"/>
+  <circle cx="52" cy="22" r="1" fill="#ffd54f" opacity="0.6"/>
+</svg>

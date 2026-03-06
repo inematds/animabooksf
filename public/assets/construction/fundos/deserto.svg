@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <!-- Sky -->
+  <rect width="960" height="540" fill="#87CEEB"/>
+  <rect width="960" height="540" fill="url(#skyGrad)"/>
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4FC3F7"/>
+      <stop offset="60%" stop-color="#FFF9C4"/>
+      <stop offset="100%" stop-color="#FFE082"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#skyGrad)"/>
+  <!-- Sun -->
+  <circle cx="780" cy="90" r="60" fill="#FFF176" opacity="0.9"/>
+  <circle cx="780" cy="90" r="50" fill="#FFEE58"/>
+  <!-- Far dunes -->
+  <ellipse cx="200" cy="380" rx="300" ry="80" fill="#F0C070"/>
+  <ellipse cx="600" cy="370" rx="350" ry="90" fill="#E8B860"/>
+  <ellipse cx="900" cy="390" rx="250" ry="70" fill="#F0C070"/>
+  <!-- Mid dunes -->
+  <ellipse cx="100" cy="420" rx="250" ry="70" fill="#E0A840"/>
+  <ellipse cx="480" cy="430" rx="400" ry="80" fill="#D4A030"/>
+  <ellipse cx="850" cy="420" rx="280" ry="75" fill="#E0A840"/>
+  <!-- Front sand -->
+  <rect x="0" y="440" width="960" height="100" fill="#D4A030"/>
+  <ellipse cx="300" cy="460" rx="350" ry="50" fill="#C89628"/>
+  <ellipse cx="700" cy="470" rx="300" ry="45" fill="#C89628"/>
+  <!-- Ground -->
+  <rect x="0" y="480" width="960" height="60" fill="#C89628"/>
+  <!-- Small cacti -->
+  <rect x="150" y="390" width="12" height="50" rx="4" fill="#66BB6A"/>
+  <rect x="140" y="400" width="10" height="20" rx="4" fill="#66BB6A" transform="rotate(-30 145 410)"/>
+  <rect x="162" y="395" width="10" height="25" rx="4" fill="#66BB6A" transform="rotate(25 167 407)"/>
+  <rect x="750" y="400" width="10" height="40" rx="4" fill="#81C784"/>
+  <rect x="742" y="408" width="8" height="18" rx="3" fill="#81C784" transform="rotate(-35 746 417)"/>
+  <!-- Tiny rocks -->
+  <ellipse cx="400" cy="500" rx="15" ry="8" fill="#B0884A"/>
+  <ellipse cx="600" cy="510" rx="12" ry="6" fill="#A8804A"/>
+  <ellipse cx="200" cy="515" rx="10" ry="5" fill="#B0884A"/>
+</svg>
