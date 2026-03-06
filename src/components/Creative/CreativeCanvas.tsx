@@ -136,16 +136,15 @@ export default function CreativeCanvas({
             }}
             onMouseDown={(e) => handleMouseDown(e, item.id)}
           >
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src={item.category.startsWith('sprites:')
                 ? `/sprites/${item.assetId}`
                 : `/assets/${item.category}/${item.assetId}`}
               alt={item.assetId}
-              width={80}
-              height={80}
               className="object-contain pointer-events-none select-none"
               draggable={false}
-              style={{ width: 'auto', height: 'auto', maxWidth: '120px', maxHeight: '120px' }}
+              style={{ width: '80px', height: '80px', maxWidth: '120px', maxHeight: '120px' }}
             />
           </div>
         );
