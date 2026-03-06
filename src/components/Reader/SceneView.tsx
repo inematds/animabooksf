@@ -23,9 +23,9 @@ export default function SceneView({ story }: SceneViewProps) {
   const scene = story.scenes[sceneIndex];
   const totalScenes = story.scenes.length;
 
-  /* ---------- Title intro splash ---------- */
+  /* ---------- Title intro splash (shorter so narrator is visible sooner) ---------- */
   useEffect(() => {
-    const timer = setTimeout(() => setShowTitle(false), 2800);
+    const timer = setTimeout(() => setShowTitle(false), 1800);
     return () => clearTimeout(timer);
   }, []);
 

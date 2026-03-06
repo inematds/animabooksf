@@ -2,12 +2,19 @@ import { Story, Scene, SpriteState, Dialogue } from './types';
 
 /**
  * Extrai o ID do sprite a partir do filename.
- * Ex: "lumi_feliz.svg" → "lumi", "caio.svg" → "caio"
- * Regra: primeiro segmento antes de "_" (se houver), sem extensao.
+ * Para personagens: "lumi_feliz.svg" → "lumi" (permite trocar expressao)
+ * Para objetos com prefixo de categoria: "animal_gato.svg" → "animal_gato" (cada objeto e unico)
  */
+const OBJECT_PREFIXES = ['animal', 'natureza', 'comida', 'movel', 'veiculo', 'brinquedo', 'escola', 'magia'];
+
 export function spriteIdFromFilename(filename: string): string {
   const withoutExt = filename.replace(/\.\w+$/, '');
   const parts = withoutExt.split('_');
+  // Objects use full name as ID (each is unique on the scene)
+  if (OBJECT_PREFIXES.includes(parts[0])) {
+    return withoutExt;
+  }
+  // Characters use first segment (allows expression swap: lumi_feliz → lumi)
   return parts[0];
 }
 

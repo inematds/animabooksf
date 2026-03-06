@@ -68,18 +68,24 @@ export default function SceneEditor({ initialStory, onSave, onPreview }: SceneEd
 
   const handleAddSprite = useCallback(
     (filename: string) => {
-      const id = spriteIdFromFilename(filename);
+      const baseId = spriteIdFromFilename(filename);
       updateScene((s) => {
-        // If sprite already exists, update filename (change expression)
-        const existing = s.sprites.find((sp) => sp.id === id);
-        if (existing) {
-          return {
-            ...s,
-            sprites: s.sprites.map((sp) =>
-              sp.id === id ? { ...sp, filename } : sp
-            ),
-          };
+        // For characters: if same character exists, update filename (change expression)
+        const isCharacter = !filename.match(/^(animal|natureza|comida|movel|veiculo|brinquedo|escola|magia)_/);
+        if (isCharacter) {
+          const existing = s.sprites.find((sp) => sp.id === baseId);
+          if (existing) {
+            return {
+              ...s,
+              sprites: s.sprites.map((sp) =>
+                sp.id === baseId ? { ...sp, filename } : sp
+              ),
+            };
+          }
         }
+        // For objects or new characters: add new instance with unique id
+        const existingIds = s.sprites.filter((sp) => sp.id === baseId || sp.id.startsWith(baseId + '_'));
+        const id = existingIds.length === 0 ? baseId : `${baseId}_${Date.now()}`;
         return {
           ...s,
           sprites: [
@@ -87,8 +93,8 @@ export default function SceneEditor({ initialStory, onSave, onPreview }: SceneEd
             {
               id,
               filename,
-              x: '50%',
-              y: '80%',
+              x: `${30 + Math.random() * 40}%`,
+              y: `${60 + Math.random() * 20}%`,
               scale: 1.0,
               zIndex: s.sprites.length,
             },
