@@ -1,225 +1,227 @@
 # Animabook SF
 
-Leitor e editor de historias infantis interativas onde personagens (sprites PNG) se movem sobre fundos de cena, com animacoes fluidas, dialogos com efeito typewriter e um sistema completo de gamificacao.
+Plataforma criativa infantil para criar e ler historias interativas com personagens animados, montar cenarios e explorar modos criativos.
 
-**Publico-alvo:** criancas (3-12 anos) consomem as historias; educadores e pais criam conteudo e gerenciam o uso.
+**Publico-alvo:** criancas (3-12 anos) consomem as historias; educadores e pais criam conteudo.
 
-## Demonstracao
+**Versao atual:** 1.1.0 | **Deploy:** [animabooksf.vercel.app](https://animabooksf.vercel.app)
 
-| Leitor | Editor | Painel Educador |
-|--------|--------|-----------------|
-| Sprites animados com Framer Motion | Drag-and-drop visual | Missoes, regras e relatorios |
-| Dialogos com typewriter | Timeline de cenas | Controle de tempo de tela |
-| Navegacao por swipe/teclado | Seletor de fundos e sprites | Classificacao etaria |
+---
+
+## Funcionalidades
+
+### Leitor de Historias (`/reader/[id]`)
+- Fundo de cena em tela cheia (16:9) com transicoes suaves
+- Sprites animados com Framer Motion
+- **Dialogos estilo HQ** - baloes de fala posicionados sobre os personagens, arrastáveis
+- Narrador como barra no topo da cena
+- Navegacao: setas, teclado, swipe touch, clique
+- Indicador de progresso por estrelas
+
+### Editor Visual (`/editor/[id]`)
+- Canvas interativo com drag-and-drop de sprites
+- **Painel lateral categorizado** com 10 categorias:
+  - Personagens, Animais, Natureza, Comida, Moveis
+  - Veiculos, Brinquedos, Escola, Magia, Moda
+- Controles de escala por sprite (zoom +/-)
+- Seletor de fundos com 14 opcoes
+- Editor de dialogos com narrador + falas + reordenacao
+- Timeline de cenas
+- Auto-save a cada 30s
+- Preview direto no leitor
+
+### Modos Criativos (`/create`) - tipo Toca Life World
+| Modo | Descricao |
+|------|-----------|
+| Decoracao | Decorar quartos, salas e jardins com moveis e objetos |
+| Construcao | Montar estruturas com blocos, portas e telhados |
+| Cidades | Criar mundos com predios, ruas e personagens |
+
+- Canvas com drag & drop livre
+- Controles: escala, rotacao, flip, camadas (fundo/meio/frente)
+- Galeria de projetos (`/gallery`) com filtros por tipo
+
+### Gamificacao (`/challenges`, `/profile`, `/events`)
+- XP, 10 niveis, moedas, 10 conquistas (4 raridades)
+- Streak diario, desafios diarios/semanais
+- Eventos semanais com bonus de XP/moedas
+- Painel do educador (`/dashboard`) com missoes e regras
+
+---
+
+## Biblioteca de Assets (97 SVGs)
+
+### Personagens (23)
+Lumi, Caio, Sofia, Pedro, Luna, Teo, Mia, Ravi, Alice, Leo, Nina, Davi, Yuki, Kai, Rosa, Enzo, Maya, Tom, Iris, Beto, Lila, Gael + variante Lumi feliz
+
+### Objetos (60) - 10 categorias
+| Categoria | Qtd | Exemplos |
+|-----------|-----|----------|
+| Animais | 5 | Gato, Cachorro, Coelho, Passaro, Borboleta |
+| Natureza | 5 | Arvore, Flor, Arbusto, Sol, Nuvem |
+| Comida | 5 | Bolo, Maca, Sorvete, Pizza, Cupcake |
+| Moveis | 5 | Mesa, Cadeira, Sofa, Estante, Cama |
+| Veiculos | 5 | Carro, Bicicleta, Onibus, Aviao, Barco |
+| Brinquedos | 5 | Bola, Ursinho, Pipa, Boneca, Robo |
+| Escola | 5 | Livro, Mochila, Lapis, Globo, Lousa |
+| Magia | 5 | Varinha, Chapeu, Pocao, Cristal, Estrela |
+| Moda | 20 | Vestido, Coroa, Oculos, Bolsa, Bota, Tiara, Mascara... |
+
+### Fundos (14)
+Sala de aula, Patio, Biblioteca, Floresta, Praia, Castelo, Espaco, Cidade, Fazenda, Parque, Quarto, Cozinha, Circo, Default
+
+---
 
 ## Stack
 
 | Camada | Tecnologia |
 |--------|-----------|
-| Framework | Next.js 16 (App Router, Turbopack) |
-| UI | React 19 + Tailwind CSS |
-| Animacao | Framer Motion (layoutId + FLIP) |
-| Drag & Drop | Nativo (mouse events) + @dnd-kit/core |
-| Storage | Supabase (opcional) / Filesystem local |
+| Framework | Next.js 16 (App Router) |
+| UI | React 19 + Tailwind CSS 4 |
+| Animacao | Framer Motion |
+| Storage | Filesystem local / Supabase (dual-mode, auto-detecta) |
 | Deploy | Vercel |
-
-## Funcionalidades
-
-### Leitor de Historias (`/reader/[id]`)
-- Fundo de cena em tela cheia (16:9)
-- Sprites animados com transicoes suaves entre cenas (Framer Motion)
-- Dialogos com efeito typewriter caractere por caractere
-- Narrador em italico
-- Navegacao: swipe, setas do teclado, botoes, ou clique para avancar
-- Indicador de progresso por cena
-
-### Editor Visual (`/editor/[id]`)
-- Canvas interativo com drag-and-drop de sprites
-- Painel lateral com galeria de sprites agrupados por personagem
-- Controles de escala (zoom +/-) por sprite
-- Seletor de fundo com galeria visual
-- Editor de dialogos com reordenacao
-- Timeline de cenas com adicionar/remover
-- Auto-save a cada 30 segundos
-- Botao de preview que abre o leitor
-- Exporta para Markdown automaticamente
-
-### Gamificacao (`/challenges`, `/profile`)
-- **XP e Niveis:** 10 titulos progressivos (Iniciante → Mestre Supremo)
-- **Moedas:** economia interna para desbloquear conteudo
-- **Conquistas:** 10 badges com 4 raridades (comum, raro, epico, lendario)
-- **Sequencia de leitura:** streak diario com recordes
-- **Desafios diarios e semanais:** metas com recompensas
-- **Notificacoes animadas:** popups de conquista e level up
-
-### Eventos Semanais (`/events`)
-| Dia | Evento | Bonus |
-|-----|--------|-------|
-| Segunda | Dia do Conto | XP x2 |
-| Terca | Dia do Criador | Moedas x2 |
-| Quarta | Desafio do Vocabulario | Recompensas especiais |
-| Quinta | Dia da Aventura | XP x1.5 + sprites tematicos |
-| Sexta | Sexta Social | Moedas x2 |
-| Sabado | Sabado de Missoes | Recompensas x2 |
-| Domingo | Domingo em Familia | XP x3 |
-
-### Painel do Educador (`/dashboard`)
-- **Missoes personalizadas:** criar tarefas de leitura, criacao ou educativas
-- **Regras de uso:** tempo maximo diario, horarios permitidos, classificacao etaria
-- **Toggle de criacao:** permitir ou bloquear criacao de historias
-- **Relatorio de progresso:** historias lidas/criadas, sequencia, conquistas, XP total
 
 ## Estrutura do Projeto
 
 ```
-animabook/
-├── src/
-│   ├── app/
-│   │   ├── page.tsx                    # Home
-│   │   ├── layout.tsx                  # Layout global com GameProvider
-│   │   ├── providers.tsx               # Client providers (GameContext)
-│   │   ├── reader/[storyId]/page.tsx   # Leitor
-│   │   ├── editor/[storyId]/page.tsx   # Editor
-│   │   ├── dashboard/page.tsx          # Painel educador
-│   │   ├── challenges/page.tsx         # Desafios
-│   │   ├── events/page.tsx             # Eventos semanais
-│   │   ├── profile/page.tsx            # Perfil e conquistas
-│   │   └── api/
-│   │       ├── assets/route.ts         # Lista sprites/fundos
-│   │       └── stories/                # CRUD de historias
-│   ├── components/
-│   │   ├── Reader/                     # SceneView, SpriteLayer, DialogueBox
-│   │   ├── Editor/                     # SceneEditor, SpritePanel, Timeline, etc.
-│   │   ├── Gamification/               # XPBar, AchievementPopup, ChallengeCard, etc.
-│   │   └── Dashboard/                  # MissionManager, UsageRules, ProgressReport
-│   └── lib/
-│       ├── types.ts                    # Interfaces: Story, Scene, Sprite, Dialogue
-│       ├── parseStory.ts               # Parser Markdown <-> JSON
-│       ├── gamification.ts             # XP, niveis, conquistas, eventos, desafios
-│       ├── GameContext.tsx              # React Context (estado global, localStorage)
-│       ├── storage.ts                  # Cliente Supabase (opcional)
-│       └── supabase-schema.sql         # Schema SQL para Supabase
-├── data/stories/                       # Historias salvas (JSON e Markdown)
-├── public/
-│   ├── sprites/                        # PNGs/SVGs dos personagens
-│   └── backgrounds/                    # PNGs/SVGs dos cenarios
-└── doc/
-    ├── PLANO_ANIMABOOK.md              # Plano de implementacao
-    └── FEATURES_FUTURAS.md             # Roadmap detalhado
+src/
+  app/
+    page.tsx, HomeContent.tsx              # Home
+    reader/[storyId]/page.tsx              # Leitor (baloes HQ)
+    editor/[storyId]/page.tsx              # Editor de historias
+    create/page.tsx                        # Hub de modos criativos
+    create/[mode]/[id]/page.tsx            # Editor criativo
+    gallery/page.tsx                       # Galeria de projetos
+    view/[id]/page.tsx                     # Visualizar projeto
+    dashboard/, challenges/, events/, profile/
+    api/stories/, api/projects/, api/assets/, api/creative-assets/
+  components/
+    Reader/       SceneView, SpriteLayer, DialogueBox (baloes HQ draggable)
+    Editor/       SceneEditor, SpritePanel (categorizado), Timeline, DialogueEditor
+    Creative/     CreativeCanvas, CreativeEditor, ItemPalette, ItemControls
+    Gamification/ XPBar, AchievementPopup, ChallengeCard, ProfileCard
+  lib/
+    types.ts            # Story, Scene, Dialogue, CreativeProject, PlacedItem
+    parseStory.ts       # Parser MD <-> JSON
+    storageAdapter.ts   # Dual-mode storage (FS + Supabase)
+    GameContext.tsx      # Gamificacao (React Context + localStorage)
+public/
+  sprites/       83 SVGs (personagens + objetos)
+  backgrounds/   14 SVGs (cenarios)
+  assets/        SVGs para modos criativos
+data/
+  stories/       Historias salvas (.json, .md)
+  projects/      Projetos criativos salvos (.json)
 ```
 
 ## Formato das Historias (Markdown)
-
-As historias usam comentarios HTML em Markdown:
 
 ```markdown
 # Titulo da Historia
 
 <!-- scene: sala_aula.svg -->
-
 <!-- sprite: lumi.svg x=30% y=75% -->
 <!-- sprite: caio.svg x=70% y=78% -->
 
 _Era uma vez, em uma escola muito colorida..._
 
 **Lumi**: "Oi! Eu sou a Lumi!"
-
 **Caio**: "Bem-vinda!"
 
 ---
 
 <!-- scene: patio.svg -->
-
 <!-- sprite: lumi_feliz.svg x=40% y=72% -->
 <!-- sprite: caio.svg exit -->
 
 _Lumi foi explorar o patio sozinha._
 ```
 
-**Regras do parser:**
-- `<!-- scene: fundo.svg -->` — define o fundo da cena
-- `<!-- sprite: arquivo.svg x=% y=% -->` — posiciona sprite
-- `<!-- sprite: arquivo.svg x=% y=% scale=1.5 -->` — com escala
-- `<!-- sprite: arquivo.svg exit -->` — remove sprite da cena
-- `**Nome**: "fala"` — dialogo
-- `_texto_` — narrador
-- `---` — separador de cenas
-- O ID do sprite vem do prefixo do filename (`lumi_feliz.svg` → id `lumi`), garantindo animacao continua ao trocar expressao
+**Convencoes:**
+- `<!-- scene: fundo.svg -->` — define fundo da cena
+- `<!-- sprite: arquivo.svg x=% y=% scale=1.5 -->` — posiciona sprite
+- `<!-- sprite: arquivo.svg exit -->` — remove sprite
+- `**Nome**: "fala"` — dialogo (aparece como balao HQ no leitor)
+- `_texto_` — narrador (barra no topo)
+- Para personagens: `lumi_feliz.svg` → id `lumi` (troca expressao)
+- Para objetos: `animal_gato.svg` → id `animal_gato` (cada um e unico)
 
 ## Instalacao
 
 ```bash
-# Clonar
 git clone git@github.com:inematds/animabooksf.git
 cd animabooksf
-
-# Instalar dependencias
 npm install
-
-# Rodar em desenvolvimento
 npm run dev
-
-# Build de producao
-npm run build
-npm start
 ```
 
-## Configuracao (Opcional)
+### Supabase (opcional)
 
-### Supabase
-
-O app funciona sem Supabase (usa filesystem local). Para habilitar persistencia na nuvem:
-
-1. Crie um projeto no [Supabase](https://supabase.com)
-2. Execute o schema SQL em `src/lib/supabase-schema.sql`
-3. Crie os buckets de storage: `sprites`, `backgrounds`, `thumbnails`
-4. Copie `.env.local.example` para `.env.local` e preencha:
+O app funciona sem Supabase (usa filesystem local). Para cloud:
 
 ```env
 NEXT_PUBLIC_SUPABASE_URL=https://seu-projeto.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=sua-anon-key
 ```
 
-### Adicionar Sprites e Fundos
+### Adicionar Assets
 
-Coloque os arquivos PNG/SVG/WebP em:
-- `public/sprites/` — personagens (transparentes, preferencialmente 1024x1024)
-- `public/backgrounds/` — cenarios (16:9, preferencialmente 1920x1080)
-
-**Convencao de nomes para sprites:**
-- `nomePersonagem.png` — expressao neutra
-- `nomePersonagem_feliz.png` — expressao feliz
-- `nomePersonagem_triste.png` — expressao triste
-- O prefixo antes do `_` define o ID do personagem
+- `public/sprites/` — personagens e objetos SVG
+- `public/backgrounds/` — cenarios SVG (16:9)
+- Personagens: `nome.svg`, `nome_expressao.svg`
+- Objetos: `categoria_nome.svg` (animal_, natureza_, comida_, movel_, veiculo_, brinquedo_, escola_, magia_, moda_)
 
 ## Rotas
 
-| Rota | Tipo | Descricao |
-|------|------|-----------|
-| `/` | Pagina | Home com lista de historias e navegacao |
-| `/reader/[id]` | Pagina | Leitor de historia (SSR) |
-| `/editor/new` | Pagina | Criar nova historia |
-| `/editor/[id]` | Pagina | Editar historia existente |
-| `/dashboard` | Pagina | Painel do educador |
-| `/challenges` | Pagina | Desafios diarios e semanais |
-| `/events` | Pagina | Calendario de eventos da semana |
-| `/profile` | Pagina | Perfil, XP e conquistas |
-| `/api/assets` | API | Lista sprites (`?type=sprite`) ou fundos (`?type=background`) |
-| `/api/stories` | API | GET lista historias, POST salva historia |
-| `/api/stories/[id]` | API | GET/DELETE historia individual |
+| Rota | Descricao |
+|------|-----------|
+| `/` | Home com lista de historias |
+| `/reader/[id]` | Leitor com baloes HQ |
+| `/editor/new` | Criar nova historia |
+| `/editor/[id]` | Editar historia |
+| `/create` | Hub de modos criativos |
+| `/create/[mode]/[id]` | Editor criativo |
+| `/gallery` | Galeria de projetos |
+| `/view/[id]` | Visualizar projeto |
+| `/dashboard` | Painel educador |
+| `/challenges` | Desafios |
+| `/events` | Eventos semanais |
+| `/profile` | Perfil e conquistas |
+| `/api/stories` | CRUD de historias |
+| `/api/projects` | CRUD de projetos criativos |
+| `/api/assets` | Lista sprites e fundos |
+| `/api/creative-assets` | Lista assets criativos por modo |
+
+## Versionamento
+
+Formato: `MAJOR.RECURSO.BUG`
+
+| Versao | Descricao |
+|--------|-----------|
+| 1.1.0 | 97 SVGs, painel categorizado, baloes HQ draggable, moda |
+| 1.0.1 | Fix navegacao de dialogos |
+| 1.0.0 | Modos criativos, gamificacao conectada, storage adapter |
 
 ## Roadmap
 
-- [ ] Integracao com Telegram Bot (historias via chat)
-- [ ] Integracao com WhatsApp Business API
-- [ ] Geracao de historias com IA (LLM)
-- [ ] Audio: vozes com ElevenLabs/TTS
-- [ ] Galeria publica de historias
+- [ ] Editor lateral de dialogos (estilo animabook referencia)
+- [ ] Expressoes para todos os personagens
 - [ ] Autenticacao (Supabase Auth)
+- [ ] Galeria publica de historias
+- [ ] Audio: vozes com TTS
+- [ ] Geracao de historias com IA
 - [ ] PWA com suporte offline
-- [ ] Marketplace de sprites e fundos
-- [ ] Troca de figurinhas entre criancas
-- [ ] Editor de personagens (customizar aparencia)
+- [ ] v3: Snap-to-place (objetos encaixam nos lugares certos)
+- [ ] v3: Marketplace de sprites e fundos
+- [ ] v3: Editor de personagens customizaveis
+
+## Documentacao
+
+- `doc/RELATORIO_V1.1.md` — Relatorio completo da versao atual
+- `PLANO_EXPANSAO.md` — Plano de expansao e roadmap v2/v3
+- `TODO.md` — Checklist de tarefas (fases 1-4 concluidas)
+- `REVISAO_COMPLETA.md` — Auditoria inicial do projeto
 
 ## Licenca
 
