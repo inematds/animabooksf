@@ -130,12 +130,12 @@ export default function SceneView({ story }: SceneViewProps) {
           }}
         />
 
-        {/* Bottom gradient for dialogue readability */}
+        {/* Subtle bottom gradient */}
         <div
-          className="absolute bottom-0 left-0 right-0 h-[45%] z-[2] pointer-events-none"
+          className="absolute bottom-0 left-0 right-0 h-[20%] z-[2] pointer-events-none"
           style={{
             background:
-              'linear-gradient(to top, rgba(0,0,0,0.40) 0%, rgba(0,0,0,0.12) 50%, transparent 100%)',
+              'linear-gradient(to top, rgba(0,0,0,0.25) 0%, transparent 100%)',
           }}
         />
 
@@ -173,12 +173,13 @@ export default function SceneView({ story }: SceneViewProps) {
           <SpriteLayer sprites={scene.sprites} />
         </LayoutGroup>
 
-        {/* Dialogue */}
+        {/* Dialogue bubbles */}
         <DialogueBox
           ref={dialogueRef}
           key={sceneIndex}
           dialogues={scene.dialogues}
           narrator={scene.narrator}
+          sprites={scene.sprites}
           onComplete={handleDialogueComplete}
         />
 
