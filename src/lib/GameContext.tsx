@@ -115,7 +115,21 @@ export function GameProvider({ children }: { children: ReactNode }) {
 
     if (saved) {
       const profile = checkStreakReset(saved.profile || DEFAULT_PROFILE);
-      return { ...saved, profile, todayEvent, weeklyEvents: DEFAULT_WEEKLY_EVENTS };
+
+      // Renovar desafios expirados
+      const now = new Date();
+      const validChallenges = (saved.challenges || []).filter(
+        (c: Challenge) => new Date(c.expiresAt) >= now || c.current >= c.target
+      );
+      const hasDaily = validChallenges.some((c: Challenge) => c.type === 'daily' && new Date(c.expiresAt) >= now);
+      const hasWeekly = validChallenges.some((c: Challenge) => c.type === 'weekly' && new Date(c.expiresAt) >= now);
+      const renewedChallenges = [
+        ...validChallenges,
+        ...(!hasDaily ? generateDailyChallenges() : []),
+        ...(!hasWeekly ? generateWeeklyChallenges() : []),
+      ];
+
+      return { ...saved, profile, todayEvent, weeklyEvents: DEFAULT_WEEKLY_EVENTS, challenges: renewedChallenges };
     }
 
     return {
@@ -242,12 +256,13 @@ export function GameProvider({ children }: { children: ReactNode }) {
         ? prev.profile.currentStreak
         : prev.profile.currentStreak + 1;
 
-      const updatedProfile = {
+      let updatedProfile = {
         ...prev.profile,
         storiesRead: prev.profile.storiesRead + 1,
         currentStreak: newStreak,
         longestStreak: Math.max(prev.profile.longestStreak, newStreak),
         lastActiveDate: today,
+        unlockedAchievements: [...prev.profile.unlockedAchievements],
       };
 
       // Check achievements
@@ -255,9 +270,12 @@ export function GameProvider({ children }: { children: ReactNode }) {
       const notifs = [...prev.notifications];
 
       for (const ach of newAchievements) {
-        updatedProfile.unlockedAchievements.push(ach.id);
-        updatedProfile.xp += ach.rewardXp;
-        updatedProfile.coins += ach.rewardCoins;
+        updatedProfile = {
+          ...updatedProfile,
+          unlockedAchievements: [...updatedProfile.unlockedAchievements, ach.id],
+          xp: updatedProfile.xp + ach.rewardXp,
+          coins: updatedProfile.coins + ach.rewardCoins,
+        };
         notifs.push({
           id: crypto.randomUUID(),
           type: 'achievement',
@@ -288,18 +306,22 @@ export function GameProvider({ children }: { children: ReactNode }) {
 
   const recordStoryCreated = useCallback(() => {
     setState((prev) => {
-      const updatedProfile = {
+      let updatedProfile = {
         ...prev.profile,
         storiesCreated: prev.profile.storiesCreated + 1,
+        unlockedAchievements: [...prev.profile.unlockedAchievements],
       };
 
       const newAchievements = checkAchievements(updatedProfile);
       const notifs = [...prev.notifications];
 
       for (const ach of newAchievements) {
-        updatedProfile.unlockedAchievements.push(ach.id);
-        updatedProfile.xp += ach.rewardXp;
-        updatedProfile.coins += ach.rewardCoins;
+        updatedProfile = {
+          ...updatedProfile,
+          unlockedAchievements: [...updatedProfile.unlockedAchievements, ach.id],
+          xp: updatedProfile.xp + ach.rewardXp,
+          coins: updatedProfile.coins + ach.rewardCoins,
+        };
         notifs.push({
           id: crypto.randomUUID(),
           type: 'achievement',

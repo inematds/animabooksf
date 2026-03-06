@@ -1,6 +1,8 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 
 interface StoryMeta {
@@ -65,7 +67,27 @@ function FloatingDecoration({
 /* ------------------------------------------------------------------ */
 /*  Main HomeContent component                                         */
 /* ------------------------------------------------------------------ */
-export default function HomeContent({ stories }: { stories: StoryMeta[] }) {
+export default function HomeContent({ stories: initialStories }: { stories: StoryMeta[] }) {
+  const router = useRouter();
+  const [stories, setStories] = useState(initialStories);
+  const [deleting, setDeleting] = useState<string | null>(null);
+
+  const handleDelete = async (id: string, title: string) => {
+    if (!confirm(`Excluir "${title}"? Esta acao nao pode ser desfeita.`)) return;
+    setDeleting(id);
+    try {
+      const res = await fetch(`/api/stories/${id}`, { method: 'DELETE' });
+      if (res.ok) {
+        setStories((prev) => prev.filter((s) => s.id !== id));
+        router.refresh();
+      }
+    } catch {
+      // silently fail
+    } finally {
+      setDeleting(null);
+    }
+  };
+
   return (
     <main className="relative min-h-screen overflow-hidden bg-gradient-to-b from-indigo-50 via-purple-50 to-pink-50">
       {/* Decorative floating elements */}
@@ -299,6 +321,23 @@ export default function HomeContent({ stories }: { stories: StoryMeta[] }) {
                             </span>
                           </motion.div>
                         </Link>
+                        <motion.button
+                          whileHover={{ scale: 1.04 }}
+                          whileTap={{ scale: 0.96 }}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleDelete(story.id, story.title);
+                          }}
+                          disabled={deleting === story.id}
+                          className="px-3 py-2 rounded-xl text-sm cursor-pointer"
+                          style={{
+                            background: 'rgba(254,226,226,0.9)',
+                            color: '#dc2626',
+                            border: '1.5px solid rgba(252,165,165,0.6)',
+                          }}
+                        >
+                          {deleting === story.id ? '...' : '🗑️'}
+                        </motion.button>
                       </div>
                     </div>
                   </motion.div>

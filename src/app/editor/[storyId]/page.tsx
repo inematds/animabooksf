@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { Story } from '@/lib/types';
+import { useGame } from '@/lib/GameContext';
 import SceneEditor from '@/components/Editor/SceneEditor';
 
 const DEFAULT_STORY: Story = {
@@ -21,9 +22,11 @@ export default function EditorPage() {
   const params = useParams();
   const router = useRouter();
   const storyId = params.storyId as string;
+  const { recordStoryCreated } = useGame();
   const [story, setStory] = useState<Story | null>(null);
   const [loading, setLoading] = useState(true);
   const savedIdRef = useRef<string | null>(null);
+  const hasRecordedCreate = useRef(false);
 
   useEffect(() => {
     if (storyId === 'new') {
@@ -62,6 +65,10 @@ export default function EditorPage() {
       }
       const data = await res.json();
       if (data.id) {
+        if (storyId === 'new' && !hasRecordedCreate.current) {
+          hasRecordedCreate.current = true;
+          recordStoryCreated();
+        }
         savedIdRef.current = data.id;
       }
       if (storyId === 'new' && data.id) {

@@ -1,7 +1,7 @@
 'use client';
 
 import { useGame } from '@/lib/GameContext';
-import { getXpProgress, getLevelTitle } from '@/lib/gamification';
+import { getXpProgress, getLevelTitle, DEFAULT_ACHIEVEMENTS } from '@/lib/gamification';
 
 export default function ProfileCard() {
   const { profile } = useGame();
@@ -62,12 +62,14 @@ export default function ProfileCard() {
         </h3>
         <div className="flex flex-wrap gap-2">
           {profile.unlockedAchievements.length > 0 ? (
-            profile.unlockedAchievements.map((id) => (
-              <span key={id} className="text-xl" title={id}>
-                {/* We'd look up the achievement icon here */}
-                ⭐
-              </span>
-            ))
+            profile.unlockedAchievements.map((id) => {
+              const ach = DEFAULT_ACHIEVEMENTS.find((a) => a.id === id);
+              return (
+                <span key={id} className="text-xl" title={ach?.name || id}>
+                  {ach?.icon || '⭐'}
+                </span>
+              );
+            })
           ) : (
             <span className="text-xs text-gray-400">Nenhuma conquista ainda. Continue lendo!</span>
           )}

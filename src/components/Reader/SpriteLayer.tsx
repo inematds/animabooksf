@@ -11,6 +11,7 @@ interface SpriteLayerProps {
 
 export default function SpriteLayer({ sprites }: SpriteLayerProps) {
   const [mounted, setMounted] = useState(false);
+  const [errorSprites, setErrorSprites] = useState<Set<string>>(new Set());
   useEffect(() => setMounted(true), []);
 
   return (
@@ -51,20 +52,27 @@ export default function SpriteLayer({ sprites }: SpriteLayerProps) {
             }}
             className="relative"
           >
-            <Image
-              src={`/sprites/${sprite.filename}`}
-              alt={sprite.id}
-              width={200}
-              height={300}
-              className="object-contain"
-              draggable={false}
-              style={{
-                filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.25))',
-                height: 'auto',
-                maxHeight: '35vh',
-                width: 'auto',
-              }}
-            />
+            {errorSprites.has(sprite.id) ? (
+              <div className="w-[100px] h-[150px] bg-purple-200/50 rounded-xl flex items-center justify-center text-3xl">
+                ?
+              </div>
+            ) : (
+              <Image
+                src={`/sprites/${sprite.filename}`}
+                alt={sprite.id}
+                width={200}
+                height={300}
+                className="object-contain"
+                draggable={false}
+                onError={() => setErrorSprites((prev) => new Set(prev).add(sprite.id))}
+                style={{
+                  filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.25))',
+                  height: 'auto',
+                  maxHeight: '35vh',
+                  width: 'auto',
+                }}
+              />
+            )}
             <div
               className="absolute -bottom-1 left-1/2 -translate-x-1/2 rounded-full"
               style={{

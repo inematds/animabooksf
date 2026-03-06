@@ -4,6 +4,7 @@ import { useState, useCallback, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
 import { Story } from '@/lib/types';
+import { useGame } from '@/lib/GameContext';
 import SpriteLayer from './SpriteLayer';
 import DialogueBox from './DialogueBox';
 
@@ -12,9 +13,11 @@ interface SceneViewProps {
 }
 
 export default function SceneView({ story }: SceneViewProps) {
+  const { recordStoryRead } = useGame();
   const [sceneIndex, setSceneIndex] = useState(0);
   const [showTitle, setShowTitle] = useState(true);
   const hasMounted = useRef(false);
+  const hasRecordedRead = useRef(false);
   useEffect(() => { hasMounted.current = true; }, []);
   const scene = story.scenes[sceneIndex];
   const totalScenes = story.scenes.length;
@@ -37,8 +40,11 @@ export default function SceneView({ story }: SceneViewProps) {
   const handleDialogueComplete = useCallback(() => {
     if (sceneIndex < totalScenes - 1) {
       goToScene(sceneIndex + 1);
+    } else if (!hasRecordedRead.current) {
+      hasRecordedRead.current = true;
+      recordStoryRead();
     }
-  }, [sceneIndex, totalScenes, goToScene]);
+  }, [sceneIndex, totalScenes, goToScene, recordStoryRead]);
 
   // Keyboard navigation
   useEffect(() => {

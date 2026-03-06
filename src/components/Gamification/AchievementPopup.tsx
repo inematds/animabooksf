@@ -7,14 +7,18 @@ import { useGame } from '@/lib/GameContext';
 export default function AchievementPopup() {
   const { notifications, dismissNotification } = useGame();
 
-  // Auto-dismiss after 4s
+  // Auto-dismiss notifications older than 4s
   useEffect(() => {
     if (notifications.length === 0) return;
-    const latest = notifications[notifications.length - 1];
-    const timer = setTimeout(() => {
-      dismissNotification(latest.id);
-    }, 4000);
-    return () => clearTimeout(timer);
+    const interval = setInterval(() => {
+      const now = Date.now();
+      for (const notif of notifications) {
+        if (now - notif.timestamp > 4000) {
+          dismissNotification(notif.id);
+        }
+      }
+    }, 1000);
+    return () => clearInterval(interval);
   }, [notifications, dismissNotification]);
 
   return (

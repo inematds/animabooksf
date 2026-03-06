@@ -1,39 +1,15 @@
-import fs from 'fs';
-import path from 'path';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { Story } from '@/lib/types';
-import { parseStory } from '@/lib/parseStory';
+import { getStory } from '@/lib/storageAdapter';
 import SceneView from '@/components/Reader/SceneView';
 
 interface Props {
   params: Promise<{ storyId: string }>;
 }
 
-async function loadStory(storyId: string): Promise<Story | null> {
-  try {
-    // Try JSON first
-    const jsonPath = path.join(process.cwd(), 'data', 'stories', `${storyId}.json`);
-    if (fs.existsSync(jsonPath)) {
-      return JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
-    }
-
-    // Try Markdown
-    const mdPath = path.join(process.cwd(), 'data', 'stories', `${storyId}.md`);
-    if (fs.existsSync(mdPath)) {
-      const md = fs.readFileSync(mdPath, 'utf-8');
-      return parseStory(md);
-    }
-  } catch (err) {
-    console.error(`Error loading story "${storyId}":`, err);
-  }
-
-  return null;
-}
-
 export default async function ReaderPage({ params }: Props) {
   const { storyId } = await params;
-  const story = await loadStory(storyId);
+  const story = await getStory(storyId);
 
   if (!story) notFound();
 

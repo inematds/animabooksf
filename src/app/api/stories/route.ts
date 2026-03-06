@@ -1,39 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
-import { parseStory } from '@/lib/parseStory';
-
-const STORIES_DIR = path.join(process.cwd(), 'data', 'stories');
-
-function ensureDir() {
-  if (!fs.existsSync(STORIES_DIR)) {
-    fs.mkdirSync(STORIES_DIR, { recursive: true });
-  }
-}
+import { listStories, saveStory } from '@/lib/storageAdapter';
+import { Story } from '@/lib/types';
 
 export async function GET() {
   try {
-    ensureDir();
-    const files = fs.readdirSync(STORIES_DIR).filter((f) => f.endsWith('.json') || f.endsWith('.md'));
-    const stories: Array<{ id: string; title: string; scenesCount: number }> = [];
-
-    for (const f of files) {
-      const ext = path.extname(f);
-      const id = f.replace(ext, '');
-      try {
-        if (ext === '.json') {
-          const data = JSON.parse(fs.readFileSync(path.join(STORIES_DIR, f), 'utf-8'));
-          stories.push({ id, title: data.title || 'Sem titulo', scenesCount: data.scenes?.length || 0 });
-        } else {
-          const md = fs.readFileSync(path.join(STORIES_DIR, f), 'utf-8');
-          const story = parseStory(md);
-          stories.push({ id, title: story.title, scenesCount: story.scenes.length });
-        }
-      } catch {
-        stories.push({ id, title: `(erro ao ler ${f})`, scenesCount: 0 });
-      }
-    }
-
+    const stories = await listStories();
     return NextResponse.json({ stories });
   } catch (err) {
     console.error('GET /api/stories error:', err);
@@ -43,11 +14,18 @@ export async function GET() {
 
 export async function POST(request: NextRequest) {
   try {
-    ensureDir();
     const body = await request.json();
-    const id = body.id || crypto.randomUUID();
-    const filePath = path.join(STORIES_DIR, `${id}.json`);
-    fs.writeFileSync(filePath, JSON.stringify(body.story, null, 2));
+    const story = body.story as Story | undefined;
+
+    // Validacao
+    if (!story || typeof story.title !== 'string' || !story.title.trim()) {
+      return NextResponse.json({ error: 'Historia precisa de um titulo' }, { status: 400 });
+    }
+    if (!Array.isArray(story.scenes) || story.scenes.length === 0) {
+      return NextResponse.json({ error: 'Historia precisa de pelo menos uma cena' }, { status: 400 });
+    }
+
+    const id = await saveStory(body.id || undefined, story);
     return NextResponse.json({ id, saved: true });
   } catch (err) {
     console.error('Save error:', err);

@@ -33,6 +33,7 @@ export default function SceneEditor({ initialStory, onSave, onPreview }: SceneEd
   const [isDragging, setIsDragging] = useState(false);
   const [saving, setSaving] = useState(false);
   const [saveMsg, setSaveMsg] = useState('');
+  const [bgError, setBgError] = useState(false);
   const canvasRef = useRef<HTMLDivElement>(null);
   const storyRef = useRef(story);
   storyRef.current = story;
@@ -44,8 +45,11 @@ export default function SceneEditor({ initialStory, onSave, onPreview }: SceneEd
     const interval = setInterval(async () => {
       try {
         await onSave(storyRef.current);
+        setSaveMsg('Auto-salvo');
+        setTimeout(() => setSaveMsg(''), 2000);
       } catch {
-        // auto-save silently fails - user can save manually
+        setSaveMsg('Falha no auto-save');
+        setTimeout(() => setSaveMsg(''), 3000);
       }
     }, 30000);
     return () => clearInterval(interval);
@@ -189,6 +193,7 @@ export default function SceneEditor({ initialStory, onSave, onPreview }: SceneEd
 
   const handleSetBackground = useCallback(
     (bg: string) => {
+      setBgError(false);
       updateScene((s) => ({ ...s, background: bg }));
     },
     [updateScene]
@@ -229,7 +234,13 @@ export default function SceneEditor({ initialStory, onSave, onPreview }: SceneEd
           Ver Historia
         </button>
         {saveMsg && (
-          <span className={`text-xs animate-pulse ${saveMsg === 'Salvo!' ? 'text-green-600' : 'text-red-500'}`}>{saveMsg}</span>
+          <span className={`text-xs animate-pulse ${
+            saveMsg === 'Salvo!' || saveMsg === 'Auto-salvo'
+              ? 'text-green-600'
+              : saveMsg === 'Falha no auto-save'
+                ? 'text-yellow-500'
+                : 'text-red-500'
+          }`}>{saveMsg}</span>
         )}
         <button
           onClick={async () => {
@@ -276,12 +287,19 @@ export default function SceneEditor({ initialStory, onSave, onPreview }: SceneEd
               onClick={() => setSelectedSpriteId(null)}
             >
               {/* Background */}
-              <Image
-                src={`/backgrounds/${scene.background}`}
-                alt="Fundo"
-                fill
-                className="object-cover pointer-events-none"
-              />
+              {bgError ? (
+                <div className="absolute inset-0 bg-gradient-to-b from-gray-700 to-gray-900 flex items-center justify-center text-gray-400 text-sm pointer-events-none">
+                  Fundo nao encontrado
+                </div>
+              ) : (
+                <Image
+                  src={`/backgrounds/${scene.background}`}
+                  alt="Fundo"
+                  fill
+                  className="object-cover pointer-events-none"
+                  onError={() => setBgError(true)}
+                />
+              )}
 
               {/* Sprites */}
               {scene.sprites.map((sprite) => (
