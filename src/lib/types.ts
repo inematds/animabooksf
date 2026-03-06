@@ -25,3 +25,30 @@ export interface Story {
   title: string;
   scenes: Scene[];
 }
+
+// --- Creative Modes (Decoration, Construction, City) ---
+
+export type ProjectType = 'decoration' | 'construction' | 'city';
+
+export interface PlacedItem {
+  id: string;
+  assetId: string;      // filename do asset
+  category: string;     // ex: "movel", "planta", "predio"
+  x: number;            // 0-100 (%)
+  y: number;            // 0-100 (%)
+  scale: number;
+  rotation: number;     // graus
+  zIndex: number;
+  layer: 'back' | 'main' | 'front';
+  flipped: boolean;
+}
+
+export interface CreativeProject {
+  id?: string;
+  type: ProjectType;
+  title: string;
+  background: string;
+  items: PlacedItem[];
+  createdAt?: string;
+  updatedAt?: string;
+}

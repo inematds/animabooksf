@@ -196,6 +196,8 @@ export default function HomeContent({ stories: initialStories }: { stories: Stor
           transition={{ delay: 0.35, duration: 0.5 }}
         >
           {[
+            { href: '/create', label: 'Criar', icon: '🎨', color: 'rose' },
+            { href: '/gallery', label: 'Galeria', icon: '🖼️', color: 'indigo' },
             { href: '/challenges', label: 'Desafios', icon: '🏆', color: 'purple' },
             { href: '/events', label: 'Eventos', icon: '🎉', color: 'pink' },
             { href: '/dashboard', label: 'Painel Educador', icon: '👩‍🏫', color: 'blue' },

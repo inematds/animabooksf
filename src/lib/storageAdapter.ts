@@ -1,4 +1,4 @@
-import { Story } from './types';
+import { Story, CreativeProject, ProjectType } from './types';
 import { parseStory } from './parseStory';
 
 // --- Supabase functions (only used when env vars are set) ---
@@ -24,11 +24,16 @@ function getStoriesDir() {
   return path.join(process.cwd(), 'data', 'stories');
 }
 
-function ensureDir() {
+function getProjectsDir() {
+  const { path } = getFsModules();
+  return path.join(process.cwd(), 'data', 'projects');
+}
+
+function ensureDir(dir?: string) {
   const { fs } = getFsModules();
-  const dir = getStoriesDir();
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
+  const target = dir || getStoriesDir();
+  if (!fs.existsSync(target)) {
+    fs.mkdirSync(target, { recursive: true });
   }
 }
 
@@ -146,7 +151,7 @@ export async function saveStory(id: string | undefined, story: Story): Promise<s
 
   // Filesystem
   const { fs, path } = getFsModules();
-  ensureDir();
+  ensureDir(getStoriesDir());
   const finalId = id || crypto.randomUUID();
   const filePath = path.join(getStoriesDir(), `${finalId}.json`);
   fs.writeFileSync(filePath, JSON.stringify(story, null, 2));
@@ -191,4 +196,144 @@ export async function listAssets(type: 'sprite' | 'background'): Promise<AssetFi
   } catch {
     return [];
   }
+}
+
+// --- Creative Projects (Decoration, Construction, City) ---
+
+export interface ProjectMeta {
+  id: string;
+  type: ProjectType;
+  title: string;
+  itemCount: number;
+  updatedAt?: string;
+}
+
+export async function listProjects(type?: ProjectType): Promise<ProjectMeta[]> {
+  if (useSupabase()) {
+    const supabase = await getSupabase();
+    if (!supabase) return [];
+    let query = supabase
+      .from('projects')
+      .select('id, title, data, created_at, updated_at')
+      .order('updated_at', { ascending: false });
+    if (type) query = query.eq('type', type);
+    const { data, error } = await query;
+    if (error) return [];
+    return data.map((row) => ({
+      id: row.id,
+      type: (row.data as CreativeProject)?.type || 'decoration',
+      title: row.title,
+      itemCount: (row.data as CreativeProject)?.items?.length || 0,
+      updatedAt: row.updated_at,
+    }));
+  }
+
+  const { fs, path } = getFsModules();
+  const dir = getProjectsDir();
+  if (!fs.existsSync(dir)) return [];
+  const files = fs.readdirSync(dir).filter((f: string) => f.endsWith('.json'));
+  const projects: ProjectMeta[] = [];
+
+  for (const f of files) {
+    const id = f.replace('.json', '');
+    try {
+      const data: CreativeProject = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf-8'));
+      if (type && data.type !== type) continue;
+      projects.push({ id, type: data.type, title: data.title, itemCount: data.items?.length || 0 });
+    } catch {
+      projects.push({ id, type: 'decoration', title: `(erro ao ler ${f})`, itemCount: 0 });
+    }
+  }
+  return projects;
+}
+
+export async function getProject(id: string): Promise<CreativeProject | null> {
+  if (useSupabase()) {
+    const supabase = await getSupabase();
+    if (!supabase) return null;
+    const { data, error } = await supabase.from('projects').select('*').eq('id', id).single();
+    if (error) return null;
+    return data?.data as CreativeProject;
+  }
+
+  const { fs, path } = getFsModules();
+  const filePath = path.join(getProjectsDir(), `${id}.json`);
+  if (!fs.existsSync(filePath)) return null;
+  return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+}
+
+export async function saveProject(id: string | undefined, project: CreativeProject): Promise<string> {
+  if (useSupabase()) {
+    const supabase = await getSupabase();
+    if (!supabase) throw new Error('Supabase nao configurado');
+    if (id) {
+      const { error } = await supabase
+        .from('projects')
+        .update({ data: project, title: project.title, type: project.type, updated_at: new Date().toISOString() })
+        .eq('id', id);
+      if (error) throw error;
+      return id;
+    }
+    const { data, error } = await supabase
+      .from('projects')
+      .insert({ data: project, title: project.title, type: project.type })
+      .select('id')
+      .single();
+    if (error) throw error;
+    return data.id;
+  }
+
+  const { fs, path } = getFsModules();
+  ensureDir(getProjectsDir());
+  const finalId = id || crypto.randomUUID();
+  fs.writeFileSync(path.join(getProjectsDir(), `${finalId}.json`), JSON.stringify(project, null, 2));
+  return finalId;
+}
+
+export async function deleteProject(id: string): Promise<void> {
+  if (useSupabase()) {
+    const supabase = await getSupabase();
+    if (!supabase) return;
+    await supabase.from('projects').delete().eq('id', id);
+    return;
+  }
+
+  const { fs, path } = getFsModules();
+  const filePath = path.join(getProjectsDir(), `${id}.json`);
+  if (fs.existsSync(filePath)) fs.unlinkSync(filePath);
+}
+
+// --- Creative Assets (items for decoration/construction/city) ---
+
+export interface CreativeAssetCategory {
+  category: string;
+  files: string[];
+}
+
+export async function listCreativeAssets(mode: ProjectType): Promise<CreativeAssetCategory[]> {
+  const { fs, path } = getFsModules();
+  const baseDir = path.join(process.cwd(), 'public', 'assets', mode);
+
+  if (!fs.existsSync(baseDir)) return [];
+
+  const categories: CreativeAssetCategory[] = [];
+  const dirs = fs.readdirSync(baseDir, { withFileTypes: true });
+
+  for (const d of dirs) {
+    if (!d.isDirectory() || d.name === 'fundos') continue;
+    const catPath = path.join(baseDir, d.name);
+    const files = fs.readdirSync(catPath).filter((f: string) => /\.(png|jpg|jpeg|webp|svg)$/i.test(f));
+    if (files.length > 0) {
+      categories.push({ category: d.name, files });
+    }
+  }
+  return categories;
+}
+
+export async function listCreativeBackgrounds(mode: ProjectType): Promise<string[]> {
+  const { fs, path } = getFsModules();
+  const bgDir = path.join(process.cwd(), 'public', 'assets', mode, 'fundos');
+
+  if (!fs.existsSync(bgDir)) return [];
+  return fs.readdirSync(bgDir).filter((f: string) => /\.(png|jpg|jpeg|webp|svg)$/i.test(f));
 }
