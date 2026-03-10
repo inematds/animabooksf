@@ -429,9 +429,10 @@ export default function SceneEditor({ initialStory, onSave, onPreview }: SceneEd
                 </div>
               )}
               {scene.dialogues.map((d, i) => {
-                if (!d.character || !d.text) return null;
+                if (!d.character?.trim() || !d.text?.trim()) return null;
+                const charLower = d.character.toLowerCase();
                 const sprite = scene.sprites.find(
-                  (s) => displayName(s.id).toLowerCase() === d.character.toLowerCase()
+                  (s) => displayName(s.id).toLowerCase() === charLower || s.id.toLowerCase() === charLower
                 );
                 const left = sprite ? parseFloat(sprite.x) : 30 + i * 20;
                 const bottom = sprite ? 100 - parseFloat(sprite.y) + 18 : 40;

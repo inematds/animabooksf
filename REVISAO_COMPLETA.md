@@ -145,13 +145,45 @@ A home page e estatica (prerendered). Historias criadas via editor so aparecem n
 
 ---
 
+## CORRECOES APLICADAS (2026-03-10)
+
+### Dialogos e legendas - fix completo
+
+**Problema:** Dialogos podiam nao aparecer no Reader por causa de regex restritiva no parser, dialogos vazios passando pro render, z-index baixo nos baloes, e falta de legenda textual.
+
+**Arquivos alterados:**
+
+1. `src/lib/parseStory.ts`
+   - Regex DIALOGUE_RE agora aceita aspas opcionais, smart quotes (unicode), e faz trim no character/text
+   - Usa regex strict (com aspas) primeiro para matches certeiros, fallback pra regex leniente
+   - Dialogos com character ou text vazio sao filtrados durante o parse
+
+2. `src/components/Reader/DialogueBox.tsx`
+   - Filtra dialogos vazios (character ou text vazio) antes de renderizar
+   - Z-index dos baloes aumentado de z-20 para z-30 (acima dos sprites e overlays)
+   - Z-index do tap zone aumentado para z-[35]
+   - Matching de character com sprite agora tenta tanto s.id quanto displayName(s.id) (consistente com editor)
+   - Posicao top dos baloes limitada com Math.min(50, ...) pra evitar clip por overflow
+   - **NOVO: Barra de legenda** na parte inferior da cena mostra o dialogo atual em formato de legenda de TV (sempre visivel independente da posicao dos baloes)
+
+3. `src/components/Editor/SceneEditor.tsx`
+   - Preview de baloes agora faz trim no character/text antes de filtrar
+   - Matching de character com sprite agora tenta tanto displayName quanto s.id (consistente com reader)
+
+**Modos de dialogo:**
+- **Reader** (`/reader/[id]`): Baloes flutuantes + barra de legenda + narrador (tudo funcionando)
+- **Editor** (`/editor/[id]`): Preview de baloes no canvas + painel de edicao (corrigido matching)
+- **Creative** (`/view/[id]`): Nao tem dialogos por design (projetos criativos usam PlacedItem, nao Dialogue)
+
+---
+
 ## RESUMO DO ESTADO
 
 | Funcionalidade | Status |
 |---|---|
 | Home page (listar historias) | Funciona local, mas estatica (nao atualiza sem rebuild) |
 | Editor (criar/editar cenas) | Funciona local |
-| Reader (ler historias) | Funciona local |
+| Reader (ler historias) | Funciona local, dialogos + legendas corrigidos |
 | Salvar historias | Funciona local, perde dados em deploy |
 | Supabase | Codigo morto - nunca chamado |
 | Gamificacao (XP/Nivel/Streak) | UI existe, mas contadores nunca incrementam |

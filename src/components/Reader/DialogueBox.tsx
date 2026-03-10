@@ -32,14 +32,22 @@ const DEFAULT_POSITIONS = [
   { left: 15, top: 25 },
 ];
 
+// Strip object prefix for display name matching (same logic as editor)
+function spriteDisplayName(id: string): string {
+  const name = id.replace(/^(animal|natureza|comida|movel|veiculo|brinquedo|escola|magia|moda)_/, '');
+  return name.charAt(0).toUpperCase() + name.slice(1);
+}
+
 function getBubblePosition(
   dialogue: Dialogue,
   index: number,
   sprites: SpriteState[]
 ): { left: number; top: number } {
-  // Try to find the sprite matching this character
+  // Try to find the sprite matching this character (by id or display name)
   const charLower = dialogue.character.toLowerCase();
-  const sprite = sprites.find((s) => s.id.toLowerCase() === charLower);
+  const sprite = sprites.find(
+    (s) => s.id.toLowerCase() === charLower || spriteDisplayName(s.id).toLowerCase() === charLower
+  );
 
   if (sprite) {
     const spriteX = parseFloat(sprite.x);
@@ -47,7 +55,7 @@ function getBubblePosition(
     // Position bubble above and slightly offset from sprite
     return {
       left: Math.max(5, Math.min(70, spriteX - 5)),
-      top: Math.max(3, spriteY - 45),
+      top: Math.max(3, Math.min(50, spriteY - 35)),
     };
   }
 
@@ -109,7 +117,7 @@ function SpeechBubble({
       initial={{ opacity: 0, scale: 0.5, y: 10 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{ delay: index * 0.15, type: 'spring', stiffness: 300, damping: 20 }}
-      className="absolute z-20 select-none"
+      className="absolute z-30 select-none"
       style={{
         left: `${pos.left}%`,
         top: `${pos.top}%`,
@@ -179,12 +187,17 @@ function SpeechBubble({
 }
 
 const DialogueBox = forwardRef<DialogueBoxHandle, DialogueBoxProps>(
-  function DialogueBox({ dialogues, narrator, sprites, onComplete }, ref) {
+  function DialogueBox({ dialogues: rawDialogues, narrator, sprites, onComplete }, ref) {
+    // Filter out empty/invalid dialogues before rendering
+    const dialogues = useMemo(
+      () => rawDialogues.filter((d) => d.character?.trim() && d.text?.trim()),
+      [rawDialogues]
+    );
+
     // Show all dialogues as bubbles at once, narrator as top bar
     // "advance" just goes to next scene
     const [showNarrator, setShowNarrator] = useState(!!narrator);
     const [visibleCount, setVisibleCount] = useState(0);
-    const totalSteps = (narrator ? 1 : 0) + dialogues.length;
     const allRevealed = visibleCount >= dialogues.length;
 
     // Reset when scene changes
@@ -256,10 +269,40 @@ const DialogueBox = forwardRef<DialogueBoxHandle, DialogueBoxProps>(
           />
         ))}
 
+        {/* Subtitle bar at the bottom — shows latest revealed dialogue */}
+        {visibleCount > 0 && dialogues.length > 0 && (
+          <motion.div
+            key={`sub-${visibleCount}`}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            className="absolute bottom-0 left-0 right-0 z-[32] pointer-events-none"
+          >
+            <div
+              className="mx-2 mb-2 sm:mx-4 sm:mb-3 px-4 py-2 sm:px-6 sm:py-2.5 rounded-xl"
+              style={{
+                background: 'rgba(0,0,0,0.75)',
+                backdropFilter: 'blur(12px)',
+                border: '1px solid rgba(255,255,255,0.08)',
+              }}
+            >
+              <p className="text-xs sm:text-sm leading-relaxed text-white">
+                <span
+                  className="font-bold mr-1.5"
+                  style={{ color: `hsl(${nameToHue(dialogues[Math.min(visibleCount, dialogues.length) - 1].character)}, 70%, 70%)` }}
+                >
+                  {dialogues[Math.min(visibleCount, dialogues.length) - 1].character}:
+                </span>
+                {dialogues[Math.min(visibleCount, dialogues.length) - 1].text}
+              </p>
+            </div>
+          </motion.div>
+        )}
+
         {/* Tap zone for advancing — only when all bubbles shown */}
         {allRevealed && (
           <div
-            className="absolute bottom-0 left-0 right-0 h-16 z-30 cursor-pointer flex items-center justify-center"
+            className="absolute bottom-0 left-0 right-0 h-16 z-[35] cursor-pointer flex items-center justify-center"
             onClick={advance}
           >
             <motion.div

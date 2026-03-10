@@ -20,7 +20,10 @@ export function spriteIdFromFilename(filename: string): string {
 
 const SCENE_RE = /<!--\s*scene:\s*(\S+)\s*-->/;
 const SPRITE_RE = /<!--\s*sprite:\s*(\S+)\s+(.*?)-->/;
-const DIALOGUE_RE = /^\*\*(.+?)\*\*:\s*"(.+)"$/;
+// Dialogue: **Character**: "text" (quotes optional, smart quotes accepted)
+const DIALOGUE_RE = /^\*\*(.+?)\*\*:\s*["\u201C]?(.+?)["\u201D]?\s*$/;
+// Strict version (with quotes) tried first for unambiguous matches
+const DIALOGUE_STRICT_RE = /^\*\*(.+?)\*\*:\s*["\u201C](.+)["\u201D]\s*$/;
 const NARRATOR_RE = /^_(.+)_$/;
 
 interface SpriteCommand {
@@ -129,13 +132,15 @@ export function parseStory(markdown: string): Story {
       continue;
     }
 
-    // Dialogue: **Character**: "text"
-    const dialogueMatch = trimmed.match(DIALOGUE_RE);
+    // Dialogue: **Character**: "text" — try strict (quoted) first, fall back to lenient
+    const dialogueStrict = trimmed.match(DIALOGUE_STRICT_RE);
+    const dialogueMatch = dialogueStrict || trimmed.match(DIALOGUE_RE);
     if (dialogueMatch) {
-      currentDialogues.push({
-        character: dialogueMatch[1],
-        text: dialogueMatch[2],
-      });
+      const character = dialogueMatch[1].trim();
+      const text = dialogueMatch[2].trim();
+      if (character && text) {
+        currentDialogues.push({ character, text });
+      }
       continue;
     }
 
