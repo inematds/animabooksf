@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { ProjectType } from '@/lib/types';
+import { listProjects, deleteProject } from '@/lib/storageAdapter';
 
 interface ProjectMeta {
   id: string;
@@ -36,9 +37,8 @@ export default function GalleryPage() {
   const [deleting, setDeleting] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch('/api/projects')
-      .then((r) => r.json())
-      .then((data) => setProjects(data.projects || []))
+    listProjects()
+      .then(setProjects)
       .catch(() => setProjects([]));
   }, []);
 
@@ -46,7 +46,7 @@ export default function GalleryPage() {
     if (!confirm(`Excluir "${title}"?`)) return;
     setDeleting(id);
     try {
-      await fetch(`/api/projects/${id}`, { method: 'DELETE' });
+      await deleteProject(id);
       setProjects((prev) => prev.filter((p) => p.id !== id));
     } catch { /* silent */ } finally {
       setDeleting(null);
@@ -116,13 +116,13 @@ export default function GalleryPage() {
                 </div>
                 <div className="flex gap-2">
                   <button
-                    onClick={() => router.push(`/create/${project.type}/${project.id}`)}
+                    onClick={() => router.push(`/create/${project.type}/?id=${encodeURIComponent(project.id)}`)}
                     className="flex-1 px-3 py-2 rounded-xl text-sm font-semibold bg-purple-500 text-white hover:bg-purple-600 transition"
                   >
                     Editar
                   </button>
                   <button
-                    onClick={() => router.push(`/view/${project.id}`)}
+                    onClick={() => router.push(`/view/?id=${encodeURIComponent(project.id)}`)}
                     className="px-3 py-2 rounded-xl text-sm font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200 transition"
                   >
                     Ver

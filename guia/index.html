@@ -61,7 +61,7 @@
   section h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;letter-spacing:-.02em}
   section .sub{color:var(--mut);margin:.6em 0 2em;max-width:62ch}
   .grid{display:grid;gap:16px}
-  .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)} .g2{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(3,minmax(0,1fr))} .g4{grid-template-columns:repeat(4,minmax(0,1fr))} .g2{grid-template-columns:repeat(2,minmax(0,1fr))}
   @media(max-width:820px){.g3,.g4{grid-template-columns:1fr 1fr}}
   @media(max-width:540px){.g2,.g3,.g4{grid-template-columns:1fr}}
   .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
@@ -120,7 +120,8 @@
       <h1>Histórias que a criança <span class="amb">monta</span> e depois lê como se fosse uma HQ</h1>
       <p class="lead">Plataforma web para crianças criarem e lerem histórias interativas — personagens animados, baloes de fala estilo HQ, cenários e modos de decoração/construção/cidades, com gamificação e um painel para educadores.</p>
       <div class="cta">
-        <a class="btn" href="#guia">Começar o guia</a>
+        <a class="btn" href="../">Abrir o app</a>
+        <a class="btn ghost" href="#guia">Começar o guia</a>
         <a class="btn ghost" href="https://github.com/inematds/animabooksf" target="_blank" rel="noopener">Ver no GitHub</a>
       </div>
     </div>
@@ -154,13 +155,13 @@
 <section id="pre"><div class="wrap">
   <span class="chip">Pré-requisitos</span>
   <h2>O que precisa estar instalado</h2>
-  <p class="sub">Projeto Next.js padrão — roda local sem depender de nenhum serviço externo. Supabase é opcional, só para persistir em nuvem em vez de filesystem local.</p>
+  <p class="sub">Para só usar, não precisa instalar nada: o app abre no navegador em <a href="../">inematds.github.io/animabooksf</a>. Para mexer no código, é um projeto Next.js que vira site estático. Supabase é opcional, só para guardar na nuvem em vez de no navegador.</p>
   <div class="grid g3">
     <div class="card"><h3>Node.js + npm</h3><p>Runtime do Next.js 16 / React 19.</p><pre><span class="c"># confira a versão</span>
 node -v</pre></div>
     <div class="card"><h3>Repositório</h3><p>Clone via SSH (padrão do projeto).</p><pre><span class="c"># clonar</span>
 git clone git@github.com:inematds/animabooksf.git</pre></div>
-    <div class="card"><h3>Supabase (opcional)</h3><p>Só se quiser storage em nuvem em vez de filesystem local — o app funciona sem isso.</p><pre><span class="c"># .env</span>
+    <div class="card"><h3>Supabase (opcional)</h3><p>Só se quiser guardar na nuvem em vez de no navegador — o app funciona sem isso. As variáveis entram no build.</p><pre><span class="c"># .env</span>
 <span class="k">NEXT_PUBLIC_SUPABASE_URL</span>=<span class="s">https://seu-projeto.supabase.co</span>
 <span class="k">NEXT_PUBLIC_SUPABASE_ANON_KEY</span>=<span class="s">sua-anon-key</span></pre></div>
   </div>
@@ -186,13 +187,13 @@ git clone git@github.com:inematds/animabooksf.git</pre></div>
   <div class="step"><div class="b">3</div><div>
     <h3>Ler uma história de exemplo</h3>
     <p>O projeto já vem com uma história de demonstração em <code>data/stories/demo.md</code>, acessível pelo leitor.</p>
-<pre><span class="k">/reader/demo</span>  <span class="c"># abre no navegador, ex.: http://localhost:3000/reader/demo</span></pre>
+<pre><span class="k">/reader/?id=demo</span>  <span class="c"># ex.: http://localhost:3000/reader/?id=demo</span></pre>
   </div></div>
 
   <div class="step"><div class="b">4</div><div>
     <h3>Criar/editar uma história pelo editor visual</h3>
     <p>Arraste sprites do painel categorizado pro canvas, escolha o fundo, escreva os diálogos (narrador + falas) e organize as cenas na timeline. Auto-save a cada 30s.</p>
-<pre><span class="k">/editor/new</span>  <span class="c"># cria uma história nova pelo editor</span></pre>
+<pre><span class="k">/editor/</span>  <span class="c"># cria uma história nova pelo editor</span></pre>
   </div></div>
 
   <div class="step"><div class="b">5</div><div>
@@ -210,18 +211,19 @@ git clone git@github.com:inematds/animabooksf.git</pre></div>
   </div></div>
 
   <div class="step"><div class="b">7</div><div>
-    <h3>Build de produção</h3>
-    <p>Para gerar o build otimizado e servir localmente como em produção.</p>
-<pre><span class="k">npm run build && npm run start</span>  <span class="c"># build + serve</span></pre>
+    <h3>Build de produção (site estático)</h3>
+    <p>O build gera a pasta <code>out/</code>, que roda em qualquer hospedagem de arquivos. No GitHub Pages o workflow faz isso sozinho a cada push, com o prefixo <code>/animabooksf</code>.</p>
+<pre><span class="k">npm run build && npm run start</span>  <span class="c"># gera out/ e serve em http://localhost:3000</span>
+<span class="k">npm run build:pages</span>  <span class="c"># igual ao do Pages (prefixo /animabooksf)</span></pre>
   </div></div>
 </div></section>
 
 <section id="exemplos"><div class="wrap">
   <span class="chip">Exemplos</span>
   <h2>Onde ver o projeto em ação</h2>
-  <p class="sub">O deploy oficial roda em produção — dá pra explorar leitor, editor e modos criativos sem instalar nada localmente.</p>
+  <p class="sub">O app está no ar no GitHub Pages — dá pra explorar leitor, editor e modos criativos sem instalar nada.</p>
   <div class="grid g2">
-    <div class="card"><h3>🌐 Deploy em produção</h3><p>Instância ao vivo do projeto (Vercel): <a href="https://animabooksf.vercel.app" target="_blank" rel="noopener">animabooksf.vercel.app</a></p></div>
+    <div class="card"><h3>🌐 App no ar</h3><p><a href="../">inematds.github.io/animabooksf</a>. As histórias e projetos ficam salvos no navegador de cada aparelho; use “Exportar cópia” e “Importar cópia” na tela inicial para guardar ou levar para outro aparelho.</p></div>
     <div class="card"><h3>📝 Formato de história</h3><p>Veja o exemplo completo em Markdown no README do repositório — cenas, sprites, diálogos e narração, tudo em texto simples versionável em Git.</p></div>
   </div>
 </div></section>
@@ -229,7 +231,7 @@ git clone git@github.com:inematds/animabooksf.git</pre></div>
 <section id="roadmap"><div class="wrap">
   <span class="chip">Roadmap</span>
   <h2>Para onde o projeto vai</h2>
-  <p class="sub">Versão atual: 1.1.0 (97 SVGs, painel categorizado, balões HQ arrastáveis, categoria moda). Próximos passos declarados no README:</p>
+  <p class="sub">Versão atual: 1.3.0 (site estático no GitHub Pages, criações salvas no navegador com cópia em .json; antes: celular e tela de Fim na 1.2.0, 97 SVGs e balões HQ na 1.1.0). Próximos passos declarados no README:</p>
   <div class="phase"><div class="tag">v1.x</div><div class="d"><strong>Editor de diálogos e expressões</strong><span>Editor lateral de diálogos estilo referência, e expressões pra todos os personagens.</span></div></div>
   <div class="phase"><div class="tag">v2</div><div class="d"><strong>Conta e comunidade</strong><span>Autenticação via Supabase Auth, galeria pública de histórias, áudio com TTS e geração de histórias com IA.</span></div></div>
   <div class="phase"><div class="tag">v2</div><div class="d"><strong>Offline</strong><span>PWA com suporte offline.</span></div></div>

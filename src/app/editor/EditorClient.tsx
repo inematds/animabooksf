@@ -1,7 +1,9 @@
 'use client';
 
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { getStory, saveStory } from '@/lib/storageAdapter';
+import { withBase } from '@/lib/base';
 import { Story } from '@/lib/types';
 import { useGame } from '@/lib/GameContext';
 import SceneEditor from '@/components/Editor/SceneEditor';
@@ -18,10 +20,10 @@ const DEFAULT_STORY: Story = {
   ],
 };
 
-export default function EditorPage() {
-  const params = useParams();
+export default function EditorClient() {
+  const searchParams = useSearchParams();
   const router = useRouter();
-  const storyId = params.storyId as string;
+  const storyId = searchParams.get('id') || 'new';
   const { recordStoryCreated } = useGame();
   const [story, setStory] = useState<Story | null>(null);
   const [loading, setLoading] = useState(true);
@@ -35,14 +37,10 @@ export default function EditorPage() {
       return;
     }
 
-    // Try loading by ID (supports both .json and .md via the API)
-    fetch(`/api/stories/${storyId}`)
-      .then((r) => {
-        if (!r.ok) throw new Error('Not found');
-        return r.json();
-      })
-      .then((data) => {
-        setStory(data.story || DEFAULT_STORY);
+    // Historia salva neste aparelho ou uma das prontas do site
+    getStory(storyId)
+      .then((s) => {
+        setStory(s || DEFAULT_STORY);
         setLoading(false);
       })
       .catch(() => {
@@ -54,16 +52,7 @@ export default function EditorPage() {
   const handleSave = useCallback(
     async (updatedStory: Story) => {
       const id = storyId === 'new' ? savedIdRef.current || undefined : storyId;
-      const res = await fetch('/api/stories', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id, story: updatedStory }),
-      });
-      if (!res.ok) {
-        const err = await res.json().catch(() => ({ error: 'Erro de rede' }));
-        throw new Error(err.error || `Erro ${res.status}`);
-      }
-      const data = await res.json();
+      const data = { id: await saveStory(id, updatedStory) };
       if (data.id) {
         if (storyId === 'new' && !hasRecordedCreate.current) {
           hasRecordedCreate.current = true;
@@ -72,7 +61,7 @@ export default function EditorPage() {
         savedIdRef.current = data.id;
       }
       if (storyId === 'new' && data.id) {
-        router.replace(`/editor/${data.id}`);
+        router.replace(`/editor/?id=${encodeURIComponent(data.id)}`);
       }
       return data.id || storyId;
     },
@@ -82,7 +71,7 @@ export default function EditorPage() {
   const handlePreview = useCallback(
     async (previewStory: Story) => {
       const savedId = await handleSave(previewStory);
-      window.open(`/reader/${savedId}`, '_blank');
+      window.open(withBase(`/reader/?id=${encodeURIComponent(savedId)}`), '_blank');
     },
     [handleSave]
   );

@@ -1,15 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
-
-interface StoryMeta {
-  id: string;
-  title: string;
-  scenesCount: number;
-}
+import { listStories, deleteStory, exportBackup, importBackup, StoryMeta } from '@/lib/storageAdapter';
 
 /* ------------------------------------------------------------------ */
 /*  Derive a consistent gradient hue from story title                  */
@@ -67,24 +61,53 @@ function FloatingDecoration({
 /* ------------------------------------------------------------------ */
 /*  Main HomeContent component                                         */
 /* ------------------------------------------------------------------ */
-export default function HomeContent({ stories: initialStories }: { stories: StoryMeta[] }) {
-  const router = useRouter();
-  const [stories, setStories] = useState(initialStories);
+export default function HomeContent() {
+  const [loaded, setLoaded] = useState<StoryMeta[] | null>(null);
   const [deleting, setDeleting] = useState<string | null>(null);
+  const [aviso, setAviso] = useState('');
+  const arquivoRef = useRef<HTMLInputElement>(null);
+  const stories = loaded || [];
+
+  // Historias ficam no navegador: carrega so depois de montar (evita erro de hidratacao)
+  const recarregar = () => listStories().then(setLoaded).catch(() => setLoaded([]));
+  useEffect(() => {
+    recarregar();
+  }, []);
 
   const handleDelete = async (id: string, title: string) => {
     if (!confirm(`Excluir "${title}"? Esta acao nao pode ser desfeita.`)) return;
     setDeleting(id);
     try {
-      const res = await fetch(`/api/stories/${id}`, { method: 'DELETE' });
-      if (res.ok) {
-        setStories((prev) => prev.filter((s) => s.id !== id));
-        router.refresh();
-      }
+      await deleteStory(id);
+      await recarregar();
     } catch {
       // silently fail
     } finally {
       setDeleting(null);
+    }
+  };
+
+  const handleExport = () => {
+    const blob = new Blob([JSON.stringify(exportBackup(), null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `animabook-copia-${new Date().toISOString().slice(0, 10)}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+    setAviso('Copia baixada. Guarde o arquivo para levar suas criacoes a outro aparelho.');
+  };
+
+  const handleImport = async (file: File | undefined) => {
+    if (!file) return;
+    try {
+      const n = importBackup(JSON.parse(await file.text()));
+      await recarregar();
+      setAviso(`Pronto: ${n} ${n === 1 ? 'item entrou' : 'itens entraram'} (historias e projetos).`);
+    } catch (err) {
+      setAviso(err instanceof Error ? err.message : 'Nao deu para ler esse arquivo.');
+    } finally {
+      if (arquivoRef.current) arquivoRef.current.value = '';
     }
   };
 
@@ -161,7 +184,7 @@ export default function HomeContent({ stories: initialStories }: { stories: Stor
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2, duration: 0.5, type: 'spring', stiffness: 200 }}
         >
-          <Link href="/editor/new">
+          <Link href="/editor/">
             <motion.div
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
@@ -222,6 +245,35 @@ export default function HomeContent({ stories: initialStories }: { stories: Stor
             </Link>
           ))}
         </motion.div>
+
+        {/* Copia de seguranca: as criacoes ficam so neste navegador */}
+        <div className="flex flex-col items-center gap-2 mb-8 text-center">
+          <p className="text-xs sm:text-sm text-gray-500 max-w-md">
+            Suas historias e projetos ficam salvos neste aparelho. Para nao perder ou levar para outro, faca uma copia.
+          </p>
+          <div className="flex gap-2">
+            <button
+              onClick={handleExport}
+              className="px-4 py-2 rounded-xl text-sm font-semibold text-purple-700 bg-white/80 border border-purple-200 hover:bg-white"
+            >
+              ⬇️ Exportar copia
+            </button>
+            <button
+              onClick={() => arquivoRef.current?.click()}
+              className="px-4 py-2 rounded-xl text-sm font-semibold text-purple-700 bg-white/80 border border-purple-200 hover:bg-white"
+            >
+              ⬆️ Importar copia
+            </button>
+            <input
+              ref={arquivoRef}
+              type="file"
+              accept="application/json,.json"
+              className="hidden"
+              onChange={(e) => handleImport(e.target.files?.[0])}
+            />
+          </div>
+          {aviso && <p className="text-xs sm:text-sm text-purple-600" role="status">{aviso}</p>}
+        </div>
 
         {/* Section title */}
         {stories.length > 0 && (
@@ -291,7 +343,7 @@ export default function HomeContent({ stories: initialStories }: { stories: Stor
                       </div>
 
                       <div className="flex gap-2 mt-1">
-                        <Link href={`/reader/${story.id}`} className="flex-1">
+                        <Link href={`/reader/?id=${encodeURIComponent(story.id)}`} className="flex-1">
                           <motion.div
                             whileHover={{ scale: 1.04 }}
                             whileTap={{ scale: 0.96 }}
@@ -307,7 +359,7 @@ export default function HomeContent({ stories: initialStories }: { stories: Stor
                             </span>
                           </motion.div>
                         </Link>
-                        <Link href={`/editor/${story.id}`}>
+                        <Link href={`/editor/?id=${encodeURIComponent(story.id)}`}>
                           <motion.div
                             whileHover={{ scale: 1.04 }}
                             whileTap={{ scale: 0.96 }}
@@ -323,7 +375,7 @@ export default function HomeContent({ stories: initialStories }: { stories: Stor
                             </span>
                           </motion.div>
                         </Link>
-                        <motion.button
+                        {!story.builtin && <motion.button
                           whileHover={{ scale: 1.04 }}
                           whileTap={{ scale: 0.96 }}
                           onClick={(e) => {
@@ -339,7 +391,7 @@ export default function HomeContent({ stories: initialStories }: { stories: Stor
                           }}
                         >
                           {deleting === story.id ? '...' : '🗑️'}
-                        </motion.button>
+                        </motion.button>}
                       </div>
                     </div>
                   </motion.div>
@@ -347,6 +399,8 @@ export default function HomeContent({ stories: initialStories }: { stories: Stor
               );
             })}
           </div>
+        ) : loaded === null ? (
+          <div className="text-center py-16 text-gray-400 animate-pulse">Carregando...</div>
         ) : (
           /* Empty state */
           <motion.div
@@ -371,7 +425,7 @@ export default function HomeContent({ stories: initialStories }: { stories: Stor
             <p className="text-gray-400 text-sm sm:text-base mb-6 max-w-sm mx-auto">
               Sua estante esta esperando! Crie sua primeira historia e de vida aos personagens.
             </p>
-            <Link href="/editor/new">
+            <Link href="/editor/">
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

@@ -98,3 +98,23 @@ Limites depois da migração:
 6. **Modo turma no painel do educador**: código de turma e lista de histórias criadas pelos alunos (exige backend; dá para começar só com exportar e importar).
 7. **Gravar a própria voz** na fala do personagem (MediaRecorder), guardada junto com a história, para a criança narrar a própria história.
 8. **Fonte e tamanho acessíveis**: opção de letra maior e fonte bastão (caixa alta) no leitor, para alfabetização inicial.
+
+## Atualização 19/10/2026 — publicado no GitHub Pages (v1.3.0)
+
+A avaliação acima foi implementada. O app está em https://inematds.github.io/animabooksf/ e o guia continua em `/guia/`.
+
+O que mudou:
+- `next.config.ts`: `output: 'export'`, `basePath` vindo de `NEXT_PUBLIC_BASE_PATH` (vazio no local, `/animabooksf` no Pages), `trailingSlash`, imagens sem otimização.
+- As 6 rotas de `src/app/api/*` saíram. `storageAdapter.ts` roda no navegador: `localStorage` por padrão (chaves `animabook:stories` e `animabook:projects`), Supabase se as variáveis entrarem no build.
+- `scripts/gera-catalogo.mjs` (roda antes do `dev` e do `build`) grava `public/data/catalogo.json` com sprites, fundos, itens dos 5 modos e as histórias prontas de `data/stories/*.md`.
+- Rotas com `?id=`: `/reader/?id=`, `/editor/?id=` (sem id = nova), `/view/?id=`, `/create/<modo>/?id=` (5 modos gerados no build). Histórias prontas não têm lixeira; editar uma salva a cópia no aparelho.
+- `src/lib/base.ts` (`withBase`) prefixa as imagens e o `window.open` da prévia.
+- Tela inicial: "Exportar cópia" e "Importar cópia" (.json; junta com o que já existe, o mais novo vence).
+- `public/sprites/veiculo_bicicleta.svg` tinha o atributo `rx` repetido e o navegador recusava o arquivo: corrigido.
+- Workflow do Pages: `npm ci` + build com prefixo + `guia/` e `capa/` copiados para `out/`.
+- Guia: botão "Abrir o app", texto de instalação/armazenamento atualizado e grade sem rolagem lateral no desktop (`minmax(0,1fr)`).
+
+Teste (build com prefixo, servido em `/animabooksf/` local, Playwright, 390×844 com toque e 1366×800): home com história pronta, leitor até "Fim!", editor nova → salvar → recarregar, história na estante, modo decoração → salvar, galeria, visualizar, exportar → apagar → importar, e as páginas create, challenges, events, profile, dashboard, leitor com id inexistente, create/city e guia. Sem rolagem lateral, sem imagem quebrada, sem `pageerror` e sem resposta 4xx.
+
+Limites que continuam: cada navegador guarda só as próprias criações (sem turma nem compartilhamento); o painel do educador não junta o progresso dos alunos; limpar os dados do navegador apaga tudo que não foi exportado.
+

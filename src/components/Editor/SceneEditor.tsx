@@ -9,6 +9,7 @@ import SpritePanel from './SpritePanel';
 import DialogueEditor from './DialogueEditor';
 import Timeline from './Timeline';
 import BackgroundSelector from './BackgroundSelector';
+import { withBase } from '@/lib/base';
 
 interface SceneEditorProps {
   initialStory: Story;
@@ -352,7 +353,7 @@ export default function SceneEditor({ initialStory, onSave, onPreview }: SceneEd
                 </div>
               ) : (
                 <Image
-                  src={`/backgrounds/${scene.background}`}
+                  src={withBase(`/backgrounds/${scene.background}`)}
                   alt="Fundo"
                   fill
                   className="object-cover pointer-events-none"
@@ -378,7 +379,7 @@ export default function SceneEditor({ initialStory, onSave, onPreview }: SceneEd
                   onPointerDown={(e) => handleCanvasMouseDown(e, sprite.id)}
                 >
                   <Image
-                    src={`/sprites/${sprite.filename}`}
+                    src={withBase(`/sprites/${sprite.filename}`)}
                     alt={sprite.id}
                     width={120}
                     height={120}
@@ -521,7 +522,7 @@ export default function SceneEditor({ initialStory, onSave, onPreview }: SceneEd
                 onClick={() => setSelectedSpriteId(sprite.id)}
               >
                 <Image
-                  src={`/sprites/${sprite.filename}`}
+                  src={withBase(`/sprites/${sprite.filename}`)}
                   alt={sprite.id}
                   width={28}
                   height={28}

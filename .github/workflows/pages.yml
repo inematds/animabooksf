@@ -1,4 +1,4 @@
-name: Deploy static site to Pages
+name: Deploy AnimaBook + guia to Pages
 on:
   push: { branches: [main, master] }
   workflow_dispatch:
@@ -10,8 +10,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      # App estático na raiz do site (/animabooksf/); o guia continua em /animabooksf/guia/
+      - run: npm run build
+        env: { NEXT_PUBLIC_BASE_PATH: /animabooksf }
+      - name: Guia e capa junto do app
+        run: |
+          cp -r guia out/guia
+          cp -r capa out/capa
+          touch out/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
-        with: { path: '.' }
+        with: { path: out }
       - id: deployment
         uses: actions/deploy-pages@v4

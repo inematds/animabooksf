@@ -4,13 +4,15 @@ Plataforma criativa infantil para criar e ler historias interativas com personag
 
 **Publico-alvo:** criancas (3-12 anos) consomem as historias; educadores e pais criam conteudo.
 
-**Versao atual:** 1.2.0 | **Deploy:** [animabooksf.vercel.app](https://animabooksf.vercel.app) (fora do ar em 10/2026 — ver `REVISAO-2026-10.md`)
+**Versao atual:** 1.3.0 | **App:** [inematds.github.io/animabooksf](https://inematds.github.io/animabooksf/) (GitHub Pages, site estatico) | **Guia:** [/guia/](https://inematds.github.io/animabooksf/guia/)
+
+> As historias e projetos ficam salvos no navegador de cada aparelho (localStorage). Use "Exportar copia" / "Importar copia" na tela inicial para guardar ou levar para outro aparelho.
 
 ---
 
 ## Funcionalidades
 
-### Leitor de Historias (`/reader/[id]`)
+### Leitor de Historias (`/reader/?id=...`)
 - Fundo de cena em tela cheia (16:9) com transicoes suaves
 - Sprites animados com Framer Motion
 - **Dialogos estilo HQ** - baloes de fala posicionados sobre os personagens, arrastáveis
@@ -18,7 +20,7 @@ Plataforma criativa infantil para criar e ler historias interativas com personag
 - Navegacao: setas, teclado, swipe touch, clique
 - Indicador de progresso por estrelas
 
-### Editor Visual (`/editor/[id]`)
+### Editor Visual (`/editor/?id=...`)
 - Canvas interativo com drag-and-drop de sprites
 - **Painel lateral categorizado** com 10 categorias:
   - Personagens, Animais, Natureza, Comida, Moveis
@@ -88,14 +90,13 @@ Sala de aula, Patio, Biblioteca, Floresta, Praia, Castelo, Espaco, Cidade, Fazen
 src/
   app/
     page.tsx, HomeContent.tsx              # Home
-    reader/[storyId]/page.tsx              # Leitor (baloes HQ)
-    editor/[storyId]/page.tsx              # Editor de historias
+    reader/page.tsx                        # Leitor (baloes HQ), ?id=
+    editor/page.tsx, EditorClient.tsx      # Editor de historias, ?id= (sem id = nova)
     create/page.tsx                        # Hub de modos criativos
-    create/[mode]/[id]/page.tsx            # Editor criativo
+    create/[mode]/page.tsx, CreativeClient.tsx  # Editor criativo (5 modos fixos), ?id=
     gallery/page.tsx                       # Galeria de projetos
-    view/[id]/page.tsx                     # Visualizar projeto
+    view/page.tsx                          # Visualizar projeto, ?id=
     dashboard/, challenges/, events/, profile/
-    api/stories/, api/projects/, api/assets/, api/creative-assets/
   components/
     Reader/       SceneView, SpriteLayer, DialogueBox (baloes HQ draggable)
     Editor/       SceneEditor, SpritePanel (categorizado), Timeline, DialogueEditor
@@ -104,15 +105,17 @@ src/
   lib/
     types.ts            # Story, Scene, Dialogue, CreativeProject, PlacedItem
     parseStory.ts       # Parser MD <-> JSON
-    storageAdapter.ts   # Dual-mode storage (FS + Supabase)
+    storageAdapter.ts   # Armazenamento no navegador (localStorage) ou Supabase; catalogo estatico; copia .json
+    base.ts             # withBase(): prefixo /animabooksf para imagens e window.open
     GameContext.tsx      # Gamificacao (React Context + localStorage)
 public/
   sprites/       83 SVGs (personagens + objetos)
   backgrounds/   14 SVGs (cenarios)
   assets/        SVGs para modos criativos
 data/
-  stories/       Historias salvas (.json, .md)
-  projects/      Projetos criativos salvos (.json)
+  stories/       Historias prontas (.md) que vem com o site
+scripts/
+  gera-catalogo.mjs  # gera public/data/catalogo.json (imagens + historias prontas) antes do build
 ```
 
 ## Formato das Historias (Markdown)
@@ -153,12 +156,17 @@ _Lumi foi explorar o patio sozinha._
 git clone git@github.com:inematds/animabooksf.git
 cd animabooksf
 npm install
-npm run dev
+npm run dev            # http://localhost:3000
+npm run build          # gera out/ (site estatico)
+npm run start          # serve out/ em http://localhost:3000
+npm run build:pages    # build igual ao do GitHub Pages (prefixo /animabooksf)
 ```
+
+O deploy e automatico: cada push na `main` roda `.github/workflows/pages.yml`, que faz o build com `NEXT_PUBLIC_BASE_PATH=/animabooksf`, junta `guia/` e `capa/` e publica no GitHub Pages.
 
 ### Supabase (opcional)
 
-O app funciona sem Supabase (usa filesystem local). Para cloud:
+O app funciona sem Supabase (guarda no navegador). Para guardar na nuvem, defina no build:
 
 ```env
 NEXT_PUBLIC_SUPABASE_URL=https://seu-projeto.supabase.co
@@ -177,21 +185,17 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=sua-anon-key
 | Rota | Descricao |
 |------|-----------|
 | `/` | Home com lista de historias |
-| `/reader/[id]` | Leitor com baloes HQ |
-| `/editor/new` | Criar nova historia |
-| `/editor/[id]` | Editar historia |
+| `/reader/?id=<id>` | Leitor com baloes HQ (`demo` = historia pronta) |
+| `/editor/` | Criar nova historia |
+| `/editor/?id=<id>` | Editar historia |
 | `/create` | Hub de modos criativos |
-| `/create/[mode]/[id]` | Editor criativo |
+| `/create/<modo>/?id=<id>` | Editor criativo (sem id = novo; modos: decoration, construction, city, fashion, countryside) |
 | `/gallery` | Galeria de projetos |
-| `/view/[id]` | Visualizar projeto |
+| `/view/?id=<id>` | Visualizar projeto |
 | `/dashboard` | Painel educador |
 | `/challenges` | Desafios |
 | `/events` | Eventos semanais |
 | `/profile` | Perfil e conquistas |
-| `/api/stories` | CRUD de historias |
-| `/api/projects` | CRUD de projetos criativos |
-| `/api/assets` | Lista sprites e fundos |
-| `/api/creative-assets` | Lista assets criativos por modo |
 
 ## Versionamento
 
@@ -199,6 +203,7 @@ Formato: `MAJOR.RECURSO.BUG`
 
 | Versao | Descricao |
 |--------|-----------|
+| 1.3.0 | Site estatico no GitHub Pages: sem servidor, criacoes no navegador, exportar/importar copia .json, rotas com ?id=, sprite da bicicleta corrigido |
 | 1.2.0 | Revisao 10/2026: tela de Fim no leitor, celular (leitor, editores, toque), sem erro de hidratacao, autosave so com mudanca |
 | 1.1.0 | 97 SVGs, painel categorizado, baloes HQ draggable, moda |
 | 1.0.1 | Fix navegacao de dialogos |

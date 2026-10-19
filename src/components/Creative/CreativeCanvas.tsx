@@ -3,6 +3,7 @@
 import { useState, useCallback, useRef } from 'react';
 import Image from 'next/image';
 import { PlacedItem } from '@/lib/types';
+import { withBase } from '@/lib/base';
 
 interface CreativeCanvasProps {
   background: string;
@@ -139,9 +140,9 @@ export default function CreativeCanvas({
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={item.category.startsWith('sprites:')
+              src={withBase(item.category.startsWith('sprites:')
                 ? `/sprites/${item.assetId}`
-                : `/assets/${item.category}/${item.assetId}`}
+                : `/assets/${item.category}/${item.assetId}`)}
               alt={item.assetId}
               className="object-contain pointer-events-none select-none"
               draggable={false}

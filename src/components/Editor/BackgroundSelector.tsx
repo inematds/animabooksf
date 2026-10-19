@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { listAssets } from '@/lib/storageAdapter';
+import { withBase } from '@/lib/base';
 
 interface BackgroundSelectorProps {
   currentBackground: string;
@@ -17,9 +19,8 @@ export default function BackgroundSelector({
   const [backgrounds, setBackgrounds] = useState<string[]>([]);
 
   useEffect(() => {
-    fetch('/api/assets?type=background')
-      .then((r) => r.json())
-      .then((data) => setBackgrounds(data.files?.map((f: { filename: string }) => f.filename) || []))
+    listAssets('background')
+      .then((files) => setBackgrounds(files.map((f) => f.filename)))
       .catch(() => setBackgrounds([]));
   }, []);
 
@@ -54,7 +55,7 @@ export default function BackgroundSelector({
                   : 'border-gray-200 hover:border-purple-300'
               }`}
             >
-              <Image src={`/backgrounds/${bg}`} alt={bg} fill className="object-cover" />
+              <Image src={withBase(`/backgrounds/${bg}`)} alt={bg} fill className="object-cover" />
               <span className="absolute bottom-0 left-0 right-0 text-[10px] bg-black/50 text-white text-center py-0.5 truncate">
                 {bg.replace(/\.\w+$/, '')}
               </span>

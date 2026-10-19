@@ -7,6 +7,8 @@ import { CreativeProject, PlacedItem, ProjectType } from '@/lib/types';
 import CreativeCanvas from './CreativeCanvas';
 import ItemPalette from './ItemPalette';
 import ItemControls from './ItemControls';
+import { listCreativeBackgrounds } from '@/lib/storageAdapter';
+import { withBase } from '@/lib/base';
 
 interface CreativeEditorProps {
   initialProject: CreativeProject;
@@ -47,15 +49,14 @@ export default function CreativeEditor({ initialProject, onSave }: CreativeEdito
 
   // Load backgrounds
   useEffect(() => {
-    fetch(`/api/creative-assets?mode=${mode}&type=backgrounds`)
-      .then((r) => r.json())
-      .then((data) => setBackgrounds(data.backgrounds || []))
+    listCreativeBackgrounds(mode)
+      .then(setBackgrounds)
       .catch(() => setBackgrounds([]));
   }, [mode]);
 
   // Get background image src from project background string
   // Format: "path:filename" or just "filename" (legacy)
-  const bgSrc = (() => {
+  const bgSrc = withBase((() => {
     const bg = project.background;
     if (bg.includes(':')) {
       const [path, filename] = bg.split(':');
@@ -63,7 +64,7 @@ export default function CreativeEditor({ initialProject, onSave }: CreativeEdito
     }
     // Legacy or mode-specific default
     return `/assets/${mode}/fundos/${bg}`;
-  })();
+  })());
 
   // Auto-save every 30s
   useEffect(() => {
@@ -260,7 +261,7 @@ export default function CreativeEditor({ initialProject, onSave }: CreativeEdito
                       project.background === bgValue ? 'border-purple-500 shadow-lg' : 'border-gray-200 hover:border-purple-300'
                     }`}
                   >
-                    <Image src={`${bg.path}${bg.filename}`} alt={bg.filename} fill className="object-cover" />
+                    <Image src={withBase(`${bg.path}${bg.filename}`)} alt={bg.filename} fill className="object-cover" />
                     <span className="absolute bottom-0 left-0 right-0 text-[10px] bg-black/50 text-white text-center py-0.5 truncate">
                       {bg.filename.replace(/\.\w+$/, '')}
                     </span>

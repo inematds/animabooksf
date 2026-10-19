@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useMemo } from 'react';
 import Image from 'next/image';
+import { listAssets } from '@/lib/storageAdapter';
+import { withBase } from '@/lib/base';
 
 interface SpritePanelProps {
   onAddSprite: (filename: string) => void;
@@ -43,9 +45,8 @@ export default function SpritePanel({ onAddSprite }: SpritePanelProps) {
   const [errorImages, setErrorImages] = useState<Set<string>>(new Set());
 
   useEffect(() => {
-    fetch('/api/assets?type=sprite')
-      .then((r) => r.json())
-      .then((data) => setSprites(data.files || []))
+    listAssets('sprite')
+      .then(setSprites)
       .catch(() => setSprites([]));
   }, []);
 
@@ -201,7 +202,7 @@ function SpriteButton({
         <div className="w-full h-full flex items-center justify-center text-gray-300 text-lg">?</div>
       ) : (
         <Image
-          src={`/sprites/${sprite.filename}`}
+          src={withBase(`/sprites/${sprite.filename}`)}
           alt={label}
           fill
           className="object-contain p-1"

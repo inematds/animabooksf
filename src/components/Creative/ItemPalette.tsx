@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { ProjectType } from '@/lib/types';
+import { listCreativeAssets } from '@/lib/storageAdapter';
+import { withBase } from '@/lib/base';
 
 interface ItemPaletteProps {
   mode: ProjectType;
@@ -90,11 +92,10 @@ export default function ItemPalette({ mode, onStartDrag, onAddItem }: ItemPalett
   const [openCat, setOpenCat] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch(`/api/creative-assets?mode=${mode}`)
-      .then((r) => r.json())
-      .then((data) => {
-        setCategories(data.categories || []);
-        if (data.categories?.length > 0) setOpenCat(data.categories[0].category);
+    listCreativeAssets(mode)
+      .then((cats) => {
+        setCategories(cats);
+        if (cats.length > 0) setOpenCat(cats[0].category);
       })
       .catch(() => setCategories([]));
   }, [mode]);
@@ -135,9 +136,9 @@ export default function ItemPalette({ mode, onStartDrag, onAddItem }: ItemPalett
                 {cat.files.map((filename) => {
                   const isSprite = cat.category.startsWith('sprites:');
                   const assetPath = isSprite ? 'sprites:' : `${mode}/${cat.category}`;
-                  const imgSrc = isSprite
+                  const imgSrc = withBase(isSprite
                     ? `/sprites/${filename}`
-                    : `/assets/${mode}/${cat.category}/${filename}`;
+                    : `/assets/${mode}/${cat.category}/${filename}`);
                   return (
                     <div
                       key={filename}

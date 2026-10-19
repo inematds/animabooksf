@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SpriteState } from '@/lib/types';
+import { withBase } from '@/lib/base';
 
 interface SpriteLayerProps {
   sprites: SpriteState[];
@@ -58,7 +59,7 @@ export default function SpriteLayer({ sprites }: SpriteLayerProps) {
               </div>
             ) : (
               <Image
-                src={`/sprites/${sprite.filename}`}
+                src={withBase(`/sprites/${sprite.filename}`)}
                 alt={sprite.id}
                 width={200}
                 height={300}

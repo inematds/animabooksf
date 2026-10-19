@@ -11,7 +11,7 @@ const modes = [
     desc: 'Crie historias interativas com personagens, cenarios e dialogos.',
     color: 'from-purple-500 to-violet-500',
     hue: 270,
-    href: '/editor/new',
+    href: '/editor/',
   },
   {
     type: 'decoration',
@@ -20,7 +20,7 @@ const modes = [
     desc: 'Decore quartos, salas e jardins com moveis, plantas e objetos.',
     color: 'from-pink-500 to-rose-500',
     hue: 340,
-    href: '/create/decoration/new',
+    href: '/create/decoration/',
   },
   {
     type: 'construction',
@@ -29,7 +29,7 @@ const modes = [
     desc: 'Construa casas e estruturas com blocos, portas e telhados.',
     color: 'from-amber-500 to-orange-500',
     hue: 30,
-    href: '/create/construction/new',
+    href: '/create/construction/',
   },
   {
     type: 'city',
@@ -38,7 +38,7 @@ const modes = [
     desc: 'Crie cidades com predios, ruas, veiculos e personagens.',
     color: 'from-blue-500 to-indigo-500',
     hue: 220,
-    href: '/create/city/new',
+    href: '/create/city/',
   },
   {
     type: 'fashion',
@@ -47,7 +47,7 @@ const modes = [
     desc: 'Vista personagens com roupas, acessorios, calcados e chapeus.',
     color: 'from-fuchsia-500 to-pink-500',
     hue: 300,
-    href: '/create/fashion/new',
+    href: '/create/fashion/',
   },
   {
     type: 'countryside',
@@ -56,7 +56,7 @@ const modes = [
     desc: 'Crie cenas no campo com animais, acampamento, rios e fazendas.',
     color: 'from-green-500 to-emerald-500',
     hue: 140,
-    href: '/create/countryside/new',
+    href: '/create/countryside/',
   },
 ];
 

@@ -1,11 +1,15 @@
 {
   "name": "animabook",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "private": true,
   "scripts": {
+    "catalogo": "node scripts/gera-catalogo.mjs",
+    "predev": "node scripts/gera-catalogo.mjs",
     "dev": "next dev",
+    "prebuild": "node scripts/gera-catalogo.mjs",
     "build": "next build",
-    "start": "next start",
+    "build:pages": "NEXT_PUBLIC_BASE_PATH=/animabooksf next build",
+    "start": "python3 -m http.server -d out 3000",
     "lint": "eslint"
   },
   "dependencies": {

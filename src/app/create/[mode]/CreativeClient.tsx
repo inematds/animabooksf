@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams, useRouter, useSearchParams } from 'next/navigation';
+import { getProject, saveProject } from '@/lib/storageAdapter';
 import Link from 'next/link';
 import { CreativeProject, ProjectType } from '@/lib/types';
 import { useGame } from '@/lib/GameContext';
@@ -32,12 +33,13 @@ function createDefaultProject(mode: ProjectType): CreativeProject {
   };
 }
 
-export default function CreativeEditorPage() {
+export default function CreativeClient() {
   const params = useParams();
+  const searchParams = useSearchParams();
   const router = useRouter();
   const { recordStoryCreated } = useGame();
   const mode = params.mode as ProjectType;
-  const projectId = params.id as string;
+  const projectId = searchParams.get('id') || 'new';
   const [project, setProject] = useState<CreativeProject | null>(null);
   const [loading, setLoading] = useState(true);
   const savedIdRef = useRef<string | null>(null);
@@ -50,13 +52,9 @@ export default function CreativeEditorPage() {
       return;
     }
 
-    fetch(`/api/projects/${projectId}`)
-      .then((r) => {
-        if (!r.ok) throw new Error('Not found');
-        return r.json();
-      })
-      .then((data) => {
-        setProject(data.project || createDefaultProject(mode));
+    getProject(projectId)
+      .then((p) => {
+        setProject(p || createDefaultProject(mode));
         setLoading(false);
       })
       .catch(() => {
@@ -68,16 +66,7 @@ export default function CreativeEditorPage() {
   const handleSave = useCallback(
     async (updatedProject: CreativeProject) => {
       const id = projectId === 'new' ? savedIdRef.current || undefined : projectId;
-      const res = await fetch('/api/projects', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id, project: updatedProject }),
-      });
-      if (!res.ok) {
-        const err = await res.json().catch(() => ({ error: 'Erro de rede' }));
-        throw new Error(err.error || `Erro ${res.status}`);
-      }
-      const data = await res.json();
+      const data = { id: await saveProject(id, updatedProject) };
       if (data.id) {
         if (projectId === 'new' && !hasRecordedCreate.current) {
           hasRecordedCreate.current = true;
@@ -86,14 +75,14 @@ export default function CreativeEditorPage() {
         savedIdRef.current = data.id;
       }
       if (projectId === 'new' && data.id) {
-        router.replace(`/create/${mode}/${data.id}`);
+        router.replace(`/create/${mode}/?id=${encodeURIComponent(data.id)}`);
       }
       return data.id || projectId;
     },
     [projectId, mode, router, recordStoryCreated]
   );
 
-  // Modo desconhecido (ex.: /create/decoracao/new) quebrava o editor: mostra aviso amigavel
+  // Modo desconhecido (ex.: /create/decoracao/) quebrava o editor: mostra aviso amigavel
   if (!(mode in MODE_TITLES)) {
     return (
       <div className="w-full h-screen flex flex-col items-center justify-center gap-4 bg-gray-100 p-6 text-center">

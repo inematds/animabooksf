@@ -1,55 +1,107 @@
-import { Story, CreativeProject, ProjectType } from './types';
-import { parseStory } from './parseStory';
+'use client';
 
-// --- Supabase functions (only used when env vars are set) ---
+// Armazenamento do AnimaBook, todo no navegador (o site é estático, roda no GitHub Pages).
+// - Com NEXT_PUBLIC_SUPABASE_URL/ANON_KEY no build: histórias e projetos vão para o Supabase.
+// - Sem essas variáveis (padrão): ficam no localStorage deste aparelho.
+// - Listas de imagens e histórias prontas vêm de /data/catalogo.json (scripts/gera-catalogo.mjs).
+// Chame estas funções só no cliente (useEffect/handlers), nunca durante o render.
+
+import { Story, CreativeProject, ProjectType } from './types';
+import { parseStory, spriteIdFromFilename } from './parseStory';
+import { withBase } from './base';
+
+// --- Supabase (opcional) ---
+
+function hasSupabase(): boolean {
+  return !!(process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
+}
 
 async function getSupabase() {
   const { supabase } = await import('./storage');
   return supabase;
 }
 
-// --- Filesystem functions (dev local) ---
+// --- localStorage ---
 
-function getFsModules() {
-  // Dynamic import to avoid bundling fs in client
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  const fs = require('fs') as typeof import('fs');
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  const path = require('path') as typeof import('path');
-  return { fs, path };
+const KEY_STORIES = 'animabook:stories';
+const KEY_PROJECTS = 'animabook:projects';
+
+interface Saved<T> {
+  data: T;
+  updatedAt: string;
 }
 
-function getStoriesDir() {
-  const { path } = getFsModules();
-  return path.join(process.cwd(), 'data', 'stories');
-}
-
-function getProjectsDir() {
-  const { path } = getFsModules();
-  return path.join(process.cwd(), 'data', 'projects');
-}
-
-function ensureDir(dir?: string) {
-  const { fs } = getFsModules();
-  const target = dir || getStoriesDir();
-  if (!fs.existsSync(target)) {
-    fs.mkdirSync(target, { recursive: true });
+function readMap<T>(key: string): Record<string, Saved<T>> {
+  try {
+    const raw = localStorage.getItem(key);
+    const parsed = raw ? JSON.parse(raw) : {};
+    return parsed && typeof parsed === 'object' ? parsed : {};
+  } catch {
+    return {};
   }
 }
 
-// --- Detect mode ---
-
-function hasSupabase(): boolean {
-  return !!(process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
+function writeMap<T>(key: string, map: Record<string, Saved<T>>) {
+  try {
+    localStorage.setItem(key, JSON.stringify(map));
+  } catch {
+    throw new Error('Não deu para salvar: o espaço do navegador acabou. Exporte e apague histórias antigas.');
+  }
 }
 
-// --- Public API ---
+function newId(): string {
+  if (typeof crypto !== 'undefined' && 'randomUUID' in crypto) return crypto.randomUUID();
+  return `h${Date.now().toString(36)}${Math.random().toString(36).slice(2, 8)}`;
+}
+
+// --- Catálogo estático ---
+
+interface Catalogo {
+  sprites: string[];
+  backgrounds: string[];
+  modos: Record<string, { categorias: { category: string; files: string[] }[]; fundos: string[] }>;
+  historias: { id: string; markdown: string }[];
+}
+
+let catalogoPromise: Promise<Catalogo> | null = null;
+
+export function getCatalogo(): Promise<Catalogo> {
+  if (!catalogoPromise) {
+    catalogoPromise = fetch(withBase('/data/catalogo.json'))
+      .then((r) => {
+        if (!r.ok) throw new Error(`catalogo ${r.status}`);
+        return r.json();
+      })
+      .catch(() => {
+        catalogoPromise = null;
+        return { sprites: [], backgrounds: [], modos: {}, historias: [] };
+      });
+  }
+  return catalogoPromise;
+}
+
+async function builtinStories(): Promise<Record<string, Story>> {
+  const cat = await getCatalogo();
+  const out: Record<string, Story> = {};
+  for (const h of cat.historias) {
+    try {
+      out[h.id] = parseStory(h.markdown);
+    } catch {
+      // história pronta com erro de formato: ignora
+    }
+  }
+  return out;
+}
+
+// --- Histórias ---
 
 export interface StoryMeta {
   id: string;
   title: string;
   scenesCount: number;
   updatedAt?: string;
+  /** História pronta que veio com o site (não dá para apagar, só editar uma cópia). */
+  builtin?: boolean;
 }
 
 export async function listStories(): Promise<StoryMeta[]> {
@@ -69,68 +121,50 @@ export async function listStories(): Promise<StoryMeta[]> {
     }));
   }
 
-  // Filesystem
-  const { fs, path } = getFsModules();
-  const dir = getStoriesDir();
-  if (!fs.existsSync(dir)) return [];
-  const files = fs.readdirSync(dir).filter((f: string) => f.endsWith('.json') || f.endsWith('.md'));
-  const stories: StoryMeta[] = [];
+  const saved = readMap<Story>(KEY_STORIES);
+  const own: StoryMeta[] = Object.entries(saved)
+    .map(([id, s]) => ({
+      id,
+      title: s.data?.title || 'Sem titulo',
+      scenesCount: s.data?.scenes?.length || 0,
+      updatedAt: s.updatedAt,
+    }))
+    .sort((a, b) => (b.updatedAt || '').localeCompare(a.updatedAt || ''));
 
-  for (const f of files) {
-    const ext = path.extname(f);
-    const id = f.replace(ext, '');
-    try {
-      if (ext === '.json') {
-        const data = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf-8'));
-        stories.push({ id, title: data.title || 'Sem titulo', scenesCount: data.scenes?.length || 0 });
-      } else {
-        const md = fs.readFileSync(path.join(dir, f), 'utf-8');
-        const story = parseStory(md);
-        stories.push({ id, title: story.title, scenesCount: story.scenes.length });
-      }
-    } catch {
-      stories.push({ id, title: `(erro ao ler ${f})`, scenesCount: 0 });
-    }
-  }
-  return stories;
+  const prontas = await builtinStories();
+  const extras: StoryMeta[] = Object.entries(prontas)
+    .filter(([id]) => !saved[id])
+    .map(([id, s]) => ({ id, title: s.title, scenesCount: s.scenes.length, builtin: true }));
+
+  return [...own, ...extras];
 }
 
 export async function getStory(id: string): Promise<Story | null> {
   if (hasSupabase()) {
     const supabase = await getSupabase();
     if (!supabase) return null;
-    const { data, error } = await supabase
-      .from('stories')
-      .select('*')
-      .eq('id', id)
-      .single();
+    const { data, error } = await supabase.from('stories').select('*').eq('id', id).single();
     if (error) return null;
     return data?.data as Story;
   }
 
-  // Filesystem - try JSON first, then MD
-  const { fs, path } = getFsModules();
-  const dir = getStoriesDir();
-
-  const jsonPath = path.join(dir, `${id}.json`);
-  if (fs.existsSync(jsonPath)) {
-    return JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
-  }
-
-  const mdPath = path.join(dir, `${id}.md`);
-  if (fs.existsSync(mdPath)) {
-    const md = fs.readFileSync(mdPath, 'utf-8');
-    return parseStory(md);
-  }
-
-  return null;
+  const saved = readMap<Story>(KEY_STORIES)[id];
+  if (saved) return saved.data;
+  const prontas = await builtinStories();
+  return prontas[id] || null;
 }
 
 export async function saveStory(id: string | undefined, story: Story): Promise<string> {
+  if (!story || typeof story.title !== 'string' || !story.title.trim()) {
+    throw new Error('Historia precisa de um titulo');
+  }
+  if (!Array.isArray(story.scenes) || story.scenes.length === 0) {
+    throw new Error('Historia precisa de pelo menos uma cena');
+  }
+
   if (hasSupabase()) {
     const supabase = await getSupabase();
     if (!supabase) throw new Error('Supabase nao configurado');
-
     if (id) {
       const { error } = await supabase
         .from('stories')
@@ -139,7 +173,6 @@ export async function saveStory(id: string | undefined, story: Story): Promise<s
       if (error) throw error;
       return id;
     }
-
     const { data, error } = await supabase
       .from('stories')
       .insert({ data: story, title: story.title })
@@ -149,12 +182,10 @@ export async function saveStory(id: string | undefined, story: Story): Promise<s
     return data.id;
   }
 
-  // Filesystem
-  const { fs, path } = getFsModules();
-  ensureDir(getStoriesDir());
-  const finalId = id || crypto.randomUUID();
-  const filePath = path.join(getStoriesDir(), `${finalId}.json`);
-  fs.writeFileSync(filePath, JSON.stringify(story, null, 2));
+  const map = readMap<Story>(KEY_STORIES);
+  const finalId = id || newId();
+  map[finalId] = { data: story, updatedAt: new Date().toISOString() };
+  writeMap(KEY_STORIES, map);
   return finalId;
 }
 
@@ -165,14 +196,12 @@ export async function deleteStory(id: string): Promise<void> {
     await supabase.from('stories').delete().eq('id', id);
     return;
   }
-
-  // Filesystem
-  const { fs, path } = getFsModules();
-  const filePath = path.join(getStoriesDir(), `${id}.json`);
-  if (fs.existsSync(filePath)) {
-    fs.unlinkSync(filePath);
-  }
+  const map = readMap<Story>(KEY_STORIES);
+  delete map[id];
+  writeMap(KEY_STORIES, map);
 }
+
+// --- Imagens (sprites e fundos das histórias) ---
 
 export interface AssetFile {
   filename: string;
@@ -180,25 +209,15 @@ export interface AssetFile {
 }
 
 export async function listAssets(type: 'sprite' | 'background'): Promise<AssetFile[]> {
-  // Assets always come from public/ directory (both modes)
-  // In Supabase mode, this could be extended to query storage buckets
-  const { fs, path } = getFsModules();
-  const { spriteIdFromFilename } = await import('./parseStory');
-  const dir = type === 'background' ? 'backgrounds' : 'sprites';
-  const fullPath = path.join(process.cwd(), 'public', dir);
-
-  try {
-    const files = fs.readdirSync(fullPath).filter((f: string) => /\.(png|jpg|jpeg|webp|svg)$/i.test(f));
-    return files.map((filename: string) => ({
-      filename,
-      characterId: type === 'sprite' ? spriteIdFromFilename(filename) : filename.replace(/\.\w+$/, ''),
-    }));
-  } catch {
-    return [];
-  }
+  const cat = await getCatalogo();
+  const files = type === 'background' ? cat.backgrounds : cat.sprites;
+  return files.map((filename) => ({
+    filename,
+    characterId: type === 'sprite' ? spriteIdFromFilename(filename) : filename.replace(/\.\w+$/, ''),
+  }));
 }
 
-// --- Creative Projects (Decoration, Construction, City) ---
+// --- Projetos criativos (decoração, construção, cidade, moda, campo) ---
 
 export interface ProjectMeta {
   id: string;
@@ -228,23 +247,16 @@ export async function listProjects(type?: ProjectType): Promise<ProjectMeta[]> {
     }));
   }
 
-  const { fs, path } = getFsModules();
-  const dir = getProjectsDir();
-  if (!fs.existsSync(dir)) return [];
-  const files = fs.readdirSync(dir).filter((f: string) => f.endsWith('.json'));
-  const projects: ProjectMeta[] = [];
-
-  for (const f of files) {
-    const id = f.replace('.json', '');
-    try {
-      const data: CreativeProject = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf-8'));
-      if (type && data.type !== type) continue;
-      projects.push({ id, type: data.type, title: data.title, itemCount: data.items?.length || 0 });
-    } catch {
-      projects.push({ id, type: 'decoration', title: `(erro ao ler ${f})`, itemCount: 0 });
-    }
-  }
-  return projects;
+  return Object.entries(readMap<CreativeProject>(KEY_PROJECTS))
+    .filter(([, p]) => !type || p.data?.type === type)
+    .map(([id, p]) => ({
+      id,
+      type: p.data?.type || 'decoration',
+      title: p.data?.title || 'Sem titulo',
+      itemCount: p.data?.items?.length || 0,
+      updatedAt: p.updatedAt,
+    }))
+    .sort((a, b) => (b.updatedAt || '').localeCompare(a.updatedAt || ''));
 }
 
 export async function getProject(id: string): Promise<CreativeProject | null> {
@@ -255,14 +267,14 @@ export async function getProject(id: string): Promise<CreativeProject | null> {
     if (error) return null;
     return data?.data as CreativeProject;
   }
-
-  const { fs, path } = getFsModules();
-  const filePath = path.join(getProjectsDir(), `${id}.json`);
-  if (!fs.existsSync(filePath)) return null;
-  return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+  return readMap<CreativeProject>(KEY_PROJECTS)[id]?.data || null;
 }
 
 export async function saveProject(id: string | undefined, project: CreativeProject): Promise<string> {
+  if (!project || !project.type || !project.title?.trim()) {
+    throw new Error('Projeto precisa de titulo e tipo');
+  }
+
   if (hasSupabase()) {
     const supabase = await getSupabase();
     if (!supabase) throw new Error('Supabase nao configurado');
@@ -283,10 +295,10 @@ export async function saveProject(id: string | undefined, project: CreativeProje
     return data.id;
   }
 
-  const { fs, path } = getFsModules();
-  ensureDir(getProjectsDir());
-  const finalId = id || crypto.randomUUID();
-  fs.writeFileSync(path.join(getProjectsDir(), `${finalId}.json`), JSON.stringify(project, null, 2));
+  const map = readMap<CreativeProject>(KEY_PROJECTS);
+  const finalId = id || newId();
+  map[finalId] = { data: project, updatedAt: new Date().toISOString() };
+  writeMap(KEY_PROJECTS, map);
   return finalId;
 }
 
@@ -297,97 +309,97 @@ export async function deleteProject(id: string): Promise<void> {
     await supabase.from('projects').delete().eq('id', id);
     return;
   }
-
-  const { fs, path } = getFsModules();
-  const filePath = path.join(getProjectsDir(), `${id}.json`);
-  if (fs.existsSync(filePath)) fs.unlinkSync(filePath);
+  const map = readMap<CreativeProject>(KEY_PROJECTS);
+  delete map[id];
+  writeMap(KEY_PROJECTS, map);
 }
 
-// --- Creative Assets (items for decoration/construction/city) ---
+// --- Itens dos modos criativos ---
 
 export interface CreativeAssetCategory {
   category: string;
   files: string[];
 }
 
+const SPRITE_PREFIX_MAP: Record<string, string> = {
+  animal: 'sprites:animais', natureza: 'sprites:natureza', comida: 'sprites:comida',
+  movel: 'sprites:moveis', veiculo: 'sprites:veiculos', brinquedo: 'sprites:brinquedos',
+  escola: 'sprites:escola', magia: 'sprites:magia', moda: 'sprites:moda_items',
+};
+
 export async function listCreativeAssets(mode: ProjectType): Promise<CreativeAssetCategory[]> {
-  const { fs, path } = getFsModules();
-  const baseDir = path.join(process.cwd(), 'public', 'assets', mode);
+  const cat = await getCatalogo();
+  const categories: CreativeAssetCategory[] = [...(cat.modos[mode]?.categorias || [])];
 
-  const categories: CreativeAssetCategory[] = [];
-
-  // Mode-specific assets from public/assets/<mode>/
-  if (fs.existsSync(baseDir)) {
-    const dirs = fs.readdirSync(baseDir, { withFileTypes: true });
-    for (const d of dirs) {
-      if (!d.isDirectory() || d.name === 'fundos') continue;
-      const catPath = path.join(baseDir, d.name);
-      const files = fs.readdirSync(catPath).filter((f: string) => /\.(png|jpg|jpeg|webp|svg)$/i.test(f));
-      if (files.length > 0) {
-        categories.push({ category: d.name, files });
-      }
-    }
+  // Sprites compartilhados (prefixo "sprites:" na categoria indica o caminho /sprites/)
+  const spriteCategories: Record<string, string[]> = { 'sprites:personagens': [] };
+  for (const f of cat.sprites) {
+    const c = SPRITE_PREFIX_MAP[f.split('_')[0]] || 'sprites:personagens';
+    (spriteCategories[c] ||= []).push(f);
   }
-
-  // Also include shared sprites from public/sprites/ (available in all modes)
-  // These use special "sprites:" prefix in category to distinguish path
-  const spritesDir = path.join(process.cwd(), 'public', 'sprites');
-  if (fs.existsSync(spritesDir)) {
-    const allSprites = fs.readdirSync(spritesDir).filter((f: string) => /\.(png|jpg|jpeg|webp|svg)$/i.test(f));
-    const spriteCategories: Record<string, string[]> = { 'sprites:personagens': [] };
-    const prefixMap: Record<string, string> = {
-      animal: 'sprites:animais', natureza: 'sprites:natureza', comida: 'sprites:comida',
-      movel: 'sprites:moveis', veiculo: 'sprites:veiculos', brinquedo: 'sprites:brinquedos',
-      escola: 'sprites:escola', magia: 'sprites:magia', moda: 'sprites:moda_items',
-    };
-    for (const f of allSprites) {
-      const prefix = f.split('_')[0];
-      if (prefixMap[prefix]) {
-        const cat = prefixMap[prefix];
-        if (!spriteCategories[cat]) spriteCategories[cat] = [];
-        spriteCategories[cat].push(f);
-      } else {
-        spriteCategories['sprites:personagens'].push(f);
-      }
-    }
-    for (const [cat, files] of Object.entries(spriteCategories)) {
-      if (files.length > 0) {
-        categories.push({ category: cat, files });
-      }
-    }
+  for (const [category, files] of Object.entries(spriteCategories)) {
+    if (files.length > 0) categories.push({ category, files });
   }
-
   return categories;
 }
 
 export interface CreativeBackground {
   filename: string;
-  path: string; // full path from public/, e.g. "/assets/decoration/fundos/" or "/backgrounds/"
+  path: string; // caminho a partir de public/, ex.: "/assets/decoration/fundos/" ou "/backgrounds/" (sem o prefixo do site)
 }
 
 export async function listCreativeBackgrounds(mode: ProjectType): Promise<CreativeBackground[]> {
-  const { fs, path } = getFsModules();
-  const backgrounds: CreativeBackground[] = [];
-
-  // Mode-specific backgrounds
-  const bgDir = path.join(process.cwd(), 'public', 'assets', mode, 'fundos');
-  if (fs.existsSync(bgDir)) {
-    const files = fs.readdirSync(bgDir).filter((f: string) => /\.(png|jpg|jpeg|webp|svg)$/i.test(f));
-    for (const f of files) {
-      backgrounds.push({ filename: f, path: `/assets/${mode}/fundos/` });
-    }
+  const cat = await getCatalogo();
+  const backgrounds: CreativeBackground[] = (cat.modos[mode]?.fundos || []).map((f) => ({
+    filename: f,
+    path: `/assets/${mode}/fundos/`,
+  }));
+  for (const f of cat.backgrounds) {
+    if (!backgrounds.find((b) => b.filename === f)) backgrounds.push({ filename: f, path: '/backgrounds/' });
   }
+  return backgrounds;
+}
 
-  // Also include shared backgrounds from public/backgrounds/
-  const sharedDir = path.join(process.cwd(), 'public', 'backgrounds');
-  if (fs.existsSync(sharedDir)) {
-    const shared = fs.readdirSync(sharedDir).filter((f: string) => /\.(png|jpg|jpeg|webp|svg)$/i.test(f));
-    for (const f of shared) {
-      if (!backgrounds.find((b) => b.filename === f)) {
-        backgrounds.push({ filename: f, path: '/backgrounds/' });
+// --- Cópia de segurança (exportar/importar .json) ---
+
+export interface Backup {
+  app: 'animabook';
+  versao: 1;
+  exportadoEm: string;
+  stories: Record<string, Saved<Story>>;
+  projects: Record<string, Saved<CreativeProject>>;
+}
+
+export function exportBackup(): Backup {
+  return {
+    app: 'animabook',
+    versao: 1,
+    exportadoEm: new Date().toISOString(),
+    stories: readMap<Story>(KEY_STORIES),
+    projects: readMap<CreativeProject>(KEY_PROJECTS),
+  };
+}
+
+/** Junta a cópia com o que já existe (o item mais novo vence). Devolve quantos itens entraram. */
+export function importBackup(raw: unknown): number {
+  const b = raw as Partial<Backup>;
+  if (!b || b.app !== 'animabook' || typeof b.stories !== 'object' || typeof b.projects !== 'object') {
+    throw new Error('Esse arquivo não é uma cópia do AnimaBook.');
+  }
+  let n = 0;
+  const merge = <T,>(key: string, incoming: Record<string, Saved<T>>) => {
+    const map = readMap<T>(key);
+    for (const [id, item] of Object.entries(incoming || {})) {
+      if (!item || typeof item !== 'object' || !('data' in item)) continue;
+      const atual = map[id];
+      if (!atual || (item.updatedAt || '') >= (atual.updatedAt || '')) {
+        map[id] = item;
+        n++;
       }
     }
-  }
-
-  return backgrounds;
+    writeMap(key, map);
+  };
+  merge(KEY_STORIES, b.stories as Record<string, Saved<Story>>);
+  merge(KEY_PROJECTS, b.projects as Record<string, Saved<CreativeProject>>);
+  return n;
 }

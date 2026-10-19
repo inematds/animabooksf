@@ -1,28 +1,57 @@
+'use client';
+
+import { Suspense, useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { notFound } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 import { getProject } from '@/lib/storageAdapter';
-import { PlacedItem } from '@/lib/types';
+import { withBase } from '@/lib/base';
+import { CreativeProject, PlacedItem } from '@/lib/types';
 
-interface Props {
-  params: Promise<{ id: string }>;
-}
+function View() {
+  const id = useSearchParams().get('id') || '';
+  const [projectCarregado, setProject] = useState<CreativeProject | null | undefined>(undefined);
 
-export default async function ViewProjectPage({ params }: Props) {
-  const { id } = await params;
-  const project = await getProject(id);
+  useEffect(() => {
+    let vivo = true;
+    if (!id) return;
+    getProject(id).then((p) => vivo && setProject(p));
+    return () => {
+      vivo = false;
+    };
+  }, [id]);
 
-  if (!project) notFound();
+  const project = !id ? null : projectCarregado;
+
+  if (project === undefined) {
+    return (
+      <main className="w-full h-screen flex items-center justify-center bg-gray-950">
+        <div className="text-white/60 animate-pulse">Carregando...</div>
+      </main>
+    );
+  }
+
+  if (project === null) {
+    return (
+      <main className="w-full h-screen flex flex-col items-center justify-center gap-4 bg-gray-950 text-white p-6 text-center">
+        <p className="text-5xl">🧩</p>
+        <p className="text-lg font-semibold">Esse projeto nao esta neste aparelho.</p>
+        <Link href="/gallery" className="px-5 py-2.5 rounded-xl bg-purple-500 font-semibold hover:bg-purple-600">
+          Ir para a galeria
+        </Link>
+      </main>
+    );
+  }
 
   // Resolve background path - new format "path:filename" or legacy "filename"
-  const bgSrc = (() => {
+  const bgSrc = withBase((() => {
     const bg = project.background;
     if (bg.includes(':')) {
       const [path, filename] = bg.split(':');
       return `${path}${filename}`;
     }
     return `/assets/${project.type}/fundos/${bg}`;
-  })();
+  })());
   const layerOrder = { back: 0, main: 1, front: 2 };
   const sortedItems = [...project.items].sort((a: PlacedItem, b: PlacedItem) => {
     const layerDiff = layerOrder[a.layer] - layerOrder[b.layer];
@@ -77,9 +106,9 @@ export default async function ViewProjectPage({ params }: Props) {
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={item.category.startsWith('sprites:')
+                src={withBase(item.category.startsWith('sprites:')
                   ? `/sprites/${item.assetId}`
-                  : `/assets/${item.category}/${item.assetId}`}
+                  : `/assets/${item.category}/${item.assetId}`)}
                 alt={item.assetId}
                 className="object-contain"
                 style={{ width: '80px', height: '80px', maxWidth: '120px', maxHeight: '120px' }}
@@ -90,11 +119,19 @@ export default async function ViewProjectPage({ params }: Props) {
       </div>
 
       <Link
-        href={`/create/${project.type}/${id}`}
+        href={`/create/${project.type}/?id=${encodeURIComponent(id)}`}
         className="mt-4 px-4 py-2 rounded-xl text-sm font-semibold text-white bg-purple-500 hover:bg-purple-600 transition"
       >
         Editar
       </Link>
     </main>
+  );
+}
+
+export default function ViewProjectPage() {
+  return (
+    <Suspense fallback={<main className="w-full h-screen bg-gray-950" />}>
+      <View />
+    </Suspense>
   );
 }

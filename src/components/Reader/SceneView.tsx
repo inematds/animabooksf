@@ -8,6 +8,7 @@ import { Story } from '@/lib/types';
 import { useGame } from '@/lib/GameContext';
 import SpriteLayer from './SpriteLayer';
 import DialogueBox, { DialogueBoxHandle } from './DialogueBox';
+import { withBase } from '@/lib/base';
 
 interface SceneViewProps {
   story: Story;
@@ -124,7 +125,7 @@ export default function SceneView({ story }: SceneViewProps) {
             className="absolute inset-0 z-0"
           >
             <Image
-              src={`/backgrounds/${scene.background}`}
+              src={withBase(`/backgrounds/${scene.background}`)}
               alt="Cenario"
               fill
               className="object-cover"
