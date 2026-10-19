@@ -38,7 +38,7 @@ export default function Timeline({
                 e.stopPropagation();
                 onRemoveScene(i);
               }}
-              className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-red-400 text-white text-[10px] flex items-center justify-center opacity-0 group-hover:opacity-100 transition"
+              className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-red-400 text-white text-[10px] flex items-center justify-center opacity-0 group-hover:opacity-100 pointer-coarse:opacity-100 transition"
             >
               ✕
             </button>

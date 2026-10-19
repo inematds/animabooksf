@@ -33,14 +33,14 @@ export default function BackgroundSelector({
 
   return (
     <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center">
-      <div className="bg-white rounded-xl shadow-xl w-[600px] max-h-[80vh] flex flex-col">
+      <div className="bg-white rounded-xl shadow-xl w-[600px] max-w-[calc(100vw-2rem)] max-h-[80vh] flex flex-col">
         <div className="flex items-center justify-between p-4 border-b">
           <h3 className="font-semibold">Selecionar Fundo</h3>
           <button onClick={onClose} className="text-gray-400 hover:text-gray-600">
             ✕
           </button>
         </div>
-        <div className="p-4 grid grid-cols-3 gap-3 overflow-y-auto">
+        <div className="p-4 grid grid-cols-2 sm:grid-cols-3 gap-3 overflow-y-auto">
           {backgrounds.map((bg) => (
             <button
               key={bg}

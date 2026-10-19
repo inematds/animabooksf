@@ -73,7 +73,7 @@ export default function SpritePanel({ onAddSprite }: SpritePanelProps) {
   const showAll = search.length > 0;
 
   return (
-    <div className="w-60 bg-gray-50 border-r border-gray-200 flex flex-col h-full overflow-hidden">
+    <div className="w-full md:w-60 h-72 md:h-full bg-gray-50 border-t md:border-t-0 md:border-r border-gray-200 flex flex-col overflow-hidden">
       <div className="p-3 border-b border-gray-200">
         <h3 className="font-semibold text-sm text-gray-700 mb-2">Sprites & Objetos</h3>
         <input

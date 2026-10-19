@@ -57,7 +57,7 @@ export function parseStory(markdown: string): Story {
   const scenes: Scene[] = [];
   let title = '';
   let currentBackground = '';
-  let currentSprites: Map<string, SpriteState> = new Map();
+  const currentSprites: Map<string, SpriteState> = new Map();
   let currentDialogues: Dialogue[] = [];
   let currentNarrator: string | undefined;
   let sceneCount = 0;

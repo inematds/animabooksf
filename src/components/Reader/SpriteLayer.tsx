@@ -68,7 +68,7 @@ export default function SpriteLayer({ sprites }: SpriteLayerProps) {
                 style={{
                   filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.25))',
                   height: 'auto',
-                  maxHeight: '35vh',
+                  maxHeight: 'min(35vh, 30vw)' /* no celular em pe, 35vh estourava a cena 16:9 */,
                   width: 'auto',
                 }}
               />

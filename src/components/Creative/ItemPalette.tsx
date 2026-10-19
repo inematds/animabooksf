@@ -7,6 +7,8 @@ import { ProjectType } from '@/lib/types';
 interface ItemPaletteProps {
   mode: ProjectType;
   onStartDrag: (assetPath: string, filename: string) => void;
+  /** Toque/clique adiciona o item no centro (arrastar nao funciona em tela de toque) */
+  onAddItem?: (assetPath: string, filename: string) => void;
 }
 
 interface CategoryData {
@@ -82,7 +84,7 @@ const CATEGORY_ICONS: Record<string, string> = {
   'sprites:moda_items': '👗',
 };
 
-export default function ItemPalette({ mode, onStartDrag }: ItemPaletteProps) {
+export default function ItemPalette({ mode, onStartDrag, onAddItem }: ItemPaletteProps) {
   const [categories, setCategories] = useState<CategoryData[]>([]);
   const [search, setSearch] = useState('');
   const [openCat, setOpenCat] = useState<string | null>(null);
@@ -105,7 +107,7 @@ export default function ItemPalette({ mode, onStartDrag }: ItemPaletteProps) {
     : categories;
 
   return (
-    <div className="w-56 bg-white border-r border-gray-200 flex flex-col h-full overflow-hidden">
+    <div className="w-full md:w-56 h-72 md:h-full bg-white border-t md:border-t-0 md:border-r border-gray-200 flex flex-col overflow-hidden">
       <div className="p-3 border-b border-gray-200">
         <h3 className="font-semibold text-sm text-gray-700 mb-2">Itens</h3>
         <input
@@ -141,6 +143,7 @@ export default function ItemPalette({ mode, onStartDrag }: ItemPaletteProps) {
                       key={filename}
                       draggable
                       onDragStart={() => onStartDrag(assetPath, filename)}
+                      onClick={() => onAddItem?.(assetPath, filename)}
                       className="relative aspect-square bg-gray-50 rounded-lg border border-gray-200 hover:border-purple-400 hover:shadow cursor-grab active:cursor-grabbing transition p-1"
                       title={filename.replace(/\.\w+$/, '')}
                     >

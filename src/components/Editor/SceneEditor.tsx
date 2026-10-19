@@ -42,6 +42,8 @@ export default function SceneEditor({ initialStory, onSave, onPreview }: SceneEd
   const [bgError, setBgError] = useState(false);
   const canvasRef = useRef<HTMLDivElement>(null);
   const storyRef = useRef(story);
+  // Auto-save so quando algo mudou (antes salvava historia vazia so por abrir o editor)
+  const lastAutoSavedRef = useRef(JSON.stringify(initialStory));
   const didDragRef = useRef(false);
   storyRef.current = story;
 
@@ -79,8 +81,11 @@ export default function SceneEditor({ initialStory, onSave, onPreview }: SceneEd
   // Auto-save every 30s
   useEffect(() => {
     const interval = setInterval(async () => {
+      const json = JSON.stringify(storyRef.current);
+      if (json === lastAutoSavedRef.current) return;
       try {
         await onSave(storyRef.current);
+        lastAutoSavedRef.current = json;
         setSaveMsg('Auto-salvo');
         setTimeout(() => setSaveMsg(''), 2000);
       } catch {
@@ -256,9 +261,9 @@ export default function SceneEditor({ initialStory, onSave, onPreview }: SceneEd
   if (!scene) return null;
 
   return (
-    <div className="flex flex-col h-screen bg-gray-100">
+    <div className="flex flex-col min-h-screen md:h-screen bg-gray-100">
       {/* Toolbar */}
-      <div className="flex items-center gap-3 px-4 py-2 bg-white border-b shadow-sm">
+      <div className="flex flex-wrap items-center gap-2 md:gap-3 px-3 md:px-4 py-2 bg-white border-b shadow-sm">
         <Link
           href="/"
           className="px-3 py-1.5 text-sm bg-gray-100 hover:bg-gray-200 rounded transition flex items-center gap-1"
@@ -270,10 +275,10 @@ export default function SceneEditor({ initialStory, onSave, onPreview }: SceneEd
           type="text"
           value={story.title}
           onChange={(e) => setStory((prev) => ({ ...prev, title: e.target.value }))}
-          className="text-lg font-bold border-b border-transparent hover:border-gray-300 focus:border-purple-500 outline-none px-1"
+          className="text-lg font-bold border-b border-transparent hover:border-gray-300 focus:border-purple-500 outline-none px-1 min-w-0 w-full md:w-auto order-last md:order-none"
           placeholder="Titulo da historia"
         />
-        <div className="flex-1" />
+        <div className="hidden md:block flex-1" />
         <button
           onClick={() => setShowBgSelector(true)}
           className="px-3 py-1.5 text-sm bg-gray-100 hover:bg-gray-200 rounded transition"
@@ -325,19 +330,19 @@ export default function SceneEditor({ initialStory, onSave, onPreview }: SceneEd
       </div>
 
       {/* Main area: sprites panel | canvas + timeline | right panel */}
-      <div className="flex flex-1 min-h-0 overflow-hidden">
+      <div className="flex flex-col md:flex-row flex-1 min-h-0 md:overflow-hidden">
         {/* Left: Sprite catalog */}
         <SpritePanel onAddSprite={handleAddSprite} />
 
-        {/* Center: Canvas + Timeline */}
-        <div className="flex-1 flex flex-col min-h-0">
-          <div className="flex-1 min-h-0 p-4 flex items-center justify-center overflow-auto">
+        {/* Center: Canvas + Timeline (no celular vem primeiro) */}
+        <div className="flex-1 flex flex-col min-h-0 order-first md:order-none">
+          <div className="flex-1 min-h-0 p-2 md:p-4 flex items-center justify-center overflow-auto">
             <div
               ref={canvasRef}
               className="relative w-full max-w-3xl aspect-video bg-gray-900 rounded-lg overflow-hidden shadow-lg cursor-crosshair"
-              onMouseMove={handleCanvasMouseMove}
-              onMouseUp={handleCanvasMouseUp}
-              onMouseLeave={handleCanvasMouseUp}
+              onPointerMove={handleCanvasMouseMove}
+              onPointerUp={handleCanvasMouseUp}
+              onPointerLeave={handleCanvasMouseUp}
               onClick={handleCanvasClick}
             >
               {/* Background */}
@@ -368,8 +373,9 @@ export default function SceneEditor({ initialStory, onSave, onPreview }: SceneEd
                     bottom: `${100 - parseFloat(sprite.y)}%`,
                     transform: `translateX(-50%) scale(${sprite.scale})`,
                     zIndex: 10 + sprite.zIndex,
+                    touchAction: 'none',
                   }}
-                  onMouseDown={(e) => handleCanvasMouseDown(e, sprite.id)}
+                  onPointerDown={(e) => handleCanvasMouseDown(e, sprite.id)}
                 >
                   <Image
                     src={`/sprites/${sprite.filename}`}
@@ -389,7 +395,7 @@ export default function SceneEditor({ initialStory, onSave, onPreview }: SceneEd
                       e.stopPropagation();
                       handleRemoveSprite(sprite.id);
                     }}
-                    className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center opacity-0 group-hover:opacity-100 transition"
+                    className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center opacity-0 group-hover:opacity-100 pointer-coarse:opacity-100 transition"
                   >
                     ✕
                   </button>
@@ -499,7 +505,7 @@ export default function SceneEditor({ initialStory, onSave, onPreview }: SceneEd
         </div>
 
         {/* Right panel: Scene sprites + Dialogues */}
-        <div className="w-64 border-l bg-white flex flex-col min-h-0">
+        <div className="w-full md:w-64 border-t md:border-t-0 md:border-l bg-white flex flex-col min-h-0">
           {/* Scene sprites list */}
           <div className="border-b p-2 space-y-1 max-h-[30%] overflow-y-auto">
             <p className="text-xs font-semibold text-gray-600 px-1">Na cena</p>

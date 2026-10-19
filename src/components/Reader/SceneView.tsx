@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
 import { Story } from '@/lib/types';
 import { useGame } from '@/lib/GameContext';
@@ -16,6 +17,7 @@ export default function SceneView({ story }: SceneViewProps) {
   const { recordStoryRead } = useGame();
   const [sceneIndex, setSceneIndex] = useState(0);
   const [showTitle, setShowTitle] = useState(true);
+  const [finished, setFinished] = useState(false);
   const hasMounted = useRef(false);
   const hasRecordedRead = useRef(false);
   const dialogueRef = useRef<DialogueBoxHandle>(null);
@@ -32,6 +34,7 @@ export default function SceneView({ story }: SceneViewProps) {
   const goToScene = useCallback(
     (index: number) => {
       if (index >= 0 && index < totalScenes) {
+        setFinished(false);
         setSceneIndex(index);
       }
     },
@@ -41,11 +44,20 @@ export default function SceneView({ story }: SceneViewProps) {
   const handleDialogueComplete = useCallback(() => {
     if (sceneIndex < totalScenes - 1) {
       goToScene(sceneIndex + 1);
-    } else if (!hasRecordedRead.current) {
+      return;
+    }
+    // Ultima cena: mostra a tela de "Fim" (antes nada acontecia)
+    setFinished(true);
+    if (!hasRecordedRead.current) {
       hasRecordedRead.current = true;
       recordStoryRead();
     }
   }, [sceneIndex, totalScenes, goToScene, recordStoryRead]);
+
+  const restart = useCallback(() => {
+    setFinished(false);
+    setSceneIndex(0);
+  }, []);
 
   const advanceDialogue = useCallback(() => {
     dialogueRef.current?.advance();
@@ -147,7 +159,7 @@ export default function SceneView({ story }: SceneViewProps) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
-              className="absolute top-0 left-0 right-0 z-[35] flex justify-center pt-6 pointer-events-none"
+              className="absolute inset-0 z-[35] flex items-center justify-center pointer-events-none"
             >
               <div
                 className="px-6 py-2.5 rounded-2xl"
@@ -231,6 +243,43 @@ export default function SceneView({ story }: SceneViewProps) {
         >
           <span className="ml-0.5">&#8250;</span>
         </motion.button>
+
+        {/* Tela de fim da historia */}
+        <AnimatePresence>
+          {finished && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="absolute inset-0 z-50 flex flex-col items-center justify-center gap-3 sm:gap-5 bg-black/60 backdrop-blur-sm text-white"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <motion.p
+                initial={{ scale: 0.5 }}
+                animate={{ scale: 1 }}
+                transition={{ type: 'spring', stiffness: 260, damping: 14 }}
+                className="text-3xl sm:text-5xl font-extrabold drop-shadow"
+              >
+                Fim! ⭐
+              </motion.p>
+              <p className="text-sm sm:text-lg text-white/85">Voce leu &quot;{story.title}&quot;</p>
+              <div className="flex gap-3">
+                <button
+                  onClick={restart}
+                  className="px-4 py-2 sm:px-6 sm:py-3 rounded-full bg-purple-500 hover:bg-purple-600 font-bold text-sm sm:text-base"
+                >
+                  ↺ Ler de novo
+                </button>
+                <Link
+                  href="/"
+                  className="px-4 py-2 sm:px-6 sm:py-3 rounded-full bg-white/20 hover:bg-white/30 border border-white/30 font-bold text-sm sm:text-base"
+                >
+                  Inicio
+                </Link>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       {/* Progress stars */}
@@ -280,7 +329,7 @@ export default function SceneView({ story }: SceneViewProps) {
                     : isVisited
                       ? 'drop-shadow(0 0 2px rgba(200,160,60,0.4))'
                       : 'grayscale(0.6) opacity(0.5)',
-                  opacity: !isActive && !isVisited ? 0.4 : 1,
+                  opacity: !isActive && !isVisited ? 0.7 : 1,
                 }}
               >
                 {isActive || isVisited ? '\u2B50' : '\u2606'}

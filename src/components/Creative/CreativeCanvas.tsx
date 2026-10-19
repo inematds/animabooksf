@@ -94,9 +94,9 @@ export default function CreativeCanvas({
     <div
       ref={canvasRef}
       className="relative w-full aspect-video bg-gray-200 rounded-xl overflow-hidden shadow-lg cursor-crosshair"
-      onMouseMove={handleMouseMove}
-      onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseUp}
+      onPointerMove={handleMouseMove}
+      onPointerUp={handleMouseUp}
+      onPointerLeave={handleMouseUp}
       onClick={handleCanvasClick}
       onDrop={handleCanvasDrop}
       onDragOver={handleDragOver}
@@ -133,8 +133,9 @@ export default function CreativeCanvas({
               top: `${item.y}%`,
               transform: `translate(-50%, -50%) scale(${item.scale}) rotate(${item.rotation}deg) ${item.flipped ? 'scaleX(-1)' : ''}`,
               zIndex: zBase + item.zIndex + idx,
+              touchAction: 'none',
             }}
-            onMouseDown={(e) => handleMouseDown(e, item.id)}
+            onPointerDown={(e) => handleMouseDown(e, item.id)}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img

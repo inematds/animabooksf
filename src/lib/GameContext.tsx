@@ -107,46 +107,69 @@ function saveState(state: GameState) {
 
 const GameContext = createContext<GameContextType | null>(null);
 
+// Estado neutro usado no servidor e no primeiro render do cliente (evita erro de hidratacao #418).
+const SSR_STATE: GameState = {
+  profile: DEFAULT_PROFILE,
+  challenges: [],
+  missions: [],
+  achievements: DEFAULT_ACHIEVEMENTS,
+  weeklyEvents: DEFAULT_WEEKLY_EVENTS,
+  todayEvent: null,
+  notifications: [],
+};
+
+// Estado real do cliente: progresso salvo + desafios renovados + evento do dia.
+function buildClientState(): GameState {
+  const saved = loadState();
+  const today = new Date().getDay();
+  const todayEvent = DEFAULT_WEEKLY_EVENTS.find((e) => e.dayOfWeek === today && e.active) || null;
+
+  if (saved) {
+    const profile = checkStreakReset(saved.profile || DEFAULT_PROFILE);
+
+    // Renovar desafios expirados
+    const now = new Date();
+    const validChallenges = (saved.challenges || []).filter(
+      (c: Challenge) => new Date(c.expiresAt) >= now || c.current >= c.target
+    );
+    const hasDaily = validChallenges.some((c: Challenge) => c.type === 'daily' && new Date(c.expiresAt) >= now);
+    const hasWeekly = validChallenges.some((c: Challenge) => c.type === 'weekly' && new Date(c.expiresAt) >= now);
+    const renewedChallenges = [
+      ...validChallenges,
+      ...(!hasDaily ? generateDailyChallenges() : []),
+      ...(!hasWeekly ? generateWeeklyChallenges() : []),
+    ];
+
+    return { ...saved, profile, todayEvent, weeklyEvents: DEFAULT_WEEKLY_EVENTS, challenges: renewedChallenges };
+  }
+
+  return {
+    profile: DEFAULT_PROFILE,
+    challenges: [...generateDailyChallenges(), ...generateWeeklyChallenges()],
+    missions: [],
+    achievements: DEFAULT_ACHIEVEMENTS,
+    weeklyEvents: DEFAULT_WEEKLY_EVENTS,
+    todayEvent,
+    notifications: [],
+  };
+}
+
 export function GameProvider({ children }: { children: ReactNode }) {
-  const [state, setState] = useState<GameState>(() => {
-    const saved = loadState();
-    const today = new Date().getDay();
-    const todayEvent = DEFAULT_WEEKLY_EVENTS.find((e) => e.dayOfWeek === today && e.active) || null;
+  const [state, setState] = useState<GameState>(SSR_STATE);
+  const [hydrated, setHydrated] = useState(false);
 
-    if (saved) {
-      const profile = checkStreakReset(saved.profile || DEFAULT_PROFILE);
-
-      // Renovar desafios expirados
-      const now = new Date();
-      const validChallenges = (saved.challenges || []).filter(
-        (c: Challenge) => new Date(c.expiresAt) >= now || c.current >= c.target
-      );
-      const hasDaily = validChallenges.some((c: Challenge) => c.type === 'daily' && new Date(c.expiresAt) >= now);
-      const hasWeekly = validChallenges.some((c: Challenge) => c.type === 'weekly' && new Date(c.expiresAt) >= now);
-      const renewedChallenges = [
-        ...validChallenges,
-        ...(!hasDaily ? generateDailyChallenges() : []),
-        ...(!hasWeekly ? generateWeeklyChallenges() : []),
-      ];
-
-      return { ...saved, profile, todayEvent, weeklyEvents: DEFAULT_WEEKLY_EVENTS, challenges: renewedChallenges };
-    }
-
-    return {
-      profile: DEFAULT_PROFILE,
-      challenges: [...generateDailyChallenges(), ...generateWeeklyChallenges()],
-      missions: [],
-      achievements: DEFAULT_ACHIEVEMENTS,
-      weeklyEvents: DEFAULT_WEEKLY_EVENTS,
-      todayEvent,
-      notifications: [],
-    };
-  });
-
-  // Persist state
+  // Carrega o progresso do localStorage so depois de montar (cliente)
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setState(buildClientState());
+    setHydrated(true);
+  }, []);
+
+  // Persist state (so depois de carregar, para nao apagar o progresso salvo)
+  useEffect(() => {
+    if (!hydrated) return;
     saveState(state);
-  }, [state]);
+  }, [state, hydrated]);
 
   const addNotification = useCallback((notif: Omit<GameNotification, 'id' | 'timestamp'>) => {
     setState((prev) => ({

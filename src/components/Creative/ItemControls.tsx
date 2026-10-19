@@ -11,7 +11,7 @@ interface ItemControlsProps {
 
 export default function ItemControls({ item, onUpdate, onDelete, onDuplicate }: ItemControlsProps) {
   return (
-    <div className="flex items-center gap-1 px-3 py-2 bg-white border-t border-gray-200">
+    <div className="flex flex-wrap items-center gap-y-2 gap-1 px-3 py-2 bg-white border-t border-gray-200">
       {/* Scale */}
       <div className="flex items-center gap-1 border-r border-gray-200 pr-2 mr-1">
         <span className="text-[10px] text-gray-400">Tamanho</span>

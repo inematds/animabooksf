@@ -99,7 +99,7 @@ export default function DialogueEditor({
               )}
               <button
                 onClick={() => removeDialogue(i)}
-                className="text-red-300 hover:text-red-500 text-sm opacity-0 group-hover:opacity-100 transition"
+                className="text-red-300 hover:text-red-500 text-sm opacity-0 group-hover:opacity-100 pointer-coarse:opacity-100 transition"
               >
                 ✕
               </button>

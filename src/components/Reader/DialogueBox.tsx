@@ -117,7 +117,7 @@ function SpeechBubble({
       initial={{ opacity: 0, scale: 0.5, y: 10 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{ delay: index * 0.15, type: 'spring', stiffness: 300, damping: 20 }}
-      className="absolute z-30 select-none"
+      className="absolute z-30 select-none hidden sm:block" /* no celular a cena e pequena: fala vai so na legenda */
       style={{
         left: `${pos.left}%`,
         top: `${pos.top}%`,
@@ -209,16 +209,17 @@ const DialogueBox = forwardRef<DialogueBoxHandle, DialogueBoxProps>(
     // Auto-reveal bubbles one by one
     useEffect(() => {
       if (visibleCount >= dialogues.length) return;
+      // 1a fala aparece rapido; as seguintes esperam tempo de leitura
       const timer = setTimeout(() => {
         setVisibleCount((c) => c + 1);
-      }, 600);
+      }, visibleCount === 0 ? 600 : 2200);
       return () => clearTimeout(timer);
     }, [visibleCount, dialogues.length]);
 
     const advance = useCallback(() => {
       if (visibleCount < dialogues.length) {
-        // Reveal all at once
-        setVisibleCount(dialogues.length);
+        // Mostra a proxima fala (antes revelava todas de uma vez e a legenda pulava falas)
+        setVisibleCount((c) => c + 1);
         return;
       }
       onComplete();
@@ -302,7 +303,7 @@ const DialogueBox = forwardRef<DialogueBoxHandle, DialogueBoxProps>(
         {/* Tap zone for advancing — only when all bubbles shown */}
         {allRevealed && (
           <div
-            className="absolute bottom-0 left-0 right-0 h-16 z-[35] cursor-pointer flex items-center justify-center"
+            className="absolute bottom-0 left-0 right-0 h-24 sm:h-28 z-[35] cursor-pointer flex items-start justify-center"
             onClick={advance}
           >
             <motion.div

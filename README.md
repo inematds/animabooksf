@@ -4,7 +4,7 @@ Plataforma criativa infantil para criar e ler historias interativas com personag
 
 **Publico-alvo:** criancas (3-12 anos) consomem as historias; educadores e pais criam conteudo.
 
-**Versao atual:** 1.1.0 | **Deploy:** [animabooksf.vercel.app](https://animabooksf.vercel.app)
+**Versao atual:** 1.2.0 | **Deploy:** [animabooksf.vercel.app](https://animabooksf.vercel.app) (fora do ar em 10/2026 — ver `REVISAO-2026-10.md`)
 
 ---
 
@@ -199,6 +199,7 @@ Formato: `MAJOR.RECURSO.BUG`
 
 | Versao | Descricao |
 |--------|-----------|
+| 1.2.0 | Revisao 10/2026: tela de Fim no leitor, celular (leitor, editores, toque), sem erro de hidratacao, autosave so com mudanca |
 | 1.1.0 | 97 SVGs, painel categorizado, baloes HQ draggable, moda |
 | 1.0.1 | Fix navegacao de dialogos |
 | 1.0.0 | Modos criativos, gamificacao conectada, storage adapter |

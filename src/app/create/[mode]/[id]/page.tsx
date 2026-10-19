@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { useParams, useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { CreativeProject, ProjectType } from '@/lib/types';
 import { useGame } from '@/lib/GameContext';
 import CreativeEditor from '@/components/Creative/CreativeEditor';
@@ -91,6 +92,19 @@ export default function CreativeEditorPage() {
     },
     [projectId, mode, router, recordStoryCreated]
   );
+
+  // Modo desconhecido (ex.: /create/decoracao/new) quebrava o editor: mostra aviso amigavel
+  if (!(mode in MODE_TITLES)) {
+    return (
+      <div className="w-full h-screen flex flex-col items-center justify-center gap-4 bg-gray-100 p-6 text-center">
+        <p className="text-5xl">🧭</p>
+        <p className="text-lg font-semibold text-gray-700">Esse modo de criacao nao existe.</p>
+        <Link href="/create" className="px-5 py-2.5 rounded-xl bg-purple-500 text-white font-semibold hover:bg-purple-600">
+          Escolher um modo
+        </Link>
+      </div>
+    );
+  }
 
   if (loading) {
     return (

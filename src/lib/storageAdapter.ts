@@ -39,7 +39,7 @@ function ensureDir(dir?: string) {
 
 // --- Detect mode ---
 
-function useSupabase(): boolean {
+function hasSupabase(): boolean {
   return !!(process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
 }
 
@@ -53,7 +53,7 @@ export interface StoryMeta {
 }
 
 export async function listStories(): Promise<StoryMeta[]> {
-  if (useSupabase()) {
+  if (hasSupabase()) {
     const supabase = await getSupabase();
     if (!supabase) return [];
     const { data, error } = await supabase
@@ -96,7 +96,7 @@ export async function listStories(): Promise<StoryMeta[]> {
 }
 
 export async function getStory(id: string): Promise<Story | null> {
-  if (useSupabase()) {
+  if (hasSupabase()) {
     const supabase = await getSupabase();
     if (!supabase) return null;
     const { data, error } = await supabase
@@ -127,7 +127,7 @@ export async function getStory(id: string): Promise<Story | null> {
 }
 
 export async function saveStory(id: string | undefined, story: Story): Promise<string> {
-  if (useSupabase()) {
+  if (hasSupabase()) {
     const supabase = await getSupabase();
     if (!supabase) throw new Error('Supabase nao configurado');
 
@@ -159,7 +159,7 @@ export async function saveStory(id: string | undefined, story: Story): Promise<s
 }
 
 export async function deleteStory(id: string): Promise<void> {
-  if (useSupabase()) {
+  if (hasSupabase()) {
     const supabase = await getSupabase();
     if (!supabase) return;
     await supabase.from('stories').delete().eq('id', id);
@@ -209,7 +209,7 @@ export interface ProjectMeta {
 }
 
 export async function listProjects(type?: ProjectType): Promise<ProjectMeta[]> {
-  if (useSupabase()) {
+  if (hasSupabase()) {
     const supabase = await getSupabase();
     if (!supabase) return [];
     let query = supabase
@@ -248,7 +248,7 @@ export async function listProjects(type?: ProjectType): Promise<ProjectMeta[]> {
 }
 
 export async function getProject(id: string): Promise<CreativeProject | null> {
-  if (useSupabase()) {
+  if (hasSupabase()) {
     const supabase = await getSupabase();
     if (!supabase) return null;
     const { data, error } = await supabase.from('projects').select('*').eq('id', id).single();
@@ -263,7 +263,7 @@ export async function getProject(id: string): Promise<CreativeProject | null> {
 }
 
 export async function saveProject(id: string | undefined, project: CreativeProject): Promise<string> {
-  if (useSupabase()) {
+  if (hasSupabase()) {
     const supabase = await getSupabase();
     if (!supabase) throw new Error('Supabase nao configurado');
     if (id) {
@@ -291,7 +291,7 @@ export async function saveProject(id: string | undefined, project: CreativeProje
 }
 
 export async function deleteProject(id: string): Promise<void> {
-  if (useSupabase()) {
+  if (hasSupabase()) {
     const supabase = await getSupabase();
     if (!supabase) return;
     await supabase.from('projects').delete().eq('id', id);

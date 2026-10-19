@@ -39,6 +39,8 @@ export default function CreativeEditor({ initialProject, onSave }: CreativeEdito
   const [backgrounds, setBackgrounds] = useState<{ filename: string; path: string }[]>([]);
   const pendingDrag = useRef<{ assetPath: string; filename: string } | null>(null);
   const projectRef = useRef(project);
+  // Auto-save so quando algo mudou (antes salvava projeto vazio so por abrir o editor)
+  const lastAutoSavedRef = useRef(JSON.stringify(initialProject));
   projectRef.current = project;
 
   const mode = project.type;
@@ -66,8 +68,11 @@ export default function CreativeEditor({ initialProject, onSave }: CreativeEdito
   // Auto-save every 30s
   useEffect(() => {
     const interval = setInterval(async () => {
+      const json = JSON.stringify(projectRef.current);
+      if (json === lastAutoSavedRef.current) return;
       try {
         await onSave(projectRef.current);
+        lastAutoSavedRef.current = json;
         setSaveMsg('Auto-salvo');
         setTimeout(() => setSaveMsg(''), 2000);
       } catch {
@@ -155,9 +160,9 @@ export default function CreativeEditor({ initialProject, onSave }: CreativeEdito
   };
 
   return (
-    <div className="flex flex-col h-screen bg-gray-100">
+    <div className="flex flex-col min-h-screen md:h-screen bg-gray-100">
       {/* Toolbar */}
-      <div className="flex items-center gap-3 px-4 py-2 bg-white border-b shadow-sm">
+      <div className="flex flex-wrap items-center gap-2 md:gap-3 px-3 md:px-4 py-2 bg-white border-b shadow-sm">
         <Link
           href="/gallery"
           className="px-3 py-1.5 text-sm bg-gray-100 hover:bg-gray-200 rounded transition flex items-center gap-1"
@@ -170,10 +175,10 @@ export default function CreativeEditor({ initialProject, onSave }: CreativeEdito
           type="text"
           value={project.title}
           onChange={(e) => setProject((prev) => ({ ...prev, title: e.target.value }))}
-          className="text-lg font-bold border-b border-transparent hover:border-gray-300 focus:border-purple-500 outline-none px-1"
+          className="text-lg font-bold border-b border-transparent hover:border-gray-300 focus:border-purple-500 outline-none px-1 min-w-0 w-full md:w-auto order-last md:order-none"
           placeholder="Nome do projeto"
         />
-        <div className="flex-1" />
+        <div className="hidden md:block flex-1" />
         <button
           onClick={() => setShowBgPicker(!showBgPicker)}
           className="px-3 py-1.5 text-sm bg-gray-100 hover:bg-gray-200 rounded transition"
@@ -198,13 +203,13 @@ export default function CreativeEditor({ initialProject, onSave }: CreativeEdito
       </div>
 
       {/* Main area */}
-      <div className="flex flex-1 min-h-0 overflow-hidden">
+      <div className="flex flex-col md:flex-row flex-1 min-h-0 md:overflow-hidden">
         {/* Item palette */}
-        <ItemPalette mode={mode} onStartDrag={handleStartDrag} />
+        <ItemPalette mode={mode} onStartDrag={handleStartDrag} onAddItem={(path, file) => addItem(path, file, 50, 55)} />
 
-        {/* Canvas */}
-        <div className="flex-1 flex flex-col min-h-0">
-          <div className="flex-1 min-h-0 p-4 flex items-center justify-center overflow-auto">
+        {/* Canvas (no celular vem primeiro) */}
+        <div className="flex-1 flex flex-col min-h-0 order-first md:order-none">
+          <div className="flex-1 min-h-0 p-2 md:p-4 flex items-center justify-center overflow-auto">
             <div className="w-full max-w-4xl">
               <CreativeCanvas
                 background={project.background}
@@ -235,12 +240,12 @@ export default function CreativeEditor({ initialProject, onSave }: CreativeEdito
       {/* Background picker modal */}
       {showBgPicker && (
         <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" onClick={() => setShowBgPicker(false)}>
-          <div className="bg-white rounded-xl shadow-xl w-[600px] max-h-[80vh] flex flex-col" onClick={(e) => e.stopPropagation()}>
+          <div className="bg-white rounded-xl shadow-xl w-[600px] max-w-[calc(100vw-2rem)] max-h-[80vh] flex flex-col" onClick={(e) => e.stopPropagation()}>
             <div className="flex items-center justify-between p-4 border-b">
               <h3 className="font-semibold">Selecionar Fundo</h3>
               <button onClick={() => setShowBgPicker(false)} className="text-gray-400 hover:text-gray-600">✕</button>
             </div>
-            <div className="p-4 grid grid-cols-3 gap-3 overflow-y-auto">
+            <div className="p-4 grid grid-cols-2 sm:grid-cols-3 gap-3 overflow-y-auto">
               {backgrounds.map((bg) => {
                 const bgValue = `${bg.path}:${bg.filename}`;
                 return (
